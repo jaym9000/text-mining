@@ -1,0 +1,40 @@
+10
+
+dir
+5089
+svn://sadi2/bio/mutation-impact-extraction/trunk/src/main/resources/gate/gazetteers
+svn://sadi2/bio
+
+
+
+2012-10-19T02:28:39.830522Z
+3906
+artjomk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+9e4bb853-3f7d-47df-b504-c7a2600926b0
+
+morethanoneword
+dir
+
+oneword
+dir
+
+dictionary_from_remote_repository
+dir
+
+organisms
+dir
+

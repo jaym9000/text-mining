@@ -1,0 +1,34 @@
+Phase: UncertainImpactResolver
+Input: Impact
+
+Rule:UncertainImpactResolver1
+(
+	{Impact.direction == "Uncertain"}
+):refinedImpact
+-->
+{
+	Annotation tempA = (gate.Annotation)((gate.AnnotationSet)bindings.get("refinedImpact")).iterator().next();  
+	Annotation impactA = (gate.Annotation)inputAS.get("Impact",tempA.getStartNode().getOffset(),tempA.getEndNode().getOffset()).iterator().next();
+
+	AnnotationSet positiveAS = inputAS.get("Positive",tempA.getStartNode().getOffset(),tempA.getEndNode().getOffset());
+	AnnotationSet negativeAS = inputAS.get("Negative",tempA.getStartNode().getOffset(),tempA.getEndNode().getOffset());
+	Annotation mf = (gate.Annotation)inputAS.get("GroundedMolecularFunction", tempA.getStartNode().getOffset(),tempA.getEndNode().getOffset()).iterator().next();
+	
+	long mfStart =  mf.getStartNode().getOffset();
+	//compare start nodes to measure which one that is closest to the molecular function.
+	long closestPositive = 9999;
+	long closestNegative = 9999;
+	for(Annotation positiveA : positiveAS) {
+		closestPositive = Math.min(Math.abs(positiveA.getStartNode().getOffset()-mfStart),closestPositive);
+	}
+	for(Annotation negativeA : positiveAS) {
+		closestNegative = Math.min(Math.abs(negativeA.getStartNode().getOffset()-mfStart),closestNegative);
+	}
+	
+	if(closestPositive < closestNegative) {
+		impactA.getFeatures().put("direction", "Positive");
+	}
+	else {
+		impactA.getFeatures().put("direction","Negative");
+	}
+}

@@ -1,0 +1,522 @@
+Phase: Debug
+Input: Sentence
+
+Options: control = once
+
+Rule:ExtractTextualEntities
+(
+	{Sentence}
+):sent
+-->
+{
+	try {
+	      //mutationimpactproject.japerhs.DebuggingRHS drhs = new mutationimpactproject.japerhs.DebuggingRHS(doc,inputAS,outputAS,bindings);
+	      //drhs.run();
+		java.util.logging.Logger log=null;
+		if(log==null){
+		    log =  java.util.logging.Logger.getLogger("JAPELogger");
+		    log.setLevel(java.util.logging.Level.FINEST);
+		    //java.util.logging.ConsoleHandler.pattern = %h/java%u.log //%L: %m [%C.%M]
+		}
+
+		Annotation paragraph = (Annotation)((AnnotationSet)bindings.get("sent")).iterator().next();
+
+
+		/**
+		*/
+
+		AnnotationSet m_mf_ds = inputAS.get("M-MF-D-Occurrence");
+		Map<String,List<Annotation>> m_mf_d_map = new HashMap<String,List<Annotation>>();
+
+		// gather annotations
+		for(Annotation m_mf_d : m_mf_ds){
+		  //System.out.println("m_mf: "+doc.getContent().getContent(m_mf.getStartNode().getOffset(), m_mf.getEndNode().getOffset()).toString());
+		  String bounderies = Long.toString(m_mf_d.getStartNode().getOffset())+"_"+Long.toString(m_mf_d.getEndNode().getOffset());
+		  if(m_mf_d_map.containsKey(bounderies)){
+		    m_mf_d_map.get(bounderies).add(m_mf_d);
+		  }else{
+		    List<Annotation> list = new ArrayList();
+		    list.add(m_mf_d);
+		    m_mf_d_map.put(bounderies,list);
+		  }
+		}
+		// merge m_d annotations
+		for(java.util.Map.Entry<String,List<Annotation>> e : m_mf_d_map.entrySet()){
+		  FeatureMap features = Factory.newFeatureMap();
+		  Long start = Long.valueOf((String)e.getKey().split("_")[0]);
+		  Long end = Long.valueOf((String)e.getKey().split("_")[1]);
+
+		    List<Annotation> mListAnn =  new ArrayList<Annotation>();
+		    List<Annotation> mfListAnn =  new ArrayList<Annotation>();
+		    List<Annotation> posListAnn =  new ArrayList<Annotation>();
+		    List<Annotation> negListAnn =  new ArrayList<Annotation>();
+		    List<Annotation> neuListAnn =  new ArrayList<Annotation>();
+		    List<Annotation> nonneuListAnn =  new ArrayList<Annotation>();
+
+		    for(Annotation mfAnn : (List<Annotation>)e.getValue()){
+		      if((Annotation)mfAnn.getFeatures().get("MANN")!=null) mListAnn.add((Annotation)mfAnn.getFeatures().get("MANN"));
+		      if((List<Annotation>)mfAnn.getFeatures().get("MF_ANN")!=null) mfListAnn.addAll((List<Annotation>)mfAnn.getFeatures().get("MF_ANN"));
+		      if((List<Annotation>)mfAnn.getFeatures().get("POSITIVE_ANN")!=null) posListAnn.addAll((List<Annotation>)mfAnn.getFeatures().get("POSITIVE_ANN"));
+		      if((List<Annotation>)mfAnn.getFeatures().get("NEGATIVE_ANN")!=null) negListAnn.addAll((List<Annotation>)mfAnn.getFeatures().get("NEGATIVE_ANN"));
+		      if((List<Annotation>)mfAnn.getFeatures().get("NEUTRAL_ANN")!=null) neuListAnn.addAll((List<Annotation>)mfAnn.getFeatures().get("NEUTRAL_ANN"));
+		      if((List<Annotation>)mfAnn.getFeatures().get("NONNEUTRAL_ANN")!=null) nonneuListAnn.addAll((List<Annotation>)mfAnn.getFeatures().get("NONNEUTRAL_ANN"));
+		    }
+		    if(!mListAnn.isEmpty()) {
+		      features.put("MANN",mListAnn);
+		    }
+		    if(!mfListAnn.isEmpty()) {
+		      features.put("MF_ANN",mfListAnn);
+		    }
+		    if(!posListAnn.isEmpty()) {
+			features.put("POSITIVE_ANN",posListAnn);
+		    }
+		    if(!negListAnn.isEmpty()) {
+			features.put("NEGATIVE_ANN",negListAnn);
+		    }
+		    if(!neuListAnn.isEmpty()) {
+			features.put("NEUTRAL_ANN",neuListAnn);
+		    }
+		    if(!nonneuListAnn.isEmpty()) {
+			features.put("NONNEUTRAL_ANN",nonneuListAnn);
+		    }
+
+		  features.put("SENTENCES", (List<Annotation>)e.getValue().get(0).getFeatures().get("SENTENCES"));
+		  outputAS.add(start,end,"M-MF-D-Merged",features);
+		}
+
+
+
+		/**
+		*/
+		AnnotationSet m_mfs = inputAS.get("M-MF-Occurrence");
+		Map<String,List<Annotation>> m_mf_map = new HashMap<String,List<Annotation>>();
+
+		// gather annotations
+		for(Annotation m_mf : m_mfs){
+		  //System.out.println("m_mf: "+doc.getContent().getContent(m_mf.getStartNode().getOffset(), m_mf.getEndNode().getOffset()).toString());
+		  String bounderies = Long.toString(m_mf.getStartNode().getOffset())+"_"+Long.toString(m_mf.getEndNode().getOffset());
+		  if(m_mf_map.containsKey(bounderies)){
+		    m_mf_map.get(bounderies).add(m_mf);
+		  }else{
+		    List<Annotation> list = new ArrayList();
+		    list.add(m_mf);
+		    m_mf_map.put(bounderies,list);
+		  }
+		}
+
+		// merge m_mf annotations
+		for(java.util.Map.Entry<String,List<Annotation>> e : m_mf_map.entrySet()){
+		  FeatureMap features = Factory.newFeatureMap();
+		  Long start = Long.valueOf((String)e.getKey().split("_")[0]);
+		  Long end = Long.valueOf((String)e.getKey().split("_")[1]);
+
+		    List<Annotation> mListAnn =  new ArrayList<Annotation>();
+		    List<Annotation> mfListAnn =  new ArrayList<Annotation>();
+
+		    for(Annotation mfAnn : (List<Annotation>)e.getValue()){
+		      if((Annotation)mfAnn.getFeatures().get("MANN")!=null) mListAnn.add((Annotation)mfAnn.getFeatures().get("MANN"));
+		      if((List<Annotation>)mfAnn.getFeatures().get("MF_ANN")!=null) mfListAnn.addAll((List<Annotation>)mfAnn.getFeatures().get("MF_ANN"));
+		    }
+		    if(!mListAnn.isEmpty()) {
+		      features.put("MANN",mListAnn);
+		    }
+		    if(!mfListAnn.isEmpty()) {
+		      features.put("MF_ANN",mfListAnn);
+		    }
+		  features.put("SENTENCES", (List<Annotation>)e.getValue().get(0).getFeatures().get("SENTENCES"));
+		  outputAS.add(start,end,"M-MF-Merged",features);
+		}
+
+
+
+
+		/**
+		*/
+		AnnotationSet m_ds = inputAS.get("M-D-Occurrence");
+		Map<String,List<Annotation>> m_d_map = new HashMap<String,List<Annotation>>();
+
+		// gather annotations
+		for(Annotation m_d : m_ds){
+		  //System.out.println("m_d: "+doc.getContent().getContent(m_d.getStartNode().getOffset(), m_d.getEndNode().getOffset()).toString());
+		  String bounderies = Long.toString(m_d.getStartNode().getOffset())+"_"+Long.toString(m_d.getEndNode().getOffset());
+		  if(m_d_map.containsKey(bounderies)){
+		    m_d_map.get(bounderies).add(m_d);
+		  }else{
+		    List<Annotation> list = new ArrayList();
+		    list.add(m_d);
+		    m_d_map.put(bounderies,list);
+		  }
+		}
+
+		// merge m_d annotations
+		for(java.util.Map.Entry<String,List<Annotation>> e : m_d_map.entrySet()){
+		  FeatureMap features = Factory.newFeatureMap();
+		  Long start = Long.valueOf((String)e.getKey().split("_")[0]);
+		  Long end = Long.valueOf((String)e.getKey().split("_")[1]);
+
+		    List<Annotation> mListAnn =  new ArrayList<Annotation>();
+		    List<Annotation> posListAnn =  new ArrayList<Annotation>();
+		    List<Annotation> negListAnn =  new ArrayList<Annotation>();
+		    List<Annotation> neuListAnn =  new ArrayList<Annotation>();
+		    List<Annotation> nonneuListAnn =  new ArrayList<Annotation>();
+
+		    for(Annotation mfAnn : (List<Annotation>)e.getValue()){
+		      if((Annotation)mfAnn.getFeatures().get("MANN")!=null) mListAnn.add((Annotation)mfAnn.getFeatures().get("MANN"));
+		      if((List<Annotation>)mfAnn.getFeatures().get("POSITIVE_ANN")!=null) posListAnn.addAll((List<Annotation>)mfAnn.getFeatures().get("POSITIVE_ANN"));
+		      if((List<Annotation>)mfAnn.getFeatures().get("NEGATIVE_ANN")!=null) negListAnn.addAll((List<Annotation>)mfAnn.getFeatures().get("NEGATIVE_ANN"));
+		      if((List<Annotation>)mfAnn.getFeatures().get("NEUTRAL_ANN")!=null) neuListAnn.addAll((List<Annotation>)mfAnn.getFeatures().get("NEUTRAL_ANN"));
+		      if((List<Annotation>)mfAnn.getFeatures().get("NONNEUTRAL_ANN")!=null) nonneuListAnn.addAll((List<Annotation>)mfAnn.getFeatures().get("NONNEUTRAL_ANN"));
+		    }
+		    if(!mListAnn.isEmpty()) {
+		      features.put("MANN",mListAnn);
+		    }
+		    if(!posListAnn.isEmpty()) {
+			features.put("POSITIVE_ANN",posListAnn);
+		    }
+		    if(!negListAnn.isEmpty()) {
+			features.put("NEGATIVE_ANN",negListAnn);
+		    }
+		    if(!neuListAnn.isEmpty()) {
+			features.put("NEUTRAL_ANN",neuListAnn);
+		    }
+		    if(!nonneuListAnn.isEmpty()) {
+			features.put("NONNEUTRAL_ANN",nonneuListAnn);
+		    }
+		  features.put("SENTENCES", (List<Annotation>)e.getValue().get(0).getFeatures().get("SENTENCES"));
+		  outputAS.add(start,end,"M-D-Merged",features);
+		}
+
+
+		/**
+		*/
+		AnnotationSet mf_ds = inputAS.get("MF-D-Occurrence");
+		Map<String,List<Annotation>> mf_d_map = new HashMap<String,List<Annotation>>();
+
+		// gather annotations
+		for(Annotation mf_d : mf_ds){
+		  //System.out.println("m_d: "+doc.getContent().getContent(m_d.getStartNode().getOffset(), m_d.getEndNode().getOffset()).toString());
+		  String bounderies = Long.toString(mf_d.getStartNode().getOffset())+"_"+Long.toString(mf_d.getEndNode().getOffset());
+		  if(mf_d_map.containsKey(bounderies)){
+		    mf_d_map.get(bounderies).add(mf_d);
+		  }else{
+		    List<Annotation> list = new ArrayList();
+		    list.add(mf_d);
+		    mf_d_map.put(bounderies,list);
+		  }
+		}
+
+		// merge m_d annotations
+		for(java.util.Map.Entry<String,List<Annotation>> e : mf_d_map.entrySet()){
+		  FeatureMap features = Factory.newFeatureMap();
+		  Long start = Long.valueOf((String)e.getKey().split("_")[0]);
+		  Long end = Long.valueOf((String)e.getKey().split("_")[1]);
+
+		    List<Annotation> mfListAnn =  new ArrayList<Annotation>();
+		    List<Annotation> posListAnn =  new ArrayList<Annotation>();
+		    List<Annotation> negListAnn =  new ArrayList<Annotation>();
+		    List<Annotation> neuListAnn =  new ArrayList<Annotation>();
+		    List<Annotation> nonneuListAnn =  new ArrayList<Annotation>();
+
+		    for(Annotation mfAnn : (List<Annotation>)e.getValue()){
+		      if((List<Annotation>)mfAnn.getFeatures().get("MF_ANN")!=null) mfListAnn.addAll((List<Annotation>)mfAnn.getFeatures().get("MF_ANN"));
+		      if((List<Annotation>)mfAnn.getFeatures().get("POSITIVE_ANN")!=null) posListAnn.addAll((List<Annotation>)mfAnn.getFeatures().get("POSITIVE_ANN"));
+		      if((List<Annotation>)mfAnn.getFeatures().get("NEGATIVE_ANN")!=null) negListAnn.addAll((List<Annotation>)mfAnn.getFeatures().get("NEGATIVE_ANN"));
+		      if((List<Annotation>)mfAnn.getFeatures().get("NEUTRAL_ANN")!=null) neuListAnn.addAll((List<Annotation>)mfAnn.getFeatures().get("NEUTRAL_ANN"));
+		      if((List<Annotation>)mfAnn.getFeatures().get("NONNEUTRAL_ANN")!=null) nonneuListAnn.addAll((List<Annotation>)mfAnn.getFeatures().get("NONNEUTRAL_ANN"));
+		    }
+		    if(!mfListAnn.isEmpty()) {
+		      features.put("MF_ANN",mfListAnn);
+		    }
+		    if(!posListAnn.isEmpty()) {
+			features.put("POSITIVE_ANN",posListAnn);
+		    }
+		    if(!negListAnn.isEmpty()) {
+			features.put("NEGATIVE_ANN",negListAnn);
+		    }
+		    if(!neuListAnn.isEmpty()) {
+			features.put("NEUTRAL_ANN",neuListAnn);
+		    }
+		    if(!nonneuListAnn.isEmpty()) {
+			features.put("NONNEUTRAL_ANN",nonneuListAnn);
+		    }
+		  features.put("SENTENCES", (List<Annotation>)e.getValue().get(0).getFeatures().get("SENTENCES"));
+		  outputAS.add(start,end,"MF-D-Merged",features);
+		}
+
+		/*
+		Annotation sentence1 = null;
+		Annotation sentence2 = null;
+		Annotation sentence3 = null;
+
+		// init context bounderies
+		Long[] context = new Long[2];
+
+		// mark the end of the context
+		context[0] = sentence.getStartNode().getOffset();
+
+
+		List<Annotation> contextList = new ArrayList<Annotation>();
+
+		AnnotationSet allSentencesSet = inputAS.get("Sentence");
+		List allSentencesList = new ArrayList(allSentencesSet);
+		Collections.sort(allSentencesList, new gate.util.OffsetComparator());
+
+
+		Iterator iter = allSentencesList.iterator();
+		while(iter.hasNext()){
+		    Annotation sent = (Annotation)iter.next();
+		    if(sent.getStartNode().getOffset() == sentence.getStartNode().getOffset() &&
+					      sent.getEndNode().getOffset() == sentence.getEndNode().getOffset()){
+			contextList.add(sent);
+			//for(int i = 0; i<3; i++){
+			    sentence1 = (Annotation)iter.next();
+			    contextList.add(sentence1);
+			    sentence2 = (Annotation)iter.next();
+			    contextList.add(sentence2);
+			    sentence3 = (Annotation)iter.next();
+			    contextList.add(sentence3);
+			
+			//}
+
+			break;
+		    }
+		}
+
+		// mark the end of the context
+		context[1] = contextList.get(contextList.size()-1).getStartNode().getOffset();
+
+
+		  // check results
+		//log.info("==================");
+		for(Annotation a : contextList){
+			//log.info("sentenceFromContext:\n "+doc.getContent().getContent(a.getStartNode().getOffset(), a.getEndNode().getOffset()).toString());
+		}
+
+
+
+
+		// collect sentences of the context as list
+		List<String> contextSentences = new ArrayList<String>();
+		for(Annotation a : contextList){
+			contextSentences.add(doc.getContent().getContent(a.getStartNode().getOffset(), a.getEndNode().getOffset()).toString());
+		}
+
+
+		for(Annotation sent : contextList){
+		  AnnotationSet mfAS = inputAS.get("MolecularFunction",sent.getStartNode().getOffset(),sent.getEndNode().getOffset());
+		  AnnotationSet posAS = inputAS.get("Positive",sent.getStartNode().getOffset(),sent.getEndNode().getOffset());
+		  AnnotationSet negAS = inputAS.get("Negative",sent.getStartNode().getOffset(),sent.getEndNode().getOffset());
+		  AnnotationSet neuAS = inputAS.get("Neutral",sent.getStartNode().getOffset(),sent.getEndNode().getOffset());
+		  AnnotationSet nonneuAS = inputAS.get("NonNeutral",sent.getStartNode().getOffset(),sent.getEndNode().getOffset());
+
+
+		  if(mfAS.size() > 0 && (posAS.size()>0 || negAS.size()>0 || neuAS.size()>0 || nonneuAS.size()>0)) {
+		    FeatureMap features = Factory.newFeatureMap();
+		    features.put("MANN",mutationTemp);
+		   // features.put("mString",doc.getContent().getContent(mutationTemp.getStartNode().getOffset(), mutationTemp.getEndNode().getOffset()).toString());
+
+		    //Iterator<Annotation>  mfIter = mentions.iterator();
+
+		    // add strings of found textual entities (molecular functions and directionality words) as feature
+		    List<Annotation> tempListAnn;
+		    //List<String> tempList;
+
+		    tempListAnn =  new ArrayList<Annotation>();
+		    //tempList =  new ArrayList<String>();
+		    for(Annotation mfAnn : mfAS){
+		     // tempList.add(doc.getContent().getContent(mfAnn.getStartNode().getOffset(), mfAnn.getEndNode().getOffset()).toString());
+		      tempListAnn.add(mfAnn);
+		    }
+		    if(!tempListAnn.isEmpty()) {
+		      //features.put("mfString",tempList);
+		      features.put("MF_ANN",tempListAnn);
+		    }
+
+		    tempListAnn =  new ArrayList<Annotation>();
+		    //tempList =  new ArrayList();
+		    for(Annotation posAnn : posAS){
+		      //tempList.add(doc.getContent().getContent(posAnn.getStartNode().getOffset(), posAnn.getEndNode().getOffset()).toString());
+		      tempListAnn.add(posAnn);
+		    }
+		    if(!tempListAnn.isEmpty()) {
+			//features.put("posString",tempList);
+			features.put("POSITIVE_ANN",tempListAnn);
+		    }
+
+		    tempListAnn =  new ArrayList<Annotation>();
+		    //tempList =  new ArrayList();
+		    for(Annotation negAnn : negAS){
+		      //tempList.add(doc.getContent().getContent(negAnn.getStartNode().getOffset(), negAnn.getEndNode().getOffset()).toString());
+		      tempListAnn.add(negAnn);
+		    }
+		    if(!tempListAnn.isEmpty()) {
+			//features.put("negString",tempList);
+			features.put("NEGATIVE_ANN",tempListAnn);
+		    }
+
+		    tempListAnn =  new ArrayList<Annotation>();
+		   // tempList =  new ArrayList();
+		    for(Annotation neuAnn : neuAS){
+		      //tempList.add(doc.getContent().getContent(neuAnn.getStartNode().getOffset(), neuAnn.getEndNode().getOffset()).toString());
+		      tempListAnn.add(neuAnn);
+		    }
+		    if(!tempListAnn.isEmpty()) {
+			//features.put("neuString",tempList);
+			features.put("NEUTRAL_ANN",tempListAnn);
+		    }
+
+		    tempListAnn =  new ArrayList<Annotation>();
+		    //tempList =  new ArrayList();
+		    for(Annotation nonneuAnn : nonneuAS){
+		      //tempList.add(doc.getContent().getContent(nonneuAnn.getStartNode().getOffset(), nonneuAnn.getEndNode().getOffset()).toString());
+		      tempListAnn.add(nonneuAnn);
+		    }
+		    if(!tempListAnn.isEmpty()) {
+			//features.put("nonneuString",tempList);
+			features.put("NONNEUTRAL_ANN",tempListAnn);
+		    }
+
+
+		    // add sentence number where impact was found as feature
+		    if(sent.getStartNode().getOffset()==sentence.getStartNode().getOffset()){
+		     	features.put("sentenceNumber", 0);
+		    }else if(sent.getStartNode().getOffset()==sentence1.getStartNode().getOffset()){
+		     	features.put("sentenceNumber", 1);
+		    }else if(sent.getStartNode().getOffset()==sentence2.getStartNode().getOffset()){
+		     	features.put("sentenceNumber", 2);
+		    }else if(sent.getStartNode().getOffset()==sentence3.getStartNode().getOffset()){
+		     	features.put("sentenceNumber", 3);
+			    }
+
+		    // add sentences as context
+		    features.put("SENTENCES", contextSentences);
+		    //features.put("xMutationAnn",mutationTemp);
+		   // features.put("xMutationAnnStart",mutationTemp.getStartNode().getOffset());
+		   // features.put("xMutationAnnEnd",mutationTemp.getEndNode().getOffset());
+
+		    outputAS.add(context[0],context[1],"M-MF-D-Occurrence",features);
+
+		  }else if(mfAS.size() > 0 && (posAS.size()==0 && negAS.size()==0 && neuAS.size()==0 && nonneuAS.size()==0)){;
+		    FeatureMap features = Factory.newFeatureMap();
+		    features.put("MANN",mutationTemp);
+		   // features.put("mString",doc.getContent().getContent(mutationTemp.getStartNode().getOffset(), mutationTemp.getEndNode().getOffset()).toString());
+
+
+		    // add strings of found textual entities (molecular functions) as feature
+		    List<Annotation> tempListAnn;
+		    //List<String> tempList;
+
+		    tempListAnn =  new ArrayList<Annotation>();
+		    //tempList =  new ArrayList<String>();
+		    for(Annotation mfAnn : mfAS){
+		     // tempList.add(doc.getContent().getContent(mfAnn.getStartNode().getOffset(), mfAnn.getEndNode().getOffset()).toString());
+		      tempListAnn.add(mfAnn);
+		    }
+		    if(!tempListAnn.isEmpty()) {
+		      //features.put("mfString",tempList);
+		      features.put("MF_ANN",tempListAnn);
+		    }
+
+		    // add sentence number where molecular function was found as feature
+		    if(sent.getStartNode().getOffset()==sentence.getStartNode().getOffset()){
+		     	features.put("sentenceNumber", 0);
+		    }else if(sent.getStartNode().getOffset()==sentence1.getStartNode().getOffset()){
+		     	features.put("sentenceNumber", 1);
+		    }else if(sent.getStartNode().getOffset()==sentence2.getStartNode().getOffset()){
+		     	features.put("sentenceNumber", 2);
+		    }else if(sent.getStartNode().getOffset()==sentence3.getStartNode().getOffset()){
+		     	features.put("sentenceNumber", 3);
+			    }
+
+		    // add sentences as context
+		    features.put("SENTENCES", contextSentences);
+		    //features.put("xMutationAnn",mutationTemp);
+		    //features.put("xMutationAnnStart",mutationTemp.getStartNode().getOffset());
+		    //features.put("xMutationAnnEnd",mutationTemp.getEndNode().getOffset());
+
+		    outputAS.add(context[0],context[1],"M-MF-Occurrence",features);
+
+		  }else if(mfAS.size() == 0 && (posAS.size()>0 || negAS.size()>0 || neuAS.size()>0 || nonneuAS.size()>0)){
+		    FeatureMap features = Factory.newFeatureMap();
+		    features.put("MANN",mutationTemp);
+		    //features.put("mString",doc.getContent().getContent(mutationTemp.getStartNode().getOffset(), mutationTemp.getEndNode().getOffset()).toString());
+
+		    // add strings of found textual entities (molecular functions and directionality words) as feature
+		    List<Annotation> tempListAnn;
+		   // List<String> tempList;
+
+		    tempListAnn =  new ArrayList<Annotation>();
+		    //tempList =  new ArrayList<String>();
+		    for(Annotation posAnn : posAS){
+		      //tempList.add(doc.getContent().getContent(posAnn.getStartNode().getOffset(), posAnn.getEndNode().getOffset()).toString());
+		      tempListAnn.add(posAnn);
+		    }
+		    if(!tempListAnn.isEmpty()) {
+			//features.put("posString",tempList);
+			features.put("POSITIVE_ANN",tempListAnn);
+		    }
+
+		    tempListAnn =  new ArrayList<Annotation>();
+		    //tempList =  new ArrayList();
+		    for(Annotation negAnn : negAS){
+		      //tempList.add(doc.getContent().getContent(negAnn.getStartNode().getOffset(), negAnn.getEndNode().getOffset()).toString());
+		      tempListAnn.add(negAnn);
+		    }
+		    if(!tempListAnn.isEmpty()) {
+			//features.put("negString",tempList);
+			features.put("NEGATIVE_ANN",tempListAnn);
+		    }
+
+		    tempListAnn =  new ArrayList<Annotation>();
+		    //tempList =  new ArrayList();
+		    for(Annotation neuAnn : neuAS){
+		      //tempList.add(doc.getContent().getContent(neuAnn.getStartNode().getOffset(), neuAnn.getEndNode().getOffset()).toString());
+		      tempListAnn.add(neuAnn);
+		    }
+		    if(!tempListAnn.isEmpty()) {
+			//features.put("neuString",tempList);
+			features.put("NEUTRAL_ANN",tempListAnn);
+		    }
+
+		    tempListAnn =  new ArrayList<Annotation>();
+		    //tempList =  new ArrayList();
+		    for(Annotation nonneuAnn : nonneuAS){
+		      //tempList.add(doc.getContent().getContent(nonneuAnn.getStartNode().getOffset(), nonneuAnn.getEndNode().getOffset()).toString());
+		      tempListAnn.add(nonneuAnn);
+		    }
+		    if(!tempListAnn.isEmpty()) {
+			//features.put("nonneuString",tempList);
+			features.put("NONNEUTRAL_ANN",tempListAnn);
+		    }
+
+
+		    // add sentence number where directionality word was found as feature
+		    if(sent.getStartNode().getOffset()==sentence.getStartNode().getOffset()){
+		     	features.put("sentenceNumber", 0);
+		    }else if(sent.getStartNode().getOffset()==sentence1.getStartNode().getOffset()){
+		     	features.put("sentenceNumber", 1);
+		    }else if(sent.getStartNode().getOffset()==sentence2.getStartNode().getOffset()){
+		     	features.put("sentenceNumber", 2);
+		    }else if(sent.getStartNode().getOffset()==sentence3.getStartNode().getOffset()){
+		     	features.put("sentenceNumber", 3);
+			    }
+
+		    // add sentences as context
+		    features.put("SENTENCES", contextSentences);
+		    features.put("xMutationAnn",mutationTemp);
+		    features.put("xMutationAnnStart",mutationTemp.getStartNode().getOffset());
+		    features.put("xMutationAnnEnd",mutationTemp.getEndNode().getOffset());
+
+		    outputAS.add(context[0],context[1],"M-D-Occurrence",features);
+		  }
+		}
+	
+
+*/
+
+
+
+	} catch(Exception e) {
+		e.printStackTrace();
+	}
+}

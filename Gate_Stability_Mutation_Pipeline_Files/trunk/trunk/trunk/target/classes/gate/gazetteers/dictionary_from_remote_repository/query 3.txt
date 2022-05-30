@@ -1,0 +1,6 @@
+SELECT ?Name ?Protein ?Cls
+WHERE { 
+?Protein a ?Cls ; <http://www.w3.org/2000/01/rdf-schema#label> ?Name .
+FILTER (?Cls = <http://unbsj.biordf.net/ontologies/fullnames.owl#Fullname>)
+}
+

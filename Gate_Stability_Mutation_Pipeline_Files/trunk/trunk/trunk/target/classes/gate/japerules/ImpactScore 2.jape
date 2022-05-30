@@ -1,0 +1,45 @@
+Phase: ImpactScore
+Input: Impact
+
+Options: control = all
+
+Rule:ImpactScore1
+(
+	{Impact}
+):impact
+-->
+{
+	//retrieve mf
+	Annotation impactA = (Annotation)((AnnotationSet)bindings.get("impact")).iterator().next();
+	Annotation mfA = (Annotation)inputAS.get("GroundedMolecularFunction",impactA.getStartNode().getOffset(),impactA.getEndNode().getOffset()).iterator().next();
+	
+	
+	//retrieve closest directionality word.
+	AnnotationSet directionAS = inputAS.get(impactA.getFeatures().get("direction").toString(),impactA.getStartNode().getOffset(),impactA.getEndNode().getOffset());
+	
+	//measure distance in number of spacetokens
+	int shortestDistance = 9999;
+	for(Annotation directionA : directionAS) {
+		if(directionA.getStartNode().getOffset()==mfA.getStartNode().getOffset()) {
+			shortestDistance = 1;
+		}
+		else if(directionA.getStartNode().getOffset()>mfA.getStartNode().getOffset()) {
+			AnnotationSet spaceTokenAS = inputAS.get("SpaceToken",mfA.getStartNode().getOffset(),directionA.getStartNode().getOffset());
+			if(spaceTokenAS.size()<shortestDistance) {
+				shortestDistance = spaceTokenAS.size();
+			}
+		}
+		else {
+			AnnotationSet spaceTokenAS = inputAS.get("SpaceToken",directionA.getStartNode().getOffset(),mfA.getStartNode().getOffset());
+			if(spaceTokenAS.size()<shortestDistance) {
+				shortestDistance = spaceTokenAS.size();
+			}
+		}
+		if(shortestDistance == 0) {
+			shortestDistance = 1;
+		}
+	}
+	double score = 1.0/((double)shortestDistance);
+	//add score as feature to impact
+	impactA.getFeatures().put("score",score);
+}

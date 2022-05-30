@@ -1,0 +1,431 @@
+12052
+
+
+
+
+
+
+
+
+
+
+
+Crystallographic and Kinetic Evidence of a Collision Complex Formed during Halide Import in Haloalkane Dehalogenase†
+
+
+
+
+
+
+
+
+
+
+
+ABSTRACT: Haloalkane dehalogenase (DhlA) converts haloalkanes to their corresponding alcohols and halide ions. The rate-limiting step in the reaction of DhlA is the release of the halide ion. The kinetics of halide release have been analyzed by measuring halide binding with stopped-flow fluorescence experiments. At high halide concentrations, halide import occurs predominantly via the rapid formation of a weak initial collision complex, followed by transport of the ion to the active site. To obtain more insight in this collision complex, we determined the X-ray structure of DhlA in the presence of bromide and investigated the kinetics of mutants that were constructed on the basis of this structure. The X-ray structure revealed one bromide ion firmly bound in the active site and two bromide ions weakly bound on the surface of the enzyme. One of the weakly bound ions is close to Thr197 and Phe294, near the entrance of the earlier proposed tunnel for substrate import. Kinetic analysis of bromide import by the Thr197Ala and Phe294Ala mutants of DhlA at high halide concentration showed that the rate constants for halide binding no longer displayed a wild-type-like parabolic increase with increasing bromide concentrations. This is in agreement with an elimination or a decrease in affinity of the surface-located halide-binding site. Likewise, chloride binding kinetics of the mutants indicated significant differences with wild-type enzyme. The results indicate that Thr197 and Phe294 are involved in the formation of an initial collision complex for halide import in DhlA and provide experimental evidence for the role of the tunnel in substrate and product transport.
+
+
+
+
+
+Haloalkane dehalogenase (DhlA)1 from Xanthobacter autotrophicus hydrolyzes carbon-halogen bonds of a broad range of n-haloalkanes (1). As many of these compounds are toxic xenobiotics which occur as soil and groundwater pollutants, DhlA is an interesting enzyme from an environmental perspective. Its structure and catalytic mechanism have been studied in detail (2-9). The enzyme consists of a main domain (residues 1-155 and 230-310) with an R/ hydrolase fold (10) and a cap domain comprising five R-helices (residues 156-229). The dehalogenation reaction takes place in the active-site cavity which is buried inside the enzyme between the two domains. The catalytic triad residues Asp124, His289, and Asp260 stand out from the main domain, whereas residues from the cap domain govern the substrate specificity (11). The four-step reaction mechanism of the enzyme begins with the formation of a Michaelis complex, after which a
+
+
+† M.G.P. and I.S.R. were supported by The Netherlands Foundation for Chemical Research (SON) with financial aid from The Netherlands Organization for Scientific Research (NWO). M.P.G. and I.S.R. contributed equally to the work reported in this paper. * To whom correspondence should be addressed. Telephone: +3150-3634209. Fax: +31-50-3634165. E-mail: D.B.Janssen@chem.rug.nl. ‡ Laboratory of Biochemistry. § Laboratory of Biophysical Chemistry. 1 Abbreviations: DhlA, haloalkane dehalogenase from Xanthobacter autotrophicus GJ10; PEG, poly(ethylene glycol); PDB, protein data bank; SDS, sodium dodecyl sulfate; DCE, 1,2-dichloroethane; DBE, 1,2-dibromoethane; rmsd, root-mean-square difference; CSD, Cambridge Structural Database.
+
+
+
+
+
+covalent alkyl-enzyme intermediate is formed by nucleophilic attack of Asp124 on the substrate and a halide ion is cleaved off. During the reaction, the halide moiety is stabilized by the indole NH groups of Trp125 and Trp175 between which it is bound. Then the covalent intermediate is hydrolyzed yielding an alcohol product which is rapidly released from the cavity. In the rate-limiting last step, the halide ion is removed from the cavity. From stopped-flow fluorescence analysis of bromide import, Schanstra et al. (12) concluded that the enzyme employs two different routes for halide import/export that operate in parallel (Scheme 1). At low bromide concentrations (1-20 mM) the import is dominated by the faster upper route which consists of a slow unimolecular isomerization step, followed by a rapid bimolecular step and a second enzyme isomerization. Site-directed mutagenesis experiments in combination with X-ray crystallographic studies have shown that mutations in the cap domain of DhlA may increase the rate of the enzyme isomerization step in the upper route and lead to faster halide release (13-15). At higher bromide concentrations (20-1000 mM) a slower lower route for halide binding can also be observed, involving a fast bimolecular step preceding a slow enzyme isomerization. The bimolecular step has been explained as the rapid binding of a bromide ion into an initial “collision complex” with the enzyme, (E.X-)* in Scheme 1. Likewise, data for chloride show the same two routes for import, although the occurrence of a collision complex was uncertain (Scheme 2) (12). Such kinetically observed colli
+
+
+
+
+10.1021/bi990849w CCC: $18.00 © 1999 American Chemical Society Published on Web 08/19/1999
+
+
+
+
+
+Halide Transport via Collision Complex in DhlA
+
+
+Scheme 1
+
+
+
+
+
+Biochemistry, Vol. 38, No. 37, 1999 12053 SCALEPACK (18). The crystal belonged to the orthorhombic space group P21212, with cell axes a ) 93.4 Å, b ) 72.0 Å, and c ) 41.0 Å. It was isomorphous to the wildtype crystals and had a mosaic spread of 1.3°. Further information on the data processing is given in Table 1. Structure Solution and Crystallographic Refinement. The structure of the wild-type DhlA at pH 5.0 [PDB entry 1BE0 (15)] without solvent molecules was used as the starting model for refinement with X-PLOR version 3.843 (19). The test-set of 5% of the unique reflections was preserved to calculate Rfree values (20) as an independent validation of the refinement progress. First, a rigid body refinement was done to position the molecule more precisely in the asymmetric unit. This resulted in a significant drop in Rfree, which decreased from 43.1 to 33.9% (15-2.3 Å data). Then several rounds of positional and B-factor refinement were applied (data 20-2.3 Å), making use of a bulk-solvent mask in X-PLOR. Water molecules were placed manually with O (21) upon inspection of OMIT Fo-Fc electron density maps (22, 23) at positions corresponding to g3σ (0.3 e Å-3) spherical density with correct geometry. Three “water molecules” were identified as bromide ions on the basis of additional positive Fo-Fc electron density and a B-factor of 2.0 Å2sthe X-PLOR default minimum valuesafter refinement, much lower than the mean B-value of the direct surroundings of the molecules. When the model was adjusted accordingly, the B-factors of the ions refined to values higher than those of their environment and the Rfree decreased by about 1%. As a control, refinements were carried out with each bromide ion replaced by a water molecule and an arbitrary water molecule by a bromide ion. In all cases this led to unrealistic B-values (99 Å2 for the “bromide instead of water” and 2.0 Å2 for the “water instead of bromide”) and an approximately 0.5% higher Rfree. The B-factors of the bromide ions in the final model are 18, 44, and 48 Å2 for Br1, Br2, and Br3, respectively, At all stages OMIT 2Fo-Fc and Fo-Fc electron density maps were calculated and inspected with O to check the agreement of the model with the data. PROCHECK (24) and WHATCHECK (25) were used to assess the stereochemical quality. Whenever necessary the model was manually adjusted with O. The refinement was stopped when it gave no further decrease in Rfree or improvement in stereochemistry. A last cycle of refinement including all data from 20 to 2.30 Å resolution was used to make some final corrections. In a Ramachandran plot of the complex structure, 96.2% of the residues is found inside the core region as defined by Kleywegt and Jones (26). The atomic coordinates and structure factor amplitudes have been deposited in the Protein Data Bank (PDB) (27) with the entry code 1CIJ. Mutagenesis and DNA Sequencing. Site-directed mutagenesis was performed according to Kunkel (28). Escherichia coli strain BW313 was used for the production of single stranded DNA of plasmid pGELAF(+) (29), a derivative of pET-3d. The primer used to mutate Thr197 to Ala was CGTTGGGCCCCCGCACTGACC, with the mutated codon italicized. The mutated nucleotides (bold) caused the removal of a unique NarI site. For the mutation of Phe294 to Ala the primer was GTACAGGAGGCCGGCGAGCAA, with the mutated codon in bold and the introduced NaeI restriction site underlined. The primer used to mutate Phe294 to Trp was GTACAGGAGTGGGGCGAGCA. The mutated codon
+
+
+
+
+
+Scheme 2
+
+
+
+
+
+sion complexes have been found with other enzymes as well (16), although their structure is often unknown. To obtain more insight in the nature of the collision complex occurring in the lower route of halide import, we studied the X-ray structure of haloalkane dehalogenase in the presence of a high concentration of bromide. Assuming that halide import and export follow the same pathway, this structure would provide valuable information about halide export from the enzyme. The structure was determined at pH 5.9 as it was known that the dissociation constant of the halide decreases at lower pH (12). The secondary bromidebinding site that was most likely to represent the collision complex was further examined by site-directed mutagenesis studies followed by kinetic characterization of the mutants to investigate their influence on halide transport. MATERIALS AND METHODS Preparation of Haloalkane Dehalogenase Crystals and Diffraction Data Collection. Haloalkane dehalogenase was crystallized in hanging drop setups at room temperature using the vapor diffusion method as described previously (17). The drops consisted of 4 µL of 5.5 mg/mL protein in 100 mM MES [2-(N-morpholino)ethanesulfonic acid] buffer, pH 5.75.9, mixed with an equal volume of reservoir solution. Crystals were obtained within 2 weeks from 47-53% ammonium sulfate in 100 mM MES buffer (pH 5.9). One crystal was soaked in a solution of 0.5 M sodium bromide and 60% (NH4)2SO4 in 100 mM MES buffer (pH 5.9) for about 30 min at room temperature. From this crystal a diffraction data set was collected at 120 K with a MacScience DIP-2030H image plate area detector system, receiving graphite monochromatized Cu KR radiation (λ ) 1.5418 Å) from an FR591 rotating anode X-ray generator through a double mirror focusing system (model MAC-XOS). A solution of 30% (w/v) PEG 6000, 25% (v/v) glycerol, and 100 mM MES buffer (pH 5.9) was applied as a cryoprotectant. Data were integrated and merged with DENZO/
+
+
+
+
+
+
+
+
+
+
+
+a
+
+
+
+
+
+Pikkemaat et al.
+
+
+
+
+
+quality of the final model a ) 93.4, b ) 72.0, c ) 41.0 50-2.30 (2.34-2.30) 34 663 12 688 97.6 (98.2) 8.0 2.1 10.8 (36.3) 19.5 final R-factor (%) free R-factor (%) no. of atoms protein bromide solvent rmsd from ideality for bond lengths (Å) bond angles (deg) dihedrals (deg) impropers (deg) ∆B bonded atoms (Å2) <B> overall (Å2) est. coord error (Å)c 22.6 (20-2.3 Å) 27.2 (20-2.3 Å) 2478 3 160 0.009 1.6 24.2 1.2 3.0 16.2 0.3
+
+
+
+
+
+Rmerge (%) ) {∑ ∑ |I(hkl,j) - < I(hkl)>|}/{∑ ∑ < I(hkl)>}. b Derived from Wilson plot statistics (52). c Derived from σA plot (31).
+
+
+hkl refl hkl refl
+
+
+
+
+
+is shown in bold, and initial confirmation of the mutation was obtained by PCR with suitable control primers. The oligonucleotides for mutagenesis were supplied by Eurosequence BV, Groningen, The Netherlands. Sequences of mutated genes were established by the Center for Biomedical Technology, University of Groningen, Groningen, The Netherlands. Protein Expression and Purification. E. coli strain BL21(DE3) (30) was used for expression of mutant dehalogenases as described before (29) with some minor alterations. Transformants, precultures, and main cultures were grown at 30 °C to an OD600 of 1.0. Then IPTG was added and growth was continued for 14-20 h at 18 °C. Crude extract was prepared as described earlier (29). The buffer used during purification was TEMAG (10 mM Tris-sulfate, pH 7.5, 1 mM EDTA, 1 mM 2-mercaptoethanol, 3 mM sodium azide, and 10% (v/v) glycerol). After passage through an 0.2 µm filter, crude extract was applied to a Resource Q column (Pharmacia Biotech). Bound protein was eluted using buffer with a gradient of 0-0.5 M ammonium sulfate. Depending on the purity of the resulting enzyme protein an additional purification step was performed as follows: The fractions containing the dehalogenase were pooled and the ammonium sulfate concentration was increased up to 1.5 M. This solution was syringe filtered again and loaded on a Resource Iso or Resource Phe hydrophobic interaction column (Pharmacia Biotech), depending on the mutant. Protein was eluted using a 1.5-0 M ammonium sulfate gradient. Purified protein was analyzed with SDS-polyacrylamide gel electrophoresis using Coomassie brilliant blue staining and stored at 4 °C in TEMAG without ammonium sulfate. Dehalogenase ActiVities. Specific dehalogenase activities were assayed using colorimetric detection of halide release (1). Km values were determined by measuring initial rates of alcohol production using gas chromatography. The uncertainty in Km and kcat was estimated at (20%. Samples were analyzed on a Chrompack 438S gas chromatograph using a CPWax 52CB column (Chrompack, Middelburg, The Netherlands), coupled to an ECD or FID detector for brominated or chlorinated products, respectively. Protein concentrations were determined with Coomassie brilliant blue using bovine serum albumin as a standard. Stopped-Flow Fluorescence Studies. Stopped-flow fluorescence quenching measurements were performed as de
+
+
+
+
+scribed before (12). Each trace was fitted to a single exponential with a program implemented in the stopped-flow instrument software. Numerical fitting of these single exponentials to a halide-binding scheme with the program Scientist (version 2.0, MicroMath Inc.) revealed rate constants for individual binding steps. With these individual rate constants the observed rate constant for any concentration could be determined by analyzing the output of the Scientist simulation in Quattro Pro (version 6.01, Borland International Inc.). The current method used to fit the obtained kobs data was more accurate than the method used by Schanstra and Janssen (12), which resulted in wild-type data that show some minor differences from formerly published results. RESULTS X-ray Structure of Haloalkane Dehalogenase with Bromide Bound. To study the structural details of secondary halide binding at high halide concentrations, we determined the X-ray structure of the enzyme soaked in a 0.5 M sodium bromide solution. The starting model (wild-type dehalogenase at pH 5.0) had to be adjusted only slightly during the crystallographic refinement procedure. Three bromide ions could be modeled convincingly into difference Fourier electron density (Figure 1). After completion of the refinement, the crystallographic R-factor was 22.6% for all data between 20 and 2.3 Å. The final model contained one complete dehalogenase molecule of 310 amino acid residues, 3 bromide ions, and 160 water molecules. The mean coordinate error estimated from a σA plot (31) was 0.3 Å. Like in the wild-type structure, the Ramachandran plot showed two outliers, Asp124 and Asn148, in generously allowed regions. Parameters indicating the stereochemical accuracy of the final model are given in Table 1. The three-dimensional structure of the enzyme with bromide bound is very similar to the apo-structure at pH 6.2 and room temperature (3). The rms difference of all CR coordinates is only 0.29 Å, and this difference cannot be attributed to a specific region. The catalytic triad, formed by residues Asp124, His289, and Asp260, is intact, and all other amino acids surrounding the active-site cavity are in an orientation comparable to that in the apo-structure. The nucleophilic water molecule is not clearly discernible, however. This is probably caused by the lower resolution of the bromide-bound dehalogenase data.
+
+
+
+
+
+Halide Transport via Collision Complex in DhlA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Inside the active-site cavity a bromide ion (Br1) is bound between the indole nitrogen atoms of Trp125 and Trp175 at a distance of 3.5 and 3.3 Å, respectively (Figure 2A). It is located at a position that is occupied by a water molecule in the apo-structure. Previously, Verschueren et al. (32) have observed halide ion binding at the same position for a chloride and iodide ion. In these cases the distances to the N 1 atoms of Trp125 and Trp175 were 3.3 and 3.4 Å for the chloride ion (estimated coordinate error 0.13 Å) and 3.8 and 3.4 Å for the iodide ion (estimated coordinate error 0.17 Å). In an extensive search of the Cambridge Structural Database (CSD (33)), Nsp2‚‚‚halide distances are reported of 3.181(6), 3.35(1), and 3.65(2) Å for chloride, bromide, and iodide ions, respectively (34). When compared to the average distances in the DhlA active site, it is seen that the average distance for the two larger ions is in agreement with the CSD values, but for chloride the CSD value is somewhat shorter than found in the protein structure (32). This suggests that the halide-binding site in DhlA is less optimal for chloride than for bromide and iodide ions. Other amino acid residues that are within 4 Å distance of the bromide ion are Glu56, Phe172, Phe222, Pro223, and Val226 (Figure 2A). Inside the cavity also one water molecule is found that is hydrogen bonded to the ion. It is close to the position of the second water molecule in the pH 6.2 apo-structure. Secondary Bromide Binding to DhlA. At the surface of haloalkane dehalogenase two other bromide ions are bound (Figure 1). The first, Br2, is located at the interface of the cap and main domains between the loop connecting helices R6 (residues 187-194) and R7 (residues 200-208) in the cap domain and the loop connecting strand 8 (residues 282-284) and helix R11 (residues 291-308) in the main domain of the enzyme. This is close to the entrance of the tunnel that was proposed to be involved in substrate import (2) (Figure 3). The ion is hydrogen bonded to the hydroxyl group of the Thr197 side chain, at a distance of 2.9 Å. This is somewhat shorter than the X‚‚‚halide contacts in the CSD, where for a Csp3-OH donor distances to chloride and bromide ions have been reported of 3.100(4) and 3.254(8) Å, respectively (34). It is also hydrogen bonded to a water molecule at 3.2 Å. This value is similar to the distances of
+
+
+
+
+
+3.190(3) and 3.339(7) Å for chloride and bromide ions observed by Steiner (34). Other amino acid residues within 4 Å distance of Br2 are Ala195, Pro196, and Phe294 (Figure 2B). The structure of this region closely resembles that of the apo-enzyme, except for the Thr197 side-chain atoms, which have rotated 0.6-1.0 Å inward. In the pH 6.2 apostructure a water molecule is found close to the position of the bromide ion, at a distance of 0.4 Å. It makes short hydrogen-bonding contacts with two other water molecules that are 2.5 and 2.6 Å away, respectively. A second bromide ion binding site at the surface of the enzyme (Br3) is found in the cap domain between the loop connecting helices R5 (residues 171-181) and R6 (residues 187-194) and the loop connecting helices R7 (residues 200208) and R8 (residues 217-227) of the enzyme. The ion is bound to the amide nitrogen atom of the Gln216 side chain and the main-chain amide nitrogen atom of Leu187 at a distance of 3.3 Å to both. This is very close to the distances observed for these types of donors in organic crystal structures, 3.299(6) and 3.46(1) Å to chloride and 3.181(6) and 3.35(1) Å to bromide, respectively (34). Br3 also makes electrostatic interactions with a water molecule at 3.3 Å. Other amino acid residues within 4 Å distance of Br3 are Leu185, Ala207, and Phe210 (Figure 2C). The structure in the vicinity of the bromide ion is very similar to that of the apo-enzyme in this region. In the pH 6.2 apo-structure a water molecule is found close to the corresponding position of the bromide ion, at a distance of 0.6 Å, and a hydrogenbonded water molecule is found at 2.9 Å. Both bromide ions that are found on the outside of the haloalkane dehalogenase are bound in a shallow depression in the surface of the molecule. Only a few electrostatic interactions contribute to binding, none of them from positively charged amino acid side chains. Instead, binding interactions are provided by predominantly apolar residues such as alanine, proline, and phenylalanine. The latter is involved in binding via the partially positively charged edge of its aromatic ring. In the apo-enzyme, the bromide binding sites are occupied by water molecules. When compared to the apo-enzyme, the protein structure is nearly unperturbed and only the neighboring water molecules have moved away
+
+
+
+
+
+
+
+
+
+
+
+Pikkemaat et al.
+
+
+
+
+
+
+
+
+
+
+
+from the position of the bromide ion. The weak nature of the binding interactions and the B-factors of both ions, 44 and 48 Å2 for Br2 and Br3, respectively, suggest that the binding of bromide ions at the surface is not as tight as in the primary halide-binding site between Trp125 and Trp175. Halide Binding in Other Protein Structures. A large number of halide-complexed structures are available in the PDB, most of them containing chloride. The halide ions are
+
+
+
+
+
+often found to act as (weak) inhibitors when the protein is in solution (35-37). Functionally relevant chloride-binding sites were found in the X-ray structures of hemocyanin (38), hemoglobin Rothschild (39), and porcine R-amylase (40, 41). In the analysis of bromide binding in various proteins, it appears that the ions are bound mostly to main-chain amide groups and to the hydroxyl groups of serine and threonine residues. In some cases binding to arginine, lysine, or
+
+
+
+
+
+Halide Transport via Collision Complex in DhlA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+histidine is observed as well as to the positively charged edge of an aromatic ring of a tyrosine or tryptophan residue. Furthermore, a few van der Waals interactions to apolar residues and many interactions with water molecules are found. Thus it is clear that there is not one preferred architecture for a bromide-binding site. The three different bromide ion binding sites in DhlA are in agreement with these findings. Site-Directed Mutagenesis. Of the two secondary bromidebinding sites, Br2 is the most likely one to correspond to the kinetically observed collision complex since it is close to the entrance of the proposed tunnel for substrate import. Moreover, in a recent diffraction experiment a chloride ion was found at this binding site but not at the Br3 site (42). To test the importance of Br2, three mutants were constructed: Thr197Ala, Phe294Ala, and Phe294Trp. The first two were chosen because the side chains of Thr197 and Phe294 are in close contact with the ion and changing these residues into alanines would weaken or eliminate the binding site. To study the effect of a more conservative mutation, Phe294 was also replaced by a tryptophan. All mutant proteins could be produced very efficiently, with expression levels exceeding 20% of the total soluble protein and with no indication of aggregation in inclusion bodies. The purification yielded about 200 mg of pure protein/L of culture fluid, and the active mutant enzymes could be stored at 4 °C for over 3 months without loss of activity. The kinetic properties of the Thr197Ala and Phe294Ala mutants were almost similar to those of the wild-type enzyme (Table 2). Both mutants showed a slightly lowered kcat for 1,2-dibromoethane and 1,2-dichloroethane, whereas the Km values for these substrates were identical to the wild type.
+
+
+
+
+
+This suggested that there were no significant differences in the structure of the active site. This was also established by the fact that the dissociation constants for chloride and bromide varied only a little from the wild-type data. The Phe294Trp mutant, however, was no longer capable of binding substrate, although CD measurements (not shown) indicated that this mutant was properly folded. Halide binding only seemed to occur at very high concentrations with an aspecific mechanism, possibly causing quenching only of the introduced tryptophan residue at the surface of the protein. Bromide Binding Kinetics. The kinetic mechanism of halide binding has been well characterized for the wild-type enzyme using stopped-flow fluorescence (12). Binding of a halide ion in the active site quenches the fluorescence of the two active-site tryptophan residues, resulting in singleexponential traces from which the kobs value can be determined. The dependence of kobs on bromide concentration is shown in Figure 4. At low concentrations, binding occurs after a slow unimolecular isomerization of the enzyme (Scheme 1, upper route), which results in the decrease of kobs with increasing bromide concentrations. The parabolic increase of kobs with halide concentrations observed at higher concentrations is due to the rapid formation of a low-affinity collision complex, followed by a slow unimolecular isomerization step (Scheme 1, lower route). To determine the role of the second bromide binding site in halide binding and release, purified Thr197Ala and Phe294Ala mutant enzymes were subjected to stopped-flow fluorescence halide-binding studies with chloride and bromide. Halide binding was examined over a concentration range of 1-1000 mM. As with the wild-type enzyme, all obtained fluorescence traces could be fitted to single exponentials.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Pikkemaat et al.
+
+
+
+
+
+k-1 (s-1) >290 >390 >320 >340 >320 >440 >320
+
+
+
+
+
+
+
+
+
+
+
+k-3 (s-1) 9.3 ( 0.5 4.7 ( 0.4 5.6 ( 0.4 8.6 ( 0.5 17.3 ( 0.7 8.3 ( 0.5 10.7 ( 0.5
+
+
+
+
+
+K4 (mM) 1500 ( 300
+
+
+
+
+
+k5 (s-1) 111 ( 5
+
+
+
+
+
+k-5 (s-1) 0.60 ( 0.3
+
+
+
+
+
+k6 (mM-1‚s-1) 0.052 ( 0.005 0.070 ( 0.007 0.054 ( 0.005 0.009 ( 0.005 0.011 ( 0.001 0.013 ( 0.01
+
+
+
+
+
+k-6 (s-1) 0.42 ( 0.02 0.88 ( 0.05 0.44 ( 0.02 0.58 ( 0.05 0.70 ( 0.06 0.68 ( 0.06
+
+
+
+
+
+Kd (mM) 10 ( 1 9(1 13 ( 1 10 ( 1 75 ( 5 68 ( 5 50 ( 5
+
+
+
+
+
+Cl
+
+
+
+
+wild-type Thr197Ala Phe294Ala wild-typea wild-type Thr197Ala Phe294Ala
+
+
+
+
+
+2.9 ( 0.3 3.9 ( 0.4 3.2 ( 0.3 3.4 ( 0.3 3.2 ( 0.3 4.4 ( 0.4 3.4 ( 0.3
+
+
+
+
+
+a
+
+
+
+
+
+Fit performed only on concentration range 1-600 mM.
+
+
+
+
+
+The kobs values for the mutants in the low concentration region are somewhat lower than for wild type (Figure 4, inset), but they still show a decrease with increasing bromide concentrations. This indicates that at low concentrations bromide binding still takes place according to the wild-type mechanism, with a slow unimolecular isomerization proceeding a rapid binding step. At high concentrations, however, the mutants appear to exhibit an alternative kinetic mechanism. The parabolic concentration dependence in the wildtype enzyme, which was modeled by assuming the formation of a collision complex that occurred before a slow isomerization step (E.X- in Scheme 1, lower route) has changed into a linear concentration dependence for both mutants. When only the lower route of the binding scheme is considered, the part of the kobs vs bromide concentration curve representing binding at high halide concentrations can be described as (43)
+
+
+
+
+
+kobs ) k-5 + k5[X-]/([X-] + K4)
+
+
+
+
+
+(1)
+
+
+
+
+
+with kobs changing from a minimum of k-5 to a maximum of k-5 + k5. The absence of a saturation phase at high concentrations observed for the two mutants indicates that the surface-located binding site responsible for the formation of the collision complex is either eliminated or has a decreased affinity for bromide ions. The resulting linear increase can be described with a bimolecular association (lower route in Scheme 2), according to
+
+
+
+
+
+kobs ) k6[X-] + k-6
+
+
+
+
+
+(2)
+
+
+
+
+
+Irrespective of whether a weak binding site is still present or not, the linear increase of kobs at high bromide concentrations, which does not approach saturation at the concentrations used, clearly shows that Thr197 and Phe294 are involved in bromide binding via the lower route of the binding scheme. Bromide binding to the mutant enzymes could be fitted over the complete concentration range with a simplified, 4-step binding scheme (Scheme 2), whereas a 5-step binding scheme (Scheme 1) was needed for the wild type. The kinetic constants of the individual binding steps were obtained by numerical fitting. The resulting data (Table 3) show that the deviation of the kobs values for bromide binding of the two mutants compared to wild type observed at low concentrations (Figure 4) is caused by a decrease of k-3 and a slight increase of k1. Since halide release is the slowest step in the dehalogenation cycle of the wild-type enzyme, the decrease in k-3 could explain the lowered kcat with DCE and DBE that was observed for the two mutants. The increase in k1 may imply a shift in the equilibrium between the two unliganded conformations of the protein. The nature of the
+
+
+
+
+
+difference between these two conformations is unknown, so it is not possible to comment on how the mutations could influence the transition between these two forms and why the Thr197 mutation has a larger effect than the Phe294 mutation. The linear increase at high bromide concentrations observed for the two mutants implies that kobs depends on k6 and k-6 (eq 2). To compare these kinetic constants with wildtype values, the concentration dependence of kobs for wildtype bromide binding was fitted to the 4-step scheme, using concentrations up to 600 mM, since these values fall in the linear part of the curve. As the kobs curves of Thr197Ala and wild-type enzyme are similar in this concentration range, k6 and k-6 are almost identical for these enzymes. The kobs curve of the Phe294Ala mutant enzyme, however, indicates a significant increase in both kinetic constants, which implies that the mutation not only affects the binding site but also influences halide transport to and from the active-site tryptophans. When the collision complex is only weakened by the mutations and bromide binding to the mutants still occurs according to Scheme 2, K4 will show an increase. From eq 1 it is clear that this would lead to a decrease in kobs. The Thr197Ala mutant however shows almost similar kobs values in the high concentration range and the kobs values of the Phe294Ala mutant in this region display even a significant increase compared to the wild type. This implies that both mutations also affect k5 and/or k-5, the rate constants that represent halide transport to and from the active site. It is most likely that bromide binding at high concentrations still occurs via a two-step mechanism, since the apparent secondorder rate constant is not very high. When this rate constant is lower than 10-9 M-1‚s-1, the rate of diffusion-limited binding (43), this is generally believed to be caused by the occurrence of an initial collision complex (16). However, the possibility that such a weak collision complex is formed cannot be assessed kinetically as the enzyme is not stable in solutions containing over 1 M halide. Chloride Binding Kinetics. For wild-type DhlA the kinetic mechanism of chloride binding is similar to the mechanism for bromide. The only significant difference arises in the lower route, which does not saturate at high chloride concentrations (Figure 5). The kobs curves could therefore be fitted to a 4-step binding scheme (Scheme 2). Despite the absence of a kinetically detectable collision complex in the wild-type enzyme, the mutations do influence chloride binding kinetics (Figure 5). The deviation of kobs at low concentrations can be attributed to the decrease in k-3 and the increase in k1, like it was also observed with bromide binding. As with bromide binding, the decrease in k-3 is likely to cause the decrease in specific activity.
+
+
+
+
+
+Halide Transport via Collision Complex in DhlA
+
+
+
+
+
+Biochemistry, Vol. 38, No. 37, 1999 12059 strong. This is supported by the fact that halide binding at these positions was not observed in previous X-ray studies performed at lower halide concentrations (4, 32). The slow step in the lower route for halide binding is an isomerization of the halide-enzyme complex, during which the halide ion is transported to the active-site cavity. The distance from the two secondary binding sites Br2 and Br3 to the active-site position Br1 is about 16 Å for both sites. Visual inspection of the structure provides no obvious pathway leading from Br3 to Br1. Following the straight line from Br3 to Br1 would require the ion to move past the side chains of the apolar residues Leu187, Val219, and Pro57 and almost through the Glu56 side chain. The latter residue is firmly held in position by a hydrogen bond from the protonated Glu56 O 2 to Val219 O, which is present even at pH 8.2 (3). On the other hand, an ion moving along the direct path from Br2 to Br1 would pass along the side chains of Phe290, His289, and Trp175. These residues are at least partially aromatic and are known to be able to stabilize negatively charged groups such as sulfur and oxygen by an interaction with the positively charged edge of their aromatic rings (45). Using their rotational freedom, the side chains could exhibit a guiding function for the halide ion without disrupting the overall structure of the enzyme too much. Moreover, this path would closely follow the tunnel leading to the active site which was proposed to play a role in substrate import and product export (2) (Figure 3). The surface binding site Br2 is only about 8 Å away from the entrance of this tunnel. Since it is charged, the bromide ion is not likely to “diffuse” through the protein as can occur with apolar compounds (46). Hence it is likely that the halide transport path runs through the tunnel, as this would imply only a small deviation from the straight route from Br2 to Br1. In this way, the X-ray structure provides experimental evidence for the tunnel as a route for halide import and export. It is conceivable that substrate import follows the same path, although in this case formation of a collision complex was never observed (7). Evidence that the surface binding site Br2 is the location of the halide-enzyme collision complex is also provided by the characterization of the Thr197Ala and Phe294Ala mutants of haloalkane dehalogenase. In contrast to wild-type enzyme, at high halide concentration both mutants show a kobs of halide binding which increases linearly with increasing halide concentrations. The third mutant that was constructed, Phe294Trp, showed an aberrant binding behavior, both for substrate and halide. It is difficult to understand how the introduction of a larger residue at the enzyme’s surface is related to an apparent disturbance of the binding interaction between the active-site tryptophans and the substrate or halide, which are 16 Å away from the mutated residue. On the basis of calculations of molecular interaction fields between DhlA and halide ions, Krooshof et al. (47) suggested that Lys259 and Lys261 were likely candidates to form the collision complex. However, the X-ray structure presented in this article as well as site-directed mutants of these two residues (M. G. Pikkemaat, unpublished results) do not indicate the involvement of Lys259 or Lys261 in the formation of the collision complex. The function of the tunnel in halide transport is also supported by experiments of Krooshof et al. (47), who constructed an Asp260Asn-Asn148Glu double mutant which
+
+
+
+
+
+
+
+
+
+
+
+Both mutants show an increase of k6 as well as of k-6, which causes an increased kobs at high chloride concentrations. As with bromide binding, the lower route is not diffusion limited, so we can assume that the employed mechanism in this case is also accurately represented by eq 1. The increase of kobs with chloride binding of the mutant enzymes compared to the wild type, however, is more pronounced than in case of bromide binding. Since the collision complex is much weaker with chloride, the effect of weakening the collision complex (increasing K4) on kobs is expected to have a much smaller effect on chloride binding kinetics. The increase of kobs can therefore be mainly attributed to an increase of k5 and/or k-5. DISCUSSION Halide ion export is the last and rate-limiting step in the reaction catalyzed by haloalkane dehalogenase (7). Two different routes that operate in parallel have been identified for the reverse process (12), one of them involving a slow enzyme isomerization preceding rapid binding of the halide ion. This upper route in Scheme 1 is predominant at low halide concentration, while at high concentration import is dominated by a two-step mechanism, initiated by a rapid bimolecular binding step followed by a slow isomerization (lower route in Scheme 1). From thermodynamic analysis of these two reversible routes Krooshof et al. (44) suggested that the first step in the lower route involved the formation of a low-affinity surface-located collision complex. In the present article, we have studied the nature of this collision complex by crystallographic analysis of DhlA at high bromide concentration and by performing kinetic studies with site-directed mutants that were constructed on the basis of this structure. Inspection of the X-ray structure shows that two halidebinding sites are present on the surface of the enzyme in addition to the known halide-binding site between Trp125 and Trp175 in the active-site cavity (Figure 1) (32). The presence of those sites on the surface is in agreement with the observation that formation of the collision complex is a fast process. Both bromide ions are bound via only a few charge-polar and van der Waals interactions which, together with their high B-values, suggests that binding is not very
+
+
+
+
+
+12060 Biochemistry, Vol. 38, No. 37, 1999 showed a 12-fold increase in the rate of bromide binding and release. They proposed that this was caused by the repositioning of the negative charge from residue 260 to 148, which moves the charge further away from the tunnel, thus facilitating the passage of a halide ion. It is also consistent with the results of a thermodynamic analysis of the two halide-binding routes, from which it was concluded that this halide-transport step probably does not require large structural rearrangements, unlike the upper route in Scheme 1 which was proposed to start with a major conformational change (44). The kinetic pattern of halide binding to haloalkane dehalogenase is in agreement with the formation of an initial collision complex according to a rapid binding equilibrium, followed by a slow unimolecular enzyme isomerization step. This pattern of ligand binding is observed with many enzymes, although the structure of the collision complex, the kinetics of its formation, and the events that occur during binding are usually unknown (16, 48, 49). Since rapid-mixing methods are only capable of determining rates of up to 1000 s-1, the formation of a collision complex is often not kinetically accessible, and the observed binding step represents the subsequent unimolecular enzyme isomerization (16). Such a rearrangement can vary from repositioning of the substrate or minor side-chain motions to major conformational changes such as a loop closure (16, 48). The collision complex is also not easy to observe by structural methods, since the isomerization step often cannot be inhibited and from a thermodynamic point of view the final conformation is more favorable. In the case of haloalkane dehalogenase, the site forming the collision complex appeared to be located on the surface, which is in agreement with the observation that the complex is rapidly formed even though the active site is a buried internal cavity. Due to the separate locations of the internal binding site and the external collision complex site, simultaneous occupancy is possible, which allowed determination of the X-ray structure of the complex. Our results indicate that the conformational change leading to definitive binding probably is a translocation of the halide ion via the tunnel to the active-site tryptophans, and in this respect it resembles more the accession of an internal cavity by a small molecule or a halide translocation process in a carrier than a tight binding step involving side-chain motion or loop closure. The access of small molecules to an internal cavity in an enzyme has been proposed to follow a rugged energy profile along the binding coordinate, during which conformational fluctuations provide stabilizing interactions along the reaction coordinate (46, 50). A similar rugged landscape with various stabilized intermediates has been proposed for chloride ion transport in halorhodopsin (51). The observed collision complex in haloalkane dehalogenase may represent a relatively stable and rapidly formed first intermediate along such a binding pathway or the last intermediate if halide export is considered. ACKNOWLEDGMENT We gratefully acknowledge Dr. Jiri Damborsky from the Laboratory of Biomolecular Structure and Dynamics (Masaryk University, Brno, Czech Republic) for many stimulating discussions. REFERENCES
+
+
+
+
+
+Pikkemaat et al.
+
+
+
+
+
+
+
+
+
+
+
+Halide Transport via Collision Complex in DhlA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+BI990849W
+
+
+
+
+

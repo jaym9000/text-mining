@@ -1,0 +1,141 @@
+Phase: Impact
+Input: PMFSentence GroundedMolecularFunction Positive Negative Neutral NonNeutral Negation
+
+Options: control = all
+
+Rule:Impact1
+(
+	{PMFSentence contains GroundedMolecularFunction, 
+	PMFSentence contains Positive, 
+	!PMFSentence contains Negative}
+):impact
+--> {
+  gate.AnnotationSet impactSet = (gate.AnnotationSet)bindings.get("impact");
+  gate.Annotation impactAnn = (gate.Annotation)impactSet.iterator().next();
+  gate.FeatureMap features = Factory.newFeatureMap();
+
+  gate.AnnotationSet propertySet  = inputAS.get("GroundedMolecularFunction",impactSet.firstNode().getOffset(), impactSet.lastNode().getOffset());
+  gate.Annotation propertyAnn = (gate.Annotation)propertySet.iterator().next();
+  features.put("propertyMentionId",propertyAnn.getId());
+  
+  gate.AnnotationSet positiveSet  = inputAS.get("Positive",impactSet.firstNode().getOffset(), impactSet.lastNode().getOffset());
+  // OR THIS: gate.AnnotationSet positiveSet  = inputAS.get("Positive",impactAnn.getStartNode().getOffset(), impactAnn.getEndNode().getOffset());
+  gate.Annotation positiveAnn = (gate.Annotation)positiveSet.iterator().next();
+  features.put("directionMentionId",positiveAnn.getId());
+
+  features.put("direction","Positive");
+  features.put("rule","Impact1");
+
+  outputAS.add(impactSet.firstNode(),impactSet.lastNode(),"Impact",features);
+}
+//:impact.Impact = {direction = "Positive" rule = Impact1}
+
+
+Rule:Impact2
+(
+	{PMFSentence contains GroundedMolecularFunction, 
+	PMFSentence contains Negative, 
+	!PMFSentence contains Positive}
+):impact
+-->
+{
+  gate.AnnotationSet impactSet = (gate.AnnotationSet)bindings.get("impact");
+  gate.Annotation impactAnn = (gate.Annotation)impactSet.iterator().next();
+  gate.FeatureMap features = Factory.newFeatureMap();
+
+  gate.AnnotationSet propertySet  = inputAS.get("GroundedMolecularFunction",impactSet.firstNode().getOffset(), impactSet.lastNode().getOffset());
+  gate.Annotation propertyAnn = (gate.Annotation)propertySet.iterator().next();
+  features.put("propertyMentionId",propertyAnn.getId());
+  
+  gate.AnnotationSet positiveSet  = inputAS.get("Negative",impactSet.firstNode().getOffset(), impactSet.lastNode().getOffset());
+  // OR THIS: gate.AnnotationSet positiveSet  = inputAS.get("Positive",impactAnn.getStartNode().getOffset(), impactAnn.getEndNode().getOffset());
+  gate.Annotation positiveAnn = (gate.Annotation)positiveSet.iterator().next();
+  features.put("directionMentionId",positiveAnn.getId());
+
+  features.put("direction","Negative");
+  features.put("rule","Impact2");
+
+  outputAS.add(impactSet.firstNode(),impactSet.lastNode(),"Impact",features);
+} 
+//:impact.Impact = {direction = "Negative" rule = Impact2}
+
+Rule:Impact3
+(
+	{PMFSentence contains GroundedMolecularFunction, 
+	PMFSentence contains Neutral,
+	!PMFSentence contains Positive,
+	!PMFSentence contains Negative}
+):impact -->
+{
+  gate.AnnotationSet impactSet = (gate.AnnotationSet)bindings.get("impact");
+  gate.Annotation impactAnn = (gate.Annotation)impactSet.iterator().next();
+  gate.FeatureMap features = Factory.newFeatureMap();
+
+  gate.AnnotationSet propertySet  = inputAS.get("GroundedMolecularFunction",impactSet.firstNode().getOffset(), impactSet.lastNode().getOffset());
+  gate.Annotation propertyAnn = (gate.Annotation)propertySet.iterator().next();
+  features.put("propertyMentionId",propertyAnn.getId());
+  
+  gate.AnnotationSet positiveSet  = inputAS.get("Neutral",impactSet.firstNode().getOffset(), impactSet.lastNode().getOffset());
+  // OR THIS: gate.AnnotationSet positiveSet  = inputAS.get("Positive",impactAnn.getStartNode().getOffset(), impactAnn.getEndNode().getOffset());
+  gate.Annotation positiveAnn = (gate.Annotation)positiveSet.iterator().next();
+  features.put("directionMentionId",positiveAnn.getId());
+
+  features.put("direction","Neutral");
+  features.put("rule","Impact3");
+
+  outputAS.add(impactSet.firstNode(),impactSet.lastNode(),"Impact",features);
+}
+//--> :impact.Impact = {direction = "Neutral" rule = Impact3}
+
+Rule:Impact4
+(
+	{PMFSentence contains GroundedMolecularFunction,
+	PMFSentence contains NonNeutral,
+	PMFSentence contains Negation,
+	!PMFSentence contains Positive,
+	!PMFSentence contains Negative
+	}
+):impact -->
+{
+  gate.AnnotationSet impactSet = (gate.AnnotationSet)bindings.get("impact");
+  gate.Annotation impactAnn = (gate.Annotation)impactSet.iterator().next();
+  gate.FeatureMap features = Factory.newFeatureMap();
+
+  gate.AnnotationSet propertySet  = inputAS.get("GroundedMolecularFunction",impactSet.firstNode().getOffset(), impactSet.lastNode().getOffset());
+  gate.Annotation propertyAnn = (gate.Annotation)propertySet.iterator().next();
+  features.put("propertyMentionId",propertyAnn.getId());
+ /*
+  * direct mention missing (TODO)
+  */ 
+  features.put("direction","PossibleNeutral");
+  features.put("rule","Impact4");
+
+  outputAS.add(impactSet.firstNode(),impactSet.lastNode(),"Impact",features);
+}
+//--> :impact.Impact = {direction = "PossibleNeutral" rule = Impact4}
+
+Rule:Impact5
+(
+	{PMFSentence contains GroundedMolecularFunction, 
+	PMFSentence contains Negative, 
+	PMFSentence contains Positive}
+):impact -->
+{
+  gate.AnnotationSet impactSet = (gate.AnnotationSet)bindings.get("impact");
+  gate.Annotation impactAnn = (gate.Annotation)impactSet.iterator().next();
+  gate.FeatureMap features = Factory.newFeatureMap();
+
+  gate.AnnotationSet propertySet  = inputAS.get("GroundedMolecularFunction",impactSet.firstNode().getOffset(), impactSet.lastNode().getOffset());
+  gate.Annotation propertyAnn = (gate.Annotation)propertySet.iterator().next();
+  features.put("propertyMentionId",propertyAnn.getId());
+ /*
+  * direct mention missing (TODO)
+  */ 
+  features.put("direction","Uncertain");
+  features.put("rule","Impact5");
+
+  outputAS.add(impactSet.firstNode(),impactSet.lastNode(),"Impact",features);
+}
+//--> :impact.Impact = {direction = "Uncertain" rule = Impact5}
+
+

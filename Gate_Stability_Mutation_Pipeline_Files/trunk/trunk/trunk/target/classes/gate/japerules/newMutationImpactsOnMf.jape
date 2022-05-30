@@ -1,0 +1,198 @@
+Phase: MutationImpactRelationExtraction
+Input: Impact
+
+Options: control = all
+
+Rule:MutationImpactRelationRule1
+(
+	{Impact}
+):impact
+-->
+{
+	try {
+		System.out.println("Entry to ...");
+		/**Weights
+		*
+		*/
+		double alfa = 1.0;
+		double beta = 1.0;
+		double gamma = 1.0;
+		double delta = 1.0;
+		
+		//retrieve impact
+		Annotation impactA = (Annotation)((AnnotationSet)bindings.get("impact")).iterator().next();
+
+		//retrieve impact sentence
+		Annotation sentence = (Annotation)inputAS.get("Impact",impactA.getStartNode().getOffset(),impactA.getEndNode().getOffset()).iterator().next();
+
+
+		//retrieve related mutations
+		boolean mutationsFound = false;
+		int sentenceDistance = 0;
+		Long[] mutantSentence = new Long[2];
+		
+		List<Long[]> mutants = new ArrayList<Long[]>();
+
+		System.out.println("Impact processing ...");
+		
+
+// Artjom: test
+                Map<String,String> pac2sequence = new HashMap<String,String>();
+	       	AnnotationSet mutatedProteins = doc.getAnnotations().get("MutatedProtein");
+
+                for(Annotation mutatedProtein : mutatedProteins ){
+                    pac2sequence.put((String)mutatedProtein.getFeatures().get("pac"),
+                                     (String)mutatedProtein.getFeatures().get("sequence"));
+                }
+
+		while(!mutationsFound && sentenceDistance < 4) {
+			//check current sentence
+			AnnotationSet mutationAS = inputAS.get("GroundedPointMutation",sentence.getStartNode().getOffset(),sentence.getEndNode().getOffset());
+			System.out.println("mutationAS.size(): "+mutationAS.size());
+
+			//if mutations exist
+			if(mutationAS.size() > 0) {
+				System.out.println("mutationAS.size() > 0");
+				//annotate each of them as a ProteinMutant.
+				for(Annotation mutationA : mutationAS) {
+					System.out.println("next mutationA");
+//System.out.println("0: "+doc.getFeatures());
+//System.out.println("1: "+doc.getFeatures().get("pacs"));
+
+////if(doc.getFeatures().get("pacs")==null)System.out.println("2: ");
+/////if(doc.getFeatures().get((String)doc.getFeatures().get("pacs"))==null){
+//if(doc.getFeatures().get("pacs")==null)System.out.println("2: ");
+if(pac2sequence.size()==0){
+System.out.println("NO SEQUENCE in pacs!!! ");
+continue;
+}
+
+					//String wildtypeSequence = new String((String)doc.getFeatures().get((String)doc.getFeatures().get("pacs")));
+					
+
+					String[] split1 = ((String)mutationA.getFeatures().get("isGroundedTo")).split("__");
+
+                                        //// ListString[] split1 = ((String)mutationA.getFeatures().get("isGroundedTo")).split("__");
+
+                                        String pacccc  = split1[0];
+                                        System.out.println("paccc: "+pacccc);
+                                        pacccc = pacccc.split("_")[0];
+                                        String wildtypeSequence = (String) pac2sequence.get(pacccc);
+
+					String sequence = new String(wildtypeSequence);
+					
+					int mutationPos = (Integer)mutationA.getFeatures().get("hasCorrectPosition")-1;
+					String mutantResidue = (String)mutationA.getFeatures().get("hasMutantResidue");
+					sequence = new String(sequence.substring(0,mutationPos)+mutantResidue+sequence.substring(mutationPos+1));
+					
+					FeatureMap features = Factory.newFeatureMap();
+					features.put("hasSequence",sequence);
+					features.put("mutatesSequence",wildtypeSequence);
+					features.put("mutatesProteinWithSwissProtId",(String)doc.getFeatures().get("pacs"));
+
+					//System.out.println();
+					// Procedure to eleiminate duplicates of PointMutaions
+					AnnotationSet previousMutants = outputAS.get("ProteinMutant",mutationA.getStartNode().getOffset(),mutationA.getEndNode().getOffset());
+					boolean mutantAlreadyExists = false;
+					for(Annotation previousMutant : previousMutants) {
+						if(previousMutant.getEndNode().getOffset() == mutationA.getEndNode().getOffset() && 
+							previousMutant.getStartNode().getOffset() == mutationA.getStartNode().getOffset()) {
+							mutantAlreadyExists = true;
+							System.out.println("mutantAlreadyExists = true;");
+						}else{
+						  System.out.println("else mutantAlreadyExists = true;");
+						}
+					}
+					if(!mutantAlreadyExists) {
+						outputAS.add(mutationA.getStartNode().getOffset(),mutationA.getEndNode().getOffset(),"ProteinMutant",features);
+						System.out.println("!mutantAlreadyExists");
+
+
+						mutants.add(new Long[] {mutationA.getStartNode().getOffset(),mutationA.getEndNode().getOffset()});
+					}
+					
+				}
+
+				//System.out.println("");
+				
+				Object tempNum = doc.getFeatures().get("numberOfImpactMutationRelations");
+				if(tempNum == null) {
+					doc.getFeatures().put("numberOfImpactMutationRelations",mutationAS.size());
+				}
+				else {
+					doc.getFeatures().put("numberOfImpactMutationRelations",((Integer)tempNum)+mutationAS.size());
+				}
+				
+				mutantSentence[0] = sentence.getStartNode().getOffset();
+				mutantSentence[1] = sentence.getEndNode().getOffset();
+				mutationsFound = true;
+			}
+			//if mutations doesnt exist
+			else {
+				//move to a more previous sentence
+				Annotation tempSentence = sentence;
+				try {
+					sentence = (Annotation)inputAS.get("Sentence",sentence.getStartNode().getOffset()-10,sentence.getStartNode().getOffset()-5).iterator().next();
+				} catch(Exception e) {
+					sentence = tempSentence;
+					sentenceDistance = 4;
+				}
+				sentenceDistance++;
+			}
+		}
+
+		//if mutationsFound
+		if(mutationsFound) {
+			for(Long[] mutant : mutants) {
+				
+				//calculate overall score
+				//FeatureMap features_o = impactA.getFeatures();
+
+				//FeatureMap features = FeatureMap fm = (FeatureMap)((SimpleFeatureMapImpl)impactA.getFeatures()).clone();
+
+				FeatureMap features = Factory.newFeatureMap();
+				features.putAll(impactA.getFeatures());
+
+				String mutantString = doc.getContent().toString().substring(mutant[0].intValue(), mutant[1].intValue()).trim();
+				
+				double aScore = (Double)features.get("score");
+				Annotation mfA = (Annotation)inputAS.get("GroundedMolecularFunction",impactA.getStartNode().getOffset(),impactA.getEndNode().getOffset()).iterator().next();
+				double mfgScore = (Double)mfA.getFeatures().get("groundingScore");
+				double mutantDistanceScore = 1.0/((double)sentenceDistance+1);
+				
+				//add score as feature.
+				double score = (alfa*aScore+beta*mutantDistanceScore/*gamma*inDocumentPositionScore*/+delta*mfgScore)/(alfa+beta/*gamma*/+delta);
+
+				features.put("mutantString",mutantString);
+				features.put("mutant",mutant);
+				
+				features.put("hasRelevanceScore",Double.toString(score));
+
+				features.put("affectProperty",((String)mfA.getFeatures().get("isGroundedTo")).replace(":","_"));
+				 
+				// Artjom: gate output cleaning
+				Annotation mutantAnn = (Annotation)inputAS.get("GroundedPointMutation",mutant[0],mutant[1]).iterator().next();
+				features.put("groundedPointMutationMentionId",mutantAnn.getId());
+
+				features.put("impactMentionId",impactA.getId());
+
+
+
+				System.out.println("MUTANT: "+doc.getContent().toString().substring(mutant[0].intValue(), mutant[1].intValue()).trim());
+				if(mutant[0]<impactA.getStartNode().getOffset()) {
+					//System.out.println("MUTANT OUT: "+ mutantString);
+					outputAS.add(mutant[0],impactA.getEndNode().getOffset(),"Mutation-Impact",features);
+				}
+				else {
+					//System.out.println("MUTANT OUT_2: "+ mutantString);
+					//System.out.println("MUTANT IN FEATURES: "+ features.get("mutantString"));
+					outputAS.add(impactA.getStartNode().getOffset(),impactA.getEndNode().getOffset(),"Mutation-Impact",features);
+				}
+			}
+		}else{
+		  System.out.println("No mutants found for ...");
+		}
+	} catch(Exception e) {
+		e.printStackTrace();
+	}
+}

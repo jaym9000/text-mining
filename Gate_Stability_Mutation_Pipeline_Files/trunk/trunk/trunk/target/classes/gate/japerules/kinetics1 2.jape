@@ -1,0 +1,48 @@
+Phase:kVar1
+Input: Token SpaceToken
+
+Options: control = appelt
+
+Rule:km
+(
+	{ Token.string ==~ "(k|K)(m|M)" } |
+	{ Token.string ==~ "k|K" }
+	{ SpaceToken }
+	{ Token.string ==~ "m|M" } |
+
+	{ Token.string == "Michaelis"}
+	{ SpaceToken } 
+	{ Token.string == "constant"} |
+
+	{ Token.string ==~ "Michaelis"}
+	{ SpaceToken } 
+	{ Token.string ==~ "constant"} |
+
+	{ Token.string ==~ "Michaelis-"}
+	{ Token.string ==~ "Menten"}
+	{ SpaceToken }
+	{ Token.string ==~ "constant"} |
+
+	{ Token.string == "Michaelis-"}
+	{ Token.string == "Menten"}
+	{ SpaceToken }
+	{ Token.string == "constants"} |
+
+	{ Token.string == "Michaelis-"}
+	{ Token.string == "Menten"}
+	{ SpaceToken }
+	{ Token.string == "constant"}
+):km
+-->
+		:km.kVar = {kind = "Km"}
+		
+Rule:kcat
+(
+	{ Token.string ==~ "k((cat)|(CAT)|(Cat))" } |
+	{ Token.string == "k" }
+	{ SpaceToken }
+	{ Token.string ==~ "(cat)|(CAT)|(Cat)" }
+
+):kcat
+-->
+		:kcat.kVar = {kind = "kcat"}

@@ -1,0 +1,34 @@
+Phase: UncertainImpactOKVResolver
+Input: ImpactOKV
+
+Rule:UncertainImpactOKVResolver1
+(
+	{ImpactOKV.direction == "Uncertain"}
+):refinedImpactOKV
+-->
+{
+	Annotation tempA = (gate.Annotation)((gate.AnnotationSet)bindings.get("refinedImpactOKV")).iterator().next();  
+	Annotation impactA = (gate.Annotation)inputAS.get("ImpactOKV",tempA.getStartNode().getOffset(),tempA.getEndNode().getOffset()).iterator().next();
+
+	AnnotationSet positiveAS = inputAS.get("Positive",tempA.getStartNode().getOffset(),tempA.getEndNode().getOffset());
+	AnnotationSet negativeAS = inputAS.get("Negative",tempA.getStartNode().getOffset(),tempA.getEndNode().getOffset());
+	Annotation kv = (gate.Annotation)inputAS.get("KineticVariableMention", tempA.getStartNode().getOffset(),tempA.getEndNode().getOffset()).iterator().next();
+	
+	long kvStart =  kv.getStartNode().getOffset();
+	//compare start nodes to measure which one that is closest to the kinetic variable.
+	long closestPositive = 9999;
+	long closestNegative = 9999;
+	for(Annotation positiveA : positiveAS) {
+		closestPositive = Math.min(Math.abs(positiveA.getStartNode().getOffset()-kvStart),closestPositive);
+	}
+	for(Annotation negativeA : positiveAS) {
+		closestNegative = Math.min(Math.abs(negativeA.getStartNode().getOffset()-kvStart),closestNegative);
+	}
+	
+	if(closestPositive < closestNegative) {
+		impactA.getFeatures().put("direction", "Positive");
+	}
+	else {
+		impactA.getFeatures().put("direction","Negative");
+	}
+}

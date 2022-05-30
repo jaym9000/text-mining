@@ -1,0 +1,222 @@
+FEBS 21668
+
+
+
+
+
+
+
+
+
+
+
+Identi¢cation of the catalytic triad in the haloalkane dehalogenase from Sphingomonas paucimobilis UT26
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Abstract The haloalkane dehalogenase from Sphingomonas paucimobilis UT26 (LinB) is the enzyme involved in the Qhexachlorocyclohexane degradation. This enzyme hydrolyses a broad range of halogenated aliphatic compounds via an alkylenzyme intermediate. LinB is believed to belong to the family of K/L-hydrolases which employ a catalytic triad, i.e. nucleophilehistidine-acid, during the catalytic reaction. The position of the catalytic triad within the sequence of LinB was probed by a sitedirected mutagenesis. The catalytic triad residues of the haloalkane dehalogenase LinB are proposed to be D108, H272 and E132. The topological location of the catalytic acid (E132) is after the L-strand six which corresponds to the location of catalytic acid in the pancreatic lipase, but not in the haloalkane dehalogenase of Xanthobacter autotrophicus GJ10 which contains the catalytic acid after the L-strand seven. z 1999 Federation of European Biochemical Societies. Key words: K,L-Hydrolase; Active site mutant; Catalytic triad; Deamidation; Haloalkane dehalogenase; Xanthobacter autotrophicus GJ10
+
+
+
+
+
+1. Introduction Haloalkane dehalogenase LinB is the enzyme isolated from a Q-hexachlorocyclohexane degrading bacterial strain Sphingomonas paucimobilis UT26 [1]. This enzyme participates in the biochemical pathway enabling the microorganism to grow on Q-hexachlorocyclohexane as the sole carbon and energy source [2,3]. The LinB enzyme catalyses conversion of 1,3,4,6-tetrachloro-1,4-cyclohexadiene to 2,5-dichloro-2,5-cyclohexadiene1,4-diol via 2,4,5-trichloro-2,5-cyclohexadien-1-ol. In addition to cyclic dienes, LinB also converts a broad range of halogenated alkanes and alkenes to their corresponding alcohols [1]. The dehalogenation reaction is catalysed without the requirement of oxygen or any other cofactor. The broadening substrate speci¢city of LinB could make this protein of interest for bioremediation purposes. For example, neither LinB nor any other dehalogenase known to date can e¤ciently catalyse the dehalogenation reaction of the important pesticides 1,2-dichloropropane and 2-chloropropane, which are consequently recalcitrant under aerobic conditions. The catalysis of 1,2-dichloropropane and 2-chloropropane by hydrolytic dehalogenases is possible from the point of view of the reaction mechanism as indicated by quantitative structure-biodegradability relationships studies [4,5]. Modi¢cation of the geometry and composition of an active
+
+
+
+
+
+LinB site could possibly lead more e¤cient binding and catalysis of these chlorinated propanes. Knowledge of the tertiary structure of a protein is the best starting point for rational re-design by site-directed mutagenesis. The 3D structure of LinB has not been experimentally determined as yet, but it was predicted by the method of homology modelling [6] based on its similarity to haloalkane dehalogenase from the bacterium Xanthobacter autotrophicus GJ10 (DhlA). The 3D structure of the haloalkane dehalogenase from X. autotrophicus GJ10 is known from X-ray crystallography [7]. Haloalkane dehalogenase LinB is expected to contain a main and cap domain and it presumably belongs to the family of K/L-hydrolases [8]. All known K/L-hydrolases have a highly conserved arrangement of their catalytic residues: nucleophile-histidine-acid. In order to con¢rm the K,L-hydrolase fold of LinB dehalogenase and to validate the homology model for further mutagenesis studies we introduced several point mutations into its structure in positions in which catalytic residues were expected. Here we describe the construction of these mutants and their characterisation. 2. Materials and methods
+
+
+2.1. Materials All chemicals were purchased from Sigma-Aldrich (Milwaukee, WI, USA). The enzymes used for DNA manipulations were obtained from Takara Shuzo Co. (Kyoto, Japan). The mutagenesis primers were obtained from Espec-oligo Service Co. (Tsukuba, Japan). The strain used in this study is Escherichia coli HB101 [T. Maniatis, E.F. Fritsch, and J. Sambrook (1982) Molecular Cloning: A Laboratory Manual, Cold Spring Harbor Laboratory, Cold Spring Harbor, NY]. 2.2. Site-directed mutagenesis Mutagenesis of LinB was performed by using the principle a of LA PCR in vitro mutagenesis kit (TaKaRa Shuzo Co., Kyoto, Japan), according to the provided protocol except for using KOD (King of DNA) polymerase (Toyobo Co., Osaka, Japan) whose ¢delity is very high. All of the nucleotide sequences of mutants were con¢rmed by the dideoxy-chain termination method with an automated DNA sequencer (LI-COR model 4000L, Aloka Co., Tokyo, Japan). The oligo nucleotides used are as follows: D108N (5P-GGC GGA CCC CCA GTT ATG CAC GAC CAG AAC-3P), D108A (5P-GGC GGA CCC CCA GGC ATG CAC GAC CAG AAC-3P), E132Q (5PGGC GAT CGC TTVGVCAT ATA GGC-3P) H272A (5P-CTC CTG GAT GAA AVGCVGGC GCC TGC GAC-3P), E244Q (5PGGC TCC CGG CTG GGC GTT GAT-3P). 2.3. Overexpression of LinB mutants in E. coli To overproduce LinB mutants in E. coli, plasmids for overexpression were constructed from pAQN, which has the same structure as pAQI [9] except for di¡erences in the aqualysin I-coding region. In these plasmids, linB mutants are transcribed by the tac promoter (P tac) under the control of laclq . E. coli HB101 containing these plasmids were cultured in 2 litres of
+
+
+
+
+
+*Correspondence author. Fax: (420) (5) 4112 9506. E-mail: jiri@chemi.muni.cz
+
+
+
+
+
+0014-5793/99/$20.00 ß 1999 Federation of European Biochemical Societies. All rights reserved. PII: S 0 0 1 4 - 5 7 9 3 ( 9 9 ) 0 0 1 9 9 - 4
+
+
+
+
+
+178
+
+
+
+
+
+è et al./FEBS Letters 446 (1999) 177^181 K. Hynkova
+
+
+
+
+
+
+
+
+
+
+
+n.a., not applicable at 100 mM substrate concentration.
+
+
+
+
+
+Luria broth (LB) without sodium chloride at 30³C. Cells were harvested (10 g of wet weight) after induction with 1 mM isopropyl-L-Dthiogalactopyranoside (IPTG), washed in 50 mM potassium phosphate bu¡er (pH 7.5), and resuspended in the bu¡er (50 mM potassium phosphate bu¡er (pH 7.5) containing 1 mM 2-mercaptoethanol and 10% glycerol). 2.4. Puri¢cation of LinB mutants The cells were disrupted by sonication (Soni¢er 250; Branson, Danbury, CT, USA). After centrifugation at 100 000Ug for 1 h, the supernatant was used as a crude extract. It was further puri¢ed by a DEAE-Toyopearl 650M column (Tosho, Tokyo, Japan), and a Sephacryl S-200 column (Pharmacia, Uppsala, Sweden) with Bio Logic LP system (Bio-Rad). Fractions at which LinB wild-type protein was eluted were collected. A major one protein band was observed on SDS-polyacrylamide gel electrophoresis after two steps of puri¢cation. The amount of protein was determined by the protein assay kit (Bio-Rad), with bovine serum albumin as a standard. 2.5. Circular dichroism spectra Circular dichroism (CD) spectra were measured with a JASCO J-720 spectropolarimeter at room temperature. The cells used were 1 and 0.1 cm light paths for wavelengths of 250^320 and 190^250 nm, respectively. 0.3^0.4 mg/ml of enzymes in 50 mM potassium phosphate bu¡er (pH 7.5) were used. 2.6. Michaelis-Menten kinetics Michaelis-Menten kinetic constants were determined by initial-velocity measurements. Gas chromatography was used for the determination of the substrate and product concentration. A dehalogenation reaction was performed in 25 ml Reacti-Flasks closed by Mininert Valves. 10 ml of glycine bu¡er (pH 8.6) was mixed with seven di¡erent substrate concentrations. The largest concentration of substrate in 10 ml glycine bu¡er served also as an abiotic control. The reaction mixture was equilibrated for 30 min in a shaking water bath at 37³C prior to the reaction initiation. Enzymatic reaction was initiated by adding 100 Wl of the enzyme preparation. The reaction progress was monitored by withdrawing 0.5 ml samples at 0, 20 and 30 min using a syringe needle to reduce evaporation of the substrate from the reaction mixture. The reaction mixture samples were mixed with 0.5 ml of methanol to terminate the reaction and directly applied on gas chro
+
+
+
+
+matography with a £ame ionisation detector (Hewlett Packard 6890). The capillary column DB-FFAP 30 mU0.25 mmU0.25 Wl (J and W Scienti¢c) was used for separation. Samples were injected by using a split technique (split ratio 50:1). The temperature program was isothermal and was dependent on the character of analysed compounds. Parallel determination of the substrate and product concentration in the same water-methanol sample was performed for construction of a calibration curve. Kw and kt values with their standard deviations were calculated by means of the program Leonora [10] by the method of least squares with relative weighting. 2.7. Activity measurements Dehalogenation reaction rates were determined for nine di¡erent substrates using the method of gas chromatography. A dehalogenation reaction was performed in 25 ml Reacti-Flasks closed by the Mininert Valves. 10 ml glycine bu¡er and 6.4 Wl of substrate was equilibrated at 37³C for 30 min in a shaking water bath prior to the reaction initiation. Enzymatic reaction was initiated by adding 100 Wl enzyme (the concentrations of wild-type enzyme and mutant proteins were the same, 0.33 mg/ml). The progress of the reaction was monitored at 10, 20 and 30 min using the same procedure as described in Section 2.6. The reaction rates were quanti¢ed by a slope of the relationship between the product concentration and time. Dehalogenation activity was expressed in percentages, where the rate of reaction of wild-type enzyme is 100% for each substrate.
+
+
+
+
+
+3. Results 3.1. Construction and puri¢cation of LinB mutants The catalytic triad in DhlA consists of amino acid residues Asp-124, His-289 and Asp-260. The corresponding residues in the homology model of LinB are Asp-108, His-272 and Glu132 [6]. The same residues were proposed to act as the catalytic triad in LinB by Krooshof and coworkers [11]. On the other hand, Fetzner and Lingens [12] suggested that it is the residue E244 which ful¢ls the role of acid in the catalytic triad of LinB. Five point mutants were prepared to test these proposals and to identify the catalytic triad in LinB dehaloge
+
+
+
+
+
+
+
+
+
+
+è et al./FEBS Letters 446 (1999) 177^181 K. Hynkova
+
+
+
+
+
+179
+
+
+
+
+
+
+
+
+
+
+
+nase: D108N and D108A (putative nucleophile mutants), H272A (putative base mutant), E132Q and E244Q (putative catalytic acid mutant). The position of these residues in the 3D model of LinB is shown in Fig. 1. The mutants were constructed by the method of site-directed mutagenesis and puri¢ed to homogeneity (Fig. 2). The integrity of each mutant structure was tested by circular dichroism spectroscopy. The CD spectra of the wild-type dehalogenase and its two mutants are shown in Fig. 3. Like the wild-type dehalogenase, point mutants had the double ellipticity minimum at 210 and 220 nm typical of K-helical content. The CD spectra of the wild-type and ¢ve mutant proteins are essentially the same indicating that the backbone polypeptide chain of constructed mutants had a very similar conformation. It was concluded that the single point substitutions did not disturb the overall structure of the protein mutants. 3.2. Activities of mutant proteins The puri¢ed wild-type and mutant enzymes were examined for their kinetic characteristics. 1-Chlorobutane was selected as a substrate because it easily undertakes the dehalogenation reaction by the wild-type enzyme and is often used as a reference compound for characterisation of the haloalkane dehalogenases [5]. No activity was observed for the mutant enzymes D108A, E132Q and H272A even at very high
+
+
+
+
+
+
+
+
+
+
+
+substrate concentration (100 mM), while the mutants D108N and E244Q showed signi¢cant activity Table 1. The activity of D108N was about 44% and E244Q 36% of the wild-type enzyme as deduced from the kt values. The activity of D108N and E244Q enzymes was determined with the group of nine di¡erent substrates to test whether the reduction in activity observed is substrate-dependent. The reaction rates were quanti¢ed by a slope of the relationship between the product concentration and time (Fig. 4). The rates obtained with the mutants are expressed as the percentage activity of the wild-type enzyme in Table 2. The mutant enzyme D108N expressed in an average of 58% of the activity of the wild-type enzyme and the mutant enzyme, while E244Q showed in an average of the 38% activity of the wild-type enzyme. The decrease in activity of the mutants E244Q and D108N was very similar for di¡erent substrates, with the standard deviation of 7% for D108N and 5% for E244Q. Activity reduction is independent of the substrates shape, size or number of their substituents. 4. Discussion 4.1. Identi¢cation of the catalytic triad of LinB The objective of this work was to identify the catalytic residues in the haloalkane dehalogenase LinB and to con¢rm
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Activities express the percentage of the rates obtained with the wildtype enzyme.
+
+
+
+
+
+180
+
+
+
+
+
+è et al./FEBS Letters 446 (1999) 177^181 K. Hynkova
+
+
+
+
+
+
+
+
+
+
+
+the structural fold of this enzyme. The catalytic triad of LinB was proposed from the model of its structure obtained from homology modelling. This model was based on the X-ray structure of the haloalkane dehalogenase from X. autotrophicus GJ10 (DhlA). Two out of three catalytic residues are conserved in both enzymes, Asp-108 in LinB corresponds to DhlA nucleophile Asp-124, while His-272 of LinB corresponds to DhlA histidine His-289 (Fig. 5). The amino acid sequence is strongly conserved in the regions surrounding these residues [11,13]. The position of the catalytic acid of LinB is less obvious, and two possible locations were consid
+
+
+
+
+ered, E132 and E244. Overall, ¢ve di¡erent point mutants of LinB have been constructed, puri¢ed and tested for activity: D108N, D108A, E132Q, E244Q and H272A. The mutants D108A, E132Q and H272A were observed to be inactive in the dehalogenation experiments. These three amino acids are essential for the catalytic reaction and presumably form the catalytic triad of LinB. No activity was expected either with the mutant D108N. However, approximately 58% activity of the wild-type enzyme was observed with this mutant. The mutant enzyme D108N was most probably reactivated by deamidation yielding the wild-type enzyme. The mechanism of deamidation was previously described by Priest and coworkers who studied the D124N nucleophile mutant of the haloalkane dehalogenase DhlA [14]. Priest suggested that the deamidation is caused by a direct attack by the activated water molecule on the side-chain amide carbon of replaced asparagine. This highly nucleophilic water molecule is located close to the carboxyl moiety of the nucleophilic catalytic residues and in the wild-type enzyme is involved in the hydrolytic dehalogenation mechanism. Reduced activity indicates that not all enzyme mutants undertake the deamidation process. The amino acid E244 was not essential for the LinB activity and apparently is not the third catalytic amino acid of the LinB enzyme. The deamination reaction observed with the D108N mutant is not expected to occur in this mutant since no nucleophilic water molecule occurs in its surroundings. The signi¢cant reduction in the dehalogenation activity of the E244Q mutant, however, suggests that this residue still plays some important role in the function of LinB. Reduced activity, which is an average of 38% of the activity of the wild-type enzyme, is about the same for substrates with di¡erent chainlength, overall shape and the number of substituents. 4.2. Topological position of the catalytic triad in LinB The composition of the catalytic residues in DhlA and LinB is similar to that which is found in serine proteases, lipases, and several other K/L-hydrolase fold enzymes [8,15]. K,L-Hydrolases generally show very little sequence similarity. However they share the same pattern in the composition of secondary elements and the same arrangement of the catalytic
+
+
+
+
+
+
+
+
+
+
+
+è et al./FEBS Letters 446 (1999) 177^181 K. Hynkova
+
+
+
+
+
+181 Acknowledgements: This project was ¢nancially supported by the Czech Grant Agency (Postdoc 203/97/P149), the Czech Ministry of Education (ME276/1998) and by a Grant-in-Aid for Scienti¢c Research from the Ministry of Education, Science, and Culture of Japan. A part of this work was performed in the facilities of the Biotechnology Research Center, The University of Tokyo. Financial support is gratefully acknowledged.
+
+
+
+
+
+residues. The order of the catalytic triad in the primary sequence of these proteins is nucleophile-histidine-acid. Without exception, the nucleophile is located at the end of the ¢fth Lstrand and the histidine residue belongs to a loop that follows L-strand eight of the L-sheet. In all but one K/L-hydrolase, the catalytic acid comes from a reverse turn following strand seven [8,16]. Schrag and coworkers noted that the acidic residue in pancreatic lipase `migrated' to a bend one strand closer to the nucleophile and is positioned after the L-strand six [17]. The authors speculated that the direction of this migration was from strand seven to strand six rather than the opposite direction. This proposal was based on the fact that the enzymes with the acid after the L-strand six are mammalian compared to the enzymes with the acid after the L-strand six which are bacterial, fungal, plant and ¢sh enzymes. The catalytic acid of the haloalkane dehalogenase from Sphingomonas paucimobilis UT26 is located after the L-strand six (Fig. 5). There are at least two other bacterial hydrolases, i.e. haloalkane dehalogenase of Rhodococcus rhodochrous NCIMB 13064 [18], and putative haloalkane dehalogenase of Mycobacterium tuberculosis H37Rv [13] which has a catalytic acid located after the L-strand six. The fact that bacterial enzymes exist also with the catalytic acid located after strand six creates an uncertainty about the direction of migration. 4.3. Proposal of catalytic mechanism of LinB dehalogenase The catalytic triad of LinB was identi¢ed within this study. It is proposed, that the LinB catalyses hydrolytic dehalogenation via the same reaction mechanism as DhlA [15,19,20]. The putative reaction mechanism of LinB is schematically shown in Fig. 6. A108 is expected to act as a nucleophile causing release of the halide ion and formation of an intermediate ester. A hydrolytic water molecule, which may be located near the nucleophile, cleaves the covalent ester intermediate. This water molecule is activated by H272 acting as a base catalyst prior to hydrolysis. E132 keeps H272 in proper orientation and stabilises a positive charge that develops on histidine imidazole ring during the reaction. Catalytic residues all together act as an electronic pump by stabilising reaction intermediates. In future research we will focus on identi¢cation of the other amino acids which are located inside the enzyme active site and could be important in the catalytic reaction and speci¢city of the haloalkane dehalogenase LinB.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

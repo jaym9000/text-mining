@@ -1,0 +1,566 @@
+lable at ScienceDirect
+Biochimie 131 (2016) 20e28Contents lists avaiBiochimie
+journal homepage: www.elsevier .com/locate/b iochiResearch paperStructural features and activity of Brazzein and its mutants upon
+substitution of a surfaced exposed alanine
+Parisa Ghanavatian a, Khosrow Khalifeh b, Vahab Jafarian a, *
+a Laboratory of Biochemistry, Department of Biology, Faculty of Sciences, University of Zanjan, Zanjan, Iran
+b Laboratory of Biophysics, Department of Biology, Faculty of Sciences, University of Zanjan, Zanjan, Irana r t i c l e i n f o
+Article history:
+Received 7 March 2016
+Received in revised form
+6 September 2016
+Accepted 6 September 2016
+Available online 8 September 2016
+Keywords:
+Brazzein
+Site-directed mutagenesis
+Sweetness
+Docking
+Equilibrium
+Interaction* Corresponding author.
+E-mail address: V.Jafarian@znu.ac.ir (V. Jafarian).
+http://dx.doi.org/10.1016/j.biochi.2016.09.006
+0300-9084/© 2016 Elsevier B.V. and Société Françaisea b s t r a c t
+Brazzein (Brz) is a member of sweet-tasting protein containing four disulfide bonds. It was reported as a
+compact and heat-resistant protein. Here, we have used site-directed mutagenesis and replaced a
+surface-exposed alanine with aspartic acid (A19D mutant), lysine (A19K mutant) and glycine (A19G
+mutant). Activity comparisons of wild-type (WT) and mutants using taste panel test procedure showed
+that A19G variant has the same activity as WT protein. However, introduction of a positive charge in
+A19K mutant led to significant increase in Brz's sweetness, while A19D has reduced sweetness compared
+to WT protein. Docking studies showed that mutation at position 19 results in slight chain mobility of
+protein at the binding surface and changing the patterns of interactions toward more effective binding of
+E9K variant in the concave surface of sweet taste receptor. Far-UV CD data spectra have a characteristic
+shape of beta structure for all variants, however different magnitudes of spectra suggest that beta-sheet
+structure in WT and A19G is more stable than that of A19D and A19K. Equilibrium unfolding studies with
+fluorescence spectroscopy and using urea and dithiothritol (DTT) as chemical denaturants indicates that
+A19G mutant gains more stability against urea denaturation; while conformational stability of A19D and
+A19K decreases when compared with WT and A19G variants. We concluded that the positive charge at
+the surface of protein is important factor responsible for the interaction of protein with the human sweet
+receptor and Ala19 can be considered as a key region for investigating the mechanism of the interaction
+of Brz with corresponding receptor.
+© 2016 Elsevier B.V. and Société Française de Biochimie et Biologie Moléculaire (SFBBM). All rights
+reserved.1. Introduction Its solution structure with nuclear magnetic resonance spectros-In recent years, demands for natural and healthy sweeteners
+with low calorie instead of traditional sweeteners like sucrose have
+been increased. So the need for sweet tasting proteins as alternative
+sweeteners seems to be essential in food industry [1]. Among all
+sweet tasting proteins, Brazzein (Brz) as one of the smallest protein
+is an appropriate model protein for both academic studies and food
+industry considering its specific features such as high level of
+sweetening potency, thermo stability and wide range of pH toler-
+ability [2e4]. It has a compact structure containing four disulfide
+bonds which exists in two forms; namely major and minor struc-
+tures with 54 and 53 residues, respectively [5].
+The structural data of major structure includes crystal (PDB
+code: 4HE7) and solution state structures (PDB codes: 1BRZ and
+2BRZ). Other reported structures include four solution-NMR
+structures of minor form (pdb codes: 2LY5, 2LY6, 2KYQ, 2KGQ).de Biochimie et Biologie Moléculcopy (pdb code: 2BRZ) indicates that it consists of three strands of
+antiparallel beta-sheet and a short alpha-helix joined together by
+loops. However, an additional a-helix was also reported in protein
+data bank (pdb codes: 4HE7, 2LY5) [6].
+A brief review of previous studies reveals that majority of in-
+vestigations have been conducted for determining of factors
+responsible for sweetening features of the protein [7e13]. Among
+them, more studies have been performed by means of site-directed
+mutagenesis to identify the key residues and regions of the protein
+which are important in the sweetening power of Brz [9,14e17]. The
+majority of these investigations emphasized the importance of
+surfaced-exposed regions of protein and the proportion of its sur-
+ficial charge to the whole length of protein. As an example, it was
+revealed that two regions of Brz including C and T-terminals of the
+proteins and a flexible loop around Arg43 have an outstanding role
+in sweetening property [9,12].
+Furthermore, studies by combination of electrophysiological
+record and site-directed mutagenesis showed that the effect ofaire (SFBBM). All rights reserved.
+P. Ghanavatian et al. / Biochimie 131 (2016) 20e28 21charge on sweetening potency of Brz is muchmore than that of side
+chain's length [12,14]. In addition, there are other reports about the
+relationship between sweetening power and intera-molecular
+hydrogen bonds on the protein structure [8].
+As we know, physico-chemical features of various amino acids
+including the size and kind of side chain are the key factors in
+determining the folding kinetics and thermodynamic stability [18].
+Among them, hydrophobicity and hydrophilicity of the amino acids
+and their location on the protein structure are very important
+properties that can influence the conformational stability of dis-
+solved proteins in polar environments [19]. In spite of various
+studies, few attempts have been performed on the structural fea-
+tures of Brz regarding its thermodynamic characterization and
+conformational stability.
+According to the 1H,15N-HSQC-NMR studies on two variants of
+Brz it was recently shown that increasing the flexibility of protein
+may allow protein to interact more strongly with the G-protein
+coupled human sweet receptor. They reported that substitution of
+Aspartic acid with Lysine (D40K) and increasing the net charge of
+protein toward positive charge (D40K mutant) leads to alterations
+in local conformational and dynamic of protein accompanied by
+three-fold enhancement of protein activity [20]. They also sug-
+gested that three regions of Brz known as sites 1, 2 and 3 are
+essential for interaction with sweet taste receptor.
+We previously investigated the effect of charge alteration at
+position 9 (starting point of site 3) of Brz and found that changing
+the charge from negative to positive at the surface of protein can
+influence its sweetness power [21]. In this study, we designed three
+mutants of Brz using bioinformatics tools and substituted Ala19
+(The end of site 3) by lysine (A19K mutant), Aspartic acid (A19D
+mutant) and glycine (A19G mutant). Upon construction of recom-
+binant proteins, the sweetness of protein variants was measured by
+taste panel test. Structural properties and thermodynamic stability
+were also determined by fluorescence and circular dichroism
+spectroscopy as well as isothermal urea denaturation experiments.
+According to structural data and in spite of high thermos-stability
+of Brz, we found that the conformational stability of A19D and
+A19K mutants against chemical denaturant is lower than that of
+WT protein. It was also revealed that the A19K mutant has higher
+sweetness power in comparison with other proteins.
+2. Material and methods
+2.1. Materials
+E. coli strain SHuffle® from New England Biolabs (www.neb.
+com) and protein expression vector pET-28a (þ) used in this
+study were supplied by Novagen (Novagen, Madison, WI, USA).
+Synthesis of the DNA primers for mutagenesis and DNA sequencing
+was performed by bioneer (Korean). PCR Purification and Plasmid
+Extraction Kits were purchased from Bioneer (UK). Phenyl-
+methylsulfonyl fluoride (PMSF) (Sigma-Aldrich, USA), DpnI
+(Thermo Scientific, USA) with other chemicals and reagents were
+commercially available as the highest reagent grade.
+2.2. Preparation of brazzein mutants by site-directed mutagenesis
+In this study, minor form of Brz (GenBank: KF013250.1) with 53-
+amino acid containing Met residue in N-terminus was cloned in
+pET28a vector (Fig. 1).
+The primers required for inducing themutations are provided inNumber of molecules ¼ ðGram Sucrose=gram proteinÞ*ðmolecularTable 1. Site directed mutagenesis was performed through Quick-
+change method using Pfu premix Kit (Bioneer, Korea). Before the
+transformation and in order of digesting non-mutated template
+plasmids, the PCR products were treated with 15 U DpnI at 37 C for
+18 h and purified by clean up kit to remove the digested fragments
+and primers. A value of 2 ml of the purified products was then used
+to transform the competent cells (Escherichia coli BL21 (DE3)) using
+calcium chloride procedure [22]. Finally, WT and mutated plasmids
+of Brz (pET-28a) were sequenced using an automated sequencer
+(Bioneer, Korean).
+2.3. Expression and purification of WT and mutant protein
+A single colony of E. coli strain SHuffle® T7 Express containing
+plasmid pET-28a(þ) was firstly selected and grown overnight at
+30 C in 5 ml of Luria broth (LB) medium supplemented with 50 mg
+kanamycin/ml and continually was shaken at 180 rpm. Afterwards,
+200 mL of the mixture was injected into 200 ml Trypton Broth (TB)
+medium, containing 50 mg kanamycin/ml, and then incubated at
+30 C until an A600 nm of approximately 0.8e1.0 was attained. Cells
+were subsequently induced for 2 h by addition of IPTG (Isopropyl-b-
+D-thiogalactopyranosid) at a final concentration of 0.5 mM. The
+culture was then centrifuged at 12000 g for 20 min at 4 C and
+deposited product were added to lysis buffer, 0.5 mM PMSF and
+4 mM DTT. The purification process was performed on Ni-NAT spin
+column (QIAGEN Co.) Finally, protein analysis was performed by
+16% Tris-Tricine gel. Protein concentration was determined ac-
+cording to Bradford method [23]. The data were averaged of three
+independent experiments.
+2.4. Cleavage of the fusion protein and purification of brazzein
+The pH of the sample was adjusted slowly to 1.5e1.7 by adding
+1 M HCl. Thirty to fifty mg CNBr was added into 8 ml of elution
+buffer containing protein at 0.2 mg/ml concentration. In order to
+remove amino terminus, the solution was incubated under dark
+condition (18 h) at room temperature [24,25]. Ni-NTA column was
+used to separate cleavage, CNBretreated proteins from uncleavage
+ones. Condensation, desalting and buffer exchange of the protein
+were done by Amicon Ultra-0.5 Centrifugal column (Millipore, USA)
+and samples were used for further studies.
+2.5. Taste test
+The tests for the solutions of WT and mutants were carried out
+according to Lee et al. procedure [26]. Distilled water (DW) and 1%
+sucrose solution were used for comparison. For conducting the test
+11 individuals including five men and six women aging 20e39 and
+with good health and normal sense were selected for tasting. As
+depicted in Table 2, 200 mL of samples with desirable concentra-
+tions ranging from 1 to 10 mg/ml including 1, 2, 4, 6, 8 and 10 mg/ml
+were delivered to apex of tongue by pipet [26]. After every test the
+mouth was washed by a cup of tap water and its sweetness was
+reported in scale of basic weight in comparison with sweetness of
+Sucrose. For comparison of sweetness power of a protein with Su-
+crose, the lowest quantity of Sucrose essential for sensing the
+sweetness (1 g/ml) is divided by the lowest quantity of protein for
+similar sensing. The resulting parameter is reported as g/g. It can be
+converted to the minimum number of protein molecules for
+sweetness sensing using the following relationship:mass of protein=molecular mass of SucroseÞ
+Fig. 1. Insertion of the gene responsible for coding of the minor form of brazzein in pET 28a (A) Unique sites are shown on the circle map in pET 28a (B) protein sequence of minor
+form of brazzein, His-Tag, cleavage CNBr site and position A19.
+Table 1
+Selective residues for substitution by site-directed mutagenesis and modified brazzein residues; Changed base are shown by bold and underline.
+Position Residue substitution Primer sequence Residue character
+Before After Before After
+Ala 19 Gly tccaaatgtcagctgggcaaccagtgcaactac Uncharged Uncharged
+Asp caaatgccagcttgacaaccagtacaactac Negative
+lys gtccaaatgccagctgaaaaaccagtgcaactacg Positive
+P. Ghanavatian et al. / Biochimie 131 (2016) 20e2822The samples were used in order of increasing their concentra-
+tion and the first sample in which each participant could detect its
+sweetness was considered as threshold of sensing. However, for
+preventing of any experimental bias, all participants in experiments
+as well as experiment conductors were not aware of the type of
+protein (WT or mutants) and the activity of protein variants were
+assayed using double-blind procedure. Each experiment was
+repeated three times in different days by the same participants. The
+resulting data were averaged and corresponding standard de-
+viations were calculated. Differences among group means and their
+variationswere evaluated by considering probability P 0.05 as the
+level of significance and performing analysis of variance (ANOVA)
+accompanied by pairwise comparisons of the scores of each group
+using Fisher's least significance difference (LSD) method.
+2.6. Bioinformatics
+Structural models of mutants as well as sweet taste receptor,
+T1R2/T1R3, were made with the MODELLER program Ver. 9.15 [27]
+and using the structure of WT protein (Pdb code: 2LY5) as template
+for mutants of Brz [4]. The Crystal structure of the extracellular
+region of the group II metabotropic glutamate receptor (pdb code:Table 2
+The comparison between the sweetness intensity of WT protein brazzein and its mutan
+Sweet tasting molecule Molecular mass (Da) Experim
+g 100 m
+Sucrose 342.30 1
+WT 6370.19 0.0004
+A19K 6427.29 0.0001
+A19G 6356.16 0.0004
+A19D 6414.20 0.0012E4U) was also used as template for construction of sweet taste
+receptor [28]. The quality of structural models for each mutant was
+evaluated with the SVAES (The Structure Analysis and Verification
+Server) server [29e32] as well as the ModEval program at SaliLab
+Model Evaluation Server (https://modbase.compbio.ucsf.edu/
+evaluation//) [33e35] and the best structures were selected based
+on the scores of ERRAT and Verify 3D programs under the SAVES
+server and DOPE (Discrete Optimized Protein Energy) score of the
+ModEval program.
+Accessible surface area of WT-Brz and its mutants was deter-
+mined by VADAR (Volume, Area, and Dihydral Angle Reporter)
+server [36]. Examining the interactions of the structure of protein
+variants were performed by Protein Interaction Calculate (PIC)
+server using the pdb files of proteins as input [37].
+To understand the molecular mechanism responsible for the
+recognition of binding residues, docking simulations were run us-
+ing HADDOCK program (Ver. 2.2) [38]. The calculations on the
+protein side were guided by defining active residues based on the
+previous reports [16,39,40]. In order to find the possible external
+binding sites, the preferred models of HADDOCK were compared
+with previously reports and it was found that in the most of the
+complexes, the docking were done with the central region on the
+cavity between the T1R2-T1R3 receptor. Different predictedts with sucrose.
+ental taste threshold Sweetness in comparison to
+sucrose
+l 1 mM g/g Molecule
+29000 1 1
+0.6279 2510 46711.81
+0.1555 10025 188237.16
+0.629 2510 46711.81
+1.559 985 18457.45
+Fig. 2. Ribbon diagram of Brazzein in Crystal state (A) and solution state (B) deter-
+mined by X-Ray Crystallography (PDB code: 4HE7) and Nuclear Magnetic Resonance
+(PDB code: 2LY5), respectively. The site of mutation is shown by white arrow. (The
+structure is depicted by Chimera software).
+P. Ghanavatian et al. / Biochimie 131 (2016) 20e28 23binding sites were energetically evaluated and the best one for each
+protein variant was selected and further analyzed.
+2.7. Circular dichroism measurements
+Circular dichroism (CD) spectra of the WT and mutants were
+recorded with an Aviv 215 circular dichroism spectrometer using a
+1-mm path-length quartz cell and at 25 C. Far-UV CD spectra were
+obtained at a protein concentration of 0.2 mg/ml at wavelengths
+from 190 to 250 nm. The measurements are expressed as mean
+residue ellipticity with amean residueweight (MRW) of 118 for Brz.
+The data were recorded three to four times and averaged.
+2.8. Isothermal urea-induced denaturation
+For stability measurements, stock solution of urea (10 M) was
+made in 50 mM Tris, pH 7.6. For each unfolding experiment a fixed
+volume of protein stock solution (50 mg/ml) and 10 ml Dithiothritole
+(DDT) was mixed with the appropriate volumes of buffer solution
+as well as fresh urea stock solution and were incubated for
+approximately 7 h at room temperature. Fluorescence measure-
+ments were performed with a Varian luminescence spectropho-
+tometer. Intrinsic fluorescence was determined at excitation
+wavelength of 280 nm. Emission spectra were recorded within
+300e450 nm at the scan rate of 100 nm per minute. Both of the
+excitation and emission slits were set to 5 nm.
+2.9. Analysis of isothermal urea-induced denaturation curves
+It was shown that the free energy of chemical unfolding reaction
+in small proteins in the presence of urea, DG ([urea]) is linearly
+related to the concentration of denaturants as equation (1) [41]:
+DGð½ureaÞ ¼ DGðH2OÞ mð½ureaÞ (1)
+where, DG(H2O) is the free energy change of unfolding reaction
+extrapolated to zero concentration of urea and m is the slope of DG
+versus [urea]. m-value is a constant which is proportional to in-
+crease in the solvent accessible surface area upon unfolding of
+protein.
+Hence, the free energy of unfolding in the absence of Urea,
+DG(H2O) is calculated using equation (2):
+DGðH2OÞ ¼ mð½ureaÞ50% (2)
+[Urea]50% is the concentration of urea in which half of the protein is
+denatured.
+Isothermal urea-induced denaturation data were analyzed for
+obtaining thermodynamic parameters of equations (1) and (2). The
+observed signal of characteristic maximum fluorescence emission
+was plotted as a function of Urea concentration. The resulting
+sigmoid-like curves known as urea denaturation curves deter-
+mined at temperature T were first normalized between 0 and 1 and
+expressed as the plots of the fraction of protein in the unfolded
+state (fu) versus [Urea]. The plots of (fu) versus [Urea] were fitted to
+equation (3), assuming a two-state (Folded-Unfolded) model with
+Kaliedagraph analysis software.
+Fu ¼
+
+exp
+ðDGH2Oþm½Urea Þ
+RT
+
+
+1þ expðDGH2Oþm½Urea ÞRT
+ (3)
+where; FU is the measured fluorescence intensity as a function of
+urea concentration normalized between 0 and 1, R is the gas con-
+stant and T is the temperature in Kelvin, is the free energy change ofunfolding reaction extrapolated to zero concentration of urea and
+m is the slope of DG versus [urea].
+According to equation (2) and using DGH2O and m-value ob-
+tained from equation (3), [Urea]50% can also be calculated [42,43].3. Results
+3.1. Description of mutation
+Fig. 2 shows the structure of WT-Brz in solution state (pdb code:
+2LY5) and crystal form (pdb code: 4HE7). The main difference of
+two structures is due to the presence of a loop in solution structure
+as connector of the first beta strand with an alpha helix. In crystal
+form, however; presence of a short length sequence (Q17-L18-A19-
+N20) in loop conformer results in breaking the helix into two
+fragments. The position of mutation is shown by arrow.
+For determining the accessible surface area of residues in Brz we
+used VADAR program and aforementioned structures as input for
+program. The output of VADAR calculation regarding the side
+chains of residues in both solution and crystal structures are shown
+in Fig. 3. It can be seen that Ala19 with a hydrophobic side chain is
+exposed to polar environment. According to hydropathy score table
+of Kyte-Doolittle [19] it seems that the presence of Ala with hy-
+dropathy score of þ1.8 is thermodynamically unfavorable. Hence;
+this residue was selected as the site of mutation.
+Structural examination of the solution state structure of Brz
+(pdb code:2LY5) with PIC server shows that side chain of Ala19
+interacts with the main chains of Asn23 and Glu36. More Exact
+structural examination by conversion of pdb files to DSSP file
+format indicate that Ala19 is involved in helix and turn conformers
+in solution and crystal structures, respectively.
+In the first mutation named A19K, Ala19 was replaced by Lys
+which has hydropathy score of 3.9. In the second one named
+A19D, Ala19 was replaced by Asp with hydropathy score of 3.5. In
+other mutant Ala19 was substituted by Gly with more conforma-
+tional space and hydropathy score of 0.4.
+Fig. 3. Accessible Surface Area of the side chains of Brazzein residues in solution state structure (dotted line) and crystal structure (continuous line). The pdb files of protein in
+solution and crystal states (PDB code: 2LY5 and 4HE7, respectively) was used as input for calculation the ASA in VADAR.
+P. Ghanavatian et al. / Biochimie 131 (2016) 20e28243.2. Docking
+Fig. 4, A shows the representative model of the complexed form
+of Brz with Sweet taste receptor subunits indicating that Brz has
+been optimally fitted in the cavity of the T1R2-T1R3 heterodimer
+containing residues of both subunits. Proximal residues from the
+subunits at the contact interface are also shown in Fig. 4, B.
+In order to compare the complexed forms of Brz and its mutants
+and for determining the structure-function relationship, all inter-
+acting residues in contact surface for WT brazzein and its mutants
+are shown in Fig. 5.
+3.3. Expression and purification of the WT and mutant proteins
+In heterologous expression in E. coli strain SHuffle® T7 Express,
+approximately 7.2e8.4 mg/L of WT and mutant forms of Brz was
+obtained. We evaluated the purity of expressed proteins by Tris-
+Tricine gel SDS-PAGE electrophoresis. Fig. 6 shows the results of
+Tris-Tricine gel electrophoresis which reveal soluble proteinFig. 4. Representation of the interaction of WT brazzeinwith the subunits of the hetero-dim
+(A) space-filling model, with the T1R2 protomer colored in blue and the T1R2 in green an
+brazzein with regions of T1R2 and T1R3 showing the critical residues at the interacting suvariants at high level of purity. This level of purity is essential for
+Sweetness Assessment and spectroscopic studies.3.4. Sweetness Assessment
+The results of taste panel test for WT protein and its mutants are
+shown in Fig. 7.
+Sweetness power of WT protein and its mutants was also
+compared with sucrose and the results are provided in Table 2.
+According to data of Fig. 7 it was revealed that the substitution
+of alanine 19 with glycine could not alter the sweetness potency of
+Brz; while, A19G variant has the same activity as WT protein.
+However, introduction of a positive charge in A19Kmutant led to 4-
+fold increase in Brz's sweetness. On the other hand, substitution of
+alanine with negative-charged residue in A19D mutant results in
+decreasing the activity of protein and reduction of its sweetness
+power. The resulting data of Table 2 are also in good agreement
+with those provided in Fig. 7.eric human sweet receptor. HADDOCK programwas used for construction of complexes.
+d brazzein in red. (B) Close-up view as ribbon scheme and details of binding sites of
+rface.
+Fig. 5. Regions of predicted complexes of the modeled structure of T1R2-T1R3 sweet receptor with brazzein and its mutants containing the interacting residues at the binding
+surface of the receptor cavity. Residues of the T1R2, T1R3 and brazzein are shown in blue, green and red respectively. The selected models were evaluated by PIC server for
+determining different types of interactions at the binding surface. The Hydrophobic, Ionic, Aromatic-Sulphur and Cation-Pi interactions were calculated within 5, 6, 5.3 and 6 Å,
+respectively. While Aromatic-Aromatic interactions were calculated within 4.5 and 7 Å.
+P. Ghanavatian et al. / Biochimie 131 (2016) 20e28 253.5. Circular dichroism measurement
+We used far UV CD measurement for monitoring the changes in
+the secondary structure of protein upon mutation. The far UV CD
+spectra (Fig. 8) have a characteristic shape of beta-sheet structure
+with different magnitudes for WT protein and mutants.
+According to far UV CD spectra of Fig. 8, hypochromacity of CD
+band with a slight red shift in the position of the negative band was
+observed for A19D and A19K mutants. The hypochromacity of CD
+band in A19D and A19K relative to WT and A19G mutant is origi-
+nated from the more flexibility of peptide bonds. This is because
+that peptide bonds act as chromophores in far UV-CD region. On
+the other hand, beta sheets in proteins have a wide range of
+extended geometries and flexibility. The variation in beta sheets
+can occur in length and width as well as twisting angle and in
+globular protein they may deviate from the planar structure [44].Fig. 6. Tris-Tricine gel analysis of protein variants after purification with affinity Ni-
+NTA column chromatography.Hence, resulting CD data spectra indicates that presence of Gly
+with more conformational space (local flexibility) could help the
+beta strands for better orientation and obtaining appropriate ge-
+ometry for creation of optimized intra-strand hydrogen bonds
+essential for formation of beta sheet structure toward global sta-
+bilization of protein. In other words, although the physico-chemical
+properties of Gly may results in local instability as a result of more
+local flexibility, however, the global stability of Brz increases in
+A19G mutant because of optimizing the geometries of beta strands
+and intra-strands hydrogen bonds.
+The small red shift in CD band in A19D and A19Kmutants can be
+attributed to the more favorable interaction of dipole moment of
+Asp and Lys with polar solvent molecules.Fig. 7. The results of taste panel for WT mutants. The results are gathered from 11
+people and are reported with corresponding errors. The black color and hatched col-
+umns refers to WT and mutant proteins, respectively. DW refers to distilled water.
+Fig. 8. Far UV CD spectra of WT brazzein and its mutants. Far-UV CD spectra were
+recorded at a protein concentration of 0.2 mg/ml in the wavelengths ranging from 190
+to 250 nm. The spectra were analyzed by Jasco program and are expressed as mean
+residue ellipticity.
+Fig. 9. Normalized equilibrium denaturation curves of the WT Brazzein and its mu-
+tants monitored by lmax of fluorescence intensity. the experimental data were fitted to
+equation (3) by kaliedagraph analysis software.
+Table 3
+P. Ghanavatian et al. / Biochimie 131 (2016) 20e28263.6. Isothermal urea induced unfolding
+In equilibrium unfolding studies, we assumed a two state
+unfolding mechanism for Brz. In this assumption both native (N)
+and unfolded (D) conformations are present at measurable con-
+centrations and there is no stable intermediate in equilibrium [45].
+It is noticeable that upon chemical unfolding at different concen-
+trations of urea, the fluorescence spectroscopy was used for
+monitoring the changes in the tertiary structure of protein around
+chromophores which are involved in fluorescence emission. Brz
+contains no tryptophan (Trp) residue. However, it has 6 tyrosines
+(Tyr) at positions 8, 11, 24, 39, 51 and 54. It has also a single Phenyl-
+alanine (Phe) residue (Phe38) near Tyr39. Hence, the fluorescence
+emission of Brz is originated mainly from Tyr residues and our
+interpretation of the conformational stability is related to these
+locations of protein. Fig. 9 shows the equilibrium denaturation
+curves of WT and mutants as the lmax of fluorescence emission
+against the denaturant concentrations. The continuous lines for
+each scatter-plot are the best fit of experimental data to equation
+(3).
+Thermodynamic parameters of isothermal denaturation exper-
+iments obtained from the analysis of data in Fig. 9 are given in
+Table 3.
+According to equilibrium unfolding data in Table 3; the confor-
+mational stability of WT-Brz against urea denaturation in the
+absence of disulfide bonds is only 1.97 kcal/mol. The m-value has
+been shown to be proportional to the difference in the solvent
+accessible surface area (SASA) between the denatured and folded
+states of protein. Comparison of [urea]50% and thermodynamic m-
+values in Table 3 suggests that more stability of A19G is more
+related to [urea]50%; while, higher magnitude of m-value in A19D as
+destabilized variant is originated from its higher SASA in denatured
+state rather than its compactness in the folded state.Thermodynamic parameters for WT brazzein and mutants obtained by analysis of
+equilibrium denaturation curves of Fig. 9 using equation (3).
+Protein variants aDG(H2O)b am-valueb [Urea]50%b
+WT 1.97 ± 0.09 0.52 ± 0.02 3.79 ± 0.22
+A19D 1.73 ± 0.07 0.60 ± 0.03 2.88 ± 0.18
+A19K 1.51 ± 0.05 0.52 ± 0.02 2.90 ± 0.15
+A19G 2.03 ± 0.09 0.44 ± 0.03 4.61 ± 0.37
+In quantitative analysis of urea denaturation curves by fitting of experimental data
+to equations (1)e(3). The free energy change of protein in unfolding reaction at
+different concentration of urea is theoretically extrapolated to the zero concentra-
+tion of urea by fitting experimental data to equation (3) and reported as DG (H2O).
+a Standard Deviations (SDs) are calculated based on three or four replicates of
+experiments.
+b m-value in kcal.mol2; [Urea]50% in M and DG(H2O) in kcal.mol1.4. Discussion
+Dssp file contents of the solution structure of Brz (pdb code:
+2LY5) indicate that a fragment of protein ranging fromAla19 to Lys30
+is the only helix conformation in the structure of Brz. Furthermore,
+Ala19 is located at the starting point of this helix between hydro-
+phobic Leu and polar Asn residues. According to the bioinformatic
+studies and modelling results we found that non-polar Ala19 is
+located at the surface of protein near polar environment which
+apparently is in contrast with physico-chemical principles. So, we
+assumed that replacement of Ala19 with more hydrophilic residuesmay influence both conformational stability of Brz as well as its
+interaction with receptors.
+According to the results of theoretical and far UV-CD studies on
+WT and mutants, it seems that Asp and Lys residues in A19D and
+A19K variants are directly involved in hydrogen bonds with other
+residues as well as polar water molecules. However, these in-
+teractions lead to distortion of beta strands and decreasing the
+stability of beta sheets or overall conformational stability of protein.
+In contrast, high degree of local flexibility in A19G mutant is
+accompanied by increased overall conformational stability of pro-
+tein. these findings with Taste test results together indicates that
+local flexibility and positive charge at the surface of protein are
+more important factors influencing the interaction of protein with
+the G-protein coupled human sweet receptor.
+According to docking results, the side of protein containing
+position 19 is toward interacting surface of receptor for all pro-
+tein variants (Figs. 4 and 5). This is in good agreement with the
+report of Singarapu et al. [20] in which they considered the re-
+gion of protein containing position 19 as one of the critical points
+for interaction with the receptor. Hence, it seems that any change
+P. Ghanavatian et al. / Biochimie 131 (2016) 20e28 27in this position may alter the stability of the corresponding
+complex.
+Comparison of the complexed forms of WT Brz and its mutants
+(Fig. 5) indicate that increasing of sweet taste in A19K mutant is
+associated with significant change in the number and pattern of
+weak interactions at the binding surface. Structural examination
+of modeled complex of E19K-receprore indicates that positive side
+chain of Lys19 in A19K mutants has 13.43 and 13.35 Å distance
+from negative side chains of Glu252 and Glu253, respectively. It
+seems that the presence of negatively electrostatic patch including
+Glu252-Glu253 in T1R2 subunit results in creation of a long-range
+electrostatic interaction with positive side chain of Lys at posi-
+tion 19 of A19K mutant which in turn elicit to slight chain
+mobility of protein at the binding surface and changing the
+pattern of interactions toward more effective binding. Structural
+data of Fig. 5 shows that among 14 different types of weak in-
+teractions, WT Brz has only one ionic interaction including Lys15-
+Asp520-T1R3 and upon replacement of Ala with Lys in A19K
+mutant Glu253 and His50 of T1R2 can also form ionic interactions
+with corresponding residues in A19K (Lys15-Asp520-T1R3, Lys15-
+Glu253-T1R2 and Asp25- His50-T1R2). This finding indicates that
+Lys at position 19 is indirectly involved in binding process. It was
+also found that some of the binding interactions including Lys15-
+Tyr519-T1R3, Tyr24-Gln255-T1R2, Tyr39-Trp487-T1R3, Tyr39- His488-
+T1R3 as well as Arg43- His488-T1R3 are removed and new ones are
+formed with Val13, Ser14, Glu17, Leu18, Asp25 and Leu45 in A19k
+mutants which finally results in increasing the number of in-
+teractions to 19. This leads to enhancement of binding strengths of
+E9K variant with sweet receptor and especially T1R2 subunit.
+Similar examination of interactions in A19G and A19D variants
+indicates that the number of weak interactions in A19G and A19D
+mutants is 13 and 12, respectively. These data together indicate
+that sweetness of protein can be changed by altering the number
+and pattern of interactions at binding surface. According to the
+results of isothermal denaturation experiments, it appears that
+interaction of A19D and A19K variants with urea molecules is
+more favorable than A19G and WT. This is because that urea
+molecule can interact with protein by forming hydrogen bonds
+with surfaced exposed residues of protein and/or by exchanging
+hydrogen bonds with intra-molecular hydrogen bonds. Hence, the
+ability of Asp and Lys to form hydrogen bond with water mole-
+cules in the absence of urea and replacing these bonds with urea
+molecules in denaturing conditions can help protein to denature
+more favorably relative to WT and A19G mutant. By following the
+same reasoning, it may be concluded that the absence of side
+chain in Gly results in more stability of A19G mutants against urea
+denaturation. Considering previously reports on high degree of
+thermal stability of Brz and its low chemical stability; we reported
+in this study, it may be said that the presence of disulfide bonds
+has profound effect on the structural integrity of Brz. In summary,
+antithetical effect of A19D and A19K mutants on the activity of
+protein and similar activity observed for WT and A19G variant
+indicate that the presence of charged residue at this position may
+have profound effect on the interaction of protein with corre-
+sponding receptor. It was also concluded that positive charge at
+this position can increases the strength of interaction toward
+increasing the sweetness power of protein; while, negative charge
+decreases the activity of protein.
+Our data are in good agreement with previously reports con-
+cerning the importance of positive charge on the activity and
+sweetness of protein in regions of protein other than that we
+investigated in this study. Accordingly; it can be concluded that
+Ala19 can be considered as a critical region for investigating the
+relationship between structure and activity of Brz.Acknowledgments
+Financial support of this work was provided by Iran National
+Science Foundation (Fund Number: 90007290). We would also like
+to thank the Research Council of the University of Zanjan. We also
+appreciate technical support from Institute of Biochemistry and
+Biophysics (IBB) of the university of Tehran and Institute for
+Advanced Studies in Basic Sciences of Zanjan for Circular Dichroism
+and fluorescence measurements, respectively. The authors have
+declared no conflict of interest.

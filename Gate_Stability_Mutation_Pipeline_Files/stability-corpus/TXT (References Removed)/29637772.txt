@@ -1,0 +1,1087 @@
+The Gelsolin Pathogenic D187N Mutant Exhibits Altered
+Conformational Stability and Forms Amyloidogenic Oligomers
+Ankit Srivastava,† Jasdeep Singh,† Shiv Pratap Singh Yadav,‡ Prabha Arya,†,§ Fouzia Kalim,† Pooja Rose,†
+Ashish,*,‡ and Bishwajit Kundu*,†
+†Kusuma School of Biological Sciences, IIT Delhi, New Delhi 110016, India
+‡CSIR-Institute of Microbial Technology, Chandigarh 160036, India
+*S Supporting Information
+ABSTRACT: Gelsolin is an actin-severing protein that attains
+an open functional conformation in the presence of Ca2+ or
+low pH. Mutations (D187N/Y) in the second domain of
+gelsolin trigger the proteolytic pathway producing amyloido-
+genic fragments that form the pathological hallmark of gelsolin
+amyloidosis and lattice corneal dystrophy type 2 (LCD2).
+Here, we show that the D187N mutant gelsolin in a Ca2+
+depleted, low pH-activated, open conformation could assemble
+into amyloidogenic oligomers without necessarily undergoing the specific proteolytic step. Although both wild-type (WT) and
+mutant proteins exhibit closely overlapping globular shapes at physiological conditions, the latter exhibits subjugated actin
+depolymerization, loss of thermodynamic stability, and folding cooperativity. Mutant gelsolin displayed aberrant conformational
+unwinding and formed structural conformers with high associative properties at low pH conditions. A SAXS intensity profile and
+Guinier analysis of these conformers showed the formation of unusual, higher order aggregates. Extended incubation at low pH
+resulted in the formation of thioflavin T and Congo red positive, β-sheet rich aggregates with a fibrillar, amyloid-like morphology
+visible under electron and atomic force microscopy. Mass spectrometric analysis of disaggregated end-stage fibrils displayed
+peptide fragments encompassing the entire protein sequence, indicating the involvement of full length mutant gelsolin in fibril
+formation. Atomistic and REMD simulations indicated a larger increase in solvent accessibility and loss of fold architecture in
+mutant gelsolin at low pH as compared to WT gelsolin. Our findings support the existence of a secondary oligomerization-
+dependent aggregation pathway associated with gelsolin amyloidosis and can pave the way for better therapeutic strategies.
+Amyloidogenesis involves the conformational conversion ofnative proteins or peptides into misfolded, higher order
+amyloid aggregates having distinct β-sheet architecture.1−3
+These aggregates along with their prefibrillar and oligomeric
+species collectively contribute to cellular toxicity and tissue
+impairment and aid in disease manifestation.4 Gelsolin
+amyloidosis or AGel amyloidosis represents a similar case,
+where mutant gelsolin undergoes proteolytic cleavage produc-
+ing amyloidogenic fragments that aggregate and contribute to
+disease etiology.5 Two mutant forms of gelsolin (G654A or
+G654T) have been found associated with familial amyloidosis
+and Meretoja’s syndrome or lattice corneal dystrophy type 2
+(LCD2).6 These mutations in the gelsolin gene lead to a
+substitution of Asp187 with either Asn (Finnish-type) or Tyr
+(Danish-type), respectively7 (Figure 1). Besides, two other
+mutations in gelsolin, viz., Asn184 to Lys (C633 to A) and
+Gly167 to Arg (G580 to A), associated with renal amyloidosis
+are also reported.8,9
+Gelsolin is a hexa-domain (named G1−G6), actin-severing,
+nucleating, capping protein that exists as cytosolic and secreted
+plasma isoforms in most vertebrates, including in humans.10
+The protein exhibits a compact globular structure under Ca2+-
+free conditions at physiological pH. It undergoes a conforma-
+tional change and attains an extended, functionally active form
+in the presence of 1 mM Ca2+ or low pH (pH ≤5).11 This dual
+activation mechanism of gelsolin is reportedly required during
+physiological (Ca2+-regulated) as well as stressed (low pH-
+regulated) conditions.12 A mutation in its second domain (G2)
+alters its calcium binding capacity, resulting in an aberrant
+conformation that makes it susceptible to proteolytic cleavage
+(Figure 1). Previous reports have shown that calcium binding
+plays an important role in imparting overall structural stability
+to gelsolin.13,14 In fact, the isolated G2 domain under calcium-
+free conditions folds into a non-native conformation.15
+Additionally, urea denaturation studies have also shown that
+the D187N variant is slightly destabilized compared to wild-
+type (WT) gelsolin.16 However, a detailed biophysical study
+emphasizing the implications of the destabilized G2 domain
+harboring a D187N mutation under Ca2+-free conditions is not
+yet available.
+Besides, several other studies have also shown that gelsolin
+amyloidosis incurs high endoplasmic reticulum (ER) stress and
+compromises cellular functions.17,18 Evidently, amyloid-associ-
+ated ER stress in Alzheimer’s disease (AD) and kidney
+Received: January 12, 2018
+Revised: March 15, 2018
+Published: March 30, 2018
+Article
+pubs.acs.org/biochemistryCite This: Biochemistry XXXX, XXX, XXX−XXX
+© XXXX American Chemical Society A DOI: 10.1021/acs.biochem.8b00039
+Biochemistry XXXX, XXX, XXX−XXX
+amyloidosis also induce lactic acidosis, hypokalemic acidosis,
+and tubular acidosis that could facilitate the release of metal
+ions from metal binding proteins like gelsolin.19−22 In the
+context of gelsolin amyloidosis, cellular acidosis could create an
+intriguing combination of misfolded, yet partially active,
+conformations of gelsolin protein. Interestingly, a recent report
+by Bannykh and co-workers showed the presence of distinct
+amyloid fibers inside the ER of mice expressing a mutant
+(D187N) form of gelsolin.23 A similar alteration in the
+processing of β-amyloid precursor protein (APP) with an
+increase in brain lactate production in AD has also been
+reported.24 This led us to hypothesize that during progressive
+phases of gelsolin amyloidosis, loss in calcium regulation could
+drive acidosis-like conditions, thereby propelling mutant
+gelsolin to attain an open and partially active conformation.
+To reliably understand the biophysical implications of this
+scenario, we studied the open conformation of WT and D187N
+mutant gelsolin under low pH conditions using a battery of
+spectral and ultrastructural probes. Our results provide insights
+into how the D187N mutation reduces structural integrity in
+gelsolin, thereby populating an amyloidogenic precursor state
+that oligomerizes into amyloid-like aggregates under low pH
+conditions.
+■ MATERIALS AND METHODS
+Preparation of Proteins. A pRSET-A plasmid incorporat-
+ing the human plasma gelsolin gene cloned between the BamHI
+and HindIII restriction sites was used. The protein was
+expressed and purified using anion exchange followed by gel
+filtration chromatography as described elsewhere.12 The
+purified protein incorporates an N-terminal His-tag and a few
+pRSET-A vector-associated extra amino acids. Since the extra
+amino acids have no discernible effect on the structure/activity
+and actin-depolymerization property of gelsolin, all of the
+experiments were performed using His-tagged protein. The
+mutant gelsolin (G654A) was created by site-directed muta-
+genesis employing a protocol from the Quikchange site-
+directed mutagenesis kit from Stratagene (Agilent Technolo-
+gies, USA). A single point mutation in gelsolin (WT) at
+position 187 (D187N) by replacing the aspartic acid residue
+with an asparagine using partially overlapping primers was
+done. The following primers were utilized with the newly
+introduced base underlined: 5′-G GAG AGC TTC AAC AAT
+GGC AAC TGC TTC ATC CTG GAC CTG-3′ and 5′-CAG
+GTC CAG GAT GAA GCA GTT GCC ATT GTT GAA GCT
+CTC C-3′. The mutation was verified by sequencing at
+Chromous Biotech, India. After mutation confirmation and a
+protein expression check, the D187N variant was purified using
+a similar protocol as described above. The concentrations of
+GFC purified proteins was measured using UV absorption at
+A280 ∼ 1.4, corresponding to 1 mg mL−1 (DU-640
+spectrophotometer, Beckman). To confirm the molecular
+weight and monodispersity of both gelsolin variants, 100 μL
+of each protein sample (1 mg mL−1) was loaded onto a
+precalibrated superdex 200, 10/300 SEC column attached to an
+AKTA purifier system (GE Healthcare, USA) operated at 25
+°C. Further, molecular masses of the proteins were also
+confirmed by mass spectrometry.
+Fluorescence and Circular Dichroism (CD). Tryptophan
+fluorescence spectra were measured using a 10 mm path length
+quartz cuvette in an LS 55 spectrofluorimeter (PerkinElmer,
+MA, USA) at 25 °C. The excitation wavelength was fixed at 295
+nm, and the spectra were recorded between 310 and 400 nm.
+For all experiments, protein concentrations were kept constant
+at 3.6 μM. For far-UV CD measurements, all protein samples
+were scanned (250−200 nm) in a 1 mm path length cell at 25
+°C using a J810 spectropolarimeter (JASCO). The mean
+residual ellipticity [θ] in each case was calculated using eq 1:
+θ
+θ
+=
+×
+lc
+[ ]
+MRW
+10
+obs
+(1)
+Here, θobs is the observed ellipticity in millidegrees (mdeg), and
+MRW (mean residue weight) represents M/(N − 1) (M is
+molecular weight and N is number of residues). The variable c
+is the concentration in mg mL−1, and l is the path length in cm.
+Thermal Denaturation Assay. For thermal denaturation
+experiments, change in ellipticity [θ210] was monitored against
+temperature with a ramping rate of 1 °C/min. All data were
+recorded in triplicate, and the averaged spectra was normalized,
+fitted using the Origin 8.0 software, and reported.
+Equilibrium Unfolding/Refolding Experiments. All
+equilibrium unfolding/refolding experiments were carried out
+using 8 and 10 M stocks of ultrapure GdnCl and urea,
+respectively. For unfolding studies, protein samples were
+prepared in Tris buffer (25 mM Tris, 50 mM NaCl, pH 7)
+containing varying concentrations of denaturant (GdnCl or
+urea), followed by equilibration for 12 h at 25 °C. Similarly, for
+refolding studies, protein stocks (50 μM) unfolded in 6 M
+GdnCl/urea for 24 h were stepwise diluted in Tris buffer and
+further left for a 12 h equilibration at 25 °C. A final protein
+concentration of 2.5 μM was kept constant for all unfolding/
+refolding experiments. Fluorescence scans of each sample taken
+in a 1 cm cuvette were recorded between 310 and 400 nm, after
+excitation at 295 nm, in an LS 55 spectrofluorimeter
+(PerkinElmer, USA). The excitation and emission slits were
+fixed at 5 nm each. The ratio of fluorescence emission at 360
+and 332 nm (334 nm for D187N) was calculated and plotted
+against increasing concentration of GdnCl or urea. Finally, the
+data were analyzed assuming the free energy of unfolding or
+refolding (G0D) to be linearly dependent on the denaturant
+concentration. G0D was obtained by linear extrapolation of the
+Figure 1. Gelsolin multidomain architecture. Structure of gelsolin
+monomer (PDB entry 3FFN) depicting all six domains (G1−G6) in
+different colors. The zoomed view of the second (G2) domain
+(turquoise) shows the position of aspartic acid (D187) in WT protein
+and the point mutation incorporating an asparagine residue (N187) in
+the mutated (D187N) protein. A loss in Ca2+ binding (red sphere)
+due to D187N mutation is also shown. The structures were visualized
+using UCSF Chimera.
+Biochemistry Article
+DOI: 10.1021/acs.biochem.8b00039
+Biochemistry XXXX, XXX, XXX−XXX
+B
+plot of free energy change and denaturant concentration to 0
+M. The pattern of unfolding and refolding of each gelsolin
+variant was analyzed and approximated in a two-state unfolding
+model described by the following reaction (eq 2):
+↔N U
+Ku (2)
+Here, N and U are the molar concentrations of native and
+unfolded proteins, respectively, and Ku is the unfolding rate
+constant. The data of denaturant-induced transition curves
+were analyzed using a nonlinear least-squares method for
+obtaining free energy change of unfolding in the absence of any
+denaturant (G0D), the midpoint concentration of denaturant
+required for unfolding or refolding (Cm), and the slope (m) of
+the unfolding or refolding curve at Cm using the following eqs
+3−6, as described previously:25
+= − −K y y y y[( ) ( )]/[( ) ( ) ]u N U (3)
+Δ = −G G m[D]D
+0
+D (4)
+= −ΔK e m G RTu
+( [D] / )0D (5)
+= − ΔC G m( / )m (H O)2 (6)
+Here, (y)N and (y)U are optical properties of the native and
+denatured protein molecules, respectively. R is the universal gas
+constant, and T is the temperature in kelvin; ΔGD is the change
+in free energy at a particular denaturant concentration [D].
+Amyloid Aggregation Experiments. Both purified
+proteins (WT and D187N gelsolin) were incubated at a
+concentration of 2−10 μM in different pH buffer solutions (pH
+2−10) with a 0.02% (v/v) final concentration of sodium azide.
+All samples (250 μL) were incubated in 1.5 mL eppendorfs at
+37 °C under continuous agitation at 200 rpm and monitored by
+dye binding assays.
+Dye Binding Assays. For the ThT assay, samples (10 μL)
+aliquoted at different time points were mixed with 10 μM ThT
+(90 μL) prepared in 50 mM phosphate buffer (pH 7) and
+incubated for 10 min. Following this, fluorescence readings
+(λexcitation = 450 nm, λemission = 485 nm) were recorded in a 1 cm
+path length cuvette using an LS 55 fluorescence spectrometer
+(PerkinElmer, MA, USA), while the excitation and emission
+slits were kept at 5 and 10 nm, respectively. Data from triplicate
+reactions were averaged and fitted using sigmoid eq 7 in Origin
+8.0, as described earlier.26
+= + +
++
++
+τ
+− −
+Y Y m x
+Y m x
+( )
+1 exp x t
+i i
+f f
+( )50
+(7)
+Here, Y is the ThT fluorescence intensity (a.u.). τ is the time
+constant. x is the time in hours, and t50 is the time at which
+ThT fluorescence attained 50% of the maximum intensity
+(Imax). The lag time of aggregation (Tlag) was calculated using
+eq 8.
+τ= −T t 2lag 50 (8)
+For the Congo red (CR) binding assay, the aggregates were
+incubated with 600 μL of CR solution (9.2 mM in PBS) at
+room temperature for 4 h in the dark. The absorption spectra
+between 400 and 600 nm were recorded using a DU-640
+spectrophotometer (Beckman), with subtraction of the baseline
+spectrum of the buffer. The absorbance spectrum of each
+sample was also corrected for light scattering by subtracting the
+spectra of aggregates alone in the buffer scanned in the visible
+region. The final spectrum obtained for each sample was
+compared with CR-only spectra to ascertain the characteristic
+amyloid-bound red-shift.
+For the surface hydrophobicity assessment, 1-anilinonaph-
+thalene 8-sulfonate (ANS) binding experiments were per-
+formed. After we added the ANS dye to different protein
+samples at a final concentration of 50 μM, the samples were
+incubated for 5 min at 25 °C. Following this, fluorescence scans
+in the range of 400−600 nm (λexcitation = 370 nm) were
+recorded in a 1 cm path length cuvette using an LS 55
+fluorescence spectrometer (PerkinElmer, MA, USA), while the
+excitation and emission slits were kept at 5 nm each.
+Transmission Electron Microscopy (TEM). Transmission
+electron micrographs of aggregating samples were recorded
+using a Tecnai transmission electron microscope (FEI, USA)
+operated at 120 kV. The aggregates obtained after a 1 week
+incubation were 5-fold diluted and placed on a copper grid for
+2 min. Following this, samples were negatively stained using a
+2% (w/v) uranyl acetate solution, washed with Milli-Q water,
+air-dried, and imaged.
+Atomic Force Microscopy (AFM). AFM imaging of
+aggregate samples was done using a Bioscope Catalyst AFM
+(Bruker Corporation, Billerica, MA). The end-stage morphol-
+ogy of gelsolin aggregates formed after a 1 week incubation was
+examined. Each sample was diluted 3-fold in 50 mM phosphate
+buffer (pH 7.0) and deposited on freshly cleaved mica.
+Following a 30 min incubation, the samples were washed
+using Milli-Q water and dried overnight. Samples were analyzed
+using standard tapping mode, and the resulting images were
+processed using Nanoscope analysis version 1.4.
+SAXS Data Acquisition. SAXS data were collected on a
+synchrotron BM-29 beamline at the European synchrotron
+radiation facility (ESRF), Grenoble, France. In each case, 30 μL
+of sample and buffer were exposed to X-rays while flowing
+through the 1.8 mm-diameter quartz capillary using the sample-
+changer robot for 10 s at 10 °C. Scattered X-rays were detected
+by using a 1 M pilatus detector with a detector distance of
+2.867 m. Initial data analysis was done using beamline software,
+BsxCuBE27 (Biosaxs Customized Beamline Environment). The
+desmearing and subtracted files obtained by BsxCuBE software
+were further processed using ATSAS suite 2.8.2.
+SAXS Data Analysis and Modeling. The desmeared I(Q)
+files were analyzed using Guinier analyses presuming a globular
+and rod-like scattering shape of the scattering particles which
+yielded the radius of gyration (Rg) and the radius of cross
+section (Rc). These analyses were done using the SAS data
+analysis program in the ATSAS 2.8.2 suite of programs. Kratky
+plots (I(Q) × Q2 vs Q) of each data set were prepared to
+examine the nature of scattering protein in the solution. After
+confirmation of the globular scattering profiles, the distance
+distribution program of SAS data analysis was employed to
+perform indirect Fourier transformation of the scattering data
+to obtain a pairwise distribution function of interatomic vectors,
+P(r). During the transformation, the probability of finding a
+pairwise vector equal to 0 Å and the maximum linear dimension
+(Dmax) was considered to be zero. To visualize the predominant
+solution shape of each protein, 10 independent uniform density
+models were generated using Dammin software for each data
+set. Finally, the refined and averaged models were used for
+comparison and superimposition with the crystal structure
+(PDB entry 3FFN).
+Mass Spectrometry. An Ultraflex Extreme MALDI-TOF/
+TOF mass spectrometer (Bruker Daltonics, Germany) was
+Biochemistry Article
+DOI: 10.1021/acs.biochem.8b00039
+Biochemistry XXXX, XXX, XXX−XXX
+C
+used for determining intact protein mass and identification of
+peptides incorporated in the amyloid aggregates. End-stage
+amyloid aggregates were aliquoted in microcentrifuge tubes that
+were rinsed in USP-grade ethanol followed by Milli-Q water
+and air-dried before use. In order to disaggregate the fibrils,
+urea was added to a final concentration of 6 M (100 μL in Tris
+buffer), and the samples were incubated overnight at room
+temperature. Following this, DTT was added to a final
+concentration of 10 mM, and samples were left for an
+additional 1 h incubation time. Next, sample alkylation was
+achieved by adding iodoacetamide to a final concentration of 40
+mM, and the samples were incubated for 1 h at room
+temperature. After this, Milli-Q water was added to the samples
+to decrease the final urea concentration to ∼0.6 M for optimal
+trypsin activity. Trypsin was added (∼20 μg) to the samples,
+and digestion was carried out overnight at 37 °C. The next day,
+the reaction was stopped, and the samples were concentrated
+by evaporation, mixed with trifluoroacetic acid (0.1% v/v), and
+taken up in a C18 ZipTip (Pierce, Thermo Fisher Scientific,
+USA). Finally, the samples were stepwise eluted with increasing
+concentrations of acetonitrile (20−60% v/v) in trifluoroacetic
+acid (0.1% v/v). Samples were analyzed using MALDI-TOF/
+TOF MS in linear mode with sinapinic acid as the matrix. The
+generated peptides were analyzed and catalogued using
+Compass HyStar 3.2, Data Analysis 4.1, and BioTools 3.2
+software (Bruker Daltonics). Further identification was done
+using MS/MS ion search through the Mascot search engine
+with a mass tolerance of ±0.5 Da and a maximum missed
+cleavage of 1.
+Replica Exchange Molecular Dynamics (REMD) Simu-
+lations. The available X-ray crystal structure of WT gelsolin
+(PDB entry 3FFN) was utilized for all MD simulations. The
+systems are described in the Supplementary Methods of the
+Supporting Information. REMD enhances the conformational
+sampling by allowing the exchange of configurations between
+multiple replicas simulated over a wide range of temperatures in
+parallel.28 The exchange of configurations allows crossing of
+energy barriers as they travel from lower temperature replicas
+to higher temperature replicas with the canonical Boltzmann
+distribution preserved in all replicas. In our study, we have used
+50 replicas in the temperature range of 310−370 K with an
+optimal distribution of temperatures to achieve exchange
+probability of ∼0.2−0.3. Exchanges have been attempted
+every 1 ps. Initially, NVT equilibration runs were performed
+using a V-rescale thermostat for ∼2 ns at each temperature.
+The NVT production run was continued for 100 ns for each
+replica, amounting to a cumulative run length of 5 μs. In all
+simulations, the particle mesh Ewald method was used to
+describe the long range electrostatic interactions with a Leap
+frog integrator with an integration time step of 2 fs being used
+to solve Newton’s equation of motion, and trajectories have
+been saved every 50 ps.
+■ RESULTS
+Preparation of Recombinant Wild-Type and Mutant
+Gelsolin. Both the WT and D187N mutant proteins were
+bacterially overexpressed and purified using anion exchange and
+size-exclusion chromatography as described in Materials and
+Methods. The molecular masses of the purified recombinant
+Figure 2. Comparative biochemical profiles of WT and D187N mutant gelsolin. (A) Size-exclusion chromatography profile of WT (black) and
+mutant gelsolin (red). The inset shows the standard curve for a Superdex 200 10/300 GL column. (B) Far-UV CD spectra. (C) Intrinsic tryptophan
+fluorescence emission curves. (D−F) Visualization of F-actin-depolymerization activities of both gelsolin variants. F-actin was incubated with buffer
+alone (control, 50 mM Tris buffer, pH 7.5) or with either gelsolin variant at a molar ratio of 1:5 (gelsolin/actin) in buffer containing 1 mM CaCl2,
+and the depolymerization activity was observed by negative stain electron microscopy after a 2 h incubation. Scale bars represent 100 nm in each
+case.
+Biochemistry Article
+DOI: 10.1021/acs.biochem.8b00039
+Biochemistry XXXX, XXX, XXX−XXX
+D
+proteins were determined by SDS-PAGE and MALDI-MS as
+∼88 kDa (Figures S1 and S2). Further, when checked for
+monodispersity using analytical size-exclusion chromatography
+(SEC), the WT and mutant gelsolin showed uniform peaks
+with retention volumes of 13.7 and 13.5 mL, respectively
+(Figure 2A). This suggested a monomeric nature for both of
+the proteins under physiological conditions. A slight decrease in
+the retention volume of the mutant protein was observed,
+which could be due to partial opening of the G2 domain as
+reported earlier.29,30 All data were determined for Ca2+-free
+proteins (in the presence of 1 mM EGTA), and further
+experiments were carried out under similar conditions unless
+mentioned explicitly.
+The D187N Mutation Alters Fold Architecture and
+Actin-Severing Activity. The secondary and tertiary
+structures of both proteins were analyzed using far-UV CD
+and intrinsic tryptophan fluorescence, respectively. The far-UV
+CD spectra of the WT gelsolin showed a negative peak at 210
+nm with a depression at 215 nm, indicating a mixed α/β-type
+secondary structure which was in accordance with the available
+crystal data31 (Figure 2B).
+The mutant, however, showed a marginal shift in both of
+these peaks indicating an alteration in its secondary structure as
+compared to that of the WT protein. Upon analysis of
+secondary structural content at physiological conditions (pH
+7), a significantly reduced α-helicity (>45%) was noted for the
+mutant protein (Table S1). Further, the tryptophan emission
+profile showed maxima at 332 and 334 nm for WT and mutant
+proteins, respectively (Figure 2C). A red-shift in the mutant
+protein suggested an increase in solvent exposure of tryptophan
+residues. Since the G2 domain containing the D187N mutation
+is partially opened, we speculate the increase in solvent
+exposure to tryptophan residues (W180, W200; Figure S4)
+inside this domain. However, the contribution of other
+tryptophan residues close to the G2 domain also cannot be
+ruled out. Further, we found that the D187N mutant gelsolin
+exhibited a considerable loss in its ability to sever filamentous
+actin as compared to the WT protein (see Supplementary
+Methods). Electron microscopy showed that WT gelsolin
+reduced actin filaments of ∼10−12 nm dimensions to smaller
+fragments and monomers (∼2−4 nm) efficiently. In contrast,
+after similar incubation periods, the D187N mutant gelsolin
+Figure 3. Structural comparison of WT and D187N gelsolin variants. (A) SAXS data profile showing double logarithmic intensity versus Q plot for
+WT (blue) and D187N (red) gelsolin. The inset shows a linear fit in the Guinier region. (B) Kratky plot for the WT and mutant gelsolin. (C)
+Pairwise distribution plot for WT and mutant gelsolin. SAXS envelopes of WT gelsolin (D−F) and D187N mutant gelsolin (G−I) and their overlay
+with the crystal structure of gelsolin (PDB entry 3FFN) shown in different orientations.
+Biochemistry Article
+DOI: 10.1021/acs.biochem.8b00039
+Biochemistry XXXX, XXX, XXX−XXX
+E
+incubated samples still showed a significant population of intact
+actin filaments (Figure 2D−F).
+WT and Mutant Gelsolin Exhibit Similar Global
+Shapes at Physiological Conditions. To gain insights into
+the global shape and quaternary structure, SAXS data profiles
+from solutions of both of the proteins were analyzed. Data
+acquired from solutions of WT and D187N mutant gelsolin in a
+physiological buffer (50 mM TrisCl, pH 7) under calcium-free
+conditions and a 24 h incubation were analyzed, and the shapes
+were constructed. SAXS Intensity I(Q) profiles indicated a lack
+of aggregation or interparticulate nature in both WT and
+mutant gelsolin samples (Figure 3A). Monodispersity in the
+samples was confirmed by a linear fit in the Guinier region
+(inset, Figure 3A). The slope of the linear fit in the Guinier
+region yielded Rg values of 3.27 and 3.28 nm for the WT and
+mutant gelsolin, respectively, presuming the globular nature of
+the scattering particle in both samples (Table 1). Similarly, Rc
+values were found to be 1.65 and 1.69 nm, respectively,
+presuming a rod-like nature of the scattering particle. From
+these Rg and Rc values, the theoretical persistent length (L) of
+the scattering particle was calculated as ∼11.2 nm for both
+proteins. Further, Kratky analysis also confirmed the globular
+nature of both proteins (Figure 3B). P(r) analysis done by the
+distance distribution function of SAXS data using the indirect
+Fourier transformation showed similar Dmax values for WT and
+mutant gelsolin, at ∼9.1 nm (Figure 3C). Additionally, volume
+correlation (VC)-based analysis of scattering particles using the
+DATMOW program yielded molecular mass values (87.6 and
+88.2 kDa, respectively) very close to that of monomeric
+proteins and in agreement with the SEC profile. Subsequently,
+global shapes of the proteins in solution were computed using
+SAXS data profiles. The generated SAXS envelopes were then
+superimposed on the available crystal structure of gelsolin31
+(PDB entry 3FFN). Shape restoration after automated
+alignment of inertial axes of SAXS-based envelopes using
+SUPCOMB largely matched the crystal structure and affirmed
+the compact globular shape of both proteins (WT, Figure 3D−
+F; D187N, Figure 3G−I).
+The D187N Mutation Decreases the Thermodynamic
+Stability of Gelsolin. The relative structural stabilities of the
+two proteins were studied by thermal unfolding at pH 7. Far-
+UV CD spectra (210 nm) were monitored as a function of
+increasing temperature. Both WT and mutant gelsolin unfolded
+with a single transition over the temperature range of 20−90
+°C (Figure 4A). Both of the proteins started to lose native
+secondary structure (change in 210 nm band) above 45 °C and
+precipitated into large visible aggregates beyond 60 °C with an
+apparent loss of CD signal. Since the thermal refolding curves
+were irreversible, a reliable estimate of free energy (ΔG) could
+not be determined. The resulting curves were analyzed, and Tm
+(melting temperature) was calculated. Tm is the temperature
+where half of any protein population is denatured and thus can
+be used for a comparative estimate of stability between two
+proteins. The Tm values of WT and mutant gelsolin were found
+to be ∼54 and 51 °C, respectively, indicating a destabilizing
+effect of the D187N point mutation (Table 2).
+Table 1. Structural Parameters of SAXS Data Collected for Wild-Type (WT) and D187N Mutant Gelsolin and Their Variations
+after 0 and 72 h of Incubation As Deduced from Guinier Analyses and Indirect Fourier Transformation
+0 h 72 h
+Guinier analyses
+Indirect Fourier
+Transformation Guinier analyses
+Indirect Fourier
+Transformation
+protein Rg (nm) Rc (nm) L (nm) Dmax Rg (nm) Rg (nm) Rc (nm) L (nm) Dmax Rg (nm)
+WT (pH 7) 3.27 1.65 11.2 9.1 3.02 3.29 1.7 9.76 9.2 3.24
+D187N (pH 7) 3.28 1.69 11.23 9.13 3.07 3.59 1.73 10.9 9.3 3.12
+WT (pH 2) 5.23 2.16 16.5 17 5.51 5.28 2.1 16.7 18 5.51
+D187N (pH 2) 6.06 2.32 20.8 22 6.9 a a a a a
+aCould not be computed.
+Figure 4. Comparative assessment of thermodynamic stability. (A) Thermal denaturation of WT (black) and D187N mutant gelsolin (red) probed
+by monitoring secondary structure changes (θ210) with increasing temperature. First derivatives (dθ/dT) of normalized melting curves are shown
+where the maxima indicate Tm (melting temperature) of the corresponding system. The inset shows normalized raw data represented as percent
+unfolding induced by temperature increments for both systems. (B) Normalized equilibrium unfolding and refolding curves of gelsolin variants at pH
+7.0 after 12 h of incubation at 25 °C. In each case, the plot of the fractional change in the wavelength maxima of the intrinsic tryptophan fluorescence
+of the WT (black) and mutant (red) gelsolin with increasing molar concentrations of GdnCl is shown. The inset shows the linear free energy
+extrapolation curve of WT and D187N mutant proteins with respect to GdnCl concentrations. The free energy in the absence of denaturant (G0D) is
+the intercept on the y-axis, obtained using the linear extrapolation method.
+Biochemistry Article
+DOI: 10.1021/acs.biochem.8b00039
+Biochemistry XXXX, XXX, XXX−XXX
+F
+Further, the destabilizing effect of the D187N mutation was
+studied using equilibrium unfolding experiments. The intrinsic
+tryptophan fluorescence for both proteins was monitored
+against increasing denaturant (urea and GdnCl) concentrations.
+Interestingly, even in the presence of >5 M urea, both proteins
+resisted complete unfolding as the λmax did not shift beyond
+347 nm, indicating only partial unfolding.
+However, in the presence of GdnCl, both proteins started to
+show gradual unfolding starting at 1 M GdnCl (λmax = 341 nm,
+WT; λmax = 345 nm, D187N), reaching complete unfolding at
+2.5−3.0 M GdnCl (λmax = 352 nm, WT; λmax = 356 nm,
+D187N) (Figure S5). The unfolding curves overlapped with the
+refolding curves for both proteins, indicating attainment of
+equilibrium. Both proteins exhibited a sharp sigmoidal
+transition, suggesting cooperative unfolding/refolding through
+a reversible two-state process (Figure 4B). The data were fitted
+according to the nonlinear equation described in Materials and
+Methods, and values of free energy in the absence of denaturant
+(G0D), cooperativity (m), and the midpoint of unfolding
+transition (Cm) were obtained for each system (Table 2). As
+per the fits, G0D and m values calculated for WT were 2.8 kcal/
+mol and 1.5 M, respectively, and for the D187N mutant were
+1.9 kcal/mol and 1.1 M, respectively. Lower G0D and m values
+observed for mutant gelsolin indicated a loss of stability and
+cooperativity due to destabilization of the protein structure.
+Also, a comparatively lower denaturant concentration was
+Table 2. Conformational Stability Parameters of the WT and
+D187N Mutant Gelsolin Proteinsa
+Thermal
+denaturation GdnCl unfolding/refolding
+protein Tm (°C)
+ΔG0D
+(kcal mol−1)
+M
+(kcal mol−1 M−1) Cm (M)
+WT 54.1 ± 0.4 2.8 ± 0.1 1.5 ± 0.1 1.9 ± 0.2
+D187N 51.5 ± 0.5 1.9 ± 0.2 1.1 ± 0.1 1.7 ± 0.1
+aThe melting temperatures (Tm) for WT and D187N gelsolin were
+calculated from CD thermal denaturation curves (θ210). Unfolding
+studies were done at various concentrations of urea and GdnCl as
+described in Materials and Methods. The Cm and ΔG0D values are
+based on three independent experiments for each measurement and
+are represented as mean and standard deviation. All experiments were
+carried out at pH 7.
+Figure 5. Assessment of pH-based structural transitions in gelsolin variants. (A) Tertiary structural changes monitored by changes in intrinsic
+tryptophan fluorescence (λmax) with pH gradient. (B) Surface hydrophobicity changes monitored by ANS fluorescence (intensitymax) with pH
+gradient. (C) SAXS data based on a double logarithmic plot of intensity versus Q for gelsolin variants incubated at pH 7 and 2 for 0 and 72 h. The
+inset shows fits in the Guinier region for all systems. (D) Kratky plot for gelsolin variants incubated at pH 7 and 2 for 0 and 72 h. A vertical line
+demarcates the peaks close to 1.73 depicting the globular shape. All systems are indicated with mentioned color traces.
+Biochemistry Article
+DOI: 10.1021/acs.biochem.8b00039
+Biochemistry XXXX, XXX, XXX−XXX
+G
+required to unfold the mutant protein as evident from a
+decrease in the Cm value.
+The D187N Mutant Exhibits Altered Conformation
+and a Higher Rate of Aggregation at Low pH. At this
+stage, we were interested in understanding the implications of
+the destabilized nature of mutant gelsolin under Ca2+ depleted,
+low pH conditions. This is important since gelsolin, which
+otherwise attains an actin-competent, open structure in the
+presence of Ca2+, also unwinds into a similar conformation at
+low pH.12 Upon equilibraton with different buffers in a range of
+pH values, a gradual opening of the structure was observed in
+both of the gelsolin variants at acidic pH. From the far-UV CD
+signatures of both of the proteins, we found that they gradually
+lose their native α/β conformation during stepwise lowering of
+pH (Figure S3). As discussed earlier, the mutant gelsolin
+harbored natively lower helical content at pH 7 that decreases
+drastically on further lowering of the pH. Interestingly, the loss
+of helicity in the WT protein (∼70%, pH 7 to 2) was
+comparatively higher than that in the mutant protein that also
+showed relatively higher residual β-sheet content at pH 2
+(Table S1). Further, tertiary structural changes studied using
+fluorescence spectroscopy showed a cooperative increase in
+λmax (332 to 342 nm) of WT gelsolin in the acidic pH range
+(pH 6 to 2), indicating exposure of buried tryptophans (Figure
+5A). Interestingly, the D187N mutant remained in a closed
+conformation until pH 5 (λmax = 334 nm) and showed an
+abrupt increment in λmax (339 nm, pH 4) at lower pH values.
+At low pH, striking differences were observed between the
+mutant and the WT proteins. The mutant gelsolin exhibited a
+tertiary structural perturbation at pH 2 (λmax = 345 nm) larger
+than that of the WT gelsolin (λmax = 341 nm).
+To further validate the tertiary structure perturbation and
+exposure of tryptophans in both proteins, we performed
+tryptophan (Trp) quenching experiments using acrylamide
+(Figure S6). The acrylamide quenching experiments divulged
+information about changes in the local environment of
+Figure 6. Characterization of aggregation in gelsolin variants. (A) Changes in ThT fluorescence plotted as a function of time to represent
+aggregation kinetics of WT (black) and D187N mutant gelsolin (red) proteins. (B) Circular dichroism-based secondary structural assessment of
+native proteins (WT and D187N) and their aggregates formed after a 150 h incubation under pH 2 conditions. Assessment of aggregate morphology
+by negative stain electron microscopy and atomic force microscopy for aggregates formed by WT (C−E) and mutant gelsolin (D−F). The images
+were taken after a 1 week incubation in each case.
+Biochemistry Article
+DOI: 10.1021/acs.biochem.8b00039
+Biochemistry XXXX, XXX, XXX−XXX
+H
+tryptophan residues in proteins. A higher Stern−Volmer
+quenching constant (Ksv) indicates higher accessibility of
+Trps to the quencher acrylamide. Interestingly, at pH 2, the
+D187N mutant exhibited a significantly lower Ksv value (>50%
+reduction) as compared to the value for WT gelsolin, indicating
+lower penetration of the quencher (Table S2). This indicated a
+subdued hydrophobic exposure in the mutant protein even at a
+very low pH. Our notion was corroborated by the considerable
+difference in hydrophobicities between the WT and mutant
+proteins under identical conditions. ANS fluorescence (depict-
+ing surface hydrophobicity) of the mutant gelsolin remained at
+least 4-fold lower than that of the WT protein at low pH values
+(pH 5 to 2, Figure 5B). With no visible precipitation and in the
+absence of complete unfolding (as achieved by GdnCl > 3 M,
+λmax = 355 nm, Figure S5), this decreased surface hydro-
+phobicity of the mutant gelsolin could be due to sequestration
+of hydrophobic patches during the formation of soluble
+oligomers.
+To ascertain this, we next investigated the particle size profile
+of gelsolin variants equilibrated at different pHs using DLS
+(Figure S7). We found that mutant gelsolin exhibited a
+dramatic increase in size distribution extending from hydro-
+dynamic radii (Rh) of 5−7 nm at pH 7 to 100−140 nm at pH 2.
+Under identical conditions, the Rh values for the WT protein,
+however, showed only a gradual rise with particle sizes ranging
+between 15 and 18 nm. Together, these results indicate that
+mutation-induced destabilized structural conformers of gelsolin
+promote extensive protein−protein interactions to form higher
+order oligomeric structures.
+To get the structural perspective, we analyzed the SAXS data
+profiles and found that both proteins showed significantly high
+intensities when incubated at pH 2 as compared to pH 7
+(Figure 5C). The observed high intensity depicts a
+polydispersed oligomeric nature of proteins in solution. The
+intensity plots at pH 2 showed an upward trend at a low Q
+range hinting toward rod-shaped protein aggregates. Interest-
+ingly, the intensity at pH 2 was found to be significantly higher
+for the mutant gelsolin as compared to that of the WT gelsolin.
+This directly correlates to a higher extent of structural
+unwinding and interprotein associations (high Rg) in the
+mutant gelsolin, enforcing higher aggregation as compared to
+that of the WT. Further, extended incubation at pH 7 (up to 72
+h) showed only minor changes in SAXS shape parameters for
+both proteins with the least deviation in Rg and Rc values,
+indicating marginal structural perturbation (Figure 5C, Table
+1).
+However, the SAXS data of 72 h incubated WT and D187N
+mutant proteins at pH 2 showed high intensity profiles.
+Interestingly, the mutant gelsolin showed a dramatic increase in
+higher order aggregates with an unusual Guinier pattern (inset,
+Figure 5C). This corroborated a normalized Kratky analysis,
+where the mutant gelsolin showed the formation of a hyperbola
+plateau indicating a high level of disorderness (Figure 5D).
+Owing to high polydispersity, further analysis and modeling
+was not possible. This was in contrast to the proteins at pH 7
+(72 h incubated) that each showed a distinct peak close to 1.73,
+depicting their globular nature. Overall, these observations
+indicated that low pH induces the formation of higher order,
+aggregation-prone species in the mutant gelsolin which were
+further characterized using dye-based assays and microscopic
+analysis.
+D187N Mutant Gelsolin Forms Amyloid-like Aggre-
+gates at Low pH. We next monitored the aggregation of WT
+and D187N gelsolin incubated at different pH buffers using the
+standard thioflavin T (ThT) fluorescence assay. Enhancement
+in ThT fluorescence during aggregation is attributed to the
+formation of fibrillar amyloid-like aggregates.26,32 We found an
+increase in ThT fluorescence for D187N gelsolin protein
+incubated in pH 2 and 4 buffers only. However, the D187N
+gelsolin showed significantly high ThT fluorescence on
+extended incubation at pH 2 (Figure 6A).
+When plotted against time, this fluorescence data traced a
+typical sigmoidal curve with a distinct lag phase of ∼47 h
+followed by an exponential phase of ∼150 h that saturated after
+200 h. In the case of pH 4 incubated D187N gelsolin, the rise in
+ThT fluorescence was noted only after more than a month of
+incubation and was not characterized further. The far-UV CD
+signal recorded after 150 h of incubation showed a discrete
+hump at 215 nm, suggesting that mutant gelsolin attained a β-
+sheet rich conformation (Figure 6B). In contrast, the WT
+gelsolin exhibited only a loss in CD signal with a nearly
+unchanged signature.
+To further ascertain differences in the aggregate types, a
+Congo red (CR) binding assay was performed (Figure S8). The
+mutant protein aggregates showed a distinct red-shift in their
+CR absorbance spectra that corroborated the formation of
+amyloid-like aggregates as reported earlier.33,34 Further, the
+TEM images of end-stage aggregates (1 week incubated)
+showed the presence of a fibrillar population in the case of
+mutant gelsolin which was characteristically absent in the WT
+samples (Figure 6C, D). The supporting AFM images showed
+that while the WT gelsolin formed large spherical, disc-like
+aggregates of heterogeneous sizes, the mutant gelsolin showed
+mature fibrils with an average thickness and heights of 4.8 and
+8.1 nm, respectively (Figure 6E, F). We next characterized
+these end-stage fibrillar aggregates by a fibril disaggregation
+assay followed by peptide mass fingerprinting. The small tryptic
+fragments generated from disaggregated fibrils showed a top
+hit-score of 106, matching that of the human gelsolin protein,
+and a sequence coverage of 42% (Figure 7).
+It was found that the identified tryptic peptides matched
+fragments from the entire protein sequence (Table S3). This
+also included the previously reported amyloidogenic fragment
+comprising residues 173−243 present in the G2 domain.32 In
+all, the data suggested the involvement of intact mutant gelsolin
+or a major structural component in contrast to the previously
+described proteolytic pathway mostly driven by 5−8 kDa
+fragments.35,36 At this stage, it was necessary to understand the
+role of the D187N mutation in the loss of structural integrity of
+gelsolin and its conversion to an aggregation-prone conformer
+that forms fibrillar aggregates under low pH conditions.
+The D187N Mutation Alters the Structural Integrity of
+the G2 Domain. To further understand the loss of structural
+integrity and predisposition to the amyloid state due to a
+D187N mutation in gelsolin, we carried out constant pH all-
+atom molecular dynamics simulations. Simulation trajectories at
+pH 7 and 2 for both the WT and D187N mutant gelsolin were
+analyzed. Backbone RMSD variations for the D187N mutant at
+pH 2 during the last ∼50 ns showed the highest deviation from
+the initial starting structure as compared to other systems
+(Figure S9A). However, only marginal changes in the overall
+gyration radius (Rg) were observed in all systems (Figure S9B).
+Additionally, free energy landscapes (FELs) were constructed
+to sample the lowest free energy conformations attained by the
+proteins in different systems during the simulations. The Gibbs
+free energy surfaces were projected using previously analyzed
+Biochemistry Article
+DOI: 10.1021/acs.biochem.8b00039
+Biochemistry XXXX, XXX, XXX−XXX
+I
+variables: Rg and backbone RMSD. For the WT system at both
+pHs, the lowest free energy conformations were restricted to
+the conformational space close to the original starting structure
+with minimal changes in the gyration radius (Figure S10A, B).
+However, for D187N gelsolin at both pHs, the conformational
+subspace drifted, with the lowest free energy conformations
+having slightly higher Rg values (∼2.88 nm) compared to those
+of the WT system (∼2.82 nm) (Figure S10C, D). Interestingly,
+we found that the D187N mutant gelsolin at pH 2 occupied a
+larger part of the conformational space. In this system, two
+separate lowest energy basins could be observed, which might
+represent metastable states attained by the mutant during
+simulations (cyan arrows, Figure S10C).
+Since gelsolin is a large multidomain protein, mapping the
+entire pathway of its transition to an amyloid-competent state
+using constant temperature simulations was computationally
+challenging. This was due to sampling limitations for major
+conformational changes in all-atom simulations performed at
+room temperature (310 K). Thus, we resorted to REMD
+(replica exchange molecular dynamics) simulations of mutant
+gelsolin at pH 7 and 2 for sampling conformational changes. To
+understand its role in the loss of structural integrity in gelsolin,
+the observations were mainly focused on the G2 domain
+carrying the D187N mutation. Structural parameters, such as
+Cα-RMSD, number of protein−solvent contacts, changes in
+solvent accessibility, and radius of gyration, were studied for
+D187N mutant gelsolin at pH 7 and 2 using individual replicas
+in the temperature range of 310−370 K (Figure 8). It is evident
+that while traversing from low to high temperatures, the protein
+will partially denature into metastable states. Consequently, the
+stability of mutant gelsolin under both pH conditions can be
+sampled in terms of its resistance to lose its structural integrity
+with temperature increments (at 310, 330, 350, and 370 K). At
+pH 7 and 2, probability distributions for RMSD of around ∼0.5
+nm were observed at all temperatures (Figure 8A, B).
+Interestingly, multiple distributions for protein−solvent con-
+tacts were observed at different temperatures in both systems.
+With the increase in temperatures, the total number of solvent
+contacts gradually increased for the mutant at pH 2 with the
+highest number of contacts (∼1450) observed at 370 K (Figure
+8C, D).
+However, at pH 7, even at higher temperatures no such
+increment in contacts was observed as it remained lower than
+the system at 310 K. Subsequently, free energy landscapes
+(FELs) of each system were constructed and projected as a
+function of RMSD and the number of protein solvent contacts
+at different temperatures (Figure S11). For the D187N mutant
+at pH 2, the lowest free energy conformations showed a
+marginally higher solvent contact frequency (∼50 contacts) as
+compared to that of corresponding mutant systems at pH 7 at
+each temperature. Further, we narrowed down our analysis to
+the G2 domain at 350 K, since the manifestation of D187N
+mutations could be immediately observed in this domain and
+can be attributed as a triggering point of aggregation. For
+sampling, the preferred conformational space of G2 at pH 2
+and 7 FELs was plotted as a function of solvent accessible area
+and number of contacts with the solvent (Figure S12). At pH 2,
+the G2 domain showed the presence of more than one
+distributed low free energy basin corresponding to states with
+higher solvent accessibility and correspondingly more solvent
+contacts.
+On the other hand, the lowest free energy state at pH 7 still
+showed intact fold architecture with a lower number of solvent
+contacts. This was also validated through an increased loss in
+structural architecture within the G2 domain at pH 2 compared
+to that at pH 7. To further investigate these structural
+transitions, FELs were constructed using a number of residues
+forming α-helix and β-sheet formations in the G2 domain. At
+pH 2, multiple lowest free energy basins were observed,
+corresponding to structures with reduced helix−beta content
+and increased unstructured content (black arrows, Figure 8E).
+However, at pH 7, most of the helical and β-sheet regions were
+conserved even at 350 K with a single lowest free basin for the
+system (Figure 8F). The representative structures at pH 2
+sampled from the lowest free energy basins show a pertinent
+loss of structural components with apparent β-coil transitions as
+was observed as compared to those of the pH 7 system (insets,
+yellow arrows, Figure 8E, F).
+■ DISCUSSION
+Gelsolin amyloidogenesis ensues when a mutation in its G2
+domain (core Ca2+ binding domain) makes the protein
+susceptible to furin and MT1-MMP mediated cleavage to
+produce 5 or 8 kDa amyloidogenic fragments.7,36 In fact, the
+proteolysis pathway, as well as amyloid formation by gelsolin
+fragments, has been targeted for developing new therapeutic
+interventions against gelsolin-related amyloidosis.18,32,37,38
+While aggregation and deposition of these fragments are
+quite evident, the concomitant physiological environment
+inside the cell has yet to be investigated. This is important
+since several secondary pathways contribute to amyloid-
+associated tissue impairment and death. In the case of
+gelsolin-related amyloidosis, severe mitochondrial abnormalities
+along with high serum lactate production have been reported.21
+Interestingly, modulation of the actin cytoskeleton by the
+gelsolin also plays a key role in regulating vacuolar H+-ATPase
+(V-ATPase) recycling. Moreover, the modulation of the actin
+Figure 7. Analysis of end-stage amyloid aggregates using mass
+spectrometry. Identification of the peptide sequences incorporating
+amyloid fibrils formed by D187N mutant gelsolin using mass
+spectrometry. The MALDI-TOF MS spectrum of peptide fragments
+present in the disaggregated fibrils after treatment with trypsin and
+subsequent elution in 60% acetonitrile using C18 ZipTip clean up.
+The inset shows a Mascot score histogram where protein scores
+greater than 56 are significant (p < 0.05). The tryptic fragments
+generated from disaggregated fibrils showed a top hit-score of 106,
+matching that of the human gelsolin protein, and a sequence coverage
+of 42%.
+Biochemistry Article
+DOI: 10.1021/acs.biochem.8b00039
+Biochemistry XXXX, XXX, XXX−XXX
+J
+cortex by Ca2+ activated gelsolin represents a common
+mechanism by which cells regulate their rate of proton
+secretion.39 Thus, it is very likely that the presence of mutant
+gelsolin with low Ca2+ sensitivity and subdued actin modulation
+capacity could contribute to the H+ balance in cellular
+compartments. During the late/progressive phases of gelsolin
+amyloidosis, this may further induct an alternate H+ rich but
+Ca2+ depleted environment, resulting in several alternative
+aggregation pathways.
+To understand the biophysical basis of these alterations, we
+compared structural stabilities and aggregation propensities of
+WT and D187N mutant gelsolin proteins under low pH
+conditions. Although the mutant showed a considerable loss in
+actin-depolymerization activity, at physiological conditions both
+mutant and WT gelsolins retained fairly identical global shapes.
+However, on studying thermal and denaturant mediated
+unfolding of both proteins, we identified that the D187N
+mutant showed considerable instability as compared to the WT
+(Figure 4). Evidently, the D187N mutation in the G2 domain
+also incurs a loss in folding cooperativity (lowered Cm value,
+Table 2), which loosens the structure and increases its
+hydrodynamic volume, as is apparent in its SEC profile (Figure
+2A). The loss in cooperativity and altered domain unwinding in
+mutant gelsolin was also apparent with an aberrant change in its
+tertiary structure with an increasing proton (H+) gradient
+(Figure 5). These observations support the notion that in
+multidomain proteins, favorable interactions tether domains
+together rendering extra stability to individual domains.40
+Moreover, specific point mutations adversely affect these
+interactions and thus alter the folding and solvation of
+individual domains.41,42
+In line with the above, mutant gelsolin showed a high
+aggregation tendency with an increasing proton gradient. The
+mutant gelsolin formed higher order assemblies (Figure S7)
+mainly driven by hydrophobic interactions (∼4-fold loss in
+surface hydrophobicity, Figure 5B). This was also confirmed by
+Figure 8. Structural insights of pH-induced perturbations in mutant gelsolin. The probability distribution of backbone RMSD obtained from REMD
+simulations at pH 7 (A) and pH 2 (B). The probability distribution of the number of protein−water contacts at pH 7 (C) and pH 2 (D). Free
+energy landscapes (FELs) for the G2 domain of D187N mutant gelsolin. Gibbs free energy surfaces in kcal/mol projected as a function of the
+number of residues forming an α-helix and β-sheet at pH 7 (E) and pH 2 (F). Black arrows in (E) show the distribution of species with a lower
+number of secondary structural elements than in (F). Yellow arrows in the insets indicate β-coil transitions in structures extracted from the lowest
+free energy basins from both FELs.
+Biochemistry Article
+DOI: 10.1021/acs.biochem.8b00039
+Biochemistry XXXX, XXX, XXX−XXX
+K
+SAXS analysis at pH 2 that showed comparatively higher
+polydispersity in the case of mutant gelsolin (Figure 5C, D). A
+prolonged incubation for up to 72 h at pH 2 indicated a high
+degree of disorderness and aggregation in mutant gelsolin as
+compared to that at the physiological pH (Table 1). In this
+regard, the aggregation of mutant gelsolin resembles low pH-
+based partial denaturation of tetrameric transthyretin (TTR)
+rendering a pro-amyloidogenic state.43 TTR is composed of
+four noncovalently attached identical polypeptide chains that
+form an ensemble of structures mostly stabilized by a strong
+interdomain hydrogen bond network.44 In contrast, the hexa-
+domain architecture of gelsolin is stabilized by the presence of
+interdomain linkers that covalently tether the domains and
+enhance their communication.12,45 Thus, aggregation at low pH
+is mostly initiated by oligomerization of the misfolded gelsolin
+ensemble as evident from the fluorescence, DLS, and SAXS
+experiments.
+On extended incubation at low pH conditions, mutant
+gelsolin forms ThT responsive aggregates which are fibrillar in
+nature as observed by TEM and AFM imaging (Figure 6D, F).
+These amyloid-like fibrils result from a sigmoidal transition
+constituting oligomerization followed by higher order aggrega-
+tion of D187N mutant gelsolin similar to other amyloidogenic
+proteins including the 8 kDa gelsolin fragment.26,32,46
+Interestingly, fibril disaggregation followed by mass spectrom-
+etry suggested the involvement of the entire protein ensemble
+in amyloid formation (Table S3). Besides, the absence of
+specific proteolytic factors in our assays indicates that this
+amyloidogenic pathway is different and possibly an additional
+furin-independent pathway. A similar alternate pathway
+involving domain swapping and dimerization of G167R mutant
+gelsolin has also been reported very recently.47 Nevertheless,
+the possibility of an autocatalytic or acid hydrolytic mechanism
+releasing amyloidogenic fragments cannot be ruled out. In that
+case, it may be similar to the role of nicked lysozyme in
+mediating amyloid formation at acidic pH.48 Altogether, low
+pH oligomerization of the D187N mutant gelsolin acts as a
+prerequisite and rate-limiting step for amyloid aggregation.
+Thus, our results suggest the existence of an alternate
+oligomerization-dependent pathway besides the previously
+known proteolysis-dependent pathway (Figure 9).
+It will be interesting to decipher any structural and kinetic
+differences in amyloids formed in both pathways through future
+studies. Insights obtained through MD simulations supported
+our experimental outcomes where mutant gelsolin at pH 2
+showed the highest structural deviation from native architecture
+substantiated by the presence of alternate low free energy
+basins in its conformational space. The effect of low pH could
+be manifested in terms of a higher contact frequency with
+solvent for mutant gelsolin, signifying possible exposure of
+hydrophobic core regions. This could be due to loss of
+compactness in the protein which decreases interdomain
+communications, resulting in partially opened aggregation-
+prone states (Figure 8). Apparently, at low pH, the mutation
+carrying the G2 domain of mutant gelsolin showed loss of both
+helix and beta contents to form solvent exposed metastable
+states, separated by small energy barriers. Structural reorganiza-
+tion in the mutant G2 domain was also evident by an overall
+increase in the number of intramolecular contacts (351) as
+compared to those of the WT G2 domain (325). Upon analysis
+of local interactions in the vicinity of mutated residue, the loss
+of three native hydrogen bonds involving residues N184 and
+Q164 was apparent (Figure S13). This structural loss has been
+documented in previous reports that pointed to the loss of β-
+sheet in G2 as the primary reason for destabilization associated
+with D187N mutation.49 However, more information on the
+level of structural destabilization in the G2 domain would
+require 19F NMR analysis combined with extensive MD
+simulations.
+Perhaps, the observed partially opened conformations could
+be one of the many triggering states for oligomerization and
+later aggregation of D187N mutant gelsolin as observed in our
+biophysical and SAXS experiments. Overall, we show that the
+pathogenic point mutation in gelsolin protein sufficiently
+destabilizes its folded architecture under calcium depleted,
+low pH conditions and can induce amyloid-like assembly. Our
+study supports the presence of an alternate aggregation
+mechanism devoid of the canonical proteolytic cleavage in a
+H+ rich but Ca2+ depleted environment during progressive
+stages of gelsolin amyloidosis. This is important since
+progressive phases of gelsolin amyloidosis accompany a surge
+in several noncanonical and secondary pathways that contribute
+to amyloid-associated tissue impairment and death. One of
+these critical secondary pathways is the rise in the H+ gradient
+inside cellular organelles, including the ER. Our data suggest
+that the lowering of cellular pH could contribute to the
+formation of amyloid-like aggregates by D187N mutant gelsolin
+by a furin/MMP-MT1-independent secondary oligomerization-
+dependent pathway (Figure 9). In this alternate pathway,
+partially active mutant gelsolin oligomerizes and may aid in
+inducing a high amyloid load by acting as amyloidogenic seeds.
+The existence of similar secondary, proteolysis-independent
+pathways involving other gelsolin disease mutants, viz. D187Y
+and N184K, cannot be ruled out and should be investigated in
+Figure 9. Canonical and proposed aggregation pathways of D187N
+mutant gelsolin. In the canonical proteolysis-dependent pathway,
+mutant gelsolin gets cleaved by furin to generate a 68 kDa fragment
+(C68) that further gets proteolyzed by MT1-MMP-like proteases to
+produce 5−8 kDa fragments. These 5−8 kDa amyloidogenic peptide
+fragments later get deposited as amyloid fibrils. During an acidosis
+scenario, mutant gelsolin may follow an alternate oligomerization-
+dependent pathway where it skips the proteolytic pathway and forms
+higher order aggregates that later aggregate into amyloid fibrils.
+Biochemistry Article
+DOI: 10.1021/acs.biochem.8b00039
+Biochemistry XXXX, XXX, XXX−XXX
+L
+future studies. The experimental evidence presented here has
+shed light on the presence of alternate aggregation mechanisms
+during gelsolin amyloidosis and can help in the design of better
+therapeutics.
+■ ASSOCIATED CONTENT
+*S Supporting Information
+The Supporting Information is available free of charge on the
+ACS Publications website at DOI: 10.1021/acs.bio-
+chem.8b00039.
+Supporting methods and analysis data, including an
+actin-depolymerization assay, molecular mass estimation
+of proteins, secondary structure estimation, tryptophan
+fluorescence, acrylamide quenching, dynamic light
+scattering, a Congo Red binding assay, and a list of
+tryptic peptide fragments; RMSD and radius of gyration
+variation data; free energy landscape projections of all-
+atomistic and REMD simulations; hydrogen bond
+network assessment (PDF)
+■ AUTHOR INFORMATION
+Corresponding Authors
+*E-mail: bkundu@bioschool.iitd.ac.in. Phone: +91-11-
+26591037.
+*E-mail: ashgang@imtech.res.in. Phone: 0172-2636680 ext.
+3284.
+ORCID
+Bishwajit Kundu: 0000-0002-5786-3144
+Present Address
+§Department of Biochemistry, Deshbandhu College, Delhi
+University, New Delhi, India.
+Author Contributions
+B.K. and A. conceived and coordinated the study. A.S. designed,
+performed, and analyzed the data from the experiments, along
+with P.A., F.K., and P.R. J.S. performed and analyzed the
+computational experiments. S.P.S.Y. performed the SAXS
+experiments and analyzed the data. J.S. and S.P.S.Y. contributed
+equally to this work. A.S., B.K., and A. wrote the manuscript
+with contributions from the other authors. All authors approved
+the final version of the manuscript.
+Funding
+B.K. and A. are grateful for financial support from the Indian
+Council of Medical Research[grant number 52/2/2013/BMS]
+and the Department of Biotechnology, Government of India,
+New Delhi [grant number BT/PR5474/MED/30/824/2012].
+A.S., J.S., and S.P.S.Y. acknowledge scholarship support from
+ICMR, IIT Delhi, and DST, respectively.
+Notes
+The authors declare no competing financial interest.
+■ ACKNOWLEDGMENTS
+The authors acknowledge the synchrotron BM-29 beamline
+facility at the European synchrotron radiation facility (ESRF),
+Grenoble, France, for SAXS data collection. The authors thank
+the Indian Institute of Technology Delhi and the CSIR-
+Institute of Microbial Technology Chandigarh for infra-
+structural support. A.S. is indebted to Dr. Dushyant K. Garg
+and Dr. Saurabh Bansal for technical discussions. The authors
+acknowledge Arti Kataria, Pankaj Sharma, and Nikita Admane
+for help in different experiments. The authors also acknowledge
+Subodh Jain for technical assistance in performing the mass
+spectrometry experiments.
+Biochemistry Article
+DOI: 10.1021/acs.biochem.8b00039
+Biochemistry XXXX, XXX, XXX−XXX
+N

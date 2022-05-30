@@ -1,0 +1,44 @@
+Imports: {
+	import java.sql.*; 
+	import com.mysql.jdbc.exceptions.*;
+	import java.lang.*;
+	import java.util.regex.*;
+	import edu.uchsc.ccp.nlp.ei.mutation.*;
+	import ca.unbsj.cbakerlab.mutation_impact.MutationGrounder;
+} 
+
+Phase:MutationGrounding
+Input: Mutation
+
+Options: control = once
+
+Rule:ground1
+(
+	{Mutation}
+	
+):ground
+
+-->
+{
+		java.util.logging.Logger log=null;
+		if(log==null){
+		    log =  java.util.logging.Logger.getLogger("JAPELogger");
+		    log.setLevel(java.util.logging.Level.OFF);
+		}
+
+	
+	
+	try {	
+		//System.out.println("Jape works@@@@@@@@@@@@@@@@@@@@@@@");
+		MutationGrounder mg = new MutationGrounder(); 
+		//if(doc.getFeatures().get("statistics") != null){
+		//    mg.setStatistics((Statistics)doc.getFeatures().get("statistics"));
+		//}
+    		mg.ground(doc);
+		//mg.groundOld1(doc);
+	
+	}
+	catch(Exception e) {
+		e.printStackTrace();
+	}
+}

@@ -1,0 +1,610 @@
+Full Terms & Conditions of access and use can be found at
+https://www.tandfonline.com/action/journalInformation?journalCode=tbsd20
+Journal of Biomolecular Structure and Dynamics
+ISSN: 0739-1102 (Print) 1538-0254 (Online) Journal homepage: https://www.tandfonline.com/loi/tbsd20
+Multimodal approach to explore the pathogenicity
+of BARD1, ARG 658 CYS, and ILE 738 VAL mutants
+Rajan Kumar Choudhary, Vikrant, Quadir M. Siddiqui, Pankaj S. Thapa,
+Sweta Raikundalia, Nikhil Gadewal, Nachimuthu Senthil Kumar, M.V. Hosur
+& Ashok K. Varma
+To cite this article: Rajan Kumar Choudhary, Vikrant, Quadir M. Siddiqui, Pankaj S. Thapa,
+Sweta Raikundalia, Nikhil Gadewal, Nachimuthu Senthil Kumar, M.V. Hosur & Ashok K. Varma
+(2016) Multimodal approach to explore the pathogenicity of BARD1, ARG 658 CYS, and ILE
+738 VAL mutants, Journal of Biomolecular Structure and Dynamics, 34:7, 1533-1544, DOI:
+10.1080/07391102.2015.1082149
+To link to this article:  https://doi.org/10.1080/07391102.2015.1082149
+View supplementary material Accepted author version posted online: 26
+Aug 2015.
+Published online: 23 Sep 2015.
+Submit your article to this journal Article views: 153
+View related articles View Crossmark data
+Citing articles: 2 View citing articles 
+Multimodal approach to explore the pathogenicity of BARD1, ARG 658 CYS, and ILE 738
+VAL mutants
+Rajan Kumar Choudharya, Vikranta,†, Quadir M. Siddiquia, Pankaj S. Thapaa, Sweta Raikundaliaa, Nikhil Gadewala,
+Nachimuthu Senthil Kumarb, M.V. Hosura and Ashok K. Varmaa*
+aAdvanced Centre for Treatment, Research and Education in Cancer, Kharghar, Navi Mumbai 410 210, Maharashtra, India;
+bDepartment of Biotechnology, Mizoram University (A Central University), Aizawl 796 004, Mizoram, India
+Communicated by Ramaswamy H. Sarma
+(Received 28 May 2015; accepted 7 August 2015)
+BARD1–BRCA1 complex plays an important role in DNA damage repair, apoptosis, chromatin remodeling, and other
+important processes required for cell survival. BRCA1 and BARD1 heterodimer possess E3 ligase activity and is
+involved in genome maintenance, by functioning in surveillance for DNA damage, thereby regulating multiple pathways
+including tumor suppression. BRCT domains are evolutionary conserved domains present in different proteins such as
+BRCA1, BARD1, XRCC, and MDC1 regulating damage response and cell-cycle control through protein–protein interac-
+tions. Nonetheless, the role of BARD1BRCT in the recruitment of DNA repair mechanism and structural integrity with
+BRCA1 complex is still implicit. To explicate the role of BARD1BRCT in the DNA repair mechanism, in silico,
+in vitro, and biophysical approach were applied to characterize BARD1 BRCT wild-type and Arg658Cys and Ile738Val
+mutants. However, no drastic secondary and tertiary structural changes in the mutant proteins were observed. Thermal
+and chemical denaturation studies revealed that mutants Arg658Cys and Ile738Val have a decrease in Tm and ΔG than
+the wild type. In silico studies of BARD1 BRCT (568-777) and mutant protein indicate loss in structural compactness
+on the Ile738Val mutant. Comparative studies of wild-type and mutants will thus be helpful in understanding the basic
+role of BARD1BRCT in DNA damage repair.
+Keywords: BARD1 BRCT; protein–protein interactions; secondary and tertiary structure; thermal and chemical
+denaturation
+1. Introduction
+Breast cancer is one of the prominent causes for cancer
+deaths in the developing countries. It has been found that
+mutations in the BRCA1 and BRCA2 genes can predis-
+pose someone at the risk of developing breast and ovarian
+cancer (Collins et al., 1995; Miki et al., 1994; Wooster
+et al., 1994). The inherited germ line mutations in the
+genes like RAD50, ATM, CHEK2, NBS1, 53BP1, PALB2,
+BRIP1 BRCA 1/2, and BARD1 regulate genomic integri-
+tyand cancer predisposing factors (Ahmed & Rahman,
+2006; Heikkinen et al., 2006; Karppinen et al., 2006;
+Meijers-Heijboer et al., 2002; Rapakko, Heikkinen,
+Karppinen, Erkko, & Winqvist, 2007; Renwick et al.,
+2006). BARD1 is a structurally correlated but sequen-
+tially distinct protein from BRCA1. BARD1 and BRCA1
+both harbor N-terminal RING domain and two C-terminal
+tandem BRCT repeat motifs (Wu et al., 1996). BARD1
+contains four ankyrin repeats in the region (425–550),
+which is absent in BRCA1. BRCA1 and BARD1
+heterodimerize by RING–RING domain interaction and
+colocalize to distinct nuclear assemblies at different stages
+of cell-cycle progression (Jin et al., 1997; Scully et al.,
+1997). Furthermore, in vivo BRCA1–BARD1 heterodimer
+forms active E3 ubiquitin ligase complex, and plays a sig-
+nificant role in tumor suppression (Brzovic, Meza,
+King, & Klevit, 2001; Brzovic, Rajagopal, Hoyt, King, &
+Klevit, 2001; Wu-Baer, Lagrazon, Yuan, & Baer, 2003).
+Mis-sense mutations within the BRCA1 RING domain
+lead to loss in heterodimerization which further reduces
+E3 ubiquitin ligase activity (Brzovic, Meza, et al., 2001).
+BARD1 BRCT (568-777) domain is conserved in many
+other multiple DNA damage response (DDR) proteins
+(Bork et al., 1997; Callebaut & Mornon, 1997).
+Different DDR proteins have diverse repeats of
+BRCTs (Mohammad & Yaffe, 2009). It has been reported
+that BARD1 BRCT is required for the early recruitment
+of BRCA1 at the DNA damage site (Li & Yu, 2013).
+Noting the role of BARD1 in genomic integrity, we
+decided to explore functional consequences of genetic
+alterations discovered in the BARD1 BRCT region. Two
+cancer predisposing mutations, Arg658Cys in Caucasian,
+African, Finnish populations, and Ile738Val in Polish and
+*Corresponding author. Email: avarma@actrec.gov.in
+†Current address: Quintiles Research Pvt. Ltd. Andheri, Mumbai-400059, India.
+© 2015 Informa UK Limited, trading as Taylor & Francis Group
+Journal of Biomolecular Structure and Dynamics, 2016
+Vol. 34, No. 7, 1533–1544, http://dx.doi.org/10.1080/07391102.2015.1082149
+Belgian families have been detected (Alshatwi, Hasan,
+Syed, Shafi, & Grace, 2012; Antoniou et al., 2010;
+De Brakeleer et al., 2010; Karppinen, Heikkinen,
+Rapakko, & Winqvist, 2004; Thai et al., 1998), but the
+molecular mechanism of how these mutations of BARD1
+gene lead to breast cancer has not been explored. Further,
+in sporadic and BRCA1-associated breast cancers,
+expression of BARD1 is observed to be too low suggest-
+ing a significant role of BARD1 in breast carcinogenesis
+(Ghimenti et al., 2002; Yoshikawa et al., 2000).
+In this study, we have used in vitro experiments and
+in silico approaches to understand the folding pattern of
+BARD1 BRCT (568-777) and its two cancer-disposing
+mutants, Arg658Cys and Ile738Val. Molecular dynamics
+simulations (MDS) were carried out to explore alter-
+ations in the structure at the atomic level. To our conclu-
+sion, both the mutants show loss in thermodynamic
+stability; however, BARD1 Ile738Val protein structure
+shows higher structural flexibility.
+2. Material and methods
+2.1. Molecular dynamics simulation
+The crystal structure of BARD1 BRCT (568-777)
+wild-type protein was taken from PDB (pdb id: 2NTE),
+(Birrane, Varma, Soni, & Ladias, 2007). BARD1 BRCT
+(568-777) amino acid sequence was retrieved from the
+Uniprot database (Accession ID: q99728). Point mutants,
+Arg658Cys and Ile738Val, were introduced using SPDB
+viewer (Kaplan & Littlejohn, 2001). MDS was per-
+formed using GROMACS 4.5.5 package (Hess, Kutzner,
+van der Spoel, & Lindahl, 2008) installed on a 80-node
+cluster of Xeon quad-core processors. The molecular sys-
+tems were solvated with TIP3P water molecules in a
+cubic box with periodic boundary conditions of 1.0 nm
+from the edge of the box. Counter ions were added to
+neutralize the systems. The systems were subjected to
+energy minimization for 5000 iterations by steepest des-
+cent algorithm implementing under OPLS-AA force field
+(Kaminski, Friesner, Tirado-Rives, & Jorgensen, 2001)
+with a tolerance of 1000 kJ/mol/nm. Electrostatic, colum-
+bic, and van der Waals interactions were calculated with
+a distance cut-off of 1.4 nm. Systems were equilibrated
+using NVT (Moles Volume Temperature) followed by
+NPT (Moles Pressure Temperature) ensemble for 50,000
+steps each. SHAKE algorithm (Ryckaert, Ciccotti, &
+Berendsen, 1977) was used to constrain bond lengths.
+Finally, systems were subjected to MD simulation for
+50 ns of production run with time-step integration of
+2 fs. The trajectories were saved at every 2 ps and ana-
+lyzed using GROMACS. The comparative analysis of
+BARD1 BRCT (568-777) wild-type and mutant
+structures, Arg658Cys, Ile738 Val, were performed to
+calculate the RMSD, RMSF, radius of gyration, solvent
+accessible surface area (SASA), Dictionary of secondary
+structure pattern (DSSP) (Kabsch & Sander, 1983), and
+hydrogen-bond interactions.
+2.2. Principal component analysis
+Principal component (PC) was calculated using eigenvec-
+tors and eigenvalues for the covariance matrix. Projection
+of first two principal components was carried out by
+essential dynamics method described within the
+GROMACS package (Amadei, Linssen, & Berendsen,
+1993). After removing the rotational and translational
+movements, variance/covariance matrix was built and fur-
+ther eigenvectors and eigenvalues were calculated. The
+eigenvalues are representative of amplitude of eigenvec-
+tors in multidimensional space. The concerted motion of
+the protein can be detected by the displacement of atoms
+along each eigenvector.
+2.3. Protein expression and purification
+BARD1 BRCT (568-777) wild-type protein was cloned in
+pET-28a vector (cDNA of full-length BARD1 was kind
+gift from Prof. Richard Bayer, Institute of Cancer Genet-
+ics, Columbia University). Mismatch primer method of
+site-directed mutagenesis was used to generate the
+Arg658Cys and Ile738Val mutants (forward primer Arg
+658Cys 5′-GAAATTCCTGAAGGTCCATGCAGAAGC-
+AGGCTCAACAG-3′, reverse primer 5′-CTGTTGAGCC-
+TGCTTCTGCATGGACCTTCAGGAATTTC-3′, forward
+primer Ile738Val 5′-CTGCACACAGTATATCGTCTAT-
+GAAGATTTGTGT-3′ reverse primer 5′-ACACAAATC-
+TTCATAGACGATATACTGTGTGCAG-3′). The BARD1
+BRCT (568-777) wild-type, Arg658Cys, and Ile738V
+mutant proteins were expressed and purified in 6His
+fusion proteins using Rosetta 2(DE3) bacterial cells.
+Fusion proteins were first purified on Ni-NTA affinity
+chromatography, then further treated with TEV to remove
+the fusion tag. Protein was purified using AKTA FPLC
+size exclusion chromatography on superdex 75 column
+(GE Healthcare).
+2.4. Dynamic light scattering experiment
+Purified BARD1 BRCT (568-777), Arg658Cys, and
+Ile738Val mutant proteins were analyzed on Malvern
+particle size analyzer (Zetasizer μV) dynamic light scat-
+tering instrument to characterize the oligomeric nature of
+these proteins. The protein samples were filtered
+(0.22-μm filter) and degassed prior to scanning. 1.0 mg/
+ml of wild-type and mutant proteins were scanned at 5-
+min intervals for 15 min, and effective diameters were
+obtained from peak positions. The experiments were
+repeated three times and the average was considered to
+be the true value.
+1534 R.K. Choudhary et al.
+2.5. Circular dichroism spectroscopy
+Circular dichroism spectroscopy was performed using
+different concentrations of purified proteins on the
+JASCO-815 spectropolarimeter. For far–UV CD spectra,
+the protein concentration was 10 μM and the wavelength
+range was taken from λ = 200–240 nm, and for near-UV
+spectra, the wavelength range was from λ = 350–250 nm
+with the protein concentration of 40 μM (buffer: 2.5 mM
+HEPES pH 7.5, 50 mM NaCl). Blank-corrected seven
+independent data scans were averaged, and the average
+value is presented for further comparative structural
+analysis. Furthermore, proteins at a concentration of
+10 μM were unfolded in a temperature range from 10 to
+65°C, and folding pattern was monitored by measuring
+ellipticity at λ = 222 nm. Near-UV range, thermal denat-
+uration studies were performed for 40 μM of proteins at
+different temperatures 20, 30, 45, and 60°C. The observed
+values of fractions unfolded were used for curve fitting.
+2.6. Limited proteolysis
+BARD1 BRCT wild-type and mutant proteins (2 mg/ml)
+were treated with trypsin (37°C) and chymotrypsin
+(25°C), 10 ρg/μl each in the digestion cocktail. At the
+time points of 0, 5, 10, 30, 60, 120, and 180 min, the
+reaction was stopped by adding protease inhibitor PMSF
+(1 mM). The experiment was repeated thrice considering
+untreated wild-type and mutant samples as controls.
+2.7. Fluorescence spectroscopy
+2.7.1. Chemical denaturation
+Micro-environment of tryptophan residue in the proteins
+were investigated using fluorescence spectrophotometer
+(Horiba, USA).While the excitation was at λ = 295 nm,
+the individual fluorescence emission spectra were
+recorded from λ = 310–400 nm. In chemical denatura-
+tion, BARD1 BRCT proteins (2 μM) were treated with
+increasing concentrations of GuHCl (0–6 M) keeping the
+final volume constant, and emission spectra were
+recorded between λ = 310 and 400 nm. Averaged blank-
+corrected data were analyzed by fitting to a three-state
+transition model (Pace, 1986; Pace & Shaw, 2000;
+Vikrant et al., 2013).
+2.7.2. Data analysis and curve fitting
+Thermodynamic parameters were determined during the
+GuHcl unfolding process by detecting the folded (N) to
+intermediate (I) and intermediate to unfolded (U) transi-
+tions of the curve. Further, thermodynamic constraints
+analysis and curve fitting were performed (Pace & Shaw,
+2000; Vikrant, Nakhwa, Badgujar, Kumar, & Rathore,
+2014).
+2.8. Chemical cross-linking assay
+BARD1 BRCT (568-777) wild-type and mutant proteins
+were incubated with 0.1% glutaraldehyde, and the reac-
+tion was terminated by addition of 5 µl of 1 M Tris
+pH-8.0. Reaction was stopped in a time-dependent man-
+ner (0, 2.5, 5, 10, 15, 30, and 60 min, respectively) and
+analyzed on 12% SDS–PAGE. Untreated protein sample
+was taken as control.
+3. Results and discussion
+Deleterious non-synonymous single nucleotide polymor-
+phisms (nsSNPs) are involved in inducing disease-
+associated phenomena, because of structural alterations
+and consequent loss of molecular functions. The modern
+bioinformatics-based advanced methods have now
+enabled us to determine the structural effects due to
+deleterious nsSNPs in the target candidate genes. In the
+current study, multidisciplinary, in vitro, biophysical, and
+in silico approaches were employed to understand the
+pathogenicity of BARD1 BRCT, Arg658Cys, and
+Ile738Val mutants (Figure 1(F)).
+3.1. Folding pattern of BARD1 BRCT (568-777)
+wild-type and mutants
+BARD1 BRCT, Arg658Cys, and Ile738Val mutations
+have been discovered from the affected families of breast
+and ovarian cancer. Considering the importance of muta-
+tions in predisposing the cancer risk, we decided to
+characterized abrogative effect of mutations on the struc-
+ture and function of the protein. It has been well docu-
+mented that different classes of proteins with exposed
+hydrophobic residues become highly prone to non-speci-
+fic interactions (Kolchanov, Soloviov, & Zharkikh, 1983;
+Zhukov, Jaroszewski, & Bierzynski, 2000), which in turn
+lead to the formation of high molecular weight aggre-
+gates. The residual Arg658Cys mutation is the substitu-
+tion of a basic amino acid to a small non-polar residue,
+cysteine. However, Ile738Val substitution is a change
+from a large to small hydrophobic residue. Ile to Val
+mutation leads to removal of –CH2–group from Ile, and
+potentially create a void volume of 25 Å3 in the mutant
+protein (Harpaz, Gerstein, & Chothia, 1994). Such muta-
+tions may lead to the loss of hydrophobic interactions
+and van der Waals interactions among the substituted and
+neighboring residues. To explore this prospect, we have
+used gel filtration chromatography (AKTA FPLC, super-
+dex 75 column) to probe the oligomeric status of the
+mutants Arg658Cys and Ile738Val. The non-synonymous
+amino acid substitution in protein tends to show differen-
+tial solubility and elution profiles in gel filtration
+chromatography. There was no substantial alteration in
+solubility and elution profiles of Arg658Cys and
+Pathogenicity of BARD1 mutants 1535
+Ile738Val mutant. In size exclusion chromatography,
+wild-type as well as mutants elute at the same position in
+superdex 75 column (GE) (Figure 1(A) and (B)). Hence,
+it is concluded that Arg658Cys and Ile 738Val mutations
+are not affecting the monomeric nature of BARD1 BRCT
+(568-777) wild-type protein in solution. This monomeric
+behavior of BARD1 BRCT (568-777) wild-type,
+Arg658Cys, and Ile 738Val mutant proteins were further
+supported by chemical cross-linking experiments
+(Supplementary Figure 1A). No higher molecular aggre-
+gate formations were observed using cross-linking assay
+of BARD1 BRCT (568-777) wild-type, Arg658Cys, and
+Ile738Val proteins. Furthermore, dynamic light scattering
+of BARD1 BRCT (568-777) wild- type, Arg658Cys, and
+Figure 1. Expression and purification profile of BARD1 BRCT (568-777) wild-type, Arg658Cys, and Ile738Val proteins.
+Notes: (A) Purified protein after gel filtration chromatography on SDS–PAGE. FPLC purified protein were heated with Laemmli
+buffer and loaded on SDS–PAGE BARD1 BRCT (568-777) wild-type (lane 1) , Arg658Cys (lane 2), and Ile738Val (lane 3).
+(B) Comparative gel filtration spectra of BARD1 BRCT (568-777) wild-type, Arg658Cys, and Ile738Val (Superdex-75, GE). Elution
+profile of BARD1 BRCT (568-777) wild-type Arg658Cys, and Ile738Val were similar and showed the presence of single peak corre-
+spond to monomer. (C) BARD1 BRCT (568-777), Arg658Cys, and Ile738Val have well-defined α/β characteristics and mutants does
+not show any drastic alteration in the secondary structure. (D) Overlay of near-UV spectra of BARD1 BRCT (568-777) wild-type,
+Arg658Cys, and Ile738Val mutant proteins indicating well compact overall structure. (E) Dynamic light scattering profile of BARD1
+BRCT (568-777) wild-type, Arg658Cys, and Ile738Val showed monomeric population of all the proteins. (F) Crystal structure of
+BARD1 BRCT (PDB ID: 2NTE) with the sites for cancer-predisposing mutations. Mutant residues are indicated in red.
+1536 R.K. Choudhary et al.
+Ile738Val mutant samples also indicated their monomeric
+nature. Albeit, BARD1 BRCT (568-777) wild- type and
+Arg658Cys did not show any change in hydrodynamic
+size, a slight increment was observed in Ile738Val mutant
+protein (Figure 1(E)). The hydrodynamic diameter of
+BARD1 BRCT (568-777) wild- type and Arg658Cys pro-
+teins were found to be 6.44 ± 0.45 nm, whereas Ile738Val
+mutant protein showed a diameter of 7.40 ± .23 nm. The
+relative increase in effective hydrodynamic size indicates
+molecular expansion in Ile738Val mutant. Relative
+increase in the hydrodynamic radii in Ile738Val mutant
+may be due to the void volume generated in the
+hydrophobic core of the protein. This may further
+increase the conformational entropy of neighboring resi-
+dues making mutant protein structurally more flexible
+and leading to the increase in effective hydrodynamic
+diameter of the protein.
+3.2. Structural organization
+Far-UV CD spectra show predominant α-helix and
+β-strand characteristic, and no significant differences
+were observed in the mean residual ellipticities of wild-
+type and mutant proteins (Figure 1(C)). Near-UV CD
+spectra were obtained to dissect the effect of mutations
+on overall packing of the protein. Comparative near-UV
+spectra of BARD1 BRCT (568-777) wild-type,
+Arg658Cys, and Ile738Val mutant proteins do not reveal
+change in ellipticity, hence mutations are not abrogating
+the tertiary structure of BARD1 BRCT (568-777) wild-
+type protein (Figure 1(D)). Treating with trypsin
+(10 pg/mol) and chymotrypsin (10 pg/mol) for three
+hours, the pattern on 12% SDS–PAGE for the wild-type
+and both the mutant proteins was very similar (Figure 2).
+This observation suggests that the mutants also have
+compact tertiary structure similar to that of the wild-type
+protein. However, wild-type and mutants were different
+when treated with the chemical denaturant GuHCl.
+To determine the unfolding pattern of BARD1 BRCT
+(568-777) wild-type, Arg658Cys, and Ile738Val mutant
+proteins, all proteins with 2 μM concentration were incu-
+bated with increasing concentrations of GuHCl (0–6 M)
+for 24 h until equilibrium was achieved. Emission max-
+ima were recorded between λ = 310 and 390 nm. In the
+absence of GuHCl, while wild-type protein shows emis-
+sion maximum at λ = 333 nm, the emission maxima for
+BARD1 BRCT (568-777), Arg658Cys, and Ile738Val
+mutant proteins were at λ = 336 and 337 nm, respec-
+tively. This red shifting in the emission maximum for the
+mutants is due to the local change in the environment,
+resulting in exposure of buried tryptophan to polar
+solvent interface. BARD1 BRCT wild-type and mutant
+proteins denatured completely in 6 M GuHCl with an
+emission maximum of λ = 345 nm, which indicates that
+tryptophans are exposed to polar interface (Figure 3(A)).
+Thus, collective observations from CD spectroscopy,
+Figure 2. Resistivity profile of BARD1 BRCT (568-777) wild-type, Arg658Cys, and Ile738Val toward protease digestion.
+Notes: (A) Limited proteolysis of BARD1 BRCT (568-777) wild-type, (B) Arg658Cys, and (C) Ile738Val using trypsin and
+(D) BARD1 BRCT (568-777) wild-type, (E) Arg658Cys, and (F) Ile738Val using chymotrypsin as proteases.
+Pathogenicity of BARD1 mutants 1537
+Figure 3. Chemical denaturation profile of BARD1 BRCT (568-777) wild-type, Arg658Cys, and Ile738Val.
+Notes: (A) Overlay of normalized fluorescent intensity pattern of BARD1 BRCT (568-777) wild-type, Arg658Cys, and Ile738Val
+mutants. Normalized fluorescence intensity of BARD1 BRCT (568-777) wild-type native, Arg658Cys, and Ile738Val (0 M GuHcl)
+unfolded (6 M GuHcl), respectively. (B) Non-linear least-squares fit of a three-state equilibrium unfolding model of BARD1 BRCT
+(568-777) wild-type, Arg658Cys, and Ile738Val on the GuHcl-induced denaturation plot measured at 10°C.
+Figure 4. Structure and stability analysis of BARD1 BRCT (568-777) wild-type, Arg658Cys, and Ile738Val mutant proteins.
+Notes: (A) Overlay of fraction unfolded in far-UV CD spectra of BARD1 BRCT (568-777) wild-type, Arg658Cys, and Ile738Val.
+Thermal stability assessment of BARD1 BRCT (568-777) wild-type, Arg658Cys, and Ile738Val in near-UV range. (B) Overlay of
+mean residual ellipticity obtained after thermal denaturation of BARD1 BRCT (568-777) wild-type, (D) Arg658Cys, and (C) Ile738-
+Val in CD spectroscopy.
+1538 R.K. Choudhary et al.
+limited proteolysis, and fluorescence spectroscopy sug-
+gested that Arg658Cys and Ile738Val substitutions might
+be affecting secondary and tertiary structures only
+locally, and the effect of mutation is collectively
+responsible for tertiary structural alterations.
+3.3. Thermodynamic stability of BARD1 BRCT
+(568-777) wild-type and mutants
+To evaluate unfolding phenomenon and thermodynamic
+stability, thermal denaturation studies of proteins were
+performed using CD spectroscopy. The change in ellip-
+ticity due to gradual increase in the temperature from 10
+to 65°C was recorded. Ellipticity at λ = 222 nm was used
+to calculate fractions unfolded (Figure 4(A)). The data
+obtained from CD at λ = 222 nm could fit satisfactorily
+into a two-state denaturation model for wild-type and all
+mutants (Pace, 1986; Pace & Shaw, 2000). The transition
+mid-point (Tm) calculated for BARD1 BRCT (568-777)
+wild-type, Arg658Cys, and Ile738Val mutant proteins
+were 40.6, 41.7, and 47.8°C, respectively. The changes
+in free energies corresponding to the denaturation were:
+ΔG°H2O 9.6 ± 0.32, 7.3 ± 0.12, and 7.6 ± .42 kcal/mol,
+respectively. For tertiary structure stability assessment,
+near-UV CD spectra of BARD1 BRCT(568-777) wild-
+type, Arg658Cys, and Ile738Val mutant proteins were
+monitored at four different temperatures: 10, 30, 45, and
+60°C corresponding to λ = 280 and λ = 295. At the
+temperature ranges from 10 to 30°C, BARD1 BRCT
+(568-777) wild-type, Arg658Cys, and Ile738Val, peaks at
+λ = 295 nm and λ = 280 nm were observed, which is
+characteristic of well folded 3-D structures. Furthermore,
+at 45°C, BARD1 BRCT (568-777) wild-type and Ile738-
+Val mutant proteins show 40% loss in the mean residual
+ellipticity, but a complete loss in ellipticity was observed
+in Arg658Cys mutant. It is therefore concluded that
+BARD1 BRCT (568-777) wild-type and Ile738Val
+mutant proteins have higher thermal stability than
+Arg658Cys (Figure 4(B)–(D)). Fluorescence spec-
+troscopy was used to monitor unfolding at 283 K
+induced by GuHCl. For chemical denaturation of
+BARD1 BRCT (568-777) wild-type, Arg658Cys, and
+Ile738Val mutant proteins, thermodynamic parameters
+were calculated by plotting average fluorescence
+emission wavelength against GuHcl concentration
+(Figure 3(B)). ΔG° H2O for BARD1 BRCT, Arg658Cys,
+and Ile738Val were 7.19 ± .36, 6.29 ± .41, and 6.8
+± .21 kcal/mol, respectively. This value of the BARD1
+BRCT wild-type protein is in agreement with the earlier
+reported results (Thanassoulas et al., 2010). ΔG for
+folded to intermediate and then from intermediate to
+unfolded state for wild-type proteins was calculated to be
+2.68 and 4.5 kcal/mol, for Ile738Val mutant to be 1.8
+and 4.8658 kcal/mol, for Arg658Cys mutant to be 2.2
+and 4.09 kcal/mol, respectively. Thus, the folded mutants
+are thermodynamically less stable than the wild type.
+Figure 5. Structural analysis of BARD1 BRCT (568-777) wild-type and mutant proteins using molecular dynamics simulation.
+Notes: Comparative overlay of (A) RMSD, (B) RMSF, (C) N–H bond, (D) Rg, (E) SASA, and (F) volume overlay of BARD1 BRCT
+(568-777) wild-type (black), Arg658Cys (green), and Ile738Val (orange) with respect to time (ns).
+Pathogenicity of BARD1 mutants 1539
+3.4. MDS of BARD1 BRCT, ARG658CYS, and ILE
+738VAL mutations
+Molecular dynamics calculations were performed to
+visualize the structural alterations in BARD1 BRCT
+(568-777) wild-type, Arg658Cys, and Ile738Val mutant
+proteins. Cα, RMSD values from the input structure were
+plotted against time (50 ns) (Figure 5(A)). It has been
+observed that wild-type and mutant structures showed
+similar deviations till 1500 ps, and at 1750 ps, the struc-
+tures behaved differently. However, after 1.75 ns, Ile738-
+Val mutant structure RMSD increases to about 3 Å,
+whereas wild-type and Ile738Val structures remained
+with a RMSD value of ~1.75 to 2 Å and ~1.75 to 3 Å,
+respectively. In BARD1 BRCT (568-777) wild-type and
+Arg658Cys and Ile738Val mutant protein structures, the
+magnitude of Cα RMSD fluctuations, after relaxation
+period produces stable trajectories throughout the simula-
+tion (Figure 5(A)). The RMSF values of BARD1 BRCT
+(568-777) wild-type, Arg658Cys, and Ile738Val mutant
+protein structures were obtained, and higher degree of
+residual flexibility were observed for Ile738Val mutant
+protein (Figure 5(B)). The BARD1 BRCT (568-777)
+wild-type structure showed radius of gyration (Rg) value
+of ∼1.924 nm at 0 ns, ∼1.946 nm at 2 ns, ∼1.92 nm at
+5 ns, ∼1.94 nm at 10 ns, ∼1.97 nm at 15 ns, ∼1.93 nm at
+20 ns, ∼1.96 nm at 25 ns, and 1.95 nm at 30 ns. Ile738-
+Val mutant structure showed Rg value of ∼1.92 nm at
+0 ns, ∼1.954 nm at 2 ns, ∼1.97 nm at 5 ns, ∼1.94 nm at
+10 ns, ∼1.95 nm at 15 ns, ∼1.92 nm at 20 ns, ∼1.91 nm
+at 25 ns, and 1.94 nm at 30 ns. Arg658Cys mutant struc-
+ture showed Rg value of ∼1.925 nm at 0 ns, ∼1.94 nm at
+2 ns, ∼1.95 nm at 5 ns, ∼1.94 nm at 10 ns, ∼1.95 nm at
+15 ns, ∼1.93 nm at 20 ns, and ∼1.93 nm at 25 ns, and
+1.94 nm at 30 ns. Radius of gyration of Arg658Cys
+mutant protein structure does not show much fluctuation,
+but Ile738Val mutant protein structure shows great varia-
+tion throughout 50 ns simulation. Random change in
+radius of gyration at 20 ns of Ile738Val mutant protein
+Figure 6. Principal component analysis of BARD1 BRCT (568-777) wild-type, Arg658Cys, and Ile738Val proteins.
+Notes: (A) BARD1 BRCT (568-777) wild-type, Arg658Cys, and Ile738Val are shown in black, green, and yellow, respectively. For
+unblemished perception, individual protein has been represented independently, (B) BARD1 BRCT, (C) Arg658Cys, and (D) Ile738-
+Val. Dynamics of the proteins are projected with two eigenvectors.
+1540 R.K. Choudhary et al.
+structure indicates that structure has lost rigidity
+(Figure 5(D)). BARD1 BRCT (568-777) wild-type and
+Arg658Cys mutant protein structures do not show any
+drastic change in the SASA values, in sharp contrast to
+Ile738Val mutant protein, which shows increase in the
+solvent accessible surface area during the initial phase of
+the simulation (Figure 5(E)). We have also observed sig-
+nificant differences in the hydrogen bonding pattern dur-
+ing the simulation. BARD1 BRCT (568-777) wild-type
+protein has shown better retention in hydrogen bonds
+over the period of stimulation compared to Ile738Val
+and Arg658Cys mutant protein structures (Figure 5(C)).
+Hydrogen bond sampling at every 10 ns further indicated
+that wild-type protein shows higher retention of hydrogen
+bond than the mutant proteins (Supplementary Figure 3).
+Loss of hydrogen bond formation leads to more flexible
+conformation, and might result in loss of function of the
+mutant protein.
+To understand the overall dynamics and evaluate the
+degree of flexibility, we have performed PCA and plotted
+eigenvector 1 v/s eigenvector 2 (Figure 6(B)–(D)). The
+area spanned/dispersion by this plot is indicative of the
+nature of motion. It has been observed that BARD1
+BRCT (568-777) wild-type protein has the compact
+structure. Mutant Ile738Val is more flexible than BARD1
+BRCT (568-777) wild-type and Arg658Cys proteins
+(Figure 6(A)). The DSSP plug-in of GROMACS moni-
+tored the secondary structures at different times during
+simulation (Kabsch & Sander, 1983). BARD1 BRCT
+Ile738Val mutant started losing the α-helix occurring
+between 50th and 60th residues and lost completely at
+about 25 ns (Figure 7(A) and (B)). However, no drastic
+Figure 7. DSSP analysis of BARD1 BRCT (568-777) wild-type, Arg658Cys, and Ile738Val proteins with respect to time.
+Notes: (A) BARD1 BRCT (568-777) wild-type, (B) Ile738Val, and (C) Arg658Cys.
+Pathogenicity of BARD1 mutants 1541
+change in the secondary structure of wild-type and
+Arg658Cys mutant were observed (Figure 7(C)). It can
+be concluded that loss in α helical content in Ile738Val
+mutant protein may lead to structural flexibility.
+This was further supported by the change in volume
+recorded in DLS and fluorescence spectroscopic studies
+(Figure 5(F)).
+3.5. Weak intramolecular interactions
+Minimum energy structures of BARD1 BRCT (568-777)
+wild-type, Arg658Cys, and Ile738Val mutant proteins
+were used to study the weak intramolecular interactions.
+In the wild-type structure, Arg 658 forms hydrogen bond
+with the Glu 652, 649, and 655, and non-covalent
+interactions with Ser 660, Gly 656, Leu 662, and Arg
+661. In Cys 658 mutant structure, there is a reduction in
+the number of hydrogen bonds. Furthermore, Cys 658
+forms non-covalent interactions with Gly 656, Glu 652,
+Pro 654, Ile 653, and Ser 660 (Supplementary Fig-
+ure 2 (A) and (B)). Mutant Ile738Val is involved in the
+hydrogen bonding with the Tyr 678 and non-hydrogen
+bonding interaction with Tyr 736, Phe 736, and Ala 758.
+Furthermore, Val 738 forms hydrogen bonds with Tyr
+678 and a new hydrogen bond is established with
+Trp680 and non-hydrogen bonding interactions with Phe
+683, Leu 679, Phe 677, Ala 758, and Tyr 736. Mutant
+structure Arg658Cys comprehensively loses the hydro-
+gen bonds as compared to wild-type structure, further
+destabilizing the structure and surface charge of the pro-
+tein molecule (Supplementary Figure 2 (C) and (D)).
+4. Conclusions
+To explore the structural effect of Arg658Cys and
+Ile738Val mutations on BARD1 BRCT, we have carried
+out biophysical experiments and MD simulations. In the
+crystal structure of BARD1 BRCT, Arg658 is a surface
+exposed residue, whereas Ile 738 is buried inside the
+structure. Expression and purification profile of BARD1
+BRCT wild-type and mutant proteins do not show any
+drastic change in solubility and monomeric behavior.
+Secondary structures characterized by CD spectroscopy
+suggest that mutation is not inducing immense global
+changes, as the change in the ellipticity values is almost
+identical for all proteins. Far-UV spectra of proteins
+show insignificant change in the secondary structure, but
+slight local changes in the structure are also irrefutable.
+Near-UV CD spectroscopy, fluorescence spectroscopy,
+and limited proteolysis experiments suggested that the
+mutations are not affecting the overall compactness. The
+Tm value has reduced by 7 and 6.2°C for the mutants.
+Interestingly, the same concentration of GuHCl appears
+to be required to denature the wild-type and mutant
+proteins. Results from molecular dynamics simulation
+indicated that Ile738Val structure has gain flexibility
+compared to wild-type and Arg658Cys mutant proteins.
+The gain of flexibility has been detected in RMSD,
+RMSF, and Rg plot for Ile738Val mutant, which is fur-
+ther supported by red shift in native fluorescence maxi-
+mum, decrease in the number of hydrogen bonds,
+increase in volume, SASA, and PCA. Loss of Tm and
+ΔG of BARD1 BRCT and Arg658Cys and Ile738Val
+mutants with respect to wild-type suggests that substitu-
+tions are physiologically detrimental. It has been
+observed collectively that wild-type and mutant proteins
+exhibited analogous secondary structural constituents,
+whereas fluorescence spectroscopy suggested that the
+comparative positioning of Trp and Tyr were signifi-
+cantly hindered. MDS of BARD1 BRCT (568-777) wild-
+type, Arg658Cys, and Ile738Val mutant protein structures
+has been comprehensively analyzed to understand the
+structural alterations. Our results from the biophysical,
+in vitro, and in silico approaches predict that Arg658Cys
+and Ile738Val mutants are destabilizing the BARD1
+BRCT domain which may lead to the loss of thermody-
+namic stability and functional activity.
+Supplementary material
+The supplementary material for this paper is available online
+at http://dx.doi.org/10.1080/07391102.2015.1082149.
+Acknowledgments
+The authors would like to acknowledge Mass Spectrometry,
+BTIS facility of TMC-ACTREC. MVH thanks DAE for the
+award of Raja Ramanna fellowship.
+Disclosure statement
+No potential conflict of interest was reported by the authors.
+Funding
+This work was supported by the Department of Biotechnology,
+Ministry of Science and Technology [grant number BT/
+PR10765/BRB/664/2008], [grant number BT/PR12565/BID/07/
+303/2009], [grant number DBT BT/513/NE/TBP/2013]; Seed
+in Air grant from TMC.

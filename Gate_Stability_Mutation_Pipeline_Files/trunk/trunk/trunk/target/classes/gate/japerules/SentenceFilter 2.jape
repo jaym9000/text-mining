@@ -1,0 +1,28 @@
+Phase:SentenceFiltering
+Input: Sentence
+
+Options: control = appelt
+
+Rule:sentencefilter1
+(
+	{Sentence}
+):sentence
+
+-->
+{	
+	Annotation sentenceAnn = (Annotation)((AnnotationSet)bindings.get("sentence")).iterator().next();  
+	AnnotationSet PMFInSentence = doc.getAnnotations().get(sentenceAnn.getStartNode().getOffset(), sentenceAnn.getEndNode().getOffset()).get("PossibleMF");
+	if(PMFInSentence.size() > 0) {
+		Object[] tokensInPMFSentence = doc.getAnnotations().get(sentenceAnn.getStartNode().getOffset(), sentenceAnn.getEndNode().getOffset()).get("Token").toArray();
+		for(Object tokenInPMFSentence : tokensInPMFSentence) {
+			try {
+				outputAS.add(((Annotation)tokenInPMFSentence).getStartNode().getOffset(), ((Annotation)tokenInPMFSentence).getEndNode().getOffset(), "PMFToken", ((Annotation)tokenInPMFSentence).getFeatures());
+			} catch(InvalidOffsetException e) {
+			}
+		}
+		try {
+			outputAS.add(sentenceAnn.getStartNode().getOffset(), sentenceAnn.getEndNode().getOffset(), "PMFSentence", sentenceAnn.getFeatures());
+		} catch(InvalidOffsetException e) {
+		}
+	}
+}

@@ -1,0 +1,13 @@
+Phase:possibleMF
+Input: MolecularFunction
+
+Options: control = appelt
+
+//possible mf rules
+
+Rule:PossibleMF
+(
+	{ MolecularFunction }
+):possibleMF
+-->
+		:possibleMF.PossibleMF = {rule = PossibleMF}

@@ -1,0 +1,34 @@
+Phase:kVar2
+Input: kVar Token
+
+Options: control = all
+
+Rule:kcatDivKm
+Priority: 1
+(
+	{ kVar.kind == "kcat" }
+	{ Token.string == "/" }
+	{ kVar.kind == "Km" }
+
+):kcatDivKm
+-->
+		:kcatDivKm.KineticVariable = {kind = "kcatOverKm"}
+
+
+Rule:km
+(
+	{ !Token.string == "/"}
+	({ kVar.kind == "Km" }):km
+	{ !Token.string == "/" }
+)
+-->
+		:km.KineticVariable = {kind = "Km"}
+		
+Rule:kcat
+(
+	{ !Token.string == "/"}
+	({ kVar.kind == "kcat" }):kcat
+	{ !Token.string == "/" }
+)
+-->
+		:kcat.KineticVariable = {kind = "kcat"}

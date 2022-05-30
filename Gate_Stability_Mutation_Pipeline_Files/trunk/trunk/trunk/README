@@ -1,0 +1,46 @@
+Running the services in Jetty:
+==============================
+export MAVEN_OPTS="-Xms1500m -Xmx2048m -ea"
+mvn -Djetty.port=9999 org.mortbay.jetty:maven-jetty-plugin:run
+
+
+Install snowball stemmer:
+=========================
+mvn install:install-file -Dfile=lib/snowball.jar -DgroupId=ca.unbsj.cbakerlab -DartifactId=snowball  -Dversion=0.0.1 -Dpackaging=jar
+
+Install mutation:
+=================
+mvn install:install-file -Dfile=lib/mutation.jar -DgroupId=ca.unbsj.cbakerlab -DartifactId=mutation  -Dversion=1.0-SNAPSHOT -Dpackaging=jar
+
+
+Execute java from command line in maven:
+========================================
+mvn exec:java -Dexec.mainClass=ca.unbsj.cbakerlab.mie.Main -Dexec.args="-d --mgpipe --cache -s -e -i /home/artjomk/workspace/Corpora/dhla-corpus-dev -o /home/artjomk/workspace/Corpora/dhla-corpus-dev/MGG -x /home/artjomk/workspace/Corpora/dhla-corpus-dev/MGG/XML -v /home/artjomk/workspace/Corpora/dhla-corpus-dev/evaluation.csv"
+
+
+
+HOW TO RUN MUTATION GROUNDER
+============================
+1. In src/main/resources/project.properties set GATE_HOME variable to your GATE installation directory
+2. mvn compile
+3. export MAVEN_OPTS="-Xmx2048m"
+4.  
+mvn exec:java -Dexec.mainClass=ca.unbsj.cbakerlab.mutation_impact.Main -Dexec.args="-d --mgpipe --cache \
+-i <corpus_path> \
+-x <corpus_path>/XML"
+
+Comments:
+corpus_path is a path to directory with text documents (*.txt)
+-d - debugging messages
+--cache - caching MGDB query results
+-i - input directory (= corpus directory)
+-x - directory with output gate xml documents
+
+
+Example:
+mvn exec:java -Dexec.mainClass=ca.unbsj.cbakerlab.mutation_impact.Main -Dexec.args="-d --mgpipe --cache \
+-i /home/artjomk/testmg \
+-x /home/artjomk/testmg/XML"
+
+Note:
+First run requires some time to download gazetteer list for long protein names (~10-20 min). After that it takes 10-30 seconds to load it by next run.

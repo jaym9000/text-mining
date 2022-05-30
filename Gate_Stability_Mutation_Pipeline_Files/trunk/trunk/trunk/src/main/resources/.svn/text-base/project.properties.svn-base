@@ -1,0 +1,14 @@
+# MySQL database information
+DATABASE_URL:138.119.12.33:3306/uniprot3
+DATABASE_USERNAME:swissprot
+DATABASE_PASSWORD:password
+
+# gate home path
+GATE_HOME:/home/artjomk/bin/GATE-7.0
+
+# ontologies used in project; they are in /resources folder
+GENE_ONTOLOGY_URL:ontology/gene_ontology_edit.obo
+MUTATION_ONTOLOGY_URI:http://www.unbsj.ca/sase/csas/mutationOntology.owl
+
+ONLY_SWISSPROT:true
+FILTER_ONE:false

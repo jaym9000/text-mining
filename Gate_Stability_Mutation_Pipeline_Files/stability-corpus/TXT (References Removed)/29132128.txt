@@ -1,0 +1,688 @@
+Contents lists available at ScienceDirect
+Redox Biology
+journal homepage: www.elsevier.com/locate/redox
+Research paper
+A single cysteine post-translational oxidation suffices to compromise
+globular proteins kinetic stability and promote amyloid formation
+Patrizia Marinellia,1, Susanna Navarroa,1, Ricardo Graña-Montesa, Manuel Bañó-Poloa,
+María Rosario Fernándeza, Elena Papaleob, Salvador Venturaa,⁎
+a Institut de Biotecnologia i de Biomedicina and Departament de Bioquímica i Biologia Molecular, Universitat Autònoma de Barcelona, 08193 Bellaterra, Barcelona, Spain
+b Computational Biology Laboratory, Danish Cancer Society Research Center, 2100 Copenhagen, Denmark
+A R T I C L E I N F O
+Keywords:
+Protein oxidation
+Protein misfolding
+Protein aggregation
+Oxidative stress
+Post-translational modification
+A B S T R A C T
+Oxidatively modified forms of proteins accumulate during aging. Oxidized protein conformers might act as
+intermediates in the formation of amyloids in age-related disorders. However, it is not known whether this
+amyloidogenic conversion requires an extensive protein oxidative damage or it can be promoted just by a dis-
+crete, localized post-translational modification of certain residues. Here, we demonstrate that the irreversible
+oxidation of a single free Cys suffices to severely perturb the folding energy landscape of a stable globular
+protein, compromise its kinetic stability, and lead to the formation of amyloids under physiological conditions.
+Experiments and simulations converge to indicate that this specific oxidation-promoted protein aggregation
+requires only local unfolding. Indeed, a large scale analysis indicates that many cellular proteins are at risk of
+undergoing this kind of deleterious transition; explaining how oxidative stress can impact cell proteostasis and
+subsequently lead to the onset of pathological states.
+1. Introduction
+Protein misfolding and aggregation are linked to the onset of more
+than 40 human diseases, including neurodegenerative disorders such
+Alzheimer’s, Parkinson’s and prion diseases or amyotrophic lateral
+sclerosis (ALS), but also non-neurodegenerative pathologies like type II
+diabetes, cardiomyopathies, cataracts or even certain types of cancer
+[1,2].
+Native state stability and folding cooperativity disfavour the ag-
+gregation of globular proteins, because they prevent local or global
+unfolding and the subsequent population of aggregation-prone inter-
+mediates. This appears as a very successful evolutionary strategy to
+avoid aggregation, since only a few globular proteins aggregate from
+their native conformation under physiological conditions [3]. Accord-
+ingly, conformational diseases where globular proteins are involved,
+are often triggered by pathogenic mutations that destabilize the native
+fold, thus facilitating subsequent aggregation [4,5]. Even conservative
+mutations might shift the delicate equilibrium between the folded and
+aggregation-prone states in the cell [6], because increased conforma-
+tional fluctuations suffice to enable the aggregation reaction, without a
+need for global unfolding [7].
+During their biological lifetime, proteins are frequently subject of
+irreversible non-enzymatic post-translational modifications (PTM) as-
+sociated to molecular aging. Oxidation represents an important class of
+non-enzymatic PTMs since cells produce significant levels of reactive
+oxygen species (ROS) [8], which can react with susceptible side chains,
+inducing various chemical modifications. Similarly to mutations, these
+modifications may cause misfolding and shift the conformational
+equilibrium towards more aggregation-prone states. Indeed, oxidative
+protein damage is being found associated with an increasing number of
+diseases and with aging [9–11].
+The thiol functional group of Cys is particularly sensitive to redox
+conversion and the thiol group of cysteines can be oxidized to different
+states. The thiol and disulfide forms are the most common, but deri-
+vatives with a higher oxidation state such as sulfenic (RSOH), sulfinic
+(RSO2H), and sulfonic (RSO3H) acid are being detected in a growing
+number of proteins. Indeed, up to a 5% of cellular protein Cys occur in
+the sulfinic or sulfonic acid form [12]. Sulfonic acid is the most highly
+oxidized species of thiols and its formation is irreversible. We have still
+little information on how site-specific cystein sulfonic acid (CySO3H)
+https://doi.org/10.1016/j.redox.2017.10.022
+Received 31 July 2017; Received in revised form 24 October 2017; Accepted 29 October 2017
+⁎ Correspondence to: Institut de Biotecnologia i de Biomedicina, Parc de Recerca UAB, Mòdul B, Universitat Autònoma de Barcelona, E-08193 Bellaterra, Barcelona, Spain.
+1 These authors contributed equally to this work.
+E-mail address: salvador.ventura@uab.es (S. Ventura).
+Abbreviations: PTM, post-translational modifications; ROS, reactive oxygen species; MSO, methionine sulfoxide; CD, circular dichroism; MD, molecular dynamics; Th-T, thioflavin T; CR,
+Congo red
+Redox Biology 14 (2018) 566–575
+Available online 31 October 2017
+2213-2317/ © 2017 The Authors. Published by Elsevier B.V. This is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/BY-NC-ND/4.0/).
+MARK
+formation may impact protein conformation. Here, we take advantage
+of the single Cys residue in position 57 of the yeast URN1 FF domain to
+gain molecular insights on the effect of such PTM in the folding and
+aggregation landscapes of this model globular protein.
+FF domains are small protein-protein interaction modules consisting
+of∼50–70 residues and characterized by the presence of two conserved
+Phe residues at their N- and C-termini [13]. This fold consists of three α-
+helices arranged as an orthogonal bundle with a 310 helix in the loop
+connecting the second and the third helices [14,15] (Fig. 1). FF do-
+mains are involved in RNA splicing, signal transduction and transcrip-
+tion processes [16,17], they are present in a variety of eukaryotic nu-
+clear transcription and splicing factors, and their sequences are well
+conserved from yeast to humans [13]. The folding and aggregation
+landscapes of several of these domains, including the URNF1 FF do-
+main, have been characterized in detail [18–21]. This provides a unique
+opportunity to dissect the impact of selective post-translational Cys
+oxidation on protein folding kinetics, thermodynamic stability and
+aggregation propensity. Here, we integrate experimental and compu-
+tational analyses to understand how these properties are affected in this
+model protein as well as at the proteome level. Overall, our results
+demonstrate that the irreversible oxidation of a single free Cys is able to
+dramatically impact the folding and stability of a globular protein,
+leading to its aggregation into amyloid-like structures under physiolo-
+gical conditions. Moreover, the data suggest that a significant fraction
+of cellular proteins are exposed to this particular risk.
+2. Material and methods
+2.1. URN1 FF cloning, expression and purification
+FF domain of yeast URN1 protein corresponding to residues 212-
+266 was cloned, expressed and purified as previously described [14].
+The purity of the samples was checked by SDS-PAGE. Protein con-
+centration was determined by UV absorption using an ε 280 nm value of
+1.948 mg−1 mL cm−1. FF mutants were engineered by PCR with
+QuikChangeII Site-directed Mutagenesis Kit, by following the manu-
+facturer instructions (Agilent Technologies). Unless otherwise noted, all
+the experiments were carried out in 50 mM sodium acetate buffer at pH
+5.7.
+2.2. FoldX modelling
+URN1-FF mutant models were built using the BuildModel command
+/ routine of the FoldX algorithm [22] (version 3b6) on top of the FF-WT
+structure (PDB: 2JUC). The resultant structures were used to calculate
+the effect of the mutation on protein stability (ΔΔG = ΔGmut - ΔGwt)
+[23].
+2.3. Sample oxidation
+Oxidation of FF domains was attained by incubating 1 mg/mL
+protein in presence of 5% v/v H2O2 solution for 12 h at 298 K. An
+extensive water dialysis at 277 K was used to remove non-reacted H2O2
+from the protein solution before lyophilization. The oxidation state of
+the sample was analyzed on an UltrafleXtreme mass spectrometer
+(Bruker Daltonics) before or after triptic digestion (3 h at 37 °C). Free
+Cys residues were alkylated by adding to the samples an excess of
+75 mM iodoacetamide in 50 mM ammonium bicarbonate buffer,
+pH=8. The reaction was allowed to proceed for 30 min at room tem-
+perature.
+2.4. Circular dichroism, Trp intrinsic fluorescence and bis-ANS binding
+Lyophilized proteins were dissolved at 20 μM in 50 mM sodium
+acetate at pH 5.7, filtered through a 0.22 µm filter and immediately
+analyzed. Far-UV CD spectra were recorded from 260 to 200 nm, at
+0.2 nm intervals, 1 nm bandwidth and a scan speed of 100 nm/min in a
+Jasco-715 spectropolarimeter (Jasco Corporation, Japan) thermostated
+at 298 K. Twenty accumulations were averaged for each spectrum. Trp
+intrinsic fluorescence was analyzed at 298 K in a Jasco FP8200 spec-
+trofluorometer (Jasco Corporation, Japan). Three averaged spectra
+were accumulated using an excitation wavelength of 280 nm and re-
+cording the emission from 300 to 400 nm with slit widths of 5 nm. To
+study the binding to 4,4′-dianilino-1,1′- binaphthyl-5,5′-disulfonic acid
+(bis-ANS), protein solutions were prepared at 20 μM in presence of
+10 μM bis-ANS and analyzed immediately. Three spectra were recorded
+in a Jasco FP8200 spectrofluorometer (Jasco Corporation, Japan) using
+an excitation wavelength of 370 nm and an emission between 400 and
+600 nm with slit widths of 5 nm.
+2.5. Thermal and chemical denaturation
+Protein samples were dissolved at 20 μM to study thermal stabilities
+by far-UV CD and Trp intrinsic fluorescence intensity. The ellipticity at
+222 nm was registered in a Jasco-715 spectropolarimeter (Jasco
+Corporation, Japan) in a range from 273 to 363 K, each 0.1 K with
+2 min of temperature equilibrium between measures. Trp intrinsic
+fluorescence emission was recorded at 360 nm after excitation at
+Fig. 1. Primary and tertiary structures of the URN1 FF domain. (A)
+Amino acidic sequence and (B) ribbon representation of FF-WT
+(left) and FF-R18A mutant (right) are shown. Colored regions
+correspond to: α-helix 1 (red), α-helix 2 (green), helix 310
+(yellow) and α-helix 3 (blue). The mutated residue (Arg18Ala) is
+represented in pink. The Protein Data Bank accession code for the
+WT structure is 2JUC. The underlined residues correspond to the
+natural FF domain. This figure was prepared with PyMOL
+(www.pymol.org).
+P. Marinelli et al. Redox Biology 14 (2018) 566–575
+567
+280 nm, using slit widths of 5 nm for both wavelengths in a Jasco
+FP8200 spectrofluorometer (Jasco Corporation, Japan). The fluores-
+cence emission was monitored each 0.5 K with 1 min of temperature
+equilibrium between measures.
+For chemical denaturation, samples were prepared at 20 μM in
+presence of different concentrations of denaturant agent (0–9 M of
+urea). The reaction was left to equilibrate for 20 h at room temperature
+and analyzed by CD and Trp intrinsic fluorescence at 222 nm and 280/
+360 nm (ex/em), respectively. The results were fitted to a two-state
+transition curve where the signals of the folded and unfolded states are
+dependent on the temperature/denaturant concentration using the
+nonlinear least squares algorithm provided with Kaleidagraph (Synergy
+Software).
+2.6. NMR spectroscopy
+Lyophilized proteins were prepared at 50 μM in 20 mM deuterated
+sodium phosphate buffer and 130 mM NaCl, at pH 5.7, using a 9:1H2O/
+D2O ratio. One-dimensional NMR spectra were accumulated at specific
+temperatures on a Bruker AVANCE 600-MHz spectrometer using sol-
+vent suppression WATERGATE techniques. The collected spectra were
+processed and analyzed using the TopSpinv2.0 software packages from
+(Bruker Biospin).
+2.7. Folding and unfolding kinetics parameters
+Folding and unfolding kinetics were followed by recording intrinsic
+fluorescence changes upon transition at 298 K in a Bio-Logic SFM-3
+stopped-flow instrument (Bio-Logic Science Instruments), employing an
+excitation wavelength of 280 nm and a 320 nm emission cut-off filter.
+The protein concentration was 20 μM in 50 mM sodium acetate at pH
+5.7 with or without urea. All fluorescence traces fitted well to a single
+exponential function, and kinetic parameters were derived to a two-
+state folding model, using the Kaleidagraph version 4.0 (Synergy
+Software), as previously described [18].
+2.8. Molecular dynamics (MD) simulations
+MD simulations were carried as described in the Supplementary
+Material.
+2.9. Aggregation kinetics
+Lyophilized URN1-FF samples were prepared at 100 μM in sodium
+acetate buffer at pH 5.7 in presence of 25 μM of Thioflavine T (Th-T).
+After equilibrating during 5 min at 310 K, Th-T fluorescence intensity
+was monitored during 60 min in a Jasco FP8200 spectrofluorometer
+(Jasco Corporation, Japan) using the Th-T excitation and emission
+wavelengths at 440 and 475 nm, respectively, with slit widths of 5 nm.
+2.10. Structural analysis of protein aggregates
+Lyophilized protein samples were prepared at 50 μM in sodium
+acetate buffer at pH 5.7 and incubated at 310 K under agitation during
+one week.
+Aggregated samples were diluted to 10 μM in sodium acetate buffer
+at pH 5.7 in presence of 25 μM of Th-T and analyzed in a Jasco FP8200
+spectrofluorometer (Jasco Corporation, Japan). Three Th-T spectra
+were accumulated exciting at 440 nm and acquiring fluorescence
+emission between 460 and 600 nm with excitation and emission slit
+widths of 5 nm. In Congo red (CR) binding assay, FF domain aggregates
+were diluted to 10 μM in presence of 20 μM of CR and optical absorp-
+tion spectra were recorded from 400 to 700 nm at 298 K. Each trace
+was the average of 3 accumulated spectra in a Cary-400 UV/Vis spec-
+trophotometer (Varian Inc.). Spectra of protein only and CR solution
+were acquired to subtract protein scattering and dye contribution.
+Aggregated FF domains solutions, diluted at 10 μM, were also
+analyzed by far-UV CD and bis-ANS dye binding as described above.
+2.11. Transmission Electron Microscopy (TEM)
+Aggregated samples were diluted tenfold in water and 10 μL were
+placed on carbon-coated copper grids during 5 min. The grids were then
+washed with distilled water and stained with 2% (w/v) uranyl acetate
+for 1 min. An HITACHI H-7000 transmission electron microscope op-
+erating at an accelerating voltage of 75 kV was used to visualize fibrils.
+3. Results
+3.1. FF domain oxidation specifically converts Cys57 into a cysteine
+sulfonic acid
+To investigate whether the impact of oxidation on protein properties
+is modulated by the native state stability, we used here two different FF
+domains: the wild type domain (FF-WT) and an Arg18Ala mutant (FF-
+R18A) (Fig. 1), which corresponds to a destabilized, yet natively folded
+FF domain variant.
+FF domains were incubated in the presence of H2O2 and their oxi-
+dation state was analyzed by mass spectrometry (MS). An increase of ≈
+64 Da was observed for both oxidized proteins, suggesting the in-
+corporation of 4 oxygen atoms (supplementary Fig. 1). Further tryptic
+digestion coupled with MS analysis allowed the identification of two
+specific oxidation sites at Met3 and Cys57 (supplementary Table 1). A
+methionine sulfoxide (MSO) accounting for one extra oxygen atom and
+a cysteine sulfonic acid (CySO3H) incorporating 3 new oxygen atoms
+(≈ +48 Da) were detected in the oxidized states of both FF variants.
+Upon iodoacetamide treatment, carboxyamidomethyl Cys (CAM≈
++57 Da) formation is observable only for peptides derived from non-
+oxidized proteins, consistent with the presence of a free and accessible
+Cys57 thiol group in their native structures (supplementary Table 1). In
+contrast, the Cys57 sulfonic acid in the oxidized domains prevents the
+alkylation reaction. Therefore, the H2O2-induced FF oxidation resulted
+in the modification of only two residues. Cys57 is located in the α-helix
+3, whereas Met3 is absent in the natural domain, placed in the dis-
+ordered N-terminal tail and, according to the NMR solution structure
+[14], not interacting with any other protein residue. Therefore, any
+impact on the protein globular conformation due to oxidation can be
+adscribed to CysSO3H formation at position 57.
+3.2. Conformational characterization of oxidized FF domains
+The conformational properties of non-oxidized (FF-WT and FF-
+R18A) and oxidized proteins (FF-WT-OX and FF-R18A-OX) were stu-
+died at 20 μM concentration, pH 5.7 at 298 K, by far-UV CD spectro-
+scopy (Fig. 2A), Trp intrinsic fluorescence (Fig. 2B) and bis-ANS
+binding (Fig. 2C). In these conditions the URNF1 FF domain exhibits
+maximal stability and solubility [18]. The typical α-helical minima at
+210 and 222 nm, together with a characteristic FF domain minimum at
+230 nm, are observed in the CD spectra of both non-oxidized proteins.
+The FF-WT-OX domain retains the native secondary structure spectrum.
+In contrast, the FF-R18A-OX spectrum reveals a conversion towards a
+largely disordered conformation, displaying a minimum at ≈ 205 nm
+(Fig. 2A).
+The FF domain has two Trp residues at position 27 and 56 and their
+fluorescence is a sensitive probe of the FF domain native structure [18].
+The FF-WT-OX Trp emission spectrum shows higher fluorescence in-
+tensity compared with that of the FF-WT, but keeps the same emission
+maximum, indicating a larger exposure of Trp residues in a native-like
+environment (Fig. 2B). The fluorescence spectrum of FF-R18A-OX is
+significantly red-shifted and displays a higher maximum than that of
+the non-oxidized mutant, consistent with the observed changes in sec-
+ondary structure and likely associated with the opening of the globular
+P. Marinelli et al. Redox Biology 14 (2018) 566–575
+568
+structure and the concomitant exposure of hydrophobic regions, as
+indicated by the high enhancement of bis-ANS fluorescence in its pre-
+sence (Fig. 2C). The analysis of bis-ANS binding also confirms con-
+formational changes occurring in FF-WT-OX, but they are much smaller
+than in FF-R18A-OX. The one-dimensional NMR (1H-NMR) spectra of
+the oxidized FF domains at 298 K shows, in both cases, an alteration of
+the native signal dispersion and peak sharpness suggesting structural
+rearrangements relative to the parental proteins (supplementary Fig. 2).
+3.3. Impact of Cys57 oxidation on FF domain stability
+Thermal unfolding of the FF domains was followed at pH 5.7 by far-
+UV CD and Trp intrinsic fluorescence, monitoring the changes in molar
+ellipticity and fluorescence emission at 222 and 360 nm, respectively
+(Fig. 3). The thermal denaturation curves show a single cooperative
+transition and the data could be fitted to a two-state unfolding model
+for all analyzed FF domains except for FF -R18A- OX, due to its lower
+thermostability.
+The stability of both FF domains resulted considerably perturbed by
+CySO3H formation (Fig. 3A and B), with a decrease in FF-WT-OX Tm of
+≈ 20 K respect that of FF-WT, and a reduction>20 K in the case of the
+R18A-OX-Tm relative to FF-R18A (supplementary Table 2). These data
+were corroborated by thermal denaturation followed by H-NMR1. Re-
+duction of the native signal dispersion is observed at lower tempera-
+tures in oxidized than in non-oxidized species both for FF-WT and FF-
+R18A (supplementary Fig. 2). In all cases the reaction was reversible.
+The chemical unfolding of the FF domains was analyzed at pH 5.7
+and 298 K. The urea denaturation curves at equilibrium were obtained
+recording the changes in molar ellipticity at 222 nm (Fig. 3C) and Trp
+intrinsic fluorescence at 360 nm (Fig. 3D) at increasing denaturant
+concentrations. The thermodynamic values were calculated assuming a
+two-state model according to the unfolding single cooperative transi-
+tion shown by all FF domains (Table 1). The ΔGF-U of FF-WT-OX
+measured by fluorescence and CD spectroscopy corresponds to ≈
+1.5 kcal/mol with a [Urea]50% of ≈ 2 M, in contrast to the ≈ 5.0 kcal/
+mol and [Urea]50% of ≈ 6 M exhibited by FF-WT. Reliable thermo-
+dynamic values could not be approximated for FF-R18A-OX since it
+unfolds at very low urea concentrations (< 1 M). In FF-WT, CySO3H
+reduces ΔGF-U by ≈ 3.5 kcal/mol. Because FF-R18A ΔGF-U ≈ 3.5 kcal/
+mol is not surprising that FF-R18A-OX is unstable even in the absence of
+denaturant.
+Overall, thermal and chemical denaturation data, indicate that both
+oxidized domains are significantly destabilized relative to non-oxidized
+FF forms and that the impact of oxidation on the protein conformation
+depends on the initial stability of the native domain.
+3.4. Dissecting the reasons behind oxidized FF domains destabilization
+Whereas it is evident that the presence of a CySO3H at position 57
+(supplementary Fig. 3A, B) impacts significantly the stability of FF
+domains, it is not clear if this effect results from the generic loss of the
+Cys57 residue or rather it is caused by the presence of the sulfonic acid
+in this specific position. In order to discriminate between these two
+possibilities, FF-WT Cys57 was mutated to both Ser and Asp. The
+Cys57Ser mutant (FF-C57S) was designed to investigate selectively the
+effect caused by the loss of the thiol group in the free Cys side chain
+(supplementary Fig. 3A, C). In the Cys57Asp mutant (FF-C57D), the
+aspartate is intended to act as a “cysteine sulfonic acid mimic”, emu-
+lating the negative charge of the oxidized Cys side chain (supplemen-
+tary Fig. 3B, D). The changes in thermodynamic stability promoted by
+the mutations were predicted with the FoldX algorithm [22] (ΔΔGtotal
+= ΔGwt - ΔGmut), rendering ΔΔG values of−0.46 and 5.29 kcal/mol for
+the FF-C57S and FF-C57D mutants, respectively, thus anticipating that
+the previously observed domain destabilization was likely caused by
+the irreversible oxidation of Cys57 and not by the mere absence of its
+thiol group.
+The secondary and tertiary structure of FF-C57S and FF-C57D mu-
+tants were analyzed by far-UV CD spectroscopy (supplementary
+Fig. 4A), Trp intrinsic fluorescence (supplementary Fig. 4B) and bis-
+ANS binding (supplementary Fig. 4C). The CD spectra of both FF mu-
+tants correspond to that of an α-helical structure (supplementary
+Fig. 4A). The increase in Trp intrinsic fluorescence emission recorded
+for FF-C57D suggests a certain opening of the globular structure as in
+the case of FF-WT-OX. In contrast, the FF-C57S Trp emission spectrum
+resembles that of FF-WT (supplementary Fig. 4B). The fluorescence
+emission of FF-C57D in the presence of bis-ANS confirms a certain ex-
+posure of hydrophobic regions to solvent, as in the case of FF-WT-OX.
+The FF-C57S mutant exhibits much lower bis-ANS binding, with a
+fluorescence intensity closer to that of FF-WT (supplementary Fig. 4C).
+Fig. 2. Conformational properties of oxidized and non-oxidized FF domains. FF domains were
+analyzed using (A) far-UV CD spectroscopy, (B) Trp intrinsic fluorescence and (C) bis-ANS
+fluorescence, at 298 K. Free bis-ANS emission spectrum is represented with a black line.
+P. Marinelli et al. Redox Biology 14 (2018) 566–575
+569
+3.5. Thermal and chemical unfolding of FF Cys57 mutants
+The thermal and chemical stability of FF Cys57 mutants was ana-
+lyzed at pH 5.7. The resulting data were compared with the thermo-
+dynamic data obtained for FF-WT and FF-WT-OX (Fig. 4). Thermal and
+chemical denaturation were monitored by far-UV CD at 222 nm and by
+Trp fluorescence emission at 360 nm, respectively. A single cooperative
+transition that could be fitted to a two-state unfolding model was ob-
+served for both mutants. The melting temperatures obtained by CD and
+Trp intrinsic fluorescence are similar (Supplementary Table 3),
+coinciding to indicate that FF-C57D displays a thermal stability (Tm =
+324 K) close to that of FF-WT-OX (Tm = 321 K), while FF-C57S (Tm =
+335 K) is more similar to the wild type domain (Tm = 342 K). An
+analogous behaviour was observed in chemical unfolding, FF-C57D
+displaying a ΔGF-U ≈ 2.5 kcal/mol and [Urea]50% ≈ 3.5 M, whereas FF-
+C57S displays a ΔGF-U ≈ 4.5 kcal/mol and [Urea]50% ≈ 5.9 M
+(Table 1). Thus, taken together, these data indicate a similar destabi-
+lization and structural rearrangement for FF-C57D and FF-WT-OX,
+whereas the FF-C57S mutant, despite being slightly destabilized re-
+lative to FF-WT, is clearly more stable, in excellent agreement with the
+Fig. 3. Thermal and chemical stabilities of FF domains. Thermal stabilities were analyzed by (A) far-UV CD signal change at 222 nm and (B) Trp intrinsic fluorescence emission at 360 nm.
+Chemical equilibrium curves with urea were followed at 298 K by (C) far-UV CD at 222 nm and by (D) Trp intrinsic fluorescence at 360 nm.
+Table 1
+Thermodynamic properties of FF domains.
+aΔG(H20) (Kcal/mol) bm (Kcal/mol·M) C[Urea]50% (M)
+CD Trp intrinsic CD Trp intrinsic CD Trp intrinsic
+Fluorescence Fluorescence Fluorescence
+FF-WT 5.14±0.21 4.84± 0.08 0.80± 0.12 0.81± 0.01 6.42± 1.22 5.97±0.17
+FF-WT-OX 1.50±0.11 1.67± 0.16 0.75± 0.07 0.80± 0.04 2.00± 0.33 2.08±0.30
+FF-R18A 3.39±0.24 3.62± 0.32 0.75± 0.09 0.96± 0.19 4.52± 0.86 3.77±1.07
+FF-R18A-OX – – – – – –
+FF-C57D 2.60±0.09 2.46± 0.05 0.82± 0.04 0.74± 0.01 3.56± 0.28 3.32±0.11
+FF-C57S 4.43±0.07 4.59± 0.07 0.77± 0.01 0.77± 0.02 5.75± 0.16 5.96±0.24
+a Gibbs energy of unfolding at [Urea]=0.
+b m value, dependence of free energy of unfolding with urea.
+c The urea concentration required to unfold 50% of the protein molecules.
+P. Marinelli et al. Redox Biology 14 (2018) 566–575
+570
+computational predictions. The absence of Cys residues in the FF-C57S
+mutant allowed us to test whether the oxidation of Met3 could play a
+significant role in FF domains destabilization. Thermal denaturation of
+oxidized FF-C57S (FF-C57S-OX) indicates that modification of Met3 has
+a low impact on protein stability, since the its Tm is only 3 K lower than
+that of the non modified FF-C57S domain (Supplementary Fig. 5A and B
+and Supplementary Table 3).
+3.6. Molecular dynamics (MD) simulations
+We carried out molecular dynamics (MD) simulations to gain an
+atomistic description of the reasons behind FF-C57D destabilization.
+We used an enhanced sampling approach based on metadynamics that
+was demonstrated to be very accurate in describing the effects of point
+mutations or post-translational modification on protein conformation
+[24–26]. Metadynamics is a method that was developed to sample rare
+conformational transitions or post-translational modification on pro-
+teins and to estimate with high accuracy the associated free energy
+changes while keeping an atomistic description of both the solvent and
+the protein [27,28]. Metadynamics simulations were carried out with a
+state-of-the-art force field (CHARMM22*) [29] in explicit solvent for
+more than 400 ns, as well as extended up to 550 ns to ensure con-
+vergence of the free energy profiles. We used as reaction coordinates
+(collective variables) properties that account for the overall structures
+of the FF domain, i.e: the radius of gyration and the helical content in
+the three α-helices of the FF fold. In agreement with the experimental
+data, the C57D mutation has destabilizing effects in the metadynamics
+simulations. Indeed, it can be observed that the mutation induces the
+appearance of minima with larger Rg population in the free energy
+landscape of the protein (supplementary Fig. 6A), which also correlates
+with the destabilization of helix 1 (supplementary Fig. 6B) and specially
+helix 3, where Cys57 resides, (supplementary Fig. 6D), resulting in a
+lower helical content. According to MD, these changes in local helicity
+impact the solvent accessibility of the two Trp residues of the protein, in
+good agreement with the spectroscopic data.
+3.7. Folding and unfolding kinetics of URN1 FF domains
+Folding and unfolding kinetics of FF-WT, and FF-WT-OX, FF-C57S
+and FF-C57D domains, were followed by stopped-flow at pH 5.7 and
+298 K under a wide range of denaturant conditions. For all domains, the
+folding and unfolding fluorescence traces fit well to a single exponential
+function. Chevron plots appear to be linear in the entire range of de-
+naturant concentrations studied and fit well to a two-state model, in-
+dicating the absence of detectable intermediates (Fig. 5).
+The rate constants for folding (Kf) and unfolding (Ku) and their
+dependence on the denaturant concentration (mf and mu) are shown in
+Table 2.
+The FF-C57S mutant shows a folding rate very similar to that of FF-
+WT, displaying, however, a slightly faster unfolding rate. FF-WT-OX
+and FF-C57D domains fold only ≈3 times slower than FF-WT but, both
+domains unfold very fast, with 155 and 85 times faster unfolding rates
+than FF-WT, respectively. Thus, FF-WT-OX and FF-C57D domains dis-
+play significantly reduced kinetic stability -the free energy difference
+Fig. 4. Thermal and chemical stabilities of FF cysteine mutants. Thermal stabilities were measured by (A) far-UV CD signal change at 222 nm and (B) Trp intrinsic fluorescence emission at
+360 nm. Chemical equilibrium curves with urea were monitored at 298 K by (C) far-UV CD at 222 nm and by (D) Trp intrinsic fluorescence at 360 nm.
+P. Marinelli et al. Redox Biology 14 (2018) 566–575
+571
+between the native state and the unfolding transition state (Table 2 and
+Fig. 5), relative to the natural domain.
+φF-U values are used to map structures of protein-folding transition
+states from changes in free energies of denaturation and activation on
+mutation. A φF-U value near 0 suggests that the region surrounding the
+mutation is unstructured in the transition state for folding, while a
+value near 1 indicates that the local structure around the mutation in
+the transition state closely resembles the structure in the native state.
+The φF-U values of 0.17, 0.20 and 0.17 calculated for FF-WT-OX, FF-
+C57D and FF-C57S mutants, respectively, suggest that Cys57 is located
+in a region that is not significantly involved in the formation of the
+protein folding nucleus.
+3.8. Amyloid fibril formation by FF domains
+The aggregation kinetics of FF domains at 100 μM concentration
+were analyzed at pH 5.7 and 310 K following the changes over time in
+the fluorescence of the amyloid staining dye Thioflavin T (Th-T)
+binding (supplementary Fig. 7). We have shown that under these con-
+ditions WT-FF does not experience any detectable aggregation [18]. FF-
+WT-OX and FF-R18A-OX aggregation was very fast, displaying Th-T
+binding immediately after mixing. A similar behaviour is exhibited by
+the FF-C57D despite it required a longer time to attain the plateau. No
+significative Th-T binding was observed for FF-WT, FF-R18A and FF-
+C57S variants.
+Thereafter, all FF domains were incubated at 50 μM concentration
+pH 5.7 and 310 K under agitation for one week in order to characterize
+the conformational, tinctorial and morphological properties of the ag-
+gregates (Fig. 6). Mature aggregates of both oxidized FF domains
+showed high Th-T binding. FF-WT did not show any significative Th-T
+binding, whereas FF-R18A exhibited certain dye binding, rendering,
+however, much lower fluorescence intensity than the oxidized FF do-
+mains (Fig. 6A). As in the case of FF-WT, the FF C57S mutant did not
+bind the amyloid dye. Conversely, FF-C57D induced high Th-T fluor-
+escence (Fig. 6B). To confirm the nature of these aggregates we used
+another amyloid staining dye, Congo red (CR). In aggreeement with the
+Th-T binding data, the characteristic CR signal shift at ≈540 nm upon
+amyloid binding was observed for oxidized FF samples, while no CR
+binding was detected for FF-WT and FF-R18A solutions. FF-C57D bound
+the CR dye, promoting the same spectral change that FF-WT-OX. As
+expected, FF-C57S did not show CR binding. To assess whether ag-
+gregation involved a transition of the native α-helical structure into β-
+Fig. 5. Folding kinetics of FF domains. The kinetics of folding and
+unfolding were followed by Trp intrinsic fluorescence performing
+stopped-flow experiments at 298 K. A) Chevron plots are shown
+for the different domains. The rate constants were measured
+under conditions of apparent two-state folding. B) Schematic re-
+presentation of the energy diagram for the folding process of the
+four FF domain variants, colors as in A).
+Table 2
+Folding kinetic parameters for FF domains.
+Kf (s−1) Ku (s−1) m f (Kcal/
+mol M)
+mu (Kcal/mol M) am U-F (Kcal/
+mol M)
+b[ ]50%
+(M)
+cΔG U-F
+(Kcal/mol)
+dΔΔG U-F
+(Kcal/mol)
+ΔΔGd U-‡
+(Kcal/mol)
+ΔΔGd F-‡
+(Kcal/mol)
+FF-WT 2819±198 0.34± 0.12 0.94± 0.02 0.26±0.04 0.71± 0.06 7.48 5.34 – – –
+FF-WT-OX 976±87 53.9± 1.4 0.98± 0.03 0.009± 0.003 0.58± 0.03 2.93 1.72 −3.63 0.63 −3.00
+FF-C57D 946±65 29.2± 0.9 0.89± 0.03 0.08±0.01 0.57± 0.04 3.58 2.06 −3.28 0.65 −2.64
+FF-C57S 2083±76 1.45± 0.02 0.96± 0.01 0.20±0.02 0.69± 0.03 6.26 4.31 −1.04 0.18 −0.86
+a Dependence of the Gibbs energy of unfolding with urea.
+b The urea concentration required to unfold 50% of the protein molecules.
+c Gibbs energy of unfolding with urea determined from the kinetic parameters.
+d The difference in free energy between the mutant protein and WT protein.
+P. Marinelli et al. Redox Biology 14 (2018) 566–575
+572
+sheet enriched conformations, the secondary protein structure of in-
+cubated solutions was monitored by far-UV CD spectroscopy. The pre-
+sence of β-sheet structure was confirmed for FF-WT-OX as indicated by
+the typical minimum at ≈218 nm. FF-R18A OX also exhibited a CD
+spectrum compatible with the presence of β-sheet structures. Non-oxi-
+dized FF proteins displayed a α-helical native-like spectra. The FF-C57S
+also retained the native secondary structure whereas FF-C57D spectrum
+was dominated by a β-sheet component, resembling the FF-WT-OX
+spectrum. The bis-ANS binding to exposed hydrophobic regions was
+much higher in oxidized samples than in non-oxidized FF domains,
+indicaticave of intermolecular clustering of hydrophobic residues in the
+aggregated species. Again, FF-C57D displayed a bis-ANS binding very
+similar to that of FF-WT-OX, while the FF-C57S resembled FF-WT.
+Transmission Electron Microscopy (TEM) was used to assess the mor-
+phological properties of the aggregates (Fig. 6C). Both FF-WT-OX and
+FF-C57D formed short amyloid-like fibrils, while FF-R18A-OX displayed
+fibrillar structures combined with amorphous aggregates consistent
+with its very fast aggregation kinetics. On the other hand, scarce
+smaller size aggregates were detected for FF-R18A, while no re-
+cognizable aggregates were observed for FF-WT and FF-C57S. Oxida-
+tion of Met 3 in FF-C57S-OX had a negligible impact on aggregation as
+measured by Th-T and CR binding (Supplementary Fig. 5C and 5D).
+Taken together, these data demonstrate that, under close to phy-
+siological conditions, irreversible oxidation of Cys57 promotes the
+formation of FF domain amyloid-like aggregates, highlighting the po-
+tential relevance of this type of PTM for in vivo proteostasis.
+3.9. Large scale prediction of the effect of proteins free cysteines oxidation
+The data reported above indicate that complete thiol oxidation to
+sulfonic acid at the single Cys residue in the FF domain induces con-
+formational and structural changes that lead to the destabilization and
+aggregation of this small globular protein. This effect can be emulated
+by replacing Cys with Asp, which acts as a CysSO3H mimic, while the
+substitution by Ser, as expected, does not recapitulate the oxidation
+impact. In attempt to understand if site-specific Cys irreversible oxi-
+dation might represent a generic destabilization mechanism in natural
+proteins we used a database of 969 non-homologous protein structures
+containing Cys residues [30]. From the total 4136 Cys present in these
+proteins, 1446 are forming disulfide bonds and 2690 are free. Inspec-
+tion of the respective structures indicated that 1338 of the non-dis-
+ulfide-bonded Cys were solvent exposed. We virtually mutated all these
+residues into Asp or Ser residues using the FoldX algorithm [22] and
+calculated the predicted stability for every of the 2676 resulting mu-
+tants. The analysis revealed a clearly destabilizing effect of Asp muta-
+tions, with ΔΔG median value of 2.28±0.10 kcal/mol (Fig. 7A). Cys to
+Ser mutations were predicted to have a much lower impact on stability
+with a ΔΔG median value of 0.92±0.06 (95% CI, p< 0.001 T-student
+test). These results strongly suggest that the Cys oxidation destabilizing
+effect reported here for the FF protein model could occur in a wide
+number of physiologically relevant proteins. For example, the Cys to
+Asp mutants of human β-interferon (IFN-β) [31], and the human
+apoptosis regulator Bcl-xL [32] are predicted to be highly destabilized,
+with ΔΔG values of 4.57 and 6.38 kcal/mol, respectively.
+Fig. 6. Conformational and morphological properties of URN1-FF aggregates at pH 5.7. A) and B) FF domains were incubated at 310 K for one week and analyzed by measuring their Th-T
+fluorescence emission, Congo red binding, far-UV CD spectra and their binding to bis-ANS (from left to right). Free dyes are indicated with a dotted line. C) Representative micrographs of
+negatively stained FF aggregates visualized by TEM. The scale bar represents 500 nm.
+P. Marinelli et al. Redox Biology 14 (2018) 566–575
+573
+The sequence-based aggregation prediction algorithms
+AGGRESCAN [33] and Zyggregator [34] were used to assess if Asp, and
+by analogy CySO3H, might act creating new or stronger “hot spots” that
+favours the aggregation in the oxidized FF domain. No significant
+changes in the FF-C57S aggregation propensity were predicted, relative
+to FF-WT (supplementary Table 4). In contrast with the experimental
+data, a reduction of the aggregation propensity was predicted for the
+FF-C57D mutant, thus confirming that CySO3H induced aggregation
+owes to the impact this PTM exerts on the protein conformation. The
+AGGRESCAN analysis of the 2676 mutants modelled with FoldX pre-
+dicted similar aggregation propensities for both Asp and Ser variants
+(Fig. 7B).
+4. Discussion
+Molecular aging, and particularly, the accumulation of oxidized
+proteins, are associated to a wide number of diseases, such as ALS,
+Alzheimer’s disease, respiratory distress syndrome, muscular dys-
+trophy, cataracts, rheumatoid arthritis and progeria [35]. Oxidation can
+promote alterations in the secondary, tertiary and quaternary structure
+of proteins [36–39]. The destabilized conformers resulting from protein
+oxidation might act as intermediates in the formation of amyloid as-
+semblies in age-related disorders [40,41]. However, biophysical dis-
+section of the contribution of individually modified amino acids to this
+deleterious conformational conversion is usually hampered by the si-
+multaneous oxidation of different protein residues at different struc-
+tural locations under oxidative conditions.
+The data in the present work illustrate how the irreversible oxida-
+tion of a single Cys residue can cause dramatic changes in the folding
+landscape and aggregation properties of a globular protein. These re-
+sults are consistent with the recent observation that the selective S-
+Glutathionylation of a Cys residue results in destabilization of titin
+immunoglobulin (Ig) domains [42]. We also show that the CySO3H
+destabilizing effect can be emulated by a Cys to Asp mutation. Contrary
+to FF-C57S, FF-C57D displays conformational, stability and aggrega-
+tional features resembling those of the oxidized wild type protein, thus
+indicating that the main destabilizing effect comes from the acquisition
+of an additional negative charge and two bulky oxygens and not from
+the lack of the original free thiol, which is consistent with CySO3H
+being exclusively in a deprotonated form at physiological pH (pKa<
+2). A similar impact on protein structure is expected for a milder Cys
+oxidation to a sulfinic acid (pKa ~ 2).
+The use of MD simulations allowed us to study in atomistic detail
+the effect of the Asp mutation on the structural stability of the FF
+domain. In good agreement with the observed experimental decrease in
+stability, MD results indicate that the C57D mutation induces a sig-
+nificant local destabilization, affecting helix 1 and helix 3. We have
+previously shown that these helices comprise the most aggregation-
+prone regions in the FF domain, being able to lead its aggregation under
+destabilizing acidic conditions [18].
+We were able to analyse, for the first time, the impact of CySO3H
+formation on the folding and unfolding rates of a globular protein, re-
+vealing that the conformational changes imposed by the sulfonic group
+do not affect significantly the folding rate. Accordingly, the φ values
+calculated for the oxidized FF protein and its two mutational variants
+are very close to 0, indicating that the C-terminal region does not
+present a native-like structure in the transition state for folding, as
+described for the homologous human HYPA/FBP11 FF domain [19].
+The unfolding rate, however, is dramatically accelerated by the for-
+mation of the CySO3H or by the presence of the Asp residue. Thus, this
+site-specific PTM acts by significantly reducing the kinetic stability of
+the protein. Kinetic stability can be thought of as the average lifespan of
+a folded molecule between transient excursions to an unfolded state;
+thus, its reduction in the FF domain would allow for the transitory
+exposition of the aggregation-prone helices to the solvent.
+The destabilization of the native state is a usual requirement for
+amyloid fibril formation in globular proteins [43]. Increasing evidences
+indicate that there may be a link between ROS-induced oxidative stress
+and the accumulation of misfolded proteins in the form of aggregates
+[44]. In particular, recent works suggest that Cys oxidation to sulfonic
+acid might be behind the aggregation of SOD1 in ALS or parkin in
+Parkinson disease [45,46]. We show here that CySO3H induced protein
+destabilization can promote the fast formation of amyloid-like insoluble
+aggregates under physiological conditions, without a need for global
+protein unfolding. Remarkably, our computational analysis suggests
+that a large number of unrelated proteins containing exposed free Cys
+residues are susceptible to suffer this deleterious conversion. Actually,
+the FF domain is a highly soluble, remarkably stable and fast folding
+protein. Despite all these properties confront aggregation, the oxidation
+of a single Cys residue suffices to promote its aggregation into amyloid
+fibrils. Many of the proteins in the cell do not exhibit these optimal
+features and indeed, according to the ProTherm database [47], most
+proteins would have stabilities< 3 kcal/mol and thus on the range of
+the FF-R18A domain (3.5 kcal/mol), for which Cys57 oxidation suffices
+to promote major conformational rearrangements leading to the rapid
+build up of aggregates. Overall, our data suggest that when ROS levels
+increase, as a result of aging or stress, cells might live on the edge of a
+proteostasis catastrophe, even if proteins are not extensively oxidized.
+Fig. 7. Stability and aggregation prediction in a large set of proteins with solvent exposed cysteine residues. (A) Free and solvent exposed cysteines in a total of 969 non-homologous protein
+structures were virtually mutated into either aspartic or serine residues and the changes in overall stability, relative to the respective WT proteins, predicted using the FoldX algorithm. (B)
+The AGGRESCAN algorithm was used to calculate the aggregation propensity of the sequences of all these protein mutants.
+P. Marinelli et al. Redox Biology 14 (2018) 566–575
+574
+Acknowledgements
+This work was funded by the Spanish Ministry of Economy and
+Competitiveness BIO2016-783-78310-R to S.V and by ICREA, ICREA-
+Academia 2015 to S.V. EP has been supported by a PRACE-DECI 13th
+GRANT on Archer (UK) and a Deic Pilot Gran ton Computerome (DK) to
+cover the computational resources needed for molecular simulations.
+Conflict of interest
+The authors declare that they have no competing interests.
+Appendix A. Supporting information
+Supplementary data associated with this article can be found in the
+online version at http://dx.doi.org/10.1016/j.redox.2017.10.022.
+P. Marinelli et al. Redox Biology 14 (2018) 566–575
+575

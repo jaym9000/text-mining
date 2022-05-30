@@ -1,0 +1,1023 @@
+Folding Dynamics and Pathways of the Trp-Cage Miniproteins
+Aimee Byrne,† D. Victoria Williams,† Bipasha Barua,† Stephen J. Hagen,‡ Brandon L. Kier,†
+and Niels H. Andersen*,†
+†Department of Chemistry, University of Washington, Seattle, Washington 98195, United States
+‡Physics Department, University of Florida, Gainesville, Florida 32611, United States
+*S Supporting Information
+ABSTRACT: Using alternate measures of fold stability for a
+wide variety of Trp-cage mutants has raised the possibility that
+prior dynamics T-jump measures may not be reporting on
+complete cage formation for some species. NMR relaxation
+studies using probes that only achieve large chemical shift
+difference from unfolded values on complete cage formation
+indicate slower folding in some but not all cases. Fourteen
+species have been examined, with cage formation time
+constants (1/kF) ranging from 0.9−7.5 μs at 300 K. The
+present study does not change the status of the Trp-cage as a
+fast folding, essentially two-state system, although it does alter
+the stage at which this description applies. A diversity of
+prestructuring events, depending on the specific analogue examined, may appear in the folding scenario, but in all cases,
+formation of the N-terminal helix is complete either at or before the cage-formation transition state. In contrast, the fold-
+stabilizing H-bonding interactions of the buried Ser14 side chain and the Arg/Asp salt bridge are post-transition state features on
+the folding pathway. The study has also found instances in which a [P12W] mutation is fold destabilizing but still serves to
+accelerate the folding process.
+The Trp-cage has become a protein folding paradigm andthe preferred test system for molecular dynamics (MD)
+based folding studies and fold prediction algorithms.1,2 The two
+features that led to this status are its small size and fast folding
+rates. A wide variety of folding pathways have been proposed
+based on these computational studies, and quite different
+conclusions have been reached concerning the extent to which
+this model protein should be viewed as an unfolded ensemble
+proceeding to a fully folded state with no detectable
+intermediates. Turning to the experimental data, the fast
+folding of the Trp-cage (the original TC5b construct, NLYIQ
+WLKDG GPSSG RPPPS, Tm = 42 °C) was noted in the very
+first report on the fold,3 there given as 1/kF = 7 ± 2 μs at 40 °C
+based on both NMR exchange broadening and IR-monitored
+T-jump experiments. The NMR experiment employed a G11α
+resonance which has a 3.5 ppm upfield ring current shift as the
+probe. The T-jump experiment followed the decrease in the
+“solvated” helical amide I′ band (1628 cm−1) amplitude after a
+10 °C T-jump which fit to a single exponential.
+With the 2002 publication of the details regarding the
+characterization of TC5b,4 the system attracted the attention of
+other biophysicists. Because of the extreme quenching of Trp
+fluorescence associated with the folded state,5 fluorescence-
+monitored T-jump experiments were another possibility. Qiu et
+al.6 reported 1/kF = 4.1 μs at 23.5 °C with the published data
+graph indicating a folding time constant of 3.56 μs at 300 K. In
+2011, the Gai lab7 reported essentially the same value in T-
+jump experiments monitoring the helical amide band
+(specifically at 1630 cm−1), 1/kF = 3.7 μs at 25 °C.
+Culik et al.7 also reported dynamics data for TC10b, a
+sequence (DAYAQ WLKDG GPSSG RPPPS, Tm = 56 °C
+8 that
+forms a more stable Trp-cage fold largely due to the enhanced
+intrinsic helicity9 of the residue Asp1−Lys8 span. Culik et al.
+employed the DA*YA*QW··· sequence with A* = 13C′-Ala and
+observed peaks at 1586, 1615, and 1646 (all with decreasing
+absorbance on warming) and 1664−1672 cm−1 (increasing
+absorbance on warming) in the temperature-differenced FT-IR
+spectra. These were attributed to 1586 (the Asp-CO2
+− signal in
+the salt bridge), 1615 (helical A*), 1646 (a shifted unlabeled
+helical amide band, shifted due to an overlapping nonhelical A*
+peak), and 1664 cm−1 (a 310 helix signal and an increasing
+random coil signal). These assignments may not be correct.
+The effect of 13CO labeling is expected to be a 36 cm−1
+frequency shift versus 12CO and has been measured10 at 39
+cm−1 in model helices. There was a distinct maximum at 1630
+cm−1 separating the 1615 and 1646 minima in the FT-IR
+difference spectra reported by Culik et al.7 We would attribute
+the 1630 maximum to increases in random coil A* and would
+expect the negative peak at 1586 to contain a significant
+component of helical-A* melting. Gai and co-workers
+Received: August 14, 2014
+Revised: September 2, 2014
+Published: September 3, 2014
+Article
+pubs.acs.org/biochemistry
+© 2014 American Chemical Society 6011 dx.doi.org/10.1021/bi501021r | Biochemistry 2014, 53, 6011−6021
+This is an open access article published under an ACS AuthorChoice License, which permits
+copying and redistribution of the article or any adaptations for non-commercial purposes.
+D
+ow
+nl
+oa
+de
+d 
+vi
+a 
+21
+7.
+13
+8.
+21
+3.
+22
+0 
+on
+ A
+ug
+us
+t 2
+1,
+ 2
+02
+0 
+at
+ 1
+3:
+38
+:3
+2 
+(U
+T
+C
+).
+Se
+e 
+ht
+tp
+s:
+//p
+ub
+s.
+ac
+s.
+or
+g/
+sh
+ar
+in
+gg
+ui
+de
+lin
+es
+ f
+or
+ o
+pt
+io
+ns
+ o
+n 
+ho
+w
+ to
+ le
+gi
+tim
+at
+el
+y 
+sh
+ar
+e 
+pu
+bl
+is
+he
+d 
+ar
+tic
+le
+s.
+monitored relaxation after the T-jumps at 1580, 1612, and 1664
+cm−1. At 1664 cm−1, the data were biexponential with the
+following time constants at 292 K, τ = 300 ns (attributed to
+local unfolding of the 310 helix) and τ = 2.5 μs (growth of
+unlabeled random coil 12CO). The slow phase was attributed
+to global unfolding and gave the same time constants observed
+as when monitoring at 1580 or 1612 cm−1: 1/kF = 1.55 μs at 25
+°C.
+Pertinent to the present study, the Feng Gai group has also
+measured the effects of a number of mutations on folding
+dynamics. These included the Gly10 to D-Ala mutation which
+we reported in 200811 as a strategy for creating hyperstable
+Trp-cages. Culik et al.12 reported that the fold-stabilizing G10a
+mutation (ΔTm = +21 °C) increased the folding rate of TC5b
+by only a factor of 2. Two additional mutations, R16K and
+P19A, were examined in the case of TC10b,7 and neither was
+reported to alter the folding rate appreciably. The P19A
+mutation is a particularly destabilizing mutation, ΔTm = −44
+°C, as quoted by Culik et al.7 As a result, Feng Gai and co-
+workers have proposed that hydrophobic staple (Y3/P19) and
+salt-bridge (D9/R16) formation occur on the downhill side of
+the folding transition and only stabilize the final state;
+essentially, that helix formation is rate determining and sets
+the stage for downhill folding events thereafter.
+The Arrhenius plots for all Trp-cage dynamics studies
+mentioned to this point indicate faster folding rates on warming
+(a negative Arrhenius plot slope). Although the slopes for
+folding were always less than slopes for the unfolding process,
+positive folding Ea values were observed throughout. The one
+exception to this is an early study of another stabilizing
+mutation, [P12W], which introduces an additional aryl/aryl
+interaction and results in more apolar burial. Bunagan et al.13
+reported dynamics data for [P12W]-TC5b, Tm = 57 °C, which
+are considerably more protein-like (vide infra): a curved plot
+for log kF versus 1/T with an increasingly negative Ea at
+temperatures well below Tm. Positive Arrhenius slopes
+(negative Ea values) usually indicate a compact transition
+state with hydrophobic surface burial. The [P12W] mutation
+also provided the first notable instance of folding rate
+acceleration, 1/kF about 1 μs at 300 Kcorresponding to a
+3.5-fold acceleration. Subsequent studies have shown that
+P12W is a stabilizing mutation in other Trp-cage species.14
+With the exception of the study reported by Qiu et al.,6 all
+previous T-jump studies of Trp-cage dynamics have relied on
+the disappearance of helical amide I′ bands, either monitored
+directly or as the appearance of a random coil amide
+absorbance. We view this as a potential source of error in
+assessing the rates at which a fully formed Trp-cage fold
+appears. There have been several reports8,15 that suggest that
+the N-terminal helix is partially retained in unfolded state
+ensembles or is a very early on-path state along MD folding
+trajectories.1c,16 Indeed, we have proposed the existence of half-
+cage species (Figure 1), either as intermediates or as partially
+folded species within the “unfolded ensemble”.4,8,17 In the case
+of exendin-4, which has a much longer and thus more stable α
+helix, the unfolded state in aqueous fluoroalcohol media has a
+fully formed helix with cage formation occurring as a separate
+docking event (scenario A, Figure 1).
+In the case of Trp-cage species with stabilizing mutations in
+the α helical segment, an intermediate situation, between A and
+B of Figure 1, may apply (vide infra). In support of this scheme,
+half-cage structures with an upfield G11-CH2 group appear to
+be present within the unfolded ensemble of TC5b and other
+less stable Trp-cage analogues.4,8,14 Long-range W6/P12 and
+W6/R16 contacts have been identified17 in the unfolded state
+of TC5b. In another study,19 it was noted that W6/R16 NOEs
+are retained at and slightly above the Tm to a greater extent
+than other long-range contacts.
+In our 2008 report on the [P19A] mutant of TC10b,8 we
+noted this species as an example in which different probes give
+radically different Tm data. The CD melt as well as chemical
+shift melts for the Hα protons in the N-terminal helix yielded a
+Tm of 15 °C. However, the NMR shifts for the ring-current
+shifted Hα and Hβ3 sites in Pro18 indicated a fold population
+(χF) of only 0.17 at 280 K and an extrapolated Tm below −9
+°C. On this basis, the ΔΔGF value for complete cage formation
+associated with the P19A mutation is at least 11 kJ/mol, with
+our best estimate at 14 kJ/mol. As a result, we were surprised
+Figure 1. Half-cage structures, with no ring current shifts at P18 and no sequestration of the Trp indole side chain NH, have interactions between
+W6 and the G11-P12 unit which result in upfield ring current shifts in those residues that are not the same as those in the complete cage structure.
+Postulated half-cage structures of Trp-cage-forming sequences have either (A) a fully formed N-terminal helix with the W6/P12 interactions as a
+helix C-cap (illustrated with a long helix such as that in exendin-4 and earlier incomplete truncation species4,18 or (B) represent transient interactions
+within the unfolded ensemble that may or may not be on-path to the full cage structure. Scenario B was first suggested for TC5b.4
+Biochemistry Article
+dx.doi.org/10.1021/bi501021r | Biochemistry 2014, 53, 6011−60216012
+by the report7 that [P19A]-TC10b folds as rapidly as the
+nonmutated sequence; in our view, it raised the possibility that
+all previous Trp-cage folding dynamics may represent just helix
+formation, not cage formation.
+Herein we report our efforts to find dynamics probes that
+exclusively reflect the formation of the complete cage structure
+and the application of these to determine which structure-
+stabilizing features of the Trp-cage are present at this folding
+transition state and which form after the transition state.
+Throughout, we have relied primarily on NMR resonances that
+display very large structuring shifts due to ring-current effects
+that are present only when the complete cage structure forms.
+As expected,20,21 these highly shifted resonances display
+measurable line broadening when in equilibrium with a
+significant unfolded state population.
+■ MATERIALS AND METHODS
+Peptide Synthesis and Characterization. Many of the
+systems examined herein, or used for the evaluation of
+mutational ΔΔG-values, have been reported previously,8,11,14,15
+and the others were prepared in the same way (automated
+FMOC-based peptide synthesis) and similarly purified and
+characterized by NMR spectroscopy and circular dichroism
+(CD) melts. All of the new Trp-cage analogues in this report
+displayed the expected (M + 2H)+2 and (M + 3H)+3 molecular
+ions by electrospray mass spectrometry (Bruker Esquire Ion
+Trap). In addition, all species with ΔGU values greater than −2
+displayed the diagnostic long-range NOEs and the upfield shifts
+at G11Hα2, P18Hα, Hβ3 (or A18Hα and Hβ), and L7Hα as
+well as downfield shifts at R16 proton sites that reflect Trp-cage
+fold formation.8,14,15 The complete list, including reference
+compounds, appears in Table 1. All ΔGU values have been
+recalculated based on the structuring shifts, expressed as
+chemical shift deviations (CSDs, the observed shift minus the
+coil reference value) at residue 18 so as to reflect complete cage
+structure formation rather than helix content. In contrast, CD
+measures and the resulting Tm values from the melting curve
+reflect only loss of helicity.
+NMR Relaxation Methods for Obtaining Folding
+Dynamics. The dynamics data obtained at U.W. are based
+on NMR resonance line broadening associated with exchange
+between the folded state and a populated unfolded state which
+lacks the structuring shifts associated with fold formation.20,21
+For most of the studies reported herein, this analysis assumes a
+two-state equilibrium between a fully folded cage state and an
+unfolded ensemble that has no structuring shifts for the probes
+examinedproton sites at residue 18 in an undocked polyProII
+unit.
+For the few studies based on line broadening at the G11Hα2
+site (panel A of Figure 2, Figure 4, and Table 2, vide infra), we
+needed to take into account the presence of half-cage species in
+the precage unfolded ensemble. A half-cage model (see Figure
+1, vide supra) was required to obtain expectation chemical
+shifts for G11Hα2 at different temperatures in both water and
+water/trifluoroethanol (TFE) mixtures. Our chosen model for
+incomplete cage formation was the NAUYU QWLKD GGPSS
+GRPAA sequence.22 The N-terminal changes, including two
+helix-favoring Aib residues (U in the sequence shown) are
+favorable for helix and half-cage formation, while the Ala
+substitution for two C-terminal prolines compromises full cage
+formation. NAUYU QWLKD GGPSS GRPPPS,8 which lacks
+the C-terminal changes displays helix (CD) and cage melting
+points that are nearly the same: 59 and 53.5 °C, respectively. In
+the case of NAUYU QWLKD GGPSS GRPAA (CD Tm = 23
+°C), helix and half-cage formation occurs. From Table 1, the
+ΔΔGU values for P19A and P18A are −11.8 and ca. −1.2 kJ/
+mol, respectively. The fractional population of the complete
+cage structure (χcage) for this model based on the ring current
+shift observed at A18α (2.69 ppm upfield in [P18A]-TC16a at
+280 K) is 0.20 (280 K), 0.15 (290 K), 0.094 (300 K), and 0.056
+(310 K) in pH 7 aqueous buffer. With the addition of TFE to
+30 vol %, the χcage-value increases to 0.33 at 280 K (and 0.11 at
+310 K). These results allowed us to calculate expectation
+Table 1. Structure Designations,a Sequences, and Fold
+Stability Datab for Key Trp-Cage Variants and Their Single
+Site Residue Mutantsc
+aThe structure designations and the first citation for each species are
+given. Sequences or conditions without a citation are new reports in
+this account. The ΔGU values are calculated, or recalculated, as
+indicatedcand do not correspond in all cases to those previously
+reported, particularly in cases where the previous report was based on
+CD monitored melting. The most extreme cases are highlighted in a
+larger bold font. bThe ΔGU values (in kJ/mol, given to nearest 0.05
+kJ) are −ΔGF with this reflecting “complete cage formation”. The
+decrease in the CSDs of the P18 Hα and Hβ3 (or, for [P18A]
+mutants, the A18 Hα and Hβ) resonances from either the reference
+values for the fully folded state, or from the observed 280 K values
+when Tm(CD) > 80 °C, are used to obtain the fraction folded (χcage)
+value at the higher temperatures. A 1%/10 °C decrease in the fully
+folded CSD on warming is assumed. The observed CSD temperature
+gradients (which are linear) for extreme ring-current-shifted sites of
+hyperstable (Tm > 90 °C) cyclic constructs
+23 have varied from 0.070 to
+0.145%/°C in the 290−320 K temperature range. cBold data indicate
+large differences between the CD and NMR measures of fold stability.
+Biochemistry Article
+dx.doi.org/10.1021/bi501021r | Biochemistry 2014, 53, 6011−60216013
+11Hα2 shifts from the observed values for the ensemble
+containing small amounts of the fully folded species. To correct
+the observed G11Hα2 δ-values to those due to the “pre-cage
+ensemble” including a partially populated half-cage, we assumed
+that the full-cage species would display the usual far upfield
+shift, given by δ = 0.488 + 0.0036 (T-280) ppm.
+The two types of NMR line width data employed are
+illustrated for TC10b and its [P18A]-analogue in Figure 2.
+The excess broadening observed for the probes is equated
+with Δex and eq 120,21,24 is used to calculate the value of kF at
+each temperature.
+πχ χ ν= Δ Δ −K 4 ( ) ( ) ( )F U F
+2 2 ex 1
+(1)
+The values of χF and χU (= 1 − χF) are obtained from the
+CSD of the probe: χF = CSD
+obs/CSD100%. The Δν in eq 1 is
+given as the CSD100% and has a small temperature dependence
+(see Table 1). The kU value at each temperature is calculated as
+kU = kF(1 − χF)(χF)−1.
+In the case of [G11-13Cα]-Trp-cage species, the excess
+broadening at G11Hα2 (versus G11Hα3) was analyzed based
+on several models as described in the Ph.D. thesis of Barua.22
+The model using the expectation shifts from the NAUYU
+QWLKD GGPSS GRPAA sequence half-cage model (vide
+supra) affords rates that are, within experimental error, in
+agreement with fluorescence-monitored T-jump studies (Figure
+4) and IR-monitored T-jump studies subsequently reported by
+Culik et al.7 In Figure 4, the errors in the ln kF values from the
+fluorescence-monitored T-jump study vary from ±0.07 to
+±0.17. Our best estimates of the error in both folding rates
+from the NMR experiment are also included on the graph.
+Assuming a random coil shift for G11Hα2 in the “unfolded
+state” affords a folding rate that is faster by a factor of 1.6. As a
+result, the same analysis using the G11Hα2 reference shifts
+from the half-cage model was employed for the other
+[G11-13Cα]-TC species examined.
+In the case of dynamics studies based on the alanine-CH3
+signal of [P18A]-analogues, the increase in line width of this
+signal is the measure that affords dynamics data; the chemical
+shift provides the equilibrium constant at each temperature.
+The 100% folded values for this signal, taken from the most
+stable Trp-cage analogues with this mutation, are 0.25 ppm
+(CSD = −1.14 ppm) and 0.20 ppm (CSD = −1.19 ± 0.005
+ppm), respectively, for species with and without a P12W
+substitution. The sensitivity of alanine-CH3 resonances to quite
+small Δex terms is illustrated in Figure 3.
+In a typical experiment, the line width at half height is
+measured for two or three well-resolved alanine methyls that
+appear within 0.15 ppm of the random coil value when in the
+folded state. A high and low value for Δex is determined by
+direct half height width comparisons to these references. Two
+additional values for Δex are obtained by modeling the A18β
+line shape in a custom built Excel spreadsheet using the A18β
+coupling constant measured at the lowest temperature and
+varying the line width (Δsim) until the observed half height
+Figure 2. (A) The 13C-edited spectra of [G11-13Cα]-TC10b at three temperatures. Note the greater broadening of the upfield Hα signal and the
+extent to which it shifts to higher δ values on warming. In contrast, the downfield G11Hα shows much less broadening and hardly shifts on warming.
+(B) The upfield region of the spectrum of [P18A]-TC10b at three temperature showing the unfolding-induced shift and line width changes for the
+Ala-18-Hβ signal. The three-line signal at 0.66 ppm is a −CHD-SiMe3 unit in the added chemical shift standard.
+Figure 3. Two segments of the upfield spectrum of [A8G,P18A]-
+TC16b at 290 and 315 K. Line shape fitting of the peak at 1.28 ppm,
+due to D-Ala10β, which appears quite close to the coil reference shift
+(1.39 ppm) for Ala-Hβ and shifts less than 0.03 ppm over a 40 °C
+range, provides the intrinsic line width parameter (Δ°) for the
+experiment. The line width increment due to exchange broadening
+results in a wider A18β peak with less separation, %-dip,20,21 between
+the two lines of the doublet.
+Biochemistry Article
+dx.doi.org/10.1021/bi501021r | Biochemistry 2014, 53, 6011−60216014
+width and the %-dip are reproduced. The Δex values from those
+two simulations are given by Δsim − Δ°, with Δ° as the average
+intrinsic broadening of the reference methyl signals. This
+provides four measures of Δex; the average value is employed in
+eq 1. With ln kF values in the 12−14 range, the typical errors in
+ln kF are ±0.18, and the largest errors observed were ±0.38.
+Fluorescence-Monitored T-Jump Data. The experiments
+were performed at the University of Florida using an apparatus
+and methodology that has been described in detail previously.25
+Briefly, protein was dissolved at concentrations 20−30 μM in
+50 mM phosphate buffer (pH 7) and then flowed through a
+silica capillary. Counter-propagating infrared laser pulses then
+induce a rapid (within <30 ns) but transient temperature
+increase of typically 6−8 °C, which triggers unfolding of the
+protein in a single-exponential process as monitored by
+tryptophan fluorescence. Fitting the exponential process to a
+two-state kinetic model that employs the equilibrium folding
+free energy determined from CD spectroscopy, we obtain the
+characteristic folding and unfolding rates shown in Figures 4
+and 5.
+Mutational ΔΔG and ΦF Values. The data appearing in
+Table 1 provide multiple determinations for a number of single
+site mutations and for acidification (pH 2.5 stabilities versus
+those at pH 7). We designate the acidification effect as ΔpH:
+ΔpH = 3.13 ± 0.61 kJ/mol (over 10 observed cases). Three
+single site mutation effects, all fold-destabilizing, are also
+observed in three or more instances: Δ(S14A) = 5.55 ± 0.43 (n
+= 3), Δ(R16nva) = 5.5 ± 1.6 (n = 4), and Δ(P17A) = 2.37 ±
+0.46 kJ/mol (n = 3). All of these are based on the ΔGU300K
+values in Table 1. A P12W mutation was also examined in
+multiple situations (ΔΔGUmut = −1.7 − +2.9 kJ/mol); no single
+value can be given for this mutation, vide infra.
+The mutational (or acidification) ΦF values are calculated at
+300−305 K as
+Φ = ΔΔ −k k2.5[ln( / )]( G )F F
+mut
+F
+ref
+U
+mut 1
+The calculation was repeated using the high and low
+estimates of the folding rates and with both the consensus
+ΔΔGU value and the specific one for the system under study if
+the latter was available. This defined the range of values allowed
+for ΦF.
+■ RESULTS AND DISCUSSION
+The original hallmark for folding dynamics in our laboratory,
+the broadening of the far upfield G11Hα2 signal, has been
+employed for additional dynamics measures. There are
+numerous potential pitfalls in the quantitative use of this
+probe: the signal is a doublet of doublets of doublets in H2O
+and the coupling constants likely change as the unfolded state
+population increases on warming. In addition, the “unfolded”
+reference shift value cannot be equated with the random coil
+shift for Gly-Hα due to half-cage contributions in the
+“unfolded” state. These difficulties are reflected by reduced
+precision and accuracy in Arrhenius plots based on line
+broadening of this probe (Figure 4, vide infra).
+To allow the observations of both the extremely shifted Gly-
+Hα2 and less shifted Hα3 resonance throughout a melt in 13C-
+edited 1D spectra, a series of 13Cα-Gly-11 labeled (G*)
+peptides were prepared: X-YAQWLKDG-G*-PSSGRPPPS (X
+= DA-, GA-, and N-). The X = DA species is TC10b. The two
+other species (X = GA- and N-, TC11b1, and TC12b) have
+also been previously characterized by NMR and CD studies;8
+the stability data appear in Table 1. The 13C-edited 1D spectra
+for 13Cα-TC10b appear as panel A of Figure 2. A number of
+alternative analyses for extracting dynamics data were
+examined.22 For the final analyses, we chose to model the
+expectation “unfolded state” shifts as the temperature-depend-
+ent shifts for the Gly11-CH2 of NAUYUQ-WLKDG-Gly11-
+PSSGRPAA. This analogue forms the complete cage structure
+only to a slight extent: χcage = 0.1 at 298 K (see Materials and
+Methods) since it lacks the terminal hydrophobic staple, the
+Y3/P19 interaction.
+The NMR dynamics method with this probe, based on the
+line widths shown in part on panel A of Figure 2, provided a
+less than optimal Arrhenius plot even with the calibration of
+“unfolded” G11α2 shifts provided by the half-cage ensemble
+(Figure 4). The wide variance at the higher temperatures likely
+reflects errors in coupling constant estimates becoming a larger
+portion of the net broadening at the higher temperatures. The
+folding rate estimate at 300 K, a portion of the plot that was
+linear, was 1/kF = 1.37 μs.
+The dynamics for TC10b were also probed by fluorescence-
+monitored T-jump experiments. The resulting dynamics are
+Figure 4. A comparison of Arrhenius plots for TC10b obtained in a
+fluorescence-monitored T-jump experiment and from H11α2 line-
+widths.
+Figure 5. [P18A]-TC10b dynamics, an Arrhenius plot comparison,
+Trp fluorescence monitored T-jumps versus 18Hβ exchange broad-
+ening. From the least-squares fit line of the NMR dynamics data, 1/kF
+= 4.8 μs at 300 K.
+Biochemistry Article
+dx.doi.org/10.1021/bi501021r | Biochemistry 2014, 53, 6011−60216015
+compared with the NMR data as Arrhenius plots in Figure 4.
+The two methods are, within experimental error, in agreement
+at the reference temperature. Our best estimate for 1/kF at 298
+K is 1.4 μs from this comparison. This is accord with the 1.5 μs
+value obtained by the Gai laboratory.7
+Even though we still have some concerns about the validity
+of exchange-broadening at G11Hα2 as a probe, and the number
+of assumptions required in the analysis used to extract Δex, we
+also report here the folding dynamics derived for the two other
+13C-Gly labeled analogues, TC11b1 and TC12b. These are
+given together with the data for TC10b in Table 2. For
+TC11b1 and TC12b, we employed the same analysis to arrive
+at both the Δex value and unfolded ensemble shifts for the
+upfield shifted G11Hα.
+The slower folding noted for TC11b1 (versus TC10b) may
+reflect a folding transition which includes the extension of the
+helix to the N-terminus of the sequence in which case the lack
+of an efficient N-cap in the GAYA- sequence could increase the
+barrier. The ΦF value for the D1G mutation is 1.26, based on
+the data in Table 2. The faster folding observed for TC12b
+(versus TC11b1), even though the fold is further destabilized
+by helix truncation is puzzling; it can, however, be rationalized
+if helix N-capping has a greater impact on the folding barrier
+than on fold stability. In this regard it should be noted that the
+greater fold stability observed for TC12b in 30% TFE,
+presumably due to helix stabilization in this medium, is not
+reflected in a much more rapid folding rate; rather the stability
+appears to represent retarded unfolding upon the addition of
+the fold stabilizing cosolvent.
+We have continued to monitor G11Hα2 line widths in our
+studies of Trp-cage unfolding, but the potential problems
+associated with this signal, particularly the questions concerning
+the temperature dependence of the chemical shift in the
+“unfolded ensemble”, have led us to view this as a less than
+ideal measure of complete fold formation. In contrast, the large
+upfield shifts at the P18Hα (CSD = −2.33) and P18Hβ3 (CSD
+= −2.14 ppm, at 280 K), based on the shifts observed in a
+hyperstable cyclic construct14,23 appeared to be superior
+measures of full cage formation. These appear only on
+complete cage formation; the P18Hα signal is usually
+overlapped with other peaks, but the P18Hβ3 signal appears
+far upfield with no other signals nearby. Were it not for its
+complex coupling, it would be an ideal NMR dynamics probe.
+Both signals are observed in the 2D NMR data of all analogues,
+and the derived CSDs provide χcage measures (typically in
+agreement to ±0.02) and the ΔGU data shown in Table 1.
+We reported the effects of individual Pro to Ala mutations on
+Trp-cage stability in 2008.8 As previously noted the P19A
+mutation had the most profound destabilizing effect; the other
+mutations were only slightly destabilizing. Of these, the [P18A]
+mutation introduces a far upfield doublet (typically in the 0.2−
+0.8 ppm spectral window even on partial melting), an ideal
+situation for applying the line width difference method for
+deriving folding dynamics first reported by Olsen et al.20 The
+100%-folded CSD for the A18α signal of our most stable
+analogue is −2.7 ppm. That this value is slightly larger than the
+P18α structuring shift likely reflects a tighter packing onto the
+W6 indole ring that is allowed when the steric clashes of the Cγ
+methylene of the proline are absent. Of particular significance,
+any unfolded species in which the A18 methyl is not docked
+over the indole ring of the central Trp, including half-cage
+species, would display random coil shifts for both the β and α
+sites of Ala18. As a result, the [P18A]-Trp-cage mutants
+provide both a dynamics probe and a means for evaluating the
+ΔGU of the full cage structure.
+The [P18A] mutant of TC10b was examined by both NMR
+relaxation (line width measurements) and fluorescence-
+monitored T-jump experiments in 2005. The Arrhenius plots
+that resulted from these two studies appear in Figure 5. Upon
+comparison with the T-jump studies in Figure 4, it is clear that
+the [P18A] mutation (ΔΔGU300 ≈ −1.05 kJ/mol; see Table 1)
+effects a retardation of the folding rate (ΦF ≈ 0.8), particularly
+at the higher temperatures. The mutation significantly reduces
+the slope of the T-jump folding Arrhenius plot.
+In the case of [P18A]-TC10b, however, the agreement
+between the fluorescence monitored T-jump and NMR
+determination of folding dynamics was very poor even after
+taking into account the greater error in the NMR
+determinations. In the ln k units shown in Figure 5, the errors
+ranged from ±0.14 to ±0.34 in the NMR dynamics experiment,
+versus a typical value of ±0.07 for the T-jump data points.
+The NMR dynamics analysis based on A18β line widths
+(with the other Me doublets providing the measure of intrinsic
+broadening for the system) gave a folding Arrhenius plot with a
+distinctly positive slope. In addition, the NMR relaxation
+method afforded rates that were 2−3-fold slower; this was not
+fully rationalized and the basis for not publishing the results at
+that time.
+Another distinction in Arrhenius plot comparison is the
+difference in apparent Tm by fluorescence versus the NMR
+measures. If we recalculate kF and kU values from the T-jump
+relaxation rates using the fraction folded values derived from
+the A18β signal NMR melt, the rate discrepancy remains. Since
+we viewed the upfield methyl signal of [P18A] Trp-cage
+mutants as a nearly ideal NMR dynamics probe, we have
+repeated a study of [P18A]-TC10b with freshly prepared
+material and using more precise line fitting procedures which
+we developed in other studies.21 In this second determination,
+we once again obtained a positive Arrhenius folding plot slope
+with 1/kF = 3.7 μs at 300 K.
+We now suggest a rationale: that many stable Trp-cage
+species have partially folded states, with cage formation still
+incomplete, that are both as helical as the native state and place
+the Trp indole in an environment that quenches its
+fluorescence. Thus, both the fluorescence measures and prior
+Trp-cage dynamics measures based on helical IR signals may
+not be probes of complete cage formation. We employed
+[P18A]-Trp-cages for our remaining studies, with the exchange
+line broadening at Ala18-Hβ as the dynamics probe.
+We first examined the possibility of extending this method to
+an ultrastable Trp-cage system,11 TC16b (DAYAQ WLKDa
+GPSSa RPPPS). If we assume the folding rate increase for
+Table 2. Folding Dynamics at 300 K for Trp-Cage Species
+with a 13Cα Placed at Gly11
+Trp cage analogue examined χU KF 1/kF (μs)
+a 1/kU (μs)
+TC10b (DAYA--) 0.140 6.14 1.43 8.8
+TC11b1 (GAYA--) 0.296 2.37 4.4 10.4
+TC12b (NYA--) 0.402 1.49 2.97 4.4
+in 30 vol % TFE 0.181 4.53 2.55 11.5
+aThe folding rate for TC10b would be increased by a factor of 1.6 if
+the random coil shift for a Gly-Hα was employed instead of the
+estimated unfolded ensemble shift. The effects of choice of unfolded
+reference are much smaller (5−20%) for TC11b1 and TC12b.
+Biochemistry Article
+dx.doi.org/10.1021/bi501021r | Biochemistry 2014, 53, 6011−60216016
+G10a observed for TC10b by Culik et al.12 applies here as well,
+this would put the estimated rate for TC16b at 300 K at 1/kF =
+0.65−0.85 μs. [P18A]-TC16b, with a Tm of 76 °C at pH 7, did
+not display enough exchange broadening to yield a useful
+Arrhenius plot. However, with the fold destabilization observed
+at pH 2.5 (ΔΔGUΔpH = −3.1 kJ/mol, Table 1), useful data
+could be collected; again a positive slope was observed (from
+305−320 K) with 1/kF = 0.93 ± 0.18 μs at 305 K (Figure S1,
+Supporting Information (SI)). This fast folding rate, under
+conditions where the salt bridge is removed by aspartate
+protonation, suggests that the salt bridge is not a required
+feature for accelerated cage formation.
+We also collected dynamics data for the [P17A,P18A]
+mutant of TC16b at pH 2.5 (Figure S2, SI). Over the 285−315
+K range, a positive Arrhenius slope was observed with a 1/kF =
+2.20 ± 0.19 μs at 305 K. The ΦF value calculated for the P17A
+mutation was ca. 0.85 at the 305 K comparison point. We
+attribute the folding rate retardation of the [P17A]-mutation, in
+combination with P18A, to destabilization of the polyProII
+conformation in the C-terminal segment. This conformation is
+required for proper docking against Y3 and W6 in cage
+formation and is reflected in the near unity ΦF value for the
+[P17A] and [P18A] mutations.
+More dramatic destabilizations were required to obtain data
+at pH 7. An Arg16 to norvaline mutation proved suitable.
+This mutation, by removing the entire guanidine-group,
+eliminates both the H-bonding and Coulombic components of
+the D9/R16 salt bridge. The ΔΔGU values for [R16nva]
+mutations are comparable to, or significantly larger, than those
+due to acidification (see Table 1). This mutation, in
+combination with the [P18A] mutation, allowed dynamics
+studies at pH 7. The [R16nva, P18A]-TC16b analogue gave
+excellent data which yielded a slightly curved Arrhenius plot for
+ln kF (Figure 6). Similarly curved Arrhenius plots are typically
+observed for small protein folds.26 The maximum rate, 1/kF =
+0.95 ± 0.10 μs, was observed between 290−305 K. Since we do
+not have data for [P18A]-TC16b at pH 7, we cannot calculate a
+ΦF value (see SI, note 1). This observation also suggests that
+salt-bridge formation does not occur until after the folding
+transition state.
+We next turned to examination of the C-terminal segment of
+the helix in the Trp-cage. Studies already presented above
+indicated that helix N-capping appears to be required in a
+transition state leading to structures that provided the full ring
+current shielding of Gly11 Hα2. The greater fold stability of
+TC10b and TC13b (versus TC5b) is attributable to improve-
+ments in helicity. As already noted,27 in prior dynamics studies
+relying on IR probes, helicity improvements resulted in folding
+acceleration, with a near unity ΦF value. We opted to examine a
+destabilizing mutation at the C-terminus of the helix, A8G, to
+obtain another helicity-associated ΦF value. From Table 1, this
+substitution results in a 4.1 kJ/mol cage fold destabilization at
+300 K. For this species, [A8G,P18A]-TC16b, with χU values
+greater than 0.1 at all temperatures above 300 K at both pH 2.5
+and 7, dynamics data could be obtained at both pH 7 and 2.5.
+The resulting Arrhenius plots appear in Figure 7.
+Since we were able to obtain dynamics data for [P18A]-
+TC16b at pH 2.5, the comparison at this pH provides a direct
+measure of the ΦF value for the A8G mutation. The folding
+time constant at the 305 K comparison point is 5.1 μs for
+[A8G,P18A]-TC16b, which corresponds to ΦF = 1.19 ± 0.08.
+Essentially the same value would be obtained at pH 7 using the
+extrapolated27 folding time constant for [P18A]-TC16b.
+This example also provides the first example of a direct
+folding dynamics comparison at pH 7 versus pH 2.5. In Figure
+7, the Arrhenius plots for folding are, within experimental error,
+identical at the two pH’s. The enhanced fold stability at pH 7 is
+exclusively the result of a decreased unfolding rate. The
+favorable Coulombic attraction associated with the D9/R16 salt
+bridge is present in the folded state but essentially gone at the
+unfolding/folding transition state.
+The most destabilizing single site mutation for the Trp-cage,
+other than P19A and Y3A, is the S14A mutation. The basis for
+this is now established.14,23,27 In all cases, Hγ of the serine
+hydroxyl forms an H-bond to OC-Gly11. In the crystal
+structure23 of a cyclic Trp-cage that lacks the R16/D9 salt
+bridge due to the pH employed for crystallization, the S14Hγ/
+OC-Gly11 interaction is clearly present and the Ser-Oγ
+accepts an H-bond from R16HN (the amide NH). In analogues
+with an R16/D9 salt-bridge, the Arg side chain wrapping
+around the indole ring places R16Hε, a side chain NH, in
+position for H-bonding to Ser-Oγ either directly or via a tightly
+Figure 6. Folding dynamics of [R16nva,P18A]-TC16b at pH 7.
+Figure 7. Folding/unfolding Arrhenius plots for [A8G,P18A]-TC16b
+at pH 7 and pH 2.5.
+Biochemistry Article
+dx.doi.org/10.1021/bi501021r | Biochemistry 2014, 53, 6011−60216017
+associated water molecule.23,27a These H-bonding interactions
+are required to allow the burial of the polar S14 side chain in
+the hydrophobic core, and they contribute a net stabilization of
+the cage fold. As a result, even though the introduction of an
+additional alanine in the 310 helix might be expected to provide
+some net stabilization to this secondary structure element, an
+S14A mutation is fold-destabilizing (ΔΔGU = −5.5 ± 0.4 kJ/
+mol). The dynamics effects of the S14A mutation were
+examined for [S14A,P18A]-TC16b. For this system, the ΔΔGU
+for the [S14A]-mutation was −5.3 kJ/mol at both pH 7 and pH
+2.5, but the dynamics probe was free of interfering peak
+overlaps only at pH 7. [S14A,P18A]-TC16b displayed a nearly
+constant folding rate (1/kF = 1.73 ± 0.15 μs) in the 295−320 K
+temperature span (Figure 9, vide infra). Since we could not
+obtain dynamics data for [P18A]-TC16b at pH 7, a direct
+comparison for a ΦF calculation does not exist (see SI, note 2).
+The slightly more stable [A8G,P18A]-TC16b analogue, which
+has a comparable fold stability (ΔGU 1.2 kJ/mol greater than
+that of [S14A,P18A]-TC16b), provides the best comparison
+point. The folding time constants are 5.1 and 1.73 μs,
+respectively, for [A8G,P18A]-TC16b and [S14A,P18A]-
+TC16b: the [S14A] mutant folds faster than the more stable
+[A8G] mutant. From this comparison, it is clear that the
+[S14A] mutation does not result in the dramatic folding rate
+reduction that might be expected for such a destabilizing effect.
+If the S14 side chain is already buried at the folding transition
+state, the web of stabilizing side chain H-bonding interactions is
+not fully established. No matter how we estimate it, ΦF is much
+less than 0.5 for the [S14A] mutation.
+Other than replacing long chain residues with alanine in
+helices8,9 and the Gly to D-Ala mutations11,12 in the C-terminal
+cap of the Trp-cage’s N-terminal helix, a [P12W] mutation13,14
+is the most fold stabilizing mutation reported for the Trp-cage.
+In the case of TC5b, this mutation has been reported to have a
+stabilizing effect (a positive ΔTm by CD) and provides a
+significantly greater acceleration of the folding rate.7 This
+published account indicates a ΦF in excess of 1.2. The same
+ΔTm for a [P12W] mutation has also been observed for TC16b
+and a circularly permuted Trp-cage sequence and ΔΔGU values
+on the order of +2 to +3 kJ/mol were derived14 for this
+mutation. The data in Table 1 indicate that a [P12W] mutation
+is not fold stabilizing for Trp-cages with the Pro18 to Ala
+mutation, ΔΔGUP12W values at 300 K are −2.4 (for [P18A]-
+TC10b), −1.3 (for [P18A]-TC16b), and −1.7 kJ (for
+[S14A,P18A]-TC16b).
+Two explanations for the fold stabilizing effect of the
+[P12W]-mutation in Trp-cage structures have been suggested:
+the formation of an enthalpically favorable edge-to-face (EtF)
+indole/indole cluster,13 and greater apolar surface burial14
+associated with the W12/P17,18 as well as the W12/W6
+interactions; see Figure 8. Both of these may apply in the case
+of Trp-cages that retain the C-terminal tri-Pro unit, but the
+relative extent to which they affect energies of the folding
+transition state and the final folded structure are not known.
+In the case of TC5b, rate comparisons7,13 suggest that the
+[P12W] mutation may have a greater stabilizing effect on the
+folding transition state, ΦF ≥ 1.2. We examined the dynamics of
+[P12W]-Trp-cages in two species, both of which also had the
+[P18A] mutation that provides our preferred dynamics probe.
+Although an indole/indole aryl cluster could still be a feature of
+the folding transition state, with a [P18A] mutation in place,
+the extent of apolar surface burial resulting is significantly
+diminished (Figure 8). This is our rationale for the observation
+that the [P12W] mutation was a fold-destabilizing rather than
+stabilizing effect when the [P18A] mutation was present. In the
+case of [P12W,P18A]-TC13b, the net effect of the double
+mutation was a 1.1 kJ/mol destabilization; the addition of the
+[P18A] mutation to [P12W]-TC13b corresponded to a 4 kJ/
+mol loss in fold stability. The folding time constants observed
+for [P12W,P18A]-TC13b were quite rapid (see Figure S3, SI),
+with a positive slope for the ln kF versus 1/T plot: 1/kF = 1.5 ±
+0.15 μs (at 305 K) and 0.9 ± 0.2 μs (at 295 K). However, the
+slope of the Arrhenius plot for unfolding was significantly less
+steep than those observed for other [P18A]-Trp-cage species of
+comparable fold stability. Extrapolated kF values from other
+[P18A]-Trp-cage species, based on ΦF values for substitutions
+in the helices, suggest that the [P12W] mutation provides a
+modest folding acceleration at the lower temperatures even
+though it has a net fold destabilizing effect, corresponding to a
+significant negative ΦF value.
+In the case of the other Trp2-cage examined in the present
+study, [P12W,S14A,P18A]-TC16b, a direct comparison is
+available (Figure 9). In this construct, the [P12W] mutation
+was destabilizing by 1.7 kJ/mol at 300 K (Table 1).
+In this example we also observed a diminished slope for ln kU
+vs 1/T. The destabilization of the fold associated with the
+[P12W] mutation predominantly results from accelerated
+unfolding particularly at the lower temperatures. The loss of
+curvature in the folding Arrhenius plot presumably reflects a
+Figure 8. Views of the packing interactions of W12 in a Trp2-cage
+taken from a previously reported14 structure, W6 appears in magenta.
+The left panel shows the close contacts between the edge of the indole
+ring and the P17Cβ and P18Cδ methylenes. The right panel shows the
+edge-to-face interaction between the two indole rings and the location
+of P18Cβ which is the only aliphatic unit retained in the P18A
+mutants. The hydrophobic cluster consisting of the W12 indole ring
+edge and the P17/P18 interface is significantly disrupted by the
+[P18A] mutation.
+Figure 9. Arrhenius plots of the folding dynamics of [S14A,P18A]-
+TC16b with and without the addition of a [P12W] mutation.
+Biochemistry Article
+dx.doi.org/10.1021/bi501021r | Biochemistry 2014, 53, 6011−60216018
+change in ΔCp‡ and signals a change in apolar surface burial at
+the transition state. Finally, at the lowest temperatures there is a
+significant increase, at least 2.2-fold (4.1 ± 1.9), in the folding
+rate associated with the [P12W] mutation. This places the ΦF
+value for the [P12W] mutation in the range of −0.7 to −1.0 at
+275 K.
+■ CONCLUSIONS
+Fold stability data are reported for 14 new Trp-cage species,
+some at both acidic and neutral pH values. These systems
+include a number of cases in which the circular dichroism
+(which detects only net helicity) provides higher Tm’s and
+measures of folded population (χF) than chemical shifts that
+report on formation of the complete cage structure. These
+observations indicate partial structuring without full cage
+formation in a number of species with either compromised
+cage features or mutations that enhance intrinsic helicity.8,9 The
+single site mutations that resulted in the largest decreases in
+cage formation, with much less effect on helix formation, were
+P19A ≫ S14A > P17A > R16nva. Since our interest lay in
+examining the rates at which the full cage motif forms, we chose
+chemical shift melts at residue 18 sites as the measure for
+obtaining a set of fold stability measures (as ΔGU at 300 K,
+Table 1) for both the new analogues and prior reference
+constructs: these reflect complete cage formation. Previously
+noted mutational effects on cage stability were, with one
+exception, confirmed by these new measures of folded fractions.
+The exception was the P12W mutation; the new analogues
+included instances where a P12W mutation was fold
+destabilizing rather than fold stabilizing as was the case in
+both the original instance13 and more recent14 studies.
+Many of the new analogues bear a [P18A] mutation, which
+is, in the absence of a [P12W] mutation, fold-destabilizing by
+only 1.2 kJ/mol. The exchange broadening of the methyl
+resonance of the alanine introduced in place of P18 served as
+our primary NMR dynamics probe. This method of folding
+dynamics analysis requires the observation of exchange
+broadening due to the equilibrium between the fully folded
+state and states that have P18A undocked from Trp6 and thus
+lack the 1.13−1.19 upfield ring current shift at 18Hβ. A pseudo-
+two-state assumption was applied to derive the fold populations
+essential for the extraction of kF and kU values. We assume that
+the equilibrium fraction of the “unfolded state ensemble” can
+be derived from the observed chemical shift of a probe, taking it
+as a population weighted average of the random coil value and
+the fully folded value. If other states with different chemical
+shifts were populated, this analysis would be incorrect and this
+would be apparent in non-Arrhenius behavior for the derived
+folding/unfolding rate constants. In other applications of this
+dynamics analysis method,21,36 we have observed dramatic
+slope changes in Arrhenius plots and disagreement in rates
+derived by probes placed in different sites for systems with
+more complicated folding scenarios. The strict Arrhenius
+behavior seen in Figures 6, 7, 9 and in the supporting figures,
+thus serves as a confirmation of two-state behavior for the final
+docking event that provides the native fold.
+The inherent limitation of the NMR dynamics method
+prevented the determination of folding rates for some of the
+most stable Trp-cage analogues that have been prepared. The
+extent of line broadening was insufficient for species with 1/kF
+values greater than 0.7 μs and in cases where a “P18A undocked
+from Trp6” state does not become populated (χU ≥ 0.08) at
+temperatures below 310 K. In some cases, dynamics were
+measured at pH 2.5 to take advantage of the fold destabilizing
+effect of Asp1,9 protonation (ΔΔG = 3.1 kJ/mol) to increase
+the unfolded state population and thus increases the extent of
+exchange broadening that can be observed providing folding
+rate constants with greater precision. Ten [P18A]-Trp-cage
+species have been examined at either pH 2.5 or pH 7, one of
+them at both pH values.
+All of our data indicate that the N-terminal helix (residues
+1−8) is fully formed at the cage folding transition state. This is
+consistent with a number of recent MD simulations.1c,27b,28,29
+The ΦF value for an [A8G] mutation was 1.19 ± 0.08 and
+similar, slightly in excess of unity, ΦF values are implied by the
+systematic increases in folding rate constants for Trp-cages with
+additional alanine residues in the N-terminal helix based both
+on the present study and a prior published account.7 A more
+limited study of exchange broadening at the upfield shifted
+G11Hα2 in the present study indicated that more effective N-
+capping residues at the first position of this helix also accelerate
+folding. The importance of the N-capping interaction has also
+been supported by a recent dynamics study.30 Near unity ΦF
+values were also found for the [P17A] and (to the extent that
+we can approximate it) the [P18A] mutations. The simplest
+rationale for these is that docking of the P17−P19 unit onto the
+Trp-bearing helix is favored when this unit has a high
+preference for the poly-ProII conformation that is present in
+the fully folded state.
+In contrast to this, we observe negative ΦF values for the
+P12W mutation when the P18A mutation is also present, and
+small fractional ΦF values were observed for ionization state
+changes and the R16nva and S14A mutations. The near
+absence of folding rate retardation due to the R16nva mutation
+and protonation of the Asp in the D9/R16 salt bridge indicates
+that the fold-stabilizing D9/R16 interaction (ΔΔGU ≈ −5 kJ/
+mol) forms after the cage formation transition state. Gai and
+co-worker have reached the same conclusion, based on an
+R16K mutation.7 This conclusion, post-transition state
+formation, was also extended this to the P19/Y3 hydrophobic
+staple. In our view the latter point requires further study using
+cage-specific probes, and efforts in this direction are in progress.
+A recent transition state interface sampling modified Markov
+State Model31 finds breaking of the salt-bridge as a very early
+event in the unfolding trajectory, well prior to any loss of
+helicity. However, premature salt bridge formation continues32
+to appear as a kinetic trap in folding simulations.
+The S14A mutation has a dramatic destabilizing effect on the
+cage fold (ΔΔGU = −5.6 kJ/mol) and is located in the 310
+helical segment of the Trp-cage. This structural element has
+been a subject of discussion in MD simulations,2,28,32 and
+experimental evidence for residual flexibility at this site has been
+reported based on both NMR structure ensembles8,14,19,33 and
+crystal structures.23 Gai and co-workers7 have observed a more
+rapid phase (ca. 300 ns) in some FT-IR-monitored T-jump
+experiments which was attributed to the 310 helix. Two
+experimental reports that have implicated an intermediate state
+populated at temperatures near the apparent Tm have also
+focused on the G11-G15 segment. Ahmed et al.34 indicated that
+this structure was more compact with closer contacts about W6,
+but a less well-formed 310 helix. Rovo et al.
+33 have calculated
+that this intermediate has a longer, nearly complete, α-helix in
+the G11-G15 segment. Whether this intermediate, which
+appears to be most populated at somewhat higher temper-
+atures, is an on-path folding intermediate at these or lower
+temperatures, is unclear. If some compact intermediate is on-
+Biochemistry Article
+dx.doi.org/10.1021/bi501021r | Biochemistry 2014, 53, 6011−60216019
+path, one possibility is that the H-bonding interactions that
+allow burial of the S14 side chain hydroxyl form after the P17−
+P19 docking event and are the basis for the late conformational
+change in the G11-G15 segment. D9/R16 salt-bridge formation
+may also contribute to this conformational change.
+P12 is also within the 310 helical segment of the Trp-cage.
+While further data, including dynamics for [P12W]-species that
+retain the P17,18,19 unit based on NMR probes within that
+unit, are required to fully clarify the nature of the contacts made
+by Trp12 in the folding transition state, the present study does
+provide insights. The rapid folding of [P12W,P18A]-species
+implies some fold-favoring interactions at Trp12. Partial
+formation of a Trp6/Trp12 aryl ring cluster at the transition
+state may be the rationale for folding that is more rapid, even
+though the [P12W] mutation is destabilizing in the ultimate
+folded state. Such a propensity to form an indole/indole cluster
+in the unfolded state ensemble could favor prestructuring at the
+transition state. This local structure may, however, differ from
+that in the final folded state with, in the case of the [P18A]-
+analogues, favorable interactions present only at the folding
+transition state. Our analysis suggests that with a proline
+present at position 18, additional hydrophobic interactions that
+are not present in [P18A] analogues, result upon full cage
+formation and provide stabilization of the fully folded state.
+While there are unanswered questions concerning the Trp-
+cage folding pathway, with a number of groups having reported
+data suggesting that Trp-cage folding is not a two-state
+system,19,28,33−35 these data are largely associated with structure
+melting analysis rather dynamics measurements. Both T-jump
+and NMR relaxation experiments are consistent with a net two-
+state process, with fewer exceptions.7,28 With the present study,
+it is apparent that mutations that increase the propensity to
+form any of the local secondary structure features of the Trp-
+cage fold produce folding rate increases, likely due to partial or
+complete structuring of these units prior to the ultimate folding
+transition state. In more stable Trp-cage sequences, there may
+be considerable folding trajectory variability: concerted
+formation of the full cage structure from an unfolded state
+ensemble when the N-terminal helix is not intrinsically
+favorable versus partial, variable degrees of prestructuring of
+the individual secondary structure elements (most notably the
+N-terminal helix, but also the poly-ProII segment and possibly
+half-cage species). The NMR dynamics method employed
+herein affords the slowest time constant involved in an
+equilibrium between two states of a probe that have a large
+chemical shift difference. By employing a site with ring current
+shifts that only appear on complete docking of residues 17−19
+upon the Trp/Tyr-bearing helix focuses our study on the,
+presumably late, cage-forming step. The Arrhenius plots for
+folding that result imply a significant barrier, and we continue
+to view this ultimate step in the formation of Trp-cage as
+effectively a two-state process.
+■ ASSOCIATED CONTENT
+*S Supporting Information
+Folding and unfolding data (as Arrhenius plots) for [P18A]-
+TC16b and [P17A,P18A]-TC16b at pH 2.5, and
+[P12W,P18A]-TC13b at pH 7. This material is available free
+of charge via the Internet at http://pubs.acs.org.
+■ AUTHOR INFORMATION
+Corresponding Author
+*E-mail: andersen@chem.washington.edu.
+Funding
+This research was supported by the National Institutes of
+Health Grants R01GM059658 and R01GM099889 to Niels
+Andersen.
+Notes
+The authors declare no competing financial interest.
+dx.doi.org/10.1021/bi501021r | Biochemistry 2014, 53, 6011−60216021

@@ -1,0 +1,47 @@
+Phase:Direction
+Input: Token
+
+Options: control = appelt
+
+//direction rules
+
+Rule:Positive
+(
+	{ Token.string ==~ "increase|increases|increased|increasing|enhance|enhances|enhanced|enhancing|higher|highest|improve|improves|improved|improving"}
+):positive
+-->
+		:positive.Positive = {rule = Positive}
+
+Rule:Negative
+(
+	{ Token.string ==~ "abolition|abolish|abolishes|abolished|abolising|decrease|decreases|decreased|decreasing|reduce|reduces|reduced|reducing|reduction|lower|lowers|lowering|lowered|lowest|inhibit|inhibits|inhibited|inhibiting|inhibition|impair|impairs|impaired|impairing|impairment|loose|looses|loosed|loosing|loss|defect|defects|defected|defecting|defective|defection|disrupt|disrupts|disrupted|disrupting|disruptive|disruption|diminish|diminishes|diminished|diminishing"}
+):negative
+-->
+		:negative.Negative = {rule = Negative}
+		
+Rule:Neutral
+(
+	{ Token.string ==~ "identical|similar|full|sustained"}
+):neutral
+-->
+		:neutral.Neutral = {rule = Neutral}
+		
+Rule:NonNeutral
+(
+	{ Token.string ==~ "affect|affects|affected|affetcting|effect|alter|alters|altered|altering|alteration|differ|differs|differed|differing|difference"}
+):nonneutral
+-->
+		:nonneutral.NonNeutral = {rule = NonNeutral}
+
+Rule:Negation
+(
+	{ Token.string ==~ "((N|n)ot)|((N|n)o)|((W|w)ithout)"}
+):negation
+-->
+		:negation.Negation = {rule = Negation}
+			
+
+
+
+
+

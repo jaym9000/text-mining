@@ -1,0 +1,162 @@
+Phase: MutationImpactOKVRelationExtraction
+Input: ImpactOKV
+
+Options: control = all
+
+Rule:MutationImpactOKVRelationRule1
+(
+	{ImpactOKV}
+):impactOKV
+-->
+{
+	try {
+		/**Weights
+		*
+		*/
+		double alfa = 1.0;
+		double beta = 1.0;
+		double gamma = 1.0;
+		double delta = 1.0;
+		
+		
+		//retrieve impact
+		Annotation impactA = (Annotation)((AnnotationSet)bindings.get("impactOKV")).iterator().next();
+
+		//retrieve impact sentence
+		Annotation sentence = (Annotation)inputAS.get("ImpactOKV",impactA.getStartNode().getOffset(),impactA.getEndNode().getOffset()).iterator().next();
+		
+		//retrieve related mutations
+		boolean mutationsFound = false;
+		int sentenceDistance = 0;
+		Long[] mutantSentence = new Long[2];
+		
+		List<Long[]> mutants = new ArrayList<Long[]>();
+		
+		while(!mutationsFound && sentenceDistance < 4) {
+			//check current sentence
+			AnnotationSet mutationAS = inputAS.get("GroundedPointMutation",sentence.getStartNode().getOffset(),sentence.getEndNode().getOffset());
+			
+			//if mutations exist
+			if(mutationAS.size() > 0) {
+				System.out.println("Flopp");
+				//annotate each of them as a Mutant.
+				for(Annotation mutationA : mutationAS) {
+					String wildtypeSequence = new String((String)doc.getFeatures().get((String)doc.getFeatures().get("pacs")));
+					String sequence = new String(wildtypeSequence);
+
+					int mutationPos = (Integer)mutationA.getFeatures().get("hasCorrectPosition")-1;
+					String mutantResidue = (String)mutationA.getFeatures().get("hasMutantResidue");
+					sequence = new String(sequence.substring(0,mutationPos)+mutantResidue+sequence.substring(mutationPos+1));
+				
+					FeatureMap features = Factory.newFeatureMap();
+					features.put("hasSequence",sequence);
+					features.put("mutatesSequence",wildtypeSequence);
+					features.put("mutatesProteinWithSwissProtId",(String)doc.getFeatures().get("pacs"));
+					
+					AnnotationSet previousMutants = outputAS.get("ProteinMutant",mutationA.getStartNode().getOffset(),mutationA.getEndNode().getOffset());
+					boolean mutantAlreadyExists = false;
+					for(Annotation previousMutant : previousMutants) {
+						if(previousMutant.getEndNode().getOffset() == mutationA.getEndNode().getOffset() && 
+							previousMutant.getStartNode().getOffset() == mutationA.getStartNode().getOffset()) {
+							mutantAlreadyExists = true;
+						}
+					}
+					if(!mutantAlreadyExists) {
+						outputAS.add(mutationA.getStartNode().getOffset(),mutationA.getEndNode().getOffset(),"ProteinMutant",features);
+					}
+					mutants.add(new Long[] {mutationA.getStartNode().getOffset(),mutationA.getEndNode().getOffset()});
+				}
+				
+				Object tempNum = doc.getFeatures().get("numberOfImpactOKVMutationRelations");
+				if(tempNum == null) {
+					doc.getFeatures().put("numberOfImpactOKVMutationRelations",mutationAS.size());
+				}
+				else {
+					doc.getFeatures().put("numberOfImpactOKVMutationRelations",((Integer)tempNum)+mutationAS.size());
+				}
+				
+				mutantSentence[0] = sentence.getStartNode().getOffset();
+				mutantSentence[1] = sentence.getEndNode().getOffset();
+				mutationsFound = true;
+			}
+			//if mutations doesnt exist
+			else {
+				//move to a more previous sentence
+				Annotation tempSentence = sentence;
+				try {
+					sentence = (Annotation)inputAS.get("Sentence",sentence.getStartNode().getOffset()-10,sentence.getStartNode().getOffset()-5).iterator().next();
+				} catch(Exception e) {
+					sentence = tempSentence;
+					sentenceDistance = 4;
+				}
+				sentenceDistance++;
+			}
+		}
+
+		//if mutationsFound
+		if(mutationsFound) {
+			for(Long[] mutant : mutants) {
+				//calculate overall score
+				FeatureMap features = impactA.getFeatures();
+				
+				double aScore = (Double)features.get("score");
+				Annotation kvA = (Annotation)inputAS.get("KineticVariableMention",impactA.getStartNode().getOffset(),impactA.getEndNode().getOffset()).iterator().next();
+				double kvgScore = (Double)kvA.getFeatures().get("groundingScore");
+				double mutantDistanceScore = 1.0/((double)sentenceDistance+1);
+				
+				/**
+				double inDocumentPositionScore;
+				Long[] docOffsets = doc.getSourceUrlOffsets();
+				System.out.println("KEKE5");
+				double documentLength = (double)(docOffsets[0]-docOffsets[1]);
+				System.out.println("KEKE6");
+				double impactPosition = (double)impactA.getStartNode().getOffset();
+				System.out.println("KEKE7");
+				double relativePosition = impactPosition/documentLength;
+				System.out.println("KEKE8");
+				//if in first 5%, ie. abstract or title.
+				if(relativePosition <= 0.05) {
+					inDocumentPositionScore = 1.0;
+				}
+				//if in the second 5%, ie. close to the "introduction"
+				else if(relativePosition > 0.05 && relativePosition <= 0.10) {
+					inDocumentPositionScore = 1.0-(20.0*(relativePosition-0.05));
+				}
+				//if in the middle 80%, ie. going from introduction to discussion
+				else if(relativePosition > 0.10 && relativePosition <= 0.90) {
+					inDocumentPositionScore = 1.25*relativePosition-0.125;
+				}
+				//if in the last 10%, ie. in a conclusion, discussion or references title.
+				else {
+					inDocumentPositionScore = 1.0;
+				}
+				
+				/**/
+				//add score as feature.
+				double score = (alfa*aScore+beta*mutantDistanceScore/*gamma*inDocumentPositionScore*/+delta*kvgScore)/(alfa+beta/*gamma*/+delta);
+				
+				features.put("hasRelevanceScore",Double.toString(score));
+				features.put("mutant",mutant);
+				if(((String)kvA.getFeatures().get("kind")).equals("Km")) {
+					features.put("affectProperty","MichaelisConstant");
+				} else if (((String)kvA.getFeatures().get("kind")).equals("kcat")) {
+					features.put("affectProperty","CatalyticRateConstant");
+				} else if (((String)kvA.getFeatures().get("kind")).equals("kcatOverKm")) {
+					features.put("affectProperty","EnzymeEfficiencyConstant");
+				} 
+				
+				if(mutant[0]<impactA.getStartNode().getOffset()) {
+					System.out.println("blarsk!foere");
+					outputAS.add(mutant[0],impactA.getEndNode().getOffset(),"Mutation-ImpactOKV",features);
+					System.out.println("blarsk!efter");
+				} else {
+					System.out.println("flempsk!foere");
+					outputAS.add(impactA.getStartNode().getOffset(),impactA.getEndNode().getOffset(),"Mutation-ImpactOKV",features);
+					System.out.println("flempsk!efter");
+				}
+			}
+		}
+	} catch(Exception e) {
+		e.printStackTrace();
+	}
+}

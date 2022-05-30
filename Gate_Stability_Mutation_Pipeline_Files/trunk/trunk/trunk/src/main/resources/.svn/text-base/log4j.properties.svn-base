@@ -1,0 +1,90 @@
+###############################################################################
+# log4j definitions
+# Version : $Revision: 1.5 $
+###############################################################################
+
+# Set root logger level to WARN.
+# Label its output channel as C1.
+log4j.rootLogger=OFF
+
+# Define C1 to be a ConsoleAppender.
+log4j.appender.C1=org.apache.log4j.ConsoleAppender
+log4j.appender.C1.target=System.out
+
+# Define C2 to be a ConsoleAppender.
+log4j.appender.C2=org.apache.log4j.ConsoleAppender
+log4j.appender.C2.target=System.out
+
+# Define F1 to be a FileAppender.
+log4j.appender.F1=org.apache.log4j.FileAppender
+log4j.appender.F1.File=debug.txt
+log4j.appender.F1.Append=false 
+
+# Define C1 to use a PatternLayout.
+#log4j.appender.C1.layout=org.apache.log4j.PatternLayout
+#log4j.appender.C1.layout.ConversionPattern=%M: %m%n
+#log4j.appender.C1.layout.ConversionPattern=; %r %-5p %c{2} %x - %m%n
+
+# Define F1 to use a PatternLayout.
+log4j.appender.F1.layout=org.apache.log4j.PatternLayout
+log4j.appender.F1.layout.ConversionPattern=[%p] %M: %m%n
+#log4j.appender.F1.layout.ConversionPattern=; %r %-5p %c{2} %x - %m%n
+
+# Define C2 to use a PatternLayout.
+log4j.appender.C2.layout=org.apache.log4j.PatternLayout
+log4j.appender.C2.layout.ConversionPattern=[%p] %M: %m%n
+
+# Define C2 to use a PatternLayout.
+log4j.appender.C2.layout=org.apache.log4j.PatternLayout
+log4j.appender.C2.layout.ConversionPattern=[%p] %M: %m%n
+
+
+log4j.logger.ca.unbsj.cbakerlab.mutation_impact.Main=DEBUG, C2, F1
+log4j.logger.ca.unbsj.cbakerlab.mutation_impact.Pipeline=DEBUG, C2, F1
+log4j.logger.ca.unbsj.cbakerlab.mutation_impact.MutationGrounder=DEBUG, C2, F1
+log4j.logger.ca.unbsj.cbakerlab.mutation_impact.MolecularFunctionGrounder=DEBUG, C2, F1
+log4j.logger.ca.unbsj.cbakerlab.mutation_impact.EvaluatorMg=DEBUG, C2, F1
+log4j.logger.ca.unbsj.cbakerlab.mutation_impact.EvaluatorMie=DEBUG, C2, F1
+log4j.logger.ca.unbsj.cbakerlab.mutation_impact.Corpus=DEBUG, C2, F1
+log4j.logger.ca.unbsj.cbakerlab.mutation_impact.DocumentInformation=DEBUG, C2, F1
+log4j.logger.ca.unbsj.cbakerlab.mutation_impact.Utils=DEBUG, C2, F1
+log4j.logger.ca.unbsj.cbakerlab.mutation_impact.MutationGrounder3=DEBUG, C2, F1
+log4j.logger.ca.unbsj.cbakerlab.mutation_impact.GroundingCandidate=DEBUG, C2, F1
+log4j.logger.ca.unbsj.cbakerlab.mutation_impact.Gate2MieoAoRdfConverter=DEBUG, C2, F1
+log4j.logger.ca.unbsj.cbakerlab.mutation_impact.MgPipelineStatic=DEBUG, C2, F1
+
+log4j.logger.ca.unbsj.cbakerlab.mutation_impact.Parameters=DEBUG, C2, F1
+log4j.logger.ca.unbsj.cbakerlab.mutation_impact.CacheQuerying=DEBUG, C2, F1
+log4j.logger.ca.unbsj.cbakerlab.mutation_impact.CacheAlignment=DEBUG, C2, F1
+
+log4j.logger.ca.unbsj.cbakerlab.mutation_impact.Main2=DEBUG, C2, F1
+
+#log4j.logger.gate=DEBUG
+#log4j.logger.gate.jape=OFF
+#log4j.logger.gate.creole.SerialController=OFF
+log4j.logger.gate.util.profile.Profiler=OFF
+
+log4j.logger.com.ontotext.kim=DEBUG
+log4j.logger.org.openrdf.sesame=INFO
+log4j.logger.com.ontotext.kim.gate=OFF
+
+log4j.logger.com.ontotext.kim.model=OFF
+log4j.logger.com.ontotext.kim.model.DataFeedFactory=OFF
+log4j.logger.com.ontotext.kim.util.datastore=OFF
+log4j.logger.org.openrdf.repository.config.RepositoryRegistry=OFF
+log4j.logger.httpclient=OFF
+log4j.logger.org.apache.commons.httpclient.params=OFF
+
+
+# File appender that outputs only benchmark messages
+#log4j.appender.benchmarklog=org.apache.log4j.RollingFileAppender
+#log4j.appender.benchmarklog.Threshold=DEBUG
+##log4j.appender.benchmarklog.File=$user.home/.gate/benchmark.txt
+#log4j.appender.benchmarklog.File=benchmark.txt
+#log4j.appender.benchmarklog.MaxFileSize=5MB
+#log4j.appender.benchmarklog.MaxBackupIndex=1
+#log4j.appender.benchmarklog.layout=org.apache.log4j.PatternLayout
+#log4j.appender.benchmarklog.layout.ConversionPattern=%m%n
+# Conﬁgure the Benchmark logger so that it only goes to the benchmark log ﬁle
+#log4j.logger.gate.util.Benchmark=DEBUG, benchmarklog
+#log4j.additivity.gate.util.Benchmark=false

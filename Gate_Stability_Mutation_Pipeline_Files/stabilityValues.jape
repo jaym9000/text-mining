@@ -1,0 +1,276 @@
+Phase:firstpass
+Input: Lookup Token SpaceToken Number
+Options: control = appelt
+
+Rule: StabilityValuesRule1
+(
+({Token.string == "−"})?
+{Number.type == numbers}
+{SpaceToken}
+{Lookup.majorType == StabilityVals}
+): label
+-->
+:label.StabilityValues = {rule= "StabilityValuesRule1"}
+
+Rule: StabilityValuesRule2
+(
+{Number.type == numbers}
+{SpaceToken}
+{Lookup.majorType == StabilityVals}
+{SpaceToken}
+{Token.string == "("}
+{Lookup.majorType == StabilityVals}
+{Token.string == ")"}
+): label
+-->
+:label.StabilityValues = {rule= "StabilityValuesRule2"}
+
+Rule: StabilityValuesRule3
+(
+{Number.type == numbers}
+{SpaceToken}
+{Token.string == "values"}
+{SpaceToken}
+{Token.string == "of-"}
+{Number.type == numbers}
+{SpaceToken}
+{Token.string == "and"}
+{SpaceToken}
+{Number.type == numbers}
+{SpaceToken}
+{Lookup.majorType == StabilityVals}
+): label
+-->
+:label.StabilityValues = {rule= "StabilityValuesRule3"}
+
+Rule: StabilityValuesRule4
+(
+{Number.type == numbers}
+{SpaceToken}
+{Token.string == "≈"}
+{Lookup.majorType == StabilityVals}
+): label
+-->
+:label.StabilityValues = {rule= "StabilityValuesRule4"}
+
+Rule: StabilityValuesRule5
+(
+{Number.type == numbers}
+{SpaceToken}
+{Token.string == "≈"}
+{SpaceToken}
+{Lookup.majorType == StabilityVals}
+): label
+-->
+:label.StabilityValues = {rule= "StabilityValuesRule5"}
+
+Rule: StabilityValuesRule6
+(
+{Lookup.majorType == StabilityVals}
+{SpaceToken}
+({Token})[1]
+{SpaceToken}
+({Token.string == "−"})?
+{Number.type == numbers}
+{SpaceToken}
+{Lookup.majorType == StabilityVals}
+): label
+-->
+:label.StabilityValues = {rule= "StabilityValuesRule6"}
+
+Rule: StabilityValuesRule7
+(
+{Lookup.majorType == StabilityVals}
+{SpaceToken}
+{Number.type == numbers}
+{SpaceToken}
+({Token})[1]
+{SpaceToken}
+{Number.type == numbers}
+): label
+-->
+:label.StabilityValues = {rule= "StabilityValuesRule7"}
+
+Rule: StabilityValuesRule8
+(
+{Lookup.majorType == StabilityVals}
+{SpaceToken}
+{Token.string == "="}
+{SpaceToken}
+{Number.type == numbers}
+{SpaceToken}
+{Token.string == "±"}
+{SpaceToken}
+{Number.type == numbers}
+{SpaceToken}
+{Lookup.majorType == StabilityVals}
+): label
+-->
+:label.StabilityValues = {rule= "StabilityValuesRule8"}
+
+Rule: StabilityValuesRule9
+(
+{Token.string == "="}
+{SpaceToken}
+{Number.type == numbers}
+{SpaceToken}
+{Token.string == "±"}
+{SpaceToken}
+{Number.type == numbers}
+{SpaceToken}
+{Lookup.majorType == StabilityVals}
+): label
+-->
+:label.StabilityValues = {rule= "StabilityValuesRule9"}
+
+Rule: StabilityValuesRule10
+(
+{Token.string == "="}
+{SpaceToken}
+{Number.type == numbers}
+{SpaceToken}
+{Token.string == "±"}
+{SpaceToken}
+{Number.type == numbers}
+): label
+-->
+:label.StabilityValues = {rule= "StabilityValuesRule10"}
+
+Rule: StabilityValuesRule11
+(
+{Lookup.majorType == StabilityVals}
+{SpaceToken}
+({Token})[1]
+{SpaceToken}
+{Number.type == numbers}
+{SpaceToken}
+({Token})[1]
+{SpaceToken}
+{Number.type == numbers}
+): label
+-->
+:label.StabilityValues = {rule= "StabilityValuesRule11"}
+
+Rule: StabilityValuesRule12
+(
+{Token.string == "="}
+{SpaceToken}
+{Number.type == numbers}
+{SpaceToken}
+{Token.string == "±"}
+{Number.type == numbers}
+): label
+-->
+:label.StabilityValues = {rule= "StabilityValuesRule12"}
+
+Rule: StabilityValuesRule13
+(
+{Token.string == "="}
+{SpaceToken}
+{Number.type == numbers}
+{SpaceToken}
+{Token.string == "±"}
+{Number.type == numbers}
+{SpaceToken}
+{Lookup.majorType == StabilityVals}
+): label
+-->
+:label.StabilityValues = {rule= "StabilityValuesRule13"}
+
+Rule: StabilityValuesRule14
+(
+{Lookup.majorType == StabilityVals}
+{SpaceToken}
+{Token.string == "="}
+{SpaceToken}
+({Token.string == "−"})?
+{Number.type == numbers}
+{SpaceToken}
+({Token})[1]
+{SpaceToken}
+{Number.type == numbers}
+{SpaceToken}
+{Lookup.majorType == StabilityVals}
+): label
+-->
+:label.StabilityValues = {rule= "StabilityValuesRule14"}
+
+Rule: StabilityValuesRule15
+(
+({Token})[1]
+{Number.type == numbers}
+{SpaceToken}
+({Token})[1]
+{SpaceToken}
+{Number.type == numbers}
+{Lookup.majorType == StabilityVals}
+): label
+-->
+:label.StabilityValues = {rule= "StabilityValuesRule15"}
+
+Rule: StabilityValuesRule16
+(
+{Number.type == numbers}
+({Token})[1]
+{Number.type == numbers}
+{SpaceToken}
+{Lookup.majorType == StabilityVals}
+): label
+-->
+:label.StabilityValues = {rule= "StabilityValuesRule16"}
+
+Rule: StabilityValuesRule17
+(
+{Lookup.majorType == StabilityVals}
+{SpaceToken}
+({Token})[1]
+{SpaceToken}
+{Number.type == numbers}
+{SpaceToken}
+{Lookup.majorType == StabilityVals}
+): label
+-->
+:label.StabilityValues = {rule= "StabilityValuesRule17"}
+
+Rule: StabilityValuesRule18
+(
+{Lookup.majorType == StabilityVals}
+{SpaceToken}
+({Token})[1]
+{SpaceToken}
+{Number.type == numbers}
+{SpaceToken}
+({Token})[1]
+{SpaceToken}
+{Number.type == numbers}
+{SpaceToken}
+{Lookup.majorType == StabilityVals}
+): label
+-->
+:label.StabilityValues = {rule= "StabilityValuesRule18"}
+
+Rule: StabilityValuesRule19
+(
+{Lookup.majorType == StabilityVals}
+{SpaceToken}
+({Token})[1]
+{SpaceToken}
+{Number.type == numbers}
+{SpaceToken}
+{Token.string == "K"}
+): label
+-->
+:label.StabilityValues = {rule= "StabilityValuesRule19"}
+
+Rule: StabilityValuesRule20
+(
+{Lookup.majorType == StabilityVals}
+{SpaceToken}
+({Token})[1,2]
+{SpaceToken}
+{Number.type == numbers}
+{SpaceToken}
+{Token.string == "K"}
+): label
+-->
+:label.StabilityValues = {rule= "StabilityValuesRule20"}

@@ -1,0 +1,168 @@
+Imports: {
+	import org.apache.log4j.Logger;
+import org.apache.log4j.Level;
+	import ca.unbsj.cbakerlab.mutation_impact.Utils;
+} 
+Phase: RemoveContradictingMutationImpacts
+Input: Mutation-Impact Mutation-ImpactOKV
+
+Options: control = once debug = true
+
+Rule:RemoveContradictingMutationImpactsRule1
+(
+  {Mutation-Impact} | {Mutation-ImpactOKV}
+):impact
+
+-->
+{
+		java.util.logging.Logger log=null;
+		if(log==null){
+		    log =  java.util.logging.Logger.getLogger("JAPELogger");
+		    log.setLevel(java.util.logging.Level.OFF);
+		}
+
+class DummyClass {
+	private final Logger log = Logger.getLogger(DummyClass.class);
+
+	Set<Integer> getImpactsToRemove(AnnotationSet impactMentions, Document doc, String progteinPropertyType) {
+
+        Set<Integer> impactsToRemove = new HashSet<Integer>();
+        Map<Integer, Integer> impactScoreMap = new HashMap<Integer, Integer>();
+        String[][] scoreTable = new String[impactMentions.size()][4];
+
+	List<Annotation> sortedMutationImpactAnnotations = new ArrayList<Annotation>(impactMentions);
+	Collections.sort(sortedMutationImpactAnnotations);
+        int i = 0;
+        for (Annotation impact : sortedMutationImpactAnnotations) {
+            log.debug("populate table " + i + "/" + impactMentions.size());
+            //FeatureMap features = impact.getFeatures();
+            //Annotation molecularFunction = (Annotation) doc.getAnnotations().get(proteinPropertyType, impact.getStartNode().getOffset(), impact.getEndNode().getOffset()).iterator().next();
+           System.out.println("protein property retrieved");
+
+            Long[] mutantMention = (Long[]) impact.getFeatures().get("mutant");
+           System.out.println(impact);
+           System.out.println(mutantMention[0]+":"+mutantMention[1]);
+           System.out.println("mutantString: "+ impact.getFeatures().get("mutantString"));
+           // Annotation mutant = (Annotation) doc.getAnnotations().get("GroundedPointMutation", mutantMention[0], mutantMention[1]).iterator().next();
+           //System.out.println("mutant retrieved");
+
+
+            Annotation gpmAnn = (Annotation) doc.getAnnotations().get((Integer)impact.getFeatures().get("groundedPointMutationMentionId"));
+            //FeatureMap gpmAnnFeatures = gpmAnn.getFeatures();
+
+
+            scoreTable[i][0] = (String) impact.getFeatures().get("affectProperty");
+           // scoreTable[i][1] = (String) mutant.getFeatures().get("hasSequence");
+            scoreTable[i][1] = (String) gpmAnn.getFeatures().get("zmSequence");
+
+            scoreTable[i][2] = (String) impact.getFeatures().get("direction");
+            scoreTable[i][3] = Double.toString((Double) impact.getFeatures().get("score"));
+
+           System.out.println("properties added to table");
+            impactScoreMap.put(impact.getId(), i);
+            i++;
+        }
+
+        System.out.println(Utils.stringTableAsString(scoreTable));
+        //iterate through the score table and mark all contradictions with lower score for removal.
+        //ALSO CONTAIN THRESHOLD!
+        if (impactMentions.size() > 1) {
+            for (int j = 0; j < impactMentions.size(); j++) {
+                for (int k = 0; k < impactMentions.size(); k++) {
+System.out.println("j: "+j+" k: "+k);
+                               System.out.println("00|" + scoreTable[j][0] + "|" + scoreTable[k][0]);
+                               System.out.println("11|" + scoreTable[j][1] + "|" + scoreTable[k][1]);
+                               System.out.println("22|" + scoreTable[j][2] + "|" + scoreTable[k][2]);
+                               System.out.println("33|" + scoreTable[j][3] + "|" + scoreTable[k][3]);
+                    //if there exists impacts on the same protein property
+                    if (scoreTable[j][0].equals(scoreTable[k][0])) {System.out.println("@1");
+                        //AND
+                        //they are caused by the same mutant (compare mutant sequences)
+                        if (scoreTable[j][1].equals(scoreTable[k][1])) {System.out.println("@2");
+                            //AND
+                            //they have different directionality
+                            if (!scoreTable[j][2].equals(scoreTable[k][2])) {System.out.println("@3");
+                                //mark the impact with lowest score for removal.
+                               System.out.println("contradiction found");
+                               System.out.println("0|" + scoreTable[j][0] + "|" + scoreTable[k][0]);
+                               System.out.println("1|" + scoreTable[j][1] + "|" + scoreTable[k][1]);
+                               System.out.println("2|" + scoreTable[j][2] + "|" + scoreTable[k][2]);
+                               System.out.println("3|" + scoreTable[j][3] + "|" + scoreTable[k][3]);
+                                if (Double.parseDouble(scoreTable[j][3]) > Double.parseDouble(scoreTable[k][3])) {
+                                    impactsToRemove.add(k);
+                                } else
+                                if (Double.parseDouble(scoreTable[j][3]) < Double.parseDouble(scoreTable[k][3])) {
+                                    impactsToRemove.add(j);
+                                } else
+                                if (Double.parseDouble(scoreTable[j][3]) == Double.parseDouble(scoreTable[k][3])) {
+                                    impactsToRemove.add(j);
+                                    impactsToRemove.add(k);
+                                }
+                            }
+                        }
+                    }
+                }
+                //also remove all impacts that are below a certain threshold
+                double threshold = 0.0;
+                if (Double.parseDouble(scoreTable[j][3]) < threshold) {                	
+                   System.out.println("REMOVED BECAUSE OF THRESHOLD.");
+                    impactsToRemove.add(j);
+                }
+            }
+        }
+
+        //export the decisions previously made.
+        Set<Integer> result = new HashSet<Integer>();
+	for(Integer impactId : impactScoreMap.keySet()) {
+            if(impactsToRemove.contains(impactScoreMap.get(impactId))) {
+                result.add(impactId);
+            }
+        }
+        return result;
+    }
+}
+	try {
+	    DummyClass dummyClass = new DummyClass();
+	    AnnotationSet mutationImpactMentionAnnotationSet = doc.getAnnotations().get("Mutation-Impact");
+	   System.out.println("mutationImpactMentionAnnotationSet: "+mutationImpactMentionAnnotationSet.size());
+       
+	    Set<Integer> impactsToRemove = dummyClass.getImpactsToRemove(mutationImpactMentionAnnotationSet,doc,"GroundedMolecularFunction");
+	   System.out.println("impactsToRemove: "+impactsToRemove);
+
+	    for(Annotation mutationImpactMentionAnnotation : mutationImpactMentionAnnotationSet) {
+        	//log.debug("mutantString comes: "+mutationImpactMentionAnnotation.getFeatures().get("mutantString"));
+		FeatureMap mutationImpactFeatures = mutationImpactMentionAnnotation.getFeatures();
+            
+		if(impactsToRemove.contains(mutationImpactMentionAnnotation.getId())) {
+		  inputAS.remove(mutationImpactMentionAnnotation);
+		}
+	  }
+
+
+
+	AnnotationSet mutationImpactOKVAnnotationSet = doc.getAnnotations().get("Mutation-ImpactOKV");
+       System.out.println("mutationImpactOKVAnnotationSet: "+mutationImpactOKVAnnotationSet.size());
+
+        //remove contradictions
+        Set<Integer> impactsToRemoveOKV = dummyClass.getImpactsToRemove(mutationImpactOKVAnnotationSet,doc,"KineticVariableMention");
+
+       System.out.println("Size of impactsToRemoveOKV: "+impactsToRemoveOKV.size());
+       System.out.println(impactsToRemoveOKV);
+
+        for(Annotation mutationImpactAnnotation : mutationImpactOKVAnnotationSet) {
+        	//log.debug("mutantString comes: "+mutationImpactAnnotation.getFeatures().get("mutantString"));
+            FeatureMap mutationImpactFeatures = mutationImpactAnnotation.getFeatures();
+            if(impactsToRemoveOKV.contains(mutationImpactAnnotation.getId())) {
+		  inputAS.remove(mutationImpactAnnotation);
+	    }
+	}
+
+
+	} catch(Exception e) {
+		e.printStackTrace();
+	}
+
+
+
+
+} 

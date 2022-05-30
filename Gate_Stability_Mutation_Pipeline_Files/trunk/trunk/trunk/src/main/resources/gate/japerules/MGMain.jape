@@ -1,0 +1,5 @@
+MultiPhase:	MutationGroundingMultiPhase
+Phases:
+LookupTransducer
+proteinFilter
+MutationGrounderExternal

@@ -1,0 +1,655 @@
+
+
+
+
+
+
+9571
+
+
+
+
+
+Repositioning the Catalytic Triad Aspartic Acid of Haloalkane Dehalogenase: Effects on Stability, Kinetics, and Structure
+
+
+
+
+
+
+
+
+
+
+
+Haloalkane dehalogenase (DhlA) catalyzes the hydrolysis of haloalkanes Via an alkyl-enzyme intermediate. The covalent intermediate, which is formed by nucleophilic substitution with Asp124, is hydrolyzed by a water molecule that is activated by His289. The role of Asp260, which is the third member of the catalytic triad, was studied by site-directed mutagenesis. Mutation of Asp260 to asparagine resulted in a catalytically inactive D260N mutant, which demonstrates that the triad acid Asp260 is essential for dehalogenase activity. Furthermore, Asp260 has an important structural role, since the D260N enzyme accumulated mainly in inclusion bodies during expression, and neither substrate nor product could bind in the active-site cavity. Activity for brominated substrates was restored to D260N by replacing Asn148 with an aspartic or glutamic acid. Both double mutants D260N+N148D and D260N+N148E had a 10fold reduced kcat and 40-fold higher Km values for 1,2-dibromoethane compared to the wild-type enzyme. Pre-steady-state kinetic analysis of the D260N+N148E double mutant showed that the decrease in kcat was mainly caused by a 220-fold reduction of the rate of carbon-bromine bond cleavage and a 10-fold decrease in the rate of hydrolysis of the alkyl-enzyme intermediate. On the other hand, bromide was released 12-fold faster and Via a different pathway than in the wild-type enzyme. Molecular modeling of the mutant showed that Glu148 indeed could take over the interaction with His289 and that there was a change in charge distribution in the tunnel region that connects the active site with the solvent. On the basis of primary structure similarity between DhlA and other R/ -hydrolase fold dehalogenases, we propose that a conserved acidic residue at the equivalent position of Asn148 in DhlA is the third catalytic triad residue in the latter enzymes.
+
+
+
+
+
+ABSTRACT:
+
+
+
+
+
+Haloalkane dehalogenase (DhlA)1 from Xanthobacter autotrophicus GJ10 is able to cleave carbon-halogen bonds hydrolytically in a broad range of haloalkanes, some of which are notorious environmental pollutants (Keuning et al., 1985). Its three-dimensional structure, which was solved by X-ray crystallography (Verschueren et al., 1993a), consists of two domains: a main domain with an R/ -hydrolase fold structure and an R-helical cap domain lying on top of the main domain. The active site is a mainly hydrophobic cavity that is positioned between the two domains and contains the catalytic triad residues Asp124, His289, and Asp260. The reaction mechanism consists of four main steps (Scheme 1) as was determined by X-ray crystallographic and site-directed mutagenesis studies (Verschueren et al., 1993b; Pries et al., 1994, 1995). In the first step the substrate binds in the cavity and a Michaelis complex (E‚RX) is formed in which the ClR is stabilized by interactions with the NH groups of the Trp125 and Trp175 side chains. This is followed by a nucleophilic attack of Asp124 on the halogen-bound C1
+
+
+* To whom correspondence should be addressed. Telephone 3150-3634208; Fax 31-50-3634165; E-mail D.B. Janssen@chem.rug.nl. ‡ University of Groningen. § Masaryk University. X Abstract published in AdVance ACS Abstracts, July 15, 1997. 1 Abbreviations: DhlA, haloalkane dehalogenase from Xanthobacter autotrophicus GJ10; CD, circular dichroism, DBE, 1,2-dibromoethane; DCE, 1,2-dichloroethane; PDB, protein data bank; SDS, sodium dodecyl sulfate.
+
+
+
+
+
+Scheme 1
+
+
+
+
+
+atom of the substrate, leading to the formation of a covalent alkyl-enzyme intermediate and a halide ion, which remains bound between the two Trp residues (E-R‚X-). The intermediate is subsequently hydrolyzed by a water molecule activated by the general base His289. The alcohol leaves the active site as soon as it is formed (E‚X-), and finally, the halide ion is released from the cavity. Recent pre-steadystate kinetic studies showed that halide export proceeds Via a complex pathway and is the main rate-determining step in the conversion of 1,2-dichloroethane and 1,2-dibromoethane (Schanstra & Janssen, 1996). The role of Asp260, the third member of the catalytic triad, is not yet fully understood. The triad acid is hydrogenbonded to His289 and may assist the histidine in its function as a general base by stabilizing the positive charge on the imidazole ring that emerges as the histidine extracts a proton from the water molecule. It may well be that Asp260 is necessary for hydrolysis of the alkyl-enzyme and that the covalent intermediate is trapped by removing the aspartic acid. In addition, Asp260 may have a structural role, e.g., by influencing the positioning of the active-site histidine or by stabilizing the active-site cavity geometry.
+
+
+
+
+
+
+
+
+S0006-2960(97)01014-3 CCC: $14.00
+
+
+
+
+
+
+
+
+
+
+
+Krooshof et al.
+
+
+
+
+
+
+
+
+
+
+
+Haloalkane dehalogenase is a member of the R/ -hydrolase fold family; a group of hydrolytic enzymes that share a similar topology and a preserved arrangement of the catalytic triad residues (Ollis et al., 1992). The topological positions of the nucleophile Asp124 and the general base His289 after -strand 5 and 8, respectively, are fully conserved within this family, while the location of the third catalytic residue Asp260 is not (Schrag et al., 1992). In haloalkane dehalogenase, Asp260 is located in a loop after -strand 7 (Figure 1), but in human pancreatic lipase, for instance, the equivalent of this residue lies after -strand 6 (Schrag et al., 1992). At that position Asn148 is present in haloalkane dehalogenase (Figure 1). The three-dimensional structure shows that Asn148 is in the proximity of His289 and that the carboxyl group can be brought into hydrogen-bonding distance with the histidine by a simple rotation around torsion angles 1 and 2. This raises the question whether an aspartic or glutamic acid at position 148 can take over the role of Asp260, and thus whether the catalytic triad can be modified. Here we report the results of studies in which we examined the role of the catalytic triad acid Asp260 in haloalkane dehalogenase by site-directed mutagenesis. On the basis of sequence alignments and the X-ray structure, we shifted Asp260 to position 148 by mutating Asp260 to an asparagine and replacing Asn148 by an aspartic or glutamic acid. In addition, we studied the effects of these mutations on dehalogenase stability, kinetics, and structure. MATERIALS AND METHODS Materials. Restriction enzymes, Klenow enzyme, T4 ligase, and isopropyl -D-thiogalactopyranoside (IPTG) were obtained from Boehringer Mannheim. Bacteriophage R408, T7 polymerase, and DNA sequencing reagents were obtained from Pharmacia LKB Biotechnology. Monodeoxyribo
+
+
+
+
+nucleoside 5′-triphosphates (dNTPs) were purchased from Promega, [R-35S]dATP from Amersham Lifescience, and the oligonucleotides for site-directed mutagenesis and sequencing were synthesized by Eurosequence (Groningen, The Netherlands). Halogenated compounds were obtained from Janssen Chimica or from Merck. 2H2O (99.8% v/v) was purchased from Merck or from Isotec Inc. Bacterial Strains and Plasmids. Escherichia coli strain BW313 (Kunkel et al., 1985) was used for the production of uracil-containing single-stranded DNA in site-directed mutagenesis, E. coli JM101 (Promega) was used for standard DNA manipulations and the production of single-stranded DNA for sequencing, and E. coli KA1276 (dam-) was used to screen transformants with the endonuclease BclI. E. coli strain BL21(DE3) (Studier et al., 1990) was the bacterial host used for overexpression of the mutant dehalogenases. The plasmid pGELAF+ was used to construct mutants of haloalkane dehalogenase. pGELAF+ is a mutagenesis and expression vector based on pET-3d (Studier et al., 1990) with the wild-type dehalogenase gene (dhlA) under the control of the T7 promoter and an additional f1+ origin for the production of single-stranded DNA (Schanstra et al., 1993). Site-Directed Mutagenesis. All standard molecular DNA techniques such as DNA preparation, restriction analysis, and electroporation were performed as described by Sambrook et al. (1989). Mutants of haloalkane dehalogenase were constructed according to the Kunkel method (Kunkel, 1985). The mutagenic primer used to change Asp260 to Asn was 5′-ggcatgaaaaacaaattgctggg-3′ (codon for amino acid 260 in boldface type), and for Asn148 to Asp or Glu, 5′-cgcctgattatcatggaa(c)gcctgcttga-3′ (removed BclI restriction site underlined and codon of amino acid 148 in boldface type). pGELAF+ and pGELAF+D260N were used as templates to obtain single and double mutants, respectively. Transformants were screened initially for loss or regain of activity
+
+
+
+
+
+D260 and N148 Mutations in Haloalkane Dehalogenase on indicator plates and for the appearance or disappearance of particular restriction sites. DNA sequences were confirmed by the dideoxy chain-termination method (Sanger et al., 1977). Protein Expression and Purification. The dehalogenase enzymes were expressed and purified as described earlier by Schanstra et al. (1993). The buffers used during purification were T10EMAG [10 mM Tris-sulfate pH 7.5, 1 mM EDTA, 1 mM 2-mercaptoethanol, 3 mM sodium azide, and 10% (v/v) glycerol] and P5EMAG [5 mM potassium phosphate pH 6.5, 1 mM EDTA, 1 mM 2-mercaptoethanol, 3 mM sodium azide, and 10% (v/v) glycerol]. The enzymes were concentrated with an Amicon ultrafiltration cell using a PM30 filter. Coomassie brilliant blue was used to determine protein concentrations of crude extracts with bovine serum albumin as a standard. The concentration of purified enzyme was measured by its absorbance at 280 nm ( 280 ) 4.87 × 104 M-1 cm-1). The purity of the isolated enzymes was analyzed by SDS-polyacrylamide gel electrophoresis. Steady-State Kinetics. Dehalogenase assays were carried out using colorimetric detection of halide release as described previously by Keuning et al. (1985). Solvent kinetic isotope effects were determined by performing dehalogenase assays in buffers containing 2H2O concentrations ranging from 0 to 90%. For the determination of Km, Vmax, and kcat/Km, a suitable amount of enzyme was incubated at 30 °C in 4.5 mL of 50 mM Tris-sulfate buffer (pH 8.2) containing varying substrate concentrations. The amount of halide produced was determined colorimetrically (Keuning et al., 1985) and the alcohol production was analyzed on a Chrompack 438S gas chromatograph with a Chrompack CP Wax 52CB column. An ECD- and an FID-detector were used to detect brominated and chlorinated compounds, respectively. The carrier gas was nitrogen (60 kPa), and the temperature program was 3 min isothermal at 45 °C followed by an increase of 10 °C/ min to 250 °C. Km and Vmax values were calculated from the alcohol and halide production rates by nonlinear regression analysis using the Michaelis-Menten equation and the Enzfitter program of Leatherbarrow (1987). Circular Dichroism Spectra. Circular dichroism spectra were recorded by using an Aviv 62A DS spectrometer. Data were collected at 25 °C from 190 to 250 nm using a 0.1-cm cuvette containing 0.3 mg/ml of dehalogenase in 5 mM potassium phosphate buffer (pH 7.5). Each spectrum shown is the average of five individual scans and was corrected for absorbance caused by the buffer. CD data were expressed in terms of the mean residue ellipticity (ΘMRE) using
+
+
+
+
+
+Biochemistry, Vol. 36, No. 31, 1997 9573 solutions of 1 µM in T50EMAG buffer (pH 8.2) were used and halides were added from NaBr and NaCl stock solutions prepared in the same buffer as the enzyme. The excitation wavelength was 290 nm and spectra were recorded in the range of 300-450 nm. The data were corrected for dilution and apparent halide dissociation constants (Kd) were calculated using nonlinear regression fitting (SigmaPlot, Jandel Scientific) of
+
+
+
+
+
+(F0 - F) fa[X-] ) F0 [X ] + K
+
+
+
+
+
+(2)
+
+
+
+
+
+d
+
+
+
+
+
+where F is the observed fluorescence at halide concentration [X-], Kd is the apparent dissociation constant, and fa is the fraction of the total fluorescence that is quenched at [X-] . Kd. Transients Kinetics. The kinetics of halide and substrate binding were determined at 30 °C by stopped-flow fluorescence quenching experiments using an Applied Photophysics SX17MV stopped-flow instrument. Tryptophan fluorescence was excited at 290 nm and the emission was monitored after passage through a 320-nm cutoff filter. All reactions were performed in T50EMAG buffer (pH 8.2) and the reported reactant concentrations are those in the reaction chamber after mixing. Each kinetic trace shown is the average of four individual experiments and could be fitted with a computer program supplied by the instrument’s manufacturer to the single-exponential model
+
+
+
+
+
+F ) R(1 - e-kobst)
+
+
+
+
+
+(3)
+
+
+
+
+
+ΘMRE )
+
+
+
+
+
+ΘobsMw(100) nlc
+
+
+
+
+
+(1)
+
+
+
+
+
+where Θobs is the observed ellipticity in degrees, Mw is the protein molecular weight of 35 143, n is the number of residues (310), l is the cell path length of 0.1 cm, c is the protein concentration in milligrams per milliliter, and the factor of 100 originates from the conversion of the molar weight to milligrams per decimole (Schmid, 1990). Steady-State Halide Binding. Steady-state halide binding was examined by fluorescence quenching measurements at 30 °C using an SLM Aminco SPF500-C spectrofluorometer as described previously (Verschueren et al., 1993c). Enzyme
+
+
+
+
+
+in which R is the amplitude and kobs is the observed rate. Kinetic data were then further analyzed using the spreadsheet program Quattro-Pro (Borland International Inc.). Rapid-Quench Studies. Rapid-quench experiments were performed in T50ED buffer (50 mM Tris-SO4, pH 8.2, 1 mM EDTA, and 1 mM dithiothreitol) at 30 °C using an RQF-63 rapid-quench instrument from KinTek Corporation. Reactions were initiated by mixing 50 µL of 1.8 mM dehalogenase with 50 µL of 0.5 mM 1,2-dibromoethane (DBE) in the case of single-turnover measurements or with 50 µL of 20 mM DBE in the case of multiple-turnover studies. The reactions were quenched after reaction times ranging from 150 ms to 15 s with 120 µL of 0.8 M H2SO4. Quenched reaction samples were directly ejected into 1.5 mL of ice-cold diethyl ether, containing 0.05 mM 1-bromohexane as the internal standard, and thoroughly mixed. The diethyl ether phase containing noncovalently bound DBE and 2-bromoethanol was separated from the water phase, neutralized by addition of H2CO3, and analyzed by gas chromatography as described for the Km determinations. All concentrations reported are those in the reaction loop of the rapid-quench instrument. Rates and equilibrium constants for substrate conversion were derived from rapid-quench data by numerical simulation of Scheme 1, using the computer program Gepasi (Mendes, 1993; Gepasi for MS-Windows, version 2.0, release 2.08). The fits were constrained by the experimentally determined steady-state kcat and Km values and by the fact that kcat/Km sets the lower limit for k1 (Fersht, 1985). The Gepasi output was analyzed with the spreadsheet program Quattro-Pro (Borland International Inc.) to check whether the numerical simulations fitted the experimental data correctly. Under
+
+
+
+
+
+
+
+
+
+
+
+Krooshof et al.
+
+
+
+
+
+
+
+
+
+
+
+initial velocity steady-state conditions,
+
+
+
+
+
+kcat )
+
+
+
+
+
+k2k3kx (k2k3 + k2kx + k3kx) k3kx(k-1 + k2)
+
+
+
+
+
+(4)
+
+
+
+
+
+Km )
+
+
+
+
+
+k1(k2k3 + k2kx + k3kx) k1k2 kcat ) Km k-1 + k2
+
+
+
+
+
+(5)
+
+
+
+
+
+(6)
+
+
+
+
+
+These equations were derived using the determinant method described by Huang (1979). Molecular Modeling. A model of the double mutant D260N+N148E was built on a SGI Power-Challenge XL computer using the Insight II modeling package (Biosym/ MSI Inc., San Diego, CA). The X-ray structure of haloalkane dehalogenase at pH 8.2 (PDB access code 1ede) was used as a starting model. The protein was protonated at pH 8.0 using the Builder module of the Insight II program. The N 2 atom of His289 was left unprotonated and the hydrogen atoms of the catalytic water molecule (H2O 402) were positioned to form hydrogen bonds with His289N 2 and Asp124Oδ1 as proposed by Verschueren et al. (1993a). All minimizations were performed using the CVFF force field of the Discover 95.0/3.00 program. The wild-type structure was relaxed prior to the modeling experiments by use of the following procedure: (i) the protein was soaked by a water
+
+
+
+
+
+layer of 5 Å, 1000 steps of steepest descent, tethered all heavy atoms; (ii) 3000 steps of steepest descent, tethered backbone; (iii) solvent molecules removed except for the catalytic water H2O 402, 1000 steps of steepest descent, no tethering; (iv) 10 000 steps of conjugate gradient, no tethering. The two substitutions Asp260Asn and Asn148Glu were made in the Biopolymer module of Insight II and the substituted side chains were positioned with 4000 steps of conjugate gradient minimization. To model protein-substrate complexes, a 1,2-dichloroethane molecule (DCE) was placed into the active site of the relaxed wild-type structure and the model of the double mutant at a position that was analogous to the position of DCE in the haloalkane dehalogenase-DCE structure (Verschueren et al., 1993b; PDB entry 2dhc). The complexes were minimized by an additional 3000 steps using the conjugate gradient algorithm. RESULTS Sequence Alignment of R/ -Hydrolase Fold Dehalogenases. Sequence analysis of haloacid dehalogenase from Moraxella B (DehH1, Genbank/EMBL Accession Number D90422; Kawasaki et al., 1992), tetrachlorocyclohexadiene dehalogenase from Sphingomonas paucimobilis (LinB, D14594; Nagata et al., 1993), and 1-chloroalkane halidohydrolase from Rhodococcus rhodochrous NCIMB13064 (DhaA, L49435; Kulakova et al., 1997) showed that they have considerable homology with DhlA (M26950), suggesting
+
+
+
+
+
+D260 and N148 Mutations in Haloalkane Dehalogenase
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+activity (milliunits/mg) substrate 1,2-dibromoethane 1-bromopropane 1,2-dibromopropane 1-bromo-2-chloroethane dibromomethane 1,2-dichloroethane 1,2-dichloropropane
+
+
+a
+
+
+
+
+
+concn (mM) 5 5 5 5 5 30 15
+
+
+
+
+
+wild type 3170 1050 1500 3270 3250 4230 95
+
+
+
+
+
+N148D 75 b 10 65 65 b b
+
+
+
+
+
+N148E 280 50 30 240 280 65 <10
+
+
+
+
+
+D260N+N148D 150 20 10 90 120 b b
+
+
+
+
+
+D260N+N148E 300 100 40 200 280 b b
+
+
+
+
+
+The crude extracts were produced from late-exponential, induced cultures grown at 17 °C. The expression levels ranged from 30% to 60% of the total protein contents of cell-free extract. b Not detectable (<5 milliunits/mg).
+
+
+
+
+
+structural and mechanistic similarity (Figure 2). Especially the regions around the nucleophilic Asp124 and general base His289 appear to be very similar. However, the third residue in the catalytic triad, which is Asp260 in DhlA, does not seem to be conserved in the other dehalogenases considering the lack of homology and the absence of an acidic amino acid in this region. On the other hand, more similarity is found around Asn148, which is located in DhlA after -strand 6 at the equivalent position of the triad acid in human pancreatic lipase. This suggests that the third residue in the catalytic triad may be present in DehH1, LinB, and DhaA at a position analogous to Asn148. Therefore, we determined whether the catalytic triad in DhlA could be modified by changing Asp260 into an asparagine and Asn148 into an aspartic acid, and we examined the effects of the mutations on activity and kinetics. Site-Directed Mutagenesis and Analysis of Specific ActiVities. The Kunkel method was used to construct the single mutants D260N, N148D, and N148E and the double mutants D260N+N148D and D260N+N148E. The mutated enzymes were overexpressed in E. coli BL21(DE3) to levels comparable to that of overexpressed wild-type DhlA. The D260N mutant protein appeared to be mainly present in inclusion bodies, suggesting that this mutant is less stable or shows less efficient folding than the wild-type protein. Activity measurements showed that D260N dehalogenase was unable to convert brominated or chlorinated substrates, indicating that Asp260 is essential for dehalogenase activity. The single mutants N148D and N148E are also inactive toward chlorinated alkanes and show largely reduced activities for all brominated substrates tested (Table 1). Moreover, both N148 single mutants were less stable than the wildtype enzyme. They lost their catalytic activity fairly rapidly (about 50% in a week), even when stored at 4 °C in the presence of 10% glycerol. Both double mutants appeared to have partially restored activities for brominated compounds compared with the catalytically inactive D260N single mutant (Table 1) and showed wild-type stability. The highest activity was found with 1,2-dibromoethane (DBE), which was about 10% of the wild-type activity for both double mutants. They remained inactive for all chlorinated compounds tested, however. Analysis of Secondary Structure. The integrity of the secondary structure was tested for the D260N and D260N+N148E mutants by circular dichroism and fluorescence spectroscopy. As shown in Figure 3, like the wildtype dehalogenase, both mutants had the double ellipticity minimum at 210 and 222 nm, characteristic of R-helical content (Schmid, 1990). Yet D260N exhibited a less intense
+
+
+
+
+
+
+
+
+
+
+
+a
+
+
+
+
+
+kcat (s-1) 3.0 0.04 0.23 0.35
+
+
+
+
+
+kcat/Km (M-1 s-1) 3.0 × 110 600 810 105
+
+
+
+
+
+Kd (mM) 10 >500 100 110
+
+
+
+
+
+fa 0.34 0.15 0.15
+
+
+
+
+
+kH/kDb 2 4 2 3
+
+
+
+
+
+typec
+
+
+
+
+
+0.01 0.36 0.38 0.43
+
+
+
+
+
+No steady-state parameters could be determined for the D260N mutant, since it was catalytically inactive. b Solvent (D2O) kinetic isotope effect on dehalogenase activity. kH and kD are the kcat values determined in H2O and 90% D2O, respectively. c Taken from Schanstra et al. (1996).
+
+
+
+
+
+minimum at 222 nm than the wild type and double mutant, suggesting a decrease in the number of amino acids in R-helical conformation. The tryptophan fluorescence spectrum of this inactive enzyme, however, is exactly the same as the one of wild-type dehalogenase (data not shown), indicating that the proposed change in R-helical content did not disturb the overall structure of the enzyme dramatically. Steady-State Kinetics and Halide Binding. The dehalogenase mutants D260N, N148D, D260N+N148D, and D260N+N148E were purified and steady-state kinetic parameters were determined using DBE as the substrate (Table 2). The activity of the D260N dehalogenase was too low for kinetic analysis. Km values obtained for the other mutants were 40-fold higher than the wild-type value, and the kcat was reduced 90-fold for the N148D mutant and at least 1000-fold for the D260N single mutant. Introduction of an acidic amino acid at position 148 in the single mutant D260N resulted in a considerable improvement of the kcat
+
+
+
+
+
+
+
+
+
+
+
+Krooshof et al.
+
+
+
+
+
+
+
+
+a
+
+
+
+
+
+k-1 (s-1)
+
+
+
+
+
+k2 (s-1) >130 >130 0.55 ( 0.05 0.3 ( 0.1
+
+
+
+
+
+k3 (s-1) 10 ( 2 4(1 0.8 ( 0.1 0.2 ( 0.02
+
+
+
+
+
+kx (s-1) 4 ( 1.5 3 ( 0.5 >10 >5
+
+
+
+
+
+kcat calca (s-1) 2.8 1.7 0.32 0.14
+
+
+
+
+
+kcat expb (s-1) 3 1.5 0.35 0.12
+
+
+
+
+
+Km calca (µM) 5.6 2.6 420 180
+
+
+
+
+
+Km expb (µM) 10 4.3 430 140
+
+
+
+
+
+kcat/Km expb (µM-1 s-1) 0.30 0.35 8.0 × 10-4 8.5 × 10-4
+
+
+
+
+
+0.75 ( 0.1 >20 0.75 ( 0.1 >20 k-1/k1 700 µM k-1/k1 400 µM
+
+
+
+
+
+Calculated from the rate constants given. b Parameters obtained from steady-state experiments. c Taken from Schanstra et al. (1996).
+
+
+
+
+
+for both double mutants D260N+N148D and D260N+N148E, although the kcat values remained 10-fold lower than with the wild-type enzyme. A solvent kinetic isotope effect of 2H2O on the kcat of DBE conversion, as was seen for wild-type DhlA (Schanstra et al., 1996; Schanstra & Janssen, 1996), was also observed for both double mutants and the N148D enzyme (Table 2). This suggested that the rate-determining reaction step might be either the hydrolysis of the alkyl-enzyme intermediate (k3 in Scheme 1) or halide release (kx in Scheme 1). Tryptophan fluorescence quenching studies were performed with bromide and chloride at pH 8.2. The calculated dissociation constants (Kd) and fractional accessibilities (fa) are listed in Table 2. Chloride dissociation constants could not be determined for any of the mutants, since chloride ions hardly caused fluorescence quenching, suggesting that chloride did not bind between Trp125 and Trp175. No significant quenching by bromide ions or substrate was observed for the catalytically inactive D260N haloalkane dehalogenase, suggesting that neither bromide ions nor substrate could bind in the active site. The affinity for bromide ions decreased about 10-fold for the double mutants and more than 10-fold for the N148D single mutant. Both double mutants showed a lower degree of quenching (fa) for bromide ions compared with the wildtype enzyme, suggesting that at least one of the tryptophans in the halide-binding site has a reduced interaction with the halide. Pre-Steady-State Kinetic Analysis of 1,2-Dibromoethane ConVersion by D260N+N148E Dehalogenase. The most active DhlA double mutant D260N+N148E was used to study the pre-steady-state kinetics of DBE conversion to find out why the double mutants display a lower kcat and higher Km than the wild-type dehalogenase. To identify the rate-determining step in DBE conversion, a rapid-quench experiment was performed with substrate in excess over enzyme (Figure 4A). A clear lag in the production of 2-bromoethanol was observed, meaning that the rate-determining step should precede halide release. Apparently, the rate-determining step has shifted in the double mutant, since halide release is the slowest step in the wild-type enzyme. A steady-state 2-bromoethanol production rate of 0.32 s-1 could be deduced from the multiple-turnover experiment (Figure 4A), which was nearly identical to the steady-state kcat derived from measurements of halide production rates (0.35 s-1, Table 2). Insight in the kinetics of the reaction steps preceding halide export was obtained from a single-turnover rapid-quench experiment in which enzyme (900 µM) was in excess over substrate (250 µM) (Figure 4A). Consumption of substrate and production of 2-bromoethanol occurred at approximately the same speed, indicating that the rate of formation of the
+
+
+
+
+
+
+
+
+
+
+
+alkyl-enzyme was lower than the rate of its hydrolysis and that the covalent intermediate hardly accumulated during the reaction. The rates of the individual reaction steps were calculated by numerical simulation of the four-step reaction mechanism in Scheme 1, together with the rapid-quench data and the steady-state kcat and Km (Table 3, fits in Figure 4A). The slowest steps in the conversion of 1,2-dibromoethane appeared to be carbon-bromine bond cleavage (k2) and hydrolysis of the covalent intermediate (k3), which showed a reduction of at least 220-fold for k2 and 10-fold for k3 compared with the wild-type values. The rate of bromide release (kx) was higher than with the wild-type, since kx had to be set higher than 10 s-1 to establish a good fit. Therefore, k2 and k3 together account for the change in steady-state kcat. The increase of the Km in the mutant may be caused by the lowered value for k2. The kcat and Km calculated from the rates of the individual steps were in good agreement with kcat and Km determined from steady-state experiments (Table 3). The numerical simulation procedure did not provide exact rates for substrate binding and release (k1 and k-1). Only the ratio between k1 and k-1 could be extracted from the data, indicating that the first step may be mechanistically complex. Direct measurement of DBE binding did not yield
+
+
+
+
+
+D260 and N148 Mutations in Haloalkane Dehalogenase absolute values, because of aspecific quenching of enzyme fluorescence at high substrate concentration. Bromide Binding and Release. The kinetics of bromide binding and release were studied in more detail by stoppedflow fluorescence experiments in which enzyme (5 µM) was mixed rapidly with various concentrations of NaBr (101000 mM). The results confirmed that bromide binding proceeds much faster than in wild-type DhlA (Figure 5). The fluorescence transients could all be fitted by singleexponential equations, which gave an apparent bromide binding rate (kobs) for each bromide concentration (Figure 5A). Unlike in the wild-type enzyme, the bromide concentration dependence of kobs in the D260N+N148E double mutant approximates a hyperbola (Figure 5B), which indicates that binding of bromide to the mutant DhlA occurs in two steps: a fast bimolecular step (rapid equilibrium) in which a collision complex is formed, followed by a slow unimolecular step (e.g., some isomerization leading to a tighter binding of the halide) (Figure 6, lower pathway). For this two-step bromide binding pathway, the observed binding rate (kobs) and apparent dissociation constant (Kd) are given by
+
+
+
+
+
+
+
+
+
+
+
+kobs ) k-2 +
+
+
+
+
+
+k2[X-] [X-] + Ks
+
+
+
+
+
+(7)
+
+
+
+
+
+
+
+
+Kd )
+
+
+
+
+
+K4k-5 k5 + k-5
+
+
+
+
+
+(8)
+
+
+
+
+
+The maximum rate is equal to the sum of k5 + k-5, and the intercept on the y-axis is equal to the rate constant k-5, defining the halide dissociation rate (kx in Scheme 1). The results of fitting the hyperbola with eq 7 (Figures 5B and 6) demonstrate that the D260N+N148E double mutant releases bromide 12-fold more rapidly than wild-type dehalogenase (kx ) 4 s-1). The calculated Kd is similar to the Kd obtained from steady-state fluorescence measurements (Table 2). Pre-Steady-State Experiments in the Presence of 2H2O. The fact that carbon-bromine bond cleavage limited the overall conversion rate of DBE in the D260N+N148E dehalogenase mutant could not explain the solvent kinetic isotope effect observed on the kcat of this mutant. Therefore, rapid-quench experiments were performed using 2H2O as the solvent (Figure 4B). The solvent clearly affected the steady-state production of 2-bromoethanol and the initial lag phase when the enzyme was mixed with excess DBE (Figure 4B). The steady-state turnover rate calculated from the last part of the curve was 0.14 s-1, which was similar to the kcat in 2H2O (Table 3). 2H O did not seem to influence the consumption rate of the 2 substrate in a single-turnover experiment, while 2-bromoethanol production was slowed down (Figure 4B). This would suggest that k3 and kx are affected, whereas k1, k-1, and k2 are not. Determination of the individual rate constants from numerical simulation of Scheme 1, as was done with experiments in 1H2O, made clear that k2, k3, and kx were all reduced compared to the values in 1H2O, although the effect on k2 was only small (Table 3, fits in Figure 4B). The rate constant k3 decreased from 0.8 to 0.2 s-1, by which it became the slowest step in the reaction pathway. From these experi
+
+
+
+
+
+
+
+
+
+
+ments we can conclude that k3 becomes the rate-limiting step when the reaction is performed in 2H2O and therefore explains the solvent kinetic isotope effect. Structure Modeling of D260N+N148E Dehalogenase. Attempts to crystallize the mutant enzymes were not successful. Amorphous precipitates were found upon incubation under various crystallization conditions (I. Ridder, personal communication). Therefore, mutations were modeled using the X-ray structure of wild-type haloalkane dehalogenase as a template (PDB entry code 1ede). This structure was relaxed before modeling to remove the unfavorable atomic
+
+
+
+
+
+
+
+
+
+
+
+Krooshof et al.
+
+
+
+
+
+
+
+
+
+
+
+interactions and to establish the intermolecular hydrogenbonding network within the protein. A solvent layer and tethering forces were used to optimize the structure gradually and to avoid large deviations from the original X-ray coordinates. The final minimization procedure converged to an average derivative <0.0002 kcal mol-1 Å-1. Analogous convergence was also achieved for the modeled structure of the double mutant D260N+N148E and the protein-substrate complexes. The overall structure of the modeled double mutant closely resembles the wild-type structure, except for some local changes in the loops. The CR rms deviation between both structures was 0.247 Å. The largest shifts in CR position were 1.6, 1.26, and 1.35 Å observed for Pro196 (in the loop between R-helices 6 and 7), Gly257 (in the loop between strand 7 and R-helix 10), and Gly288 (in the loop between -strand 8 and R-helix 11), respectively. The only observable differences between the model of the double mutant and the wild-type structure in the local environment around the modified residues and catalytic triad are a 0.3-Å increase of the distance between His289N 2 and Asp124Oδ1 and the loss of hydrogen bonds between residue 260 and Leu262 and between residue 260 and His289 (Figure 7). In addition, a new hydrogen bond was found between Glu148O 1 and His289Nδ1, and the O 1 atom of Glu148 is located at about the same position as Asp260Oδ2 in the wildtype structure. The hydrogen-bonding network in this region is summarized in Table 4 and Figure 7. The substrate 1,2-dichloroethane (DCE) could be placed into the active site of the model in the same way as in the wild-type structure, indicating that the shape and size of both cavities are similar. DISCUSSION On the basis of the X-ray structure and reaction mechanism of haloalkane dehalogenase (DhlA), we proposed a role for Asp260 in helping His289 to act as a general base in the hydrolysis of the covalent intermediate. Mutation of Asp260 to asparagine indeed demonstrated that Asp260 is essential
+
+
+
+
+
+
+
+
+
+
+
+Glu 148
+
+
+
+
+
+Asp260
+
+
+
+
+
+2.04 1.88 1.94 1.97 1.96 1.85 2.20 1.97 2.37 2.24 2.11 2.11
+
+
+
+
+
+Asn260 His289
+
+
+
+
+
+for dehalogenase activity. In addition, our results implied that the D260N mutant enzyme has structural differences compared with the wild-type enzyme and that Asp260 plays a critical structural role besides its catalytic function. From the X-ray structure it is known that Asp260 is part of two hydrogen-bonding networks (Figure 7; Verschueren et al., 1993a). In the first one, Asp260Oδ2 forms a salt bridge with Nδ1 of His289, and the histidine is further hydrogenbonded to a water molecule that hydrolyzes the covalent intermediate emerging during substrate conversion. Therefore, the ionic interaction between Asp260 and His289 is supposed to be of catalytic importance, since it may facilitate the proton extraction of the water molecule by His289 and stabilize the positive charge on His289 electronically. Structurally, Asp260 may provide hydrogen-bonding stabilization of the functional His tautomer and thus secure its correct orientation within the catalytic site as was found in
+
+
+
+
+
+D260 and N148 Mutations in Haloalkane Dehalogenase trypsin (Sprang et al., 1987) and dienelactone hydrolase (Cheah et al., 1993). In the second hydrogen-bonding network, Asp260Oδ2 is hydrogen-bonded to Asn148Nδ2 and Asn148 makes an additional hydrogen bond with Asp124, which is the nucleophile responsible for the formation of the alkyl-enzyme intermediate (Verschueren et al., 1993a). Asn148 is thought to have a special structural or functional role, since it has unusual main-chain torsion angles ( ) -9°, ψ ) +94°). The position of Asp260 is further stabilized by hydrogen bonds from Oδ1 to Leu262N and from Oδ2 to Leu263N. The many interactions in which the side chain of Asp260 is involved clearly suggest the importance of the residue in maintaining the proper active-site geometry. By changing Asp260 into asparagine, some of the hydrogen bonds would surely be lost or weakened, thereby disrupting or destabilizing the hydrogen-bonding networks. This may lead to conformational perturbations as was observed in phospholipase A2 (Li & Tsai, 1993; Kumar et al., 1994). The contribution of buried hydrogen-bonding networks to protein stability was also demonstrated in acetylcholinesterase (Ordentlich et al., 1993), barnase (Chen et al., 1993), and lactate dehydrogenase (Nobbs et al., 1994). In addition, the loss of the negative charge in the D260N mutant may have affected the delicate charge balance in the active site and further destabilized the structure of the catalytic site. Introduction of an additional negative charge as in the single mutants N148D and N148E also resulted in a loss of stability. The amino acid sequence alignment of DhlA with several other R/ -hydrolase fold dehalogenases suggests that the triad acid in the latter enzymes is present at a position equivalent to Asn148 in DhlA. The different location of the triad acid was also noticed in the lipase from the human pancreas (Schrag et al., 1992). Activity could be restored partially to the inactive D260N mutant dehalogenase by introducing the additional N148D or N148E mutation. This indeed indicates that an aspartic or glutamic acid at position 148 can act as a triad acid, although catalytically less effectively. Apparently, the charge balance and a sufficiently stabilizing hydrogen-bonding network are restored in the active-site cavity. Pre-steady-state kinetic experiments with the D260N+N148E double mutant clearly showed that the mutations largely affected all reaction steps and not only k3. The large decrease in k2 can be explained by the fact that the affinity of Trp125 and Trp175 for halide ions is lower than in the wild type, which may be accompanied by a reduced transition-state stabilization during carbon-halogen cleavage. The positions of Trp125 and 175 in the double mutant do not seem to be different from the wild type, which suggests that electronic rather than geometric perturbations account for the decrease in k2. The modeled structure of the double mutant showed that Glu148O 1 forms a hydrogen bond with His289Nδ1 and that the distance between His289 and Asp124 increased by 0.3 Å compared with the wild-type structure (Figure 7). This trend would suggest that the catalytic water molecule can be activated by His289 but that it is further away from its target (Asp124Cγ) in the alkyl-enzyme intermediate, resulting in the slower hydrolysis of the covalent intermediate (k3). Moreover, in the model the O 1 atom of Glu148 appears to be located at about the same position as Asp260Oδ2 in the wild-type structure (Figure 7). This means that the indole
+
+
+
+
+
+Biochemistry, Vol. 36, No. 31, 1997 9579 ring of His289 is typically in the same plane as in the wildtype structure and that only subtle changes in hydrogen bonding and stabilization of the triad residues account for the differences in kinetics, as was also the case for similar mutants of Geotrichum candidum lipase (Schrag et al., 1994). Two remarkable effects were observed on bromide export, which is the slowest step in wild-type DhlA. The overall bromide release is 12 times faster and is mechanistically different in the mutant. Only one export route is observed in the double mutant (Figure 6), while two parallel pathways are proposed for the wild-type enzyme (Figure 6; Schanstra & Janssen, 1996). In the most important (upper) route a slow enzyme isomerization occurs prior to and after rapid bromide dissociation. A slow unimolecular step, followed by a fast bimolecular step, occurs in the second (lower) export route. The bromide binding and release pathway proposed for the double mutant is similar to the lower route in wild-type DhlA. The large increase of the rate of this pathway probably masks the existence of the alternative way of bromide release. The conformational changes associated with the unimolecular steps are still unknown. A small tunnel of which Lys259, Asp260, and Lys261 form the wall was proposed to connect the cavity with the solvent outside and to be responsible for substrate entrance (Verschueren et al., 1993a). Calculations of the molecular interaction fields between DhlA and halide ions (Cl-, Br-, I-) predicted that Lys259 and Lys261 could form a weak halide binding site at the surface of the protein in front of the tunnel entrance (Damborsky ´ et al., 1997). Bromide bound to this halide binding site could represent the collision complex (E‚X-)* in Figure 6. The negative charge of Asp260, however, might hinder the export of the halide ion through this tunnel, so that an additional, more complex route is used in the wild-type enzyme. In the D260N+N148E/D double mutants, however, the negative charge has been shifted away from the tunnel by 2.6 Å, enabling the halide ion to leave the active site through the front door. The reduced binding affinity of Trp125 and Trp175 for bromide ions would further increase the rate of bromide release. In addition, the hydrogen bond between the side chain of residue 260 and Leu262N is lost in the modeled structure of the double mutant, and the CR of Leu262 is shifted 0.6 Å away from the tunnel (Figure 7, Table 4). The side chain of Leu262 is proposed to block the tunnel in the wild-type structure (Verschueren et al., 1993a). The shift of CR together with the increased flexibility of the backbone of Leu262 may enlarge the diameter of the tunnel and allow faster exchange of the ions and water molecules between the active site and the solvent. Our results clearly demonstrate that the catalytic triad can be rearranged in haloalkane dehalogenase. Schrag et al. (1992) presume that the catalytic acid moved from -strand 7 to strand 6 during the evolution of the lipases, because pancreatic lipases, which are all of mammalian origin and carry the acid on strand 6, are likely to be derivatives of the lipoprotein lipases, which occur in various life forms and have the acid on strand 7. The situation seems to be different for the family of dehalogenases presented in Figure 2, since they all are from bacterial sources. We propose that the shift has taken place from -strand 6 to strand 7 after this group of dehalogenases had evolved. The fact that the double mutants and the enzymes from the alignment are inactive
+
+
+
+
+
+9580 Biochemistry, Vol. 36, No. 31, 1997 toward 1,2-dichloroethane would suggest that relocation of the triad acid to strand 7 might have been an important event in the adaptation of DhlA to 1,2-dichloroethane, a synthetic compound that has not been emitted in large quantities into the environment until its industrial production started in 1922. ACKNOWLEDGMENT We thank the Czech Academic Supercomputer Centre in Brno and Prague for providing computational facilities, Professor Dr. B.W. Dijkstra from the Department of Biophysical Chemistry (University of Groningen) for many stimulating discussions, and Ivo Ridder for providing Figure 1. REFERENCES
+
+
+
+
+
+
+
+
+Krooshof et al.
+
+
+
+
+
+BI971014T
+
+
+
+
+

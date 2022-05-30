@@ -1,0 +1,76 @@
+Imports: {
+	import java.sql.*; 
+	import com.mysql.jdbc.exceptions.*;
+	import java.lang.*;
+	import java.util.regex.*;
+	import edu.uchsc.ccp.nlp.ei.mutation.*;
+} 
+
+Phase:MutationGroundingQuasi
+Input: MutationTemp
+
+Options: control = all
+
+Rule:quasiGround1
+(
+	{MutationTemp}
+):mutTemp
+
+-->
+{	try {
+		java.util.logging.Logger log=null;
+		if(log==null){
+		    log =  java.util.logging.Logger.getLogger("JAPELogger");
+		    log.setLevel(java.util.logging.Level.OFF);
+		}
+
+		Annotation mutationTemp = (Annotation)((AnnotationSet)bindings.get("mutTemp")).iterator().next();
+
+		String mutString  = (String)mutationTemp.getFeatures().get("WNMFormat");
+		String mutWildtypeResidue  = mutString.substring(0,1);
+		String mutMutantResidue  = mutString.substring(mutString.length()-1,mutString.length());
+		int hasMentionedPosition  = Integer.parseInt(mutString.substring(1,mutString.length()-1));
+
+		if (inputAS.get("GroundedPointMutation", mutationTemp.getStartNode().getOffset(), mutationTemp.getEndNode().getOffset()).isEmpty() ){
+				FeatureMap features = Factory.newFeatureMap();
+				features.put("hasMentionedPosition",hasMentionedPosition);
+				features.put("hasCorrectPosition", hasMentionedPosition);
+				features.put("isGroundedTo", "PXXXXX");
+				features.put("hasWildtypeResidue", mutWildtypeResidue);
+				features.put("hasMutantResidue", mutMutantResidue);
+				outputAS.add(mutationTemp.getStartNode().getOffset(), mutationTemp.getEndNode().getOffset(), "GroundedPointMutation",features);
+		}
+
+		/*
+		for(int[] ia : mentionTable.keySet()) {
+			for(String ac : chosenPacs) {
+				if (mentionTable.get(ia).contains(ac)) {
+					AnnotationSet as = inputAS.get(Long.parseLong(Integer.toString(ia[0])),Long.parseLong(Integer.toString(ia[1])));
+					Annotation a = (gate.Annotation)as.get("ProteinName").iterator().next();
+					FeatureMap features = Factory.newFeatureMap();
+					features.put("mentionsProtein",ac);
+					outputAS.add(Long.parseLong(Integer.toString(ia[0])),Long.parseLong(Integer.toString(ia[1])), "ProteinMention", features);
+				}
+			}
+		}
+		
+		//add chosenPacs as a feature to the document
+		String pacFeature = new String();
+		int nop = 0;
+		for(String ac : chosenPacs) {
+			if(nop == 0) {
+				pacFeature=ac;
+			} else {
+				pacFeature+=","+ac;
+			}
+			nop++;
+		}
+		doc.getFeatures().put("pacs",pacFeature);
+		doc.getFeatures().put(pacFeature,PASequenceMapping.get(pacFeature));
+*/
+
+	}
+	catch(Exception e) {
+		e.printStackTrace();
+	}
+}

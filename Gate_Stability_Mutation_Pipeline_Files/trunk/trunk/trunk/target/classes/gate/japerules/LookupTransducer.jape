@@ -1,0 +1,72 @@
+Phase:LookupCleaner
+Input: Lookup Tagger
+
+Options: control = appelt
+
+Rule:Mutation1
+(
+    { Lookup.majorType == "mutation" }
+):mutation
+-->
+    :mutation.MutationTemp = {rule = "Mutation1" , WNMFormat = :mutation.Lookup.WNMFormat}
+		
+Rule:ProteinShort1
+(
+	{ Lookup.majorType == "SwissProt", Lookup.minorType == "shortName"}
+):protein
+-->
+	:protein.ProteinShortName = {rule = "ProteinShort1"}
+
+Rule:ProteinFull1
+(
+	{ Lookup.majorType == "SwissProt", Lookup.minorType == "fullName"}
+):protein
+-->
+	:protein.ProteinFullName = {rule = "Proteinfull1"}
+
+Rule:Gene1
+(
+	{ Lookup.majorType == "SwissProt", Lookup.minorType == "geneName"}
+):protein
+-->
+	:protein.GeneName = {rule = "Gene1"}
+
+Rule:Organism1
+(
+	{ Lookup.majorType == "SwissProt", Lookup.minorType == "organismName"}
+):protein
+-->
+	:protein.OrganismName = {rule = "Organism1"}
+	
+Rule:AC1
+(
+	{ Lookup.majorType == "SwissProt", Lookup.minorType == "AC"}
+):protein
+-->
+	:protein.AC = {rule = "AC1"}
+	
+Rule:EC1
+(
+	{ Lookup.majorType == "SwissProt", Lookup.minorType == "EC"}
+):protein
+-->
+	:protein.EC = {rule = "EC1"}
+	
+Rule:OWMTOW
+(
+	{ Lookup.majorType == "SwissProt", Lookup.minorType == "Name"}
+):protein
+-->
+	:protein.ProteinName = {rule = "OWMTOW"}
+Rule:ProteinLKB1
+(
+	{ Lookup.class == "http://unbsj.biordf.net/ontologies/fullnames.owl#Fullname"}
+):protein
+-->
+	:protein.ProteinName = {rule = "ProteinLKB1"}
+Rule:AbnerTagger
+(
+	{ Tagger.type == "Gene" }
+):protein
+-->
+	:protein.ProteinName = {rule = "AbnerTagger"}

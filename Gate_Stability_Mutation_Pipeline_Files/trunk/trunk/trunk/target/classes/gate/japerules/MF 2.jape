@@ -1,0 +1,29 @@
+Phase:TestTestTest
+Input: NP Token
+
+Options: control = appelt
+
+Rule:mfrule1
+(
+	{NP}
+):tempMF
+-->
+{
+	Annotation NP = (Annotation)((AnnotationSet)bindings.get("tempMF")).iterator().next();
+	//System.out.println(NP);
+	FeatureMap features = NP.getFeatures();
+	//System.out.println("|"+features.get("HEAD").toString()+"|");
+	//	System.out.println("|"+features+"|");
+
+
+	if(features.get("HEAD").toString().equals("activity")
+	      ||features.get("HEAD").toString().equals("binding")
+	      ||features.get("HEAD").toString().equals("affinity")){
+		try {
+			outputAS.add(NP.getStartNode().getOffset(), NP.getEndNode().getOffset(), "MolecularFunction", features);
+		} catch(InvalidOffsetException e) {
+		}
+	}
+}
+
+

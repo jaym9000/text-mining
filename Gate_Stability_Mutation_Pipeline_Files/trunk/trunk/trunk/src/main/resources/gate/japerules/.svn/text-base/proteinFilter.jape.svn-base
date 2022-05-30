@@ -1,0 +1,26 @@
+Phase:ProteinFilter
+Input: ProteinName SpaceToken Token
+
+Options: control = appelt
+
+Rule:proteinfilter1
+(
+	{ProteinName}
+):pn
+-->
+{
+	try {
+		Annotation anot = (Annotation)((AnnotationSet)bindings.get("pn")).iterator().next();
+		String nextChar = doc.getContent().getContent(anot.getEndNode().getOffset(),anot.getEndNode().getOffset()+1).toString();
+		char c = nextChar.charAt(0);	
+		if(!Character.isDigit(c)) {
+			FeatureMap features = anot.getFeatures();
+			outputAS.add(anot.getStartNode().getOffset(),anot.getEndNode().getOffset(),"ProperProteinName",features);
+			//System.out.println("pn1: "+doc.getContent().getContent(anot.getStartNode().getOffset(),anot.getEndNode().getOffset()));
+			//inputAS.removeAll(inputAS.get(anot.getStartNode().getOffset(),anot.getEndNode().getOffset()).get("ProteinName"));
+		}
+	} catch(InvalidOffsetException e) {
+	}
+	catch(NullPointerException e) {
+	}
+}

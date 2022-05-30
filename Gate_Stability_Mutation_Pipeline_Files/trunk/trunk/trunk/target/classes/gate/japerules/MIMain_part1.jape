@@ -1,0 +1,15 @@
+MultiPhase:	MutationImpactMultiphasePart1
+Phases:
+direction
+kinetics1
+kinetics2
+MF
+possibleMF
+SentenceFilter
+TokenSentenceCleanup
+LookupTransducer
+proteinFilter
+PMFSubSentenceSplitter
+KVSubSentenceSplitter
+PMFandKVSubSentenceSplitter
+MolecularFunctionGrounderExternal

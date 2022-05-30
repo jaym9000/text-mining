@@ -1,0 +1,13 @@
+MultiPhase:	MutationImpactMultiphasePart2
+Phases:
+impact
+impactOnKineticVariables
+UncertainImpactResolver
+UncertainImpactOKVResolver
+ImpactRefinement
+ImpactOKVRefinement
+ImpactScore
+ImpactOKVScore
+newMutationImpactsOnMf
+newMutationImpactsOnKV
+removeContradictingMutationImpacts

@@ -1,0 +1,377 @@
+Protein Expression and Puriﬁcation 17, 299 -304 (1999) Article ID prep.1999.1143, available online at http://www.idealibrary.com on
+
+
+
+
+
+Construction and Characterization of Histidine-Tagged Haloalkane Dehalogenase (LinB) of a New Substrate Class from a ␥-Hexachlorocyclohexane-Degrading Bacterium, Sphingomonas paucimobilis UT26
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The linB gene product (LinB), which is involved in the degradation of ␥-hexachlorocyclohexane in Sphingomonas paucimobilis UT26, is a member of haloalkane dehalogenases with a broad range of substrate speciﬁcity. Elucidation of the factors determining its substrate speciﬁcity is of interest. Aiming to facilitate puriﬁcation of recombinant LinB protein for site-directed mutagenesis analysis, a 6-histidyl tail was added to the C-terminus of LinB. The His-tagged LinB was speciﬁcally bound with Ni-NTA resin in the buffer containing 10 mM imidazole. After elution with 500 mM imidazole, quantitative recovery of protein occurred. The steady-state kinetic parameters of the Histagged LinB for four substrates were in good agreement with that of wild-type recombinant LinB. Although the His-tagged LinB expressed in an average of 80% of the activity of the wild type LinB for 10 different substrates, the decrease was very similar for different substrates with the standard deviation of 5.5%. The small activity reduction is independent of the substrate shape, size, or number of substituents, indicating that the His-tagged LinB can be used for further mutagenesis studies. To conﬁrm the suitability of this system for mutagenesis studies, two mutant proteins with substitution in putative halide binding residues (W109 and F151) were constructed, puriﬁed, and tested for activity. As expected, complete loss in activity of W109L and sustained activity of F151W were observed. © 1999 Academic Press
+
+
+
+
+
+␥-Hexachlorocyclohexane (␥-HCH; also called BHC or lindane) is a halogenated organic insecticide which
+
+
+1 To whom correspondence should be addressed. Fax: ϩ81-3-58418015. E-mail: aynaga@hongo.ecc.u-tokyo.ac.jp.
+
+
+
+
+
+has been used worldwide. Because of its toxicity and long persistence in soil, most countries have prohibited the use of ␥-HCH. However, many contaminated sites still remain throughout the world (1). Moreover, some countries are presently using ␥-HCH for economic reasons, and thus new sites are continuously being contaminated (2). Because ␥-HCH is a highly chlorinated compound which has six chlorine atoms per molecule, dechlorination is a very signiﬁcant step for its degradation. In fact, we have revealed that three different types of dechlorination reactions are sequentially involved in the degradation of ␥-HCH in Sphingomonas (formerly Pseudomonas) paucimobilis UT26 (35). The ﬁrst reaction is dehydrochlorination of ␥-HCH to 1,3,4,6-tetrachloro-1,4-cyclohexadiene (1,4-TCDN) via ␥-pentachlorocyclohexene (␥-PCCH) (3). The second reaction is hydrolytic dechlorination of 1,4-TCDN to 2,5-dichloro2,5-cyclohexadiene-1,4-diol (2,5-DDOL) via 2,4,5-trichloro-2,5-cyclohexadiene-1-ol (2,4,5-DNOL) (4). Finally, the third reaction is reductive dechlorination of 2,5-dichlorohydroquinone (2,5-DCHQ), which is produced from 2,5-DDOL by dehydrogenase (LinC) (6), to hydroquinone (5). We have cloned four genes (linA, linB, linC, and linD) which are involved in the abovementioned reactions (3- 6). The deduced amino acid sequence of LinB showed signiﬁcant similarity to haloalkane dehalogenase (DhlA) from Xanthobacter autotrophicus GJ10 (7), suggesting that LinB belongs to the family of haloalkane dehalogenase enzymes catalyzing the dehalogenation by hydrolytic mechanism (4). It was revealed that LinB has broader speciﬁcity than DhlA. For example, 1-chlorodecane and 2-chlorobutane, which are poor substrates for DhlA, were good substrates for resting Esch299
+
+
+
+
+
+1046-5928/99 $30.00 Copyright © 1999 by Academic Press All rights of reproduction in any form reserved.
+
+
+
+
+
+300
+
+
+
+
+
+NAGATA ET AL.
+
+
+
+
+
+erichia coli cells overproducing LinB (4). Furthermore, the linB gene from S. paucimobilis UT26 was highly expressed in E. coli, and the LinB was puriﬁed to homogeneity and characterized (8). Principal component analysis of substrate activities of various haloalkane dehalogenases suggested that LinB constitutes a new substrate speciﬁcity class within this group of enzymes (8). It would certainly be useful to analyze reaction mechanism of LinB to better understand the structure function relationships within halidohydrolases. LinB belongs to the family of ␣/␤-hydrolases (9) which employ a catalytic triad, i.e., nucleophile  histidine acid, during the catalytic reaction. First, the position of the catalytic triad within the sequence of LinB was probed by a site-directed mutagenesis. The catalytic triad residues of the haloalkane dehalogenase LinB are proposed to be D108, H272, and E132 (10). For further site-directed mutagenesis analysis, facilitating puriﬁcation process of recombinant LinB protein is desirable. In this study, a 6-histidyl tail was added to the C-terminus of LinB. The resulting Histagged LinB was puriﬁed and characterized.
+
+
+MATERIALS AND METHODS
+
+
+
+
+
+pAQN was digested with EcoRI and HindIII to replace the 1.8-kb aqualysin I-coding fragment with the 0.9-kb EcoRI-HindIII fragment from pULBH6. The resulting plasmid (pMLBH6) contains the origin of replication from pUC18 and lacI q gene and expressed the Histagged linB gene under control of the tac promoter. Site-directed mutagenesis. Mutagenesis of Histagged LinB was performed by using LA PCR in vitro mutagenesis kit (TaKaRa Shuzo Co., Kyoto, Japan), according to the provided protocol except for using Pyrobest DNA polymerase (TaKaRa Shuzo Co.) whose ﬁdelity is very high. All of the nucleotide sequences of mutants were conﬁrmed by the dideoxy-chain termination method with ABI PRISM 310 genetic analyzer (Applied Biosystems, Foster City, CA). The oligo nucleotides used are as follows: W109L (5Ј-GGC CTG CAA CAG ATC GCG-3Ј), F151W (5ЈGGC CTG CCA CAG ATC GCG-3Ј). Expression and puriﬁcation of the His-tagged LinB. E. coli HB101 containing pMLBH6 were cultured in 2 liters of Luria broth (LB) (11) at 30°C. When the culture reached an optical density of 0.6 at 660 nm, isopropyl-␤-D-thiogalactopyranoside (IPTG) was added to a ﬁnal concentration of 1 mM. Cells were harvested (10 g wet wt) after 3 h incubation, washed by 50 mM potassium phosphate buffer [pH 7.5], and resuspended in 50 ml of the buffer (50 mM potassium phosphate buffer [pH 7.5] containing 1 mM 2-mercaptoethanol and 10% glycerol). The cells were disrupted by sonication (Soniﬁer 250; Branson, Danbury, CT). After centrifugation at 100,000g for 1 h, the supernatant was used as crude extract. Almost all of the crude extract was further puriﬁed by a 20-ml volume of Ni-NTA agarose (QIAGEN) at 4°C. The His-tagged LinB was allowed to bind to the resin in the wash buffer (20 mM potassium phosphate buffer [pH 7.5] containing 0.5 M sodium chloride and 10 mM imidazole), and then was eluted by the elution buffer (20 mM potassium phosphate buffer [pH 7.5] containing 0.5 M sodium chloride and 500 mM imidazole). The puriﬁed enzyme was stored in the buffer (50 mM potassium phosphate buffer [pH 7.5] containing 1 mM 2-mercaptoethanol and 10% glycerol) at concentration about 1 mg/ml at 0   4°C. Circular dichroism spectra. Circular dichroism (CD) spectra were measured with a JASCO J-720 spectropolarimeter at room temperature. The cells used were 1- and 0.1-cm light paths for wavelengths between 250 -320 and 190 -250 nm, respectively. Enzyme (0.45 mg/ml) in 50 mM potassium phosphate buffer (pH 7.5) was used. Michaelis-Menten kinetics. Michaelis-Menten kinetic constants were determined by initial-velocity measurements as described previously (10). K M and k cat values with their standard deviations were calculated
+
+
+
+
+
+Materials. All chemicals were purchased from Sigma-Aldrich (Milwaukee, WI). The enzymes used for DNA manipulations were obtained from Takara Shuzo Co. (Kyoto, Japan) and TOYOBO Co. (Osaka, Japan). The oligonucleotides were synthesized by Espec-oligo Service Co. (Tsukuba, Japan). The strain used in this study is E. coli HB101 (11). Construction of plasmid for expression of His-tagged LinB. The oligo nucleotides used as primers are as follows: 5Ј-GCC GAA TTC TAA GGA GGA ATA TCG ATG AGC CTC-3Ј (33-mer) and 5Ј-GCC AAG CTT GGA TTA GTG ATG GTG ATG GTG ATG TGC TGG GCG CAA TCG-3Ј (48-mer). The former is designed for the introduction of EcoRI site and for change of SD sequence from AAGGAG to TAAGGAGG which interacts with the 3Ј end of the 16S rRNA during translational initiation in E. coli (12). The latter is designed for the introduction of HindIII site and 6-histidyl tail into the C-terminus of the LinB. The PCR was performed by using these primers, KOD polymerase (TOYOBO), and pMYLB1 (4) as a template. After digestion with EcoRI and HindIII, the ampliﬁed fragment was introduced into multiple cloning site of pUC18 (13). The resulting plasmid was named pULBH6. All of the nucleotide sequences of the ampliﬁed fragment were conﬁrmed by the dideoxy-chain termination method with an automated DNA sequencer (LI-COR Model 4000L, Aloka Co., Tokyo, Japan). An overexpression plasmid, pMLBH6 (Fig. 1), was constructed from pAQN, which has the same structure as pAQI (14) except for differences in the aqualysin I-coding region. The plasmid
+
+
+
+
+
+CHARACTERIZATION OF His-TAGGED LinB
+
+
+
+
+
+301
+
+
+
+
+
+FIG. 1. Construction of His-tagged haloalkane dehalogenase (LinB) expression vector, pMLBH6. The SD sequence was changed, and the 6-histidyl tail was introduced into the C-terminus of LinB. See text for detail.
+
+
+
+
+
+by means of the program Leonora (15) by the method of least squares with relative weighting. Activity measurements. LinB activity was routinely assayed with 1-chlorobutane (1-CB) as a substrate. A suitable amount of enzyme was incubated with 50 to 100 mM 1-CB in glycine buffer at 30°C. One unit of enzyme activity was deﬁned as the amount of enzyme required for the release of 1 ␮mol of chloride ion per minute under these conditions. The amount of chloride ion released was measured spectrophotometrically at 460 nm with mercuric thiocyanate and ferric ammonium sulfate by the method of Iwasaki et al. (16). Dehalogenation reaction rates were determined for 10 different substrates using the method of gas chromatography as described previously (10). The reaction rates were quantiﬁed by a slope of the relationship between the product concentration and time. Dehalogenation activity was expressed in percentages, where the rate of reaction of wild-type enzyme is 100% for each substrate.
+
+
+RESULTS
+
+
+
+
+
+Construction and puriﬁcation of His-tagged LinB. For expression of the His-tagged LinB, the plasmid pMLBH6 was constructed (Fig. 1). E. coli HB101 harboring pMLBH6 was cultured and induced with IPTG as described under Materials and Methods. His-tagged
+
+
+
+
+
+LinB was produced to about 15% of the total cell protein. Because the linB gene has rare codons in E. coli, such as AGG (12), a higher level of expression of LinB may be possible by coexpression of tRNAs for such rare codons or by site-directed mutagenesis of linB. The E. coli cells producing LinB were harvested and disrupted. After centrifugation, the supernatant was used as crude extract. The crude extract showed a speciﬁc activity of 0.12 U/mg protein. The speciﬁc activity of crude extract was increased about two times as a result of improving the SD sequence (data not shown). The His-tagged LinB in the crude extract was further puriﬁed by a Ni-NTA resin (QIAGEN). Only one protein band was observed on SDS-polyacrylamide gel electrophoresis after this treatment (Fig. 2). The puriﬁcation scheme for the His-tagged LinB is summarized in Table 1. The speciﬁc activity of the puriﬁed His-tagged LinB was 1.18 U/mg protein, indicating that the enzyme was puriﬁed approximately 10-fold by the one step. The integrity of the structure of the puriﬁed Histagged LinB was tested by CD spectroscopy. The CD spectra of the wild-type and His-tagged protein are shown in Fig. 3. Like the wild-type LinB, His-tagged protein had the double ellipticity minimum at 210 and 220 nm typical of ␣-helical content. The CD spectra of the wild-type and His-tagged proteins are essentially
+
+
+
+
+
+302
+
+
+
+
+
+NAGATA ET AL.
+
+
+
+
+
+FIG. 2. Protein patterns during the His-tagged LinB puriﬁcation. The samples were analyzed by SDS-polyacrylamide gel electrophoresis. Lanes: 1, total cell proteins; 2, crude extract; 3, His-tagged LinB.
+
+
+
+
+
+the same, indicating that the backbone polypeptide chain of the constructed protein had a very similar conformation. It was concluded that the His-tag did not disturb the overall structure of the protein. Activities of His-tagged LinB. The puriﬁed wildtype and His-tagged enzymes were examined for their kinetic characteristics. The steady-state kinetic parameters of the His-tagged LinB for four substrates (1-chlorobutane, 1-bromopropane, 1-bromo-2-methylpropane, and 2-bromo-1-chloropropane) were in good agreement with those of wild-type LinB (Table 2). The relative activity of His-tagged LinB was determined with the group of 10 different substrates to test whether there is a difference in substrate speciﬁcity between wild-type and His-tagged LinB. The reaction rates were quantiﬁed by a slope of the plot of the product concentration and time. The rates obtained with the His-tagged LinB are expressed as the percentage activity of the wild-type enzyme in Table 3. Although the His-tagged LinB expressed an average of
+
+
+
+
+
+FIG. 3. Circular dichroism spectra for wavelengths between 190 and 250 nm (a) and between 250 and 320 nm (b) of wild-type haloalkane dehalogenase LinB and His-tagged LinB.
+
+
+
+
+
+
+
+
+Total protein (mg) Total activity (U) Sp act (U/mg of protein)
+
+
+
+
+
+Step Crude extract Ni-NTA
+
+
+
+
+
+Yield (%)
+
+
+
+
+
+Puriﬁcation factor
+
+
+
+
+
+918 50
+
+
+
+
+
+110 59
+
+
+
+
+
+0.12 1.18
+
+
+
+
+
+100 54
+
+
+
+
+
+9.8
+
+
+
+
+
+80% of the activity of the wild-type LinB for 10 different substrates, the decrease was very similar for different substrates with the standard deviation of 5.5%. The small activity reduction is independent of the substrate shape, size, or number of substituents. Activities of His-tagged mutant proteins. To conﬁrm the validity of this His-tagged system, we constructed two mutants, W109L and F151W, by sitedirected mutagenesis and puriﬁed to homogeneity (Fig. 4). Both residues are expected to participate in binding and stabilization of halogen atom during dehalogenation reaction (17). Replacement of these residues by a nonaromatic amino acid should result in signiﬁcant loss of activity, while at least some activity was expected with the mutant carrying a conservative substitution. Speciﬁc activities of W109L and F151W mutants toward 1-chlorobutane were determined spectrophotometrically. No activity was observed for W109L, while F151W showed the same level of activity (1.16 U/mg) as wild-type His-tagged enzyme (1.18 U/mg).
+
+
+
+
+
+CHARACTERIZATION OF His-TAGGED LinB
+
+
+
+
+
+303
+
+
+
+
+
+
+
+
+Wild-type Substrate 1-Chlorobutane 1-Bromopropane 1-Bromo-2-methylpropane 2-Bromo-1-chloropropane K M [mM] 0.18 Ϯ 0.02 0.23 Ϯ 0.04 0.05 Ϯ 0.01 0.55 Ϯ 0.05 k cat [s ] 1.6 Ϯ 0.06 5.5 Ϯ 0.54 1.6 Ϯ 0.15 1.4 Ϯ 0.06
+
+
+Ϫ1
+
+
+
+
+
+His-tagged k cat/K M 8.8 24 34 2.5 K M [mM] 0.16 Ϯ 0.01 0.31 Ϯ 0.02 0.06 Ϯ 0.02 0.49 Ϯ 0.05 k cat [s Ϫ1] 1.0 Ϯ 0.03 6.2 Ϯ 0.18 1.8 Ϯ 0.17 2.2 Ϯ 0.09 k cat/ K M 6.5 20 28 4.4
+
+
+
+
+
+DISCUSSION
+
+
+
+
+
+Because the substrate speciﬁcity of LinB is relatively broad, this enzyme is interesting for bioremediation purposes. The important pesticides, 1,2-dichloropropane and 2-chloropropane, are recalcitrant under aerobic conditions. Although LinB cannot efﬁciently catalyze the dehalogenation reaction of these pesticides (no other dehalogenase known to date can), modiﬁcation of the geometry and composition of an active LinB site could possibly lead to more efﬁcient binding and catalysis of these chlorinated propanes. The catalysis of 1,2-dichloropropane and 2-chloropropane by hydrolytic dehalogenases is possible from the point of view of the reaction mechanism as indicated by quantitative structure  biodegradability relationships studies (18,19). In this study, we constructed and characterized the His-tagged haloalkane dehalogenase LinB. The Histagged LinB was highly expressed in E. coli and was easily puriﬁed by Ni-NTA resin. The CD spectra of the wild-type and His-tagged proteins are essentially the same, indicating that the backbone polypeptide chain
+
+
+
+
+
+
+
+
+Relative activity a of His-tagged LinB (%) 77 75 73 75 91 80 81 76 80 89 80 5.5
+
+
+
+
+
+of constructed protein had a very similar conformation. At least, the His-tag did not disturb the overall structure of the protein. The K M and k cat kinetic parameters of the His-tagged LinB for four substrates were in good agreement with those of the wild-type LinB. Although the His-tagged LinB expressed an average of 80% of the relative activity of the wild-type LinB for 10 different substrates, the decrease was very similar for different substrates with the standard deviation of 5.5%. From these results, it was concluded that the Histagged LinB has enough features similar to those of wild-type protein for further analysis of its reaction mechanism and for the mutagenesis studies. Consistent substrate speciﬁcity of the wild-type and Histagged dehalogenase makes this system suitable also for the quantitative structure  biodegradability studies which require large volumes of the protein material for experimental testing. Furthermore, we prepared two mutants, W109L and F151W, and conﬁrmed that the His-tagged system we constructed here is working well. W109L lost the dehalogenase activity toward 1-chlorobutane completely, while F151W retained the activity at the same level as the wild-type enzyme. W109 and F151 are proposed to be the residues which are involved in halide stabilization during dehalogenation reaction. For their func
+
+
+
+
+Substrate 1-Chlorobutane 1,3-Dibromopropane 1,3-Dichloropropane 1-Bromopropane 1-Bromo-3-chloropropane 1-Chloropropane 1,2-Dibromopropane 1-Bromo-2-methylpropane 1-Bromohexane 1-Bromocyclohexane Average Standard deviation
+
+
+
+
+
+a Activity expresses the percentage of the rates obtained with the wild-type LinB.
+
+
+
+
+
+FIG. 4. SDS-polyacrylamide gel electrophoresis of puriﬁed LinB mutants, W109L and F151W. Lanes: 1, W109L; 2, F151W.
+
+
+
+
+
+304
+
+
+
+
+
+
+
+
+
+
+
+tion, partial positive charge is essential. Since replacement of tryptophan to leucine diminishes the positive charge of the residue, loss of the dehalogenase activity of W109L is reasonable. Replacement of phenylalanine by tryptophan does not diminish halide stabilization which is consistent with the observed activity of the F151W mutant.
+
+
+ACKNOWLEDGMENTS
+
+
+This work was ﬁnancially supported by a Grant-in-Aid for Scientiﬁc Research from the Ministry of Education, Science, Culture and Sports of Japan and by the Czech Grant Agency (Postdoc 203/97/ P149), and the Czech Ministry of Education (ME276). A part of this work was performed using the facilities of the Biotechnology Research Center, University of Tokyo.
+
+
+
+
+
+8.
+
+
+
+
+
+9.
+
+
+
+
+
+10.
+
+
+
+
+
+11.
+
+
+
+
+
+REFERENCES
+
+
+
+
+
+
+
+
+15. 16.
+
+
+
+
+
+17.
+
+
+
+
+
+18.
+
+
+
+
+
+19.
+
+
+
+
+
+20.
+
+
+
+
+

@@ -1,0 +1,34 @@
+Phase:TokenSentenceCleanup
+Input: Sentence
+
+Options: control = once
+
+Rule:sentencefilter1
+(
+	{Sentence}
+):sentence
+
+-->
+{	
+	AnnotationSet PMFSentences = doc.getAnnotations().get("PMFSentence");
+	//if(PMFSentences.size() >0) {
+		//inputAS.removeAll(inputAS.get("Token"));
+		//inputAS.removeAll(inputAS.get("Sentence"));
+	//}
+	if(PMFSentences.size() == 0) {
+		System.out.println("No PMFs");
+		AnnotationSet tokens = doc.getAnnotations().get("Token");
+		AnnotationSet sentences = doc.getAnnotations().get("Sentence");
+		
+		Annotation token = (Annotation)tokens.iterator().next();
+		Annotation sentence = (Annotation)sentences.iterator().next();
+		
+		try {
+			outputAS.add(token.getStartNode().getOffset(), token.getEndNode().getOffset(), "PMFToken", token.getFeatures());
+			outputAS.add(sentence.getStartNode().getOffset(), sentence.getEndNode().getOffset(), "PMFSentence", sentence.getFeatures());
+		} catch(InvalidOffsetException e) {
+		}	
+		//inputAS.removeAll(inputAS.get("Token"));
+		//inputAS.removeAll(inputAS.get("Sentence"));
+	}
+}

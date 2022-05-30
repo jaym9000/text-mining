@@ -1,0 +1,13 @@
+Phase:possibleMF
+Input: Token
+
+Options: control = appelt
+
+//possible mf rules
+
+Rule:PossibleMF
+(
+	{ Token.string ==~ "activity|binding|affinity|inactive|active"}
+):possibleMF
+-->
+		:possibleMF.PossibleMF = {rule = PossibleMF}

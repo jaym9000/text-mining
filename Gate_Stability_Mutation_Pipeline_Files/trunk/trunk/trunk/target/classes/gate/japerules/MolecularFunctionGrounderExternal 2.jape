@@ -1,0 +1,34 @@
+Imports: {
+	import java.util.regex.*;
+	import java.net.URI;
+	import java.sql.*; 
+	import com.mysql.jdbc.exceptions.*;
+	
+	import org.tartarus.snowball.SnowballStemmer;
+
+	import ca.unbsj.cbakerlab.mutation_impact.MolecularFunctionGrounder;
+}
+
+Phase:MolecularFunctionGrounding
+Input: GroundedPointMutation
+
+Options: control = once
+
+Rule:MFGround1
+(
+	{GroundedPointMutation}
+):ground
+-->
+{
+	try {	
+		//System.out.println("Jape works@@@@@@@@@@@@@@@@@@@@@@@");
+		MolecularFunctionGrounder mfg = new MolecularFunctionGrounder(); 
+		//if(doc.getFeatures().get("statistics") != null){
+		//    mg.setStatistics((Statistics)doc.getFeatures().get("statistics"));
+		//}
+    		mfg.ground(doc);	
+	}
+	catch(Exception e) {
+		e.printStackTrace();
+	}
+}

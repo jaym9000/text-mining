@@ -1,0 +1,293 @@
+
+
+
+
+
+
+In Vivo Screening of Haloalkane Dehalogenase Mutants
+
+
+
+
+
+b
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a
+
+
+
+
+
+AbstractÐHaloalkane dehalogenase (DhlA) from Xanthobacter autotrophicus GJ10 catalyzes the dehalogenation of short chain primary alkyl halides. Due to the high Km and low turnover, wild type DhlA is not optimal for applications in bioremediation. We have developed an in vivo screen, based on a colorimetric pH indicator, to identify DhlA mutant with improved catalytic activity. After screening 50,000 colonies, we identi®ed a DhlA mutant with a lower pH optimum. Sequence analysis of the mutant revealed a single substitution, alanine 149 to threonine, which is located close to the active site of DhlA. Replacement of alanine 149 via sitedirected mutagenesis with threonine, serine or cysteine retained the mutant phenotype. Other substitutions at position 149 show little or no activity. # 1999 Elsevier Science Ltd. All rights reserved.
+
+
+
+
+
+Introduction The bacterium Xanthobacter autotrophicus GJ10 is capable of growth using short-chain halogenated hydrocarbons as the sole carbon and energy source. This unique activity derives from the constitutive expression of a haloalkane dehalogenase (DhlA).1 DhlA catalyzes the cleavage of halogen±carbon bonds of a variety of halogenated compounds and results in the production of alcohols, protons and halide ions.1,2 The gene encoding DhlA has been cloned,3 and the protein has been puri®ed from GJ10 and as a recombinant protein from E. coli.4,5 Its amino acid sequence shows weak homology to several haloalkane dehalogenases and epoxide hydrolases from other bacteria.6±8 The three-dimensional structure of DhlA has been solved by X-ray crystallography at dierent pHs and temperatures.9±11 The dehalogenase is a monomeric protein consisting of two domains: the main domain and the cap domain. The active site of DhlA is positioned between these two domains. The structure of the main domain (residues 1±155 and 230±310) is homologous with a group of proteins that have the a/b hydrolase fold structure.12 On the other hand, the cap
+
+
+Key words: Xanthobacter autotrophicus GJ10; haloalkane dehalogenase; pH indicator; DhlA; mutagenesis. * Corresponding author. Tel.: +1-505-665-2501; fax: +1-505-6653024; e-mail: chang@telomere.lanl.gov y Second corresponding author. Tel.: +1-505-667-0072; fax: +1-505665-3024; e-mail: terwilliger@tanl.gov
+
+
+
+
+
+domain (residues 156±229), which sits on top of the main domain, shows no homology with any protein in the Protein Data Bank (PDB).13 Spontaneous mutations in the cap domain suggest a role in determining the substrate speci®city of DhlA.14 As revealed by X-ray crystallographic analyses, kinetic analyses and site directed mutation studies, Janssen and his co-workers have proposed a two-step catalytic mechanism.15,16 After substrate binding, nucleophilic attack by D124 on the substrate causes the cleavage of the halogen±carbon bond and the formation of an alkyl-ester intermediate. This intermediate ester is then hydrolyzed by the nucleophilic attack of a water molecule which is activated by hydrogen bonding to H289. The H289 is stabilized by D260.16 These residues, D124, H289 and D260, form the catalytic triad of DhlA.8,17 Halogenated chemicals are widely produced for industrial applications and represent an environmental hazard to human health. DhlA has potential for use in bioremediation of primary alkyl halides. Trichloroethene (TCE) and tetrachloroethene are not substrates of this enzyme. Given that the Km is 0.53 mM and the kcat is 3.3 sÀ1,18 DhlA is ineective when the concentration of 1,2-dichloroethane (DCA) drops below the millimolar range. In the US, the maximum contaminant level allowed for 1,2-dichloroethane is only 5 ppb (partper-billion, about 60 nM)19 which is orders of magnitude lower than the Km for DhlA. To increase the rate of bioremediation, it is important to develop DhlA mutants with the desired enzymatic capabilities (low Km, high kcat).
+
+
+
+
+
+0968-0896/99/$ - see front matter # 1999 Elsevier Science Ltd. All rights reserved. PII: S0968-0896(99)00148-0
+
+
+
+
+
+2176
+
+
+
+
+
+
+
+
+
+
+
+Unlike those DhlA mutants which have expanded substrate speci®city,14,20±22 no DhlA mutants with increased activity towards 1,2-dichloroethane have been reported. We believe that a rapid and sensitive screening method for DhlA mutants would allow us to identify useful phenotypes. In this study, we have developed a simple, reproducible screen to facilitate the isolation of DhlA mutants with increased catalytic eciency toward 1,2-dichloroethane. This method combined with random mutagenesis resulted in the identi®cation of a mutant DhlA with a higher turnover number.
+
+
+
+
+
+Results Screening of DhlA mutants During the degradation of 1,2-dichloroethane into 2chloroethanol, a proton is released at the expense of a single water molecule, glEgrP grP Egl  rP y 3 glEgrP grP Eyr  r  glÀ The enzymatic turnover of DhlA thus corresponds to the quantity of protons produced, which, in turn, can be monitored by a pH indicator. Based on this idea, an in vivo plate-screening scheme was developed to detect DhlA activity (Fig. 1). A library of plasmid DNA containing mutant DhlA was generated using mutator strain Epicurian coli XL1-Red.23 This library was transferred into E. coli DH10B cells and the mutation rate was calculated at 0.03% by sequencing 10 randomly selected clones, as compared to a published rate of 0.05%.23 The transformed DH10B cells were then screened on the pH indicator plates (see Experimental) for the ability to degrade 1,2-dichloroethane. Of 50,000 colonies screened, a single colony exhibiting elevated DhlA activity appeared on the pH indicator plates. This colony was isolated and the mutant's enhanced ability to degrade 1,2-dichloroethane was compared directly to colonies containing wild type DhlA on the indicator plate (Fig. 2). To con®rm this result, experiments were conducted to ensure that the mutant phenotype was not caused by mutations outside of the coding region for the DhlA gene (data not shown). Plasmid DNA was isolated from this mutant clone and the sequence of the mutant DhlA gene on this plasmid was analyzed. The sequencing results revealed a G to A substitution at nucleotide number 445, which substitutes alanine 149 with threonine. No other mutations were found in the coding or upstream promoter regions. When 1,3dichloropropane and 1-chlorobutane (substrates for wild type DhlA) were used as substrates on the indicator plates, clones containing the A149T mutant still showed higher activity than strains with wild type DhlA. On the other hand, the A149T mutant was tested for their ability to degrade 2-chloroethanol and 1chloroethane, two poor substrates for wild type DhlA, and no detectable activity was found using the pH indicator plates (data not shown). Based on the indicator plate assay, the A149T mutant has enhanced enzymatic activity toward primary alkyl halides.
+
+
+
+
+
+
+
+
+
+
+Activity and expression of the A149T mutant To quickly quantify the DhlA activity in dierent strains, a whole cell activity assay was developed based on the widely used b-galactosidase assay.24 Derivatives of E. coli DH10B carrying the following DhlA alleles were assayed for DhlA activity: no DdhlA, wild type DhlA and A149T mutant. As shown in Figure 3, strains with the A149T mutation have approximately two-fold higher activity than the wild type, while the strain lacking DhlA gene has very low background activity. Although the wild type and mutant DhlA genes were under the Ptac promoter, the induced level of DhlA was too low to estimate the amount of protein expressed on Coomassie-stained SDS-PAGE gels (data not shown). To determine whether the wild type and mutant DhlAs were expressed at equivalent levels in these strains, proteins from these strains were visualized by immunological staining and the quantities of expressed proteins were compared with the quanti®cation program NIH Image. As shown in Figure 4(A), the staining intensity of the A149T mutant was approximately equivalent to that of the wild type protein, suggesting that the corresponding
+
+
+
+
+
+
+
+
+
+
+
+2177
+
+
+
+
+
+
+
+
+
+
+dehalogenase using 1,2-dichloroethane at ®ve dierent pH values (Table 1). The optimal catalytic activity or turnover number (kcat) for wild type enzyme was observed at pH 8.2, which is similar to results reported by Janssen and co-workers.18,21,25 The A149T enzyme displayed a similar pH pro®le (kcat versus pH), however, we observed a 1.6-fold increase in the kcat value at pH 8.2. The Km values of the wild type enzyme were constant throughout the examined pH range. In contrast, the A149T enzyme displayed a 10-fold increase in the Km value at pH 8.2 when compared to the wild type enzyme. The Km values of A149T were similar to the wild type enzyme between pH 6.2 and 7.5. The 10-fold increase in the Michaelis constant at pH 8.2 for A149T shifted the optimal value for the speci®city constant (kcat/Km) to pH 7.2. The wild type enzyme has a larger kcat/Km value at pH 8.2. Site-directed mutagenesis To further examine the eect of the A149T mutation on the activity of DhlA, site-directed mutagenesis was performed to substitute alanine 149 with all other amino acids (see Experimental). Clones containing mutant DhlA genes were classi®ed according to their phenotypes on the pH indicator plates, and 9 dierent substitutions at this residue were identi®ed. As described in Table 2, more than half of the 17 clones sequenced had the A149T phenotype on the pH indicator plates. In addition to threonine, substitutions for alanine at position 149 with serine and cysteine also resulted in the A149T phenotype. Despite valine's similarity in size to threonine, its substitution at position 149 substantially decreased the activity of DhlA. We did not identify any other substitution at position 149 other than alanine which exhibited the wild type phenotype. Furthermore, replacement with bulky amino acids at this position totally disrupted the activity of DhlA (Table 2), suggesting a strict spatial requirement for the amino acid at this position.
+
+
+
+
+
+expression levels were similar. These results indicate that the observed increase in DhlA activity was caused by the enhanced activity of the A149T mutant rather than by increased expression of A149T. Since it is possible to increase the sensitivity of our screen by increasing the amount of expressed DhlA in the cells, we subcloned the A149T mutant downstream of a T7 promoter and the resulting plasmid was transferred into E. coli BL21(DE3) for overexpression. The A149T protein was well expressed and soluble in this strain at both 25 and 37 C (Fig. 4(B)). Both strains with Ptac- and PT7-expressed A149T were then examined on pH indicator plates for activity at a low concentration of 1,2-dichloroethane. The strains with PT7-expressed A149T showed modest increase in the DhlA activity (data not shown) Steady-state kinetics of DhlA The steady-state kinetic constants (Km and kcat) were determined for the puri®ed A149T and wild type
+
+
+
+
+
+Discussion In order to demonstrate the utility of our screen, we generated mutant DhlAs. The DhlA gene was cloned and transformed into a mutator strain and the transformants were allowed to grow for 40 generations. Mutant DNA under the control of Ptac was then electroporated into competent E. coli. Transformants were selected on LB agar containing ampicillin. Following growth, the transformants were replicated using nitrocellulose membranes onto LB plates containing the pH indicator, bromothymol blue. Within 3±5 h, the colonies became blue. At that time, the ®lters were transferred to fresh plates containing IPTG and volatile halogenated organic was added in the lid of each Petri dish. After the addition of substrate, protons released by dehalogenase activity caused the bromothymol blue color to change to yellow. The rate of the blue to yellow transition was used as an indicator of the amount of activity. The indicator plates provided a simple means with which to identify mutant dehalogenases with increased activity
+
+
+
+
+
+
+
+
+
+
+2178
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+and/or altered substrate speci®city. Dierent volatile halogenated alkanes may be employed to determine the breadth of speci®city. We used these plates to screen approximately 50,000 mutants and identi®ed one mutant with apparently improved dehalogenation activity when 1,2-dichloroethane was the substrate. Sequencing of this mutant revealed a change at A149. Based on our results with the indicator plates, we selected and further characterized the A149T mutant. We have also developed a DhlA activity assay in whole cells. This assay employs a suspension of cells that have been induced to express DhlA. These cells were suspended in a weakly buered solution, the absorbance at 600 nm was determined and then pH indicator and cells were mixed and exposed to DCA. Cell suspension without DCA was used as a negative control. Following incubation, the cells were removed by centrifugation
+
+
+
+
+
+
+
+
+and the rate of change in absorbance at 615 nm was used to determine the relative DhlA activity. The utility of this assay is supported by its qualitative agreement with in vitro kinetic studies using puri®ed enzymes. The in vivo assay showed slightly greater than twofold increase in activity for the A149T mutant (Fig. 3). The kcat value for the A149T mutant was approximately 1.5fold greater than the wild type (Table 2). We noticed that the best results can be achieved by measuring the absorbance at 615 nm soon after visual observation of the pH indicator color change, and by employing chemical inhibitors to terminate the DhlA reaction. This assay can be easily modi®ed into a microtiter plate format for high-throughput screening of DhlA mutants. Though a similar application utilizing 96-well plates has been reported,26 our procedure bypasses the lysis step, thereby signi®cantly reducing both the time and reagent quantities required for the screening. The A149T enzyme was puri®ed and its activity was compared with that of the wild type enzyme. The A149T mutant displayed a modest (1.3±1.6 fold) increase in kcat at all pHs. The Km for 1,2-dichloroethane was similar to wild type at low pHs, but was increased 10-fold at pH 8.2, the wild type enzyme's pH optimum. This increase of Km in the A149T mutant is probably due to the high level of 1,2-dichloroethane used in the screen, and makes this mutant less suitable for application at this pH. Although the fastest turnover occurred at pH 8.2 for the A149T mutant, the 10-fold lower Km at pH 7.2 results in the highest speci®city constant (kcat/Km) at pH 7.2 (Table 2). The optimal speci®city constant has shifted from pH 8.2 in the wild type (647,000 MÀ1 sÀ1) to pH 7.2 in the mutant (330,000 MÀ1 sÀ1). Since the speci®city constant (kcat/Km) represents a rate constant at very low concentrations of substrate, the pH optimum of the mutant enzyme is 7.2.
+
+
+
+
+
+A149T
+
+
+
+
+
+a The steady-state constants for wild type and A149T were determined as described in Experimental. b The kt values had errors less then or equal to 8%. c The Km values had errors less then or equal to 20%.
+
+
+
+
+
+C.-H. Chang et al. / Bioorg. Med. Chem. 7 (1999) 2175±2181 Table 2. Phenotypes of DhlA mutants with substitution at Ala149 determined on the pH indicator platesa Clone WT A149T No. 1 No. 40 No. 32 No. 35 No. 7 No. 37 No. 17 No. 41 No. 42 No. 8 No. 38 No. 23 No. 16 No. 25 No. 6 No. 31 No. 24
+
+
+a
+
+
+
+
+
+2179
+
+
+
+
+
+Activity +++ ++++++ ++++++ ++++++ ++++++ ++++++ ++++++ ++++++ +++++ +++++ +++++ +++ +++ + Ð Ð Ð Ð Ð
+
+
+
+
+
+Codon GCC ACC ACG ACG ACC ACT TGC TGT TCA TCC AGT GCA GCC GTA CAG CAA TAC TGG CTG
+
+
+
+
+
+Amino acid A T T T T T C C S S S A A V Q Q Y W L
+
+
+
+
+
+12 times faster than wild type DhlA.17 It is possible that the A149T mutation aects the conformation of N148, and in turn, chloride release from the active site, which is thought to limit the rate of DhlA.25
+
+
+
+
+
+Conclusion We have demonstrated here that monitoring of pH changes can be used to screen for DhlA mutants by identifying, isolating and characterizing a mutant DhlA with a, modestly improved kcat and shifted pH optimum. There are several advantages to this screening method. These include ease of use: pH indicators are readily available to all laboratories, speed: the pH decrease is usually so fast that the survival of E. coli cells is not required, which is useful if toxic compounds are produced by the function of the target enzyme, and versatility: because acid production is common in many industrially important enzymes, such as lipases, hydrolases and proteases, this method could easily be modi®ed to screen these enzymes as well. On the other hand, some technical challenges remain. First, the target substrate, 1,2-dichloroethane, is volatile and it is dicult to estimate its actual concentration in the Petri dishes, especially when it is very low. Secondly, the buering capacity in the cells limits the sensitivity of this assay, making it dicult to monitor subtle pH changes that occur at very low substrate concentrations. We are currently exploring the feasibility of using ¯uorescenceactivated cell sorting (FACS) and ¯uorescent indicators to resolve these diculties.
+
+
+
+
+
+The strength of DhlA activity is represented by the number of plus signs. +++, activity comparable to wild type DhlA. ++++++, activity comparable to DhlAA149T. +, weak DhlA activity. Ð, no DhlA activity.
+
+
+
+
+
+The internal pH of E. coli is approximately 7.4±7.8 during normal growth,27 so it is not surprising that mutant enzymes with lower pH optima would be isolated using our screen. The A149T substitution eectively lowered the pH optimum of the haloalkane dehalogenase suggesting that this mutation might prove useful for bioremediation in host organisms with a lower internal pH. A BLAST sequence alignment of DhlA and homologous proteins conducted in our laboratory showed that most of the aligned proteins have alanine, threonine or glycine at position 149. Interestingly, there are some homologues with serine or valine at this position in the alignment. The results of our site-directed mutagenesis results are consistent with the alignment in that substitution at position 149 with alanine, cysteine, serine, threonine or valine produces a functional enzyme. In combination with the alignment, our results suggest that it would be possible to increase the activity of these homologues by localized mutagenesis on the region around residue 149. Though A149 is not one of the residues making up the active site cavity of DhlA, an adjacent residue, N148, has been implicated in stabilizing the conformation of two catalytic residues: D124 and D260.10 Furthermore, substitutions of N148 with glutamate or aspartate partially restore the function to D260N mutant of DhlA.17 While the D260N+N148D and D260N+N148E double mutants have a 10-fold reduced kcat and a 40-fold increased Km for 1,2-dichloroethane, they release halide
+
+
+
+
+
+Experimental Random mutagenesis and screening Wild type DhlA was PCR ampli®ed from X. autotrophicus GJ10 and cloned into NdeI and EcoRI-cut pPR106828 which contains the Ptac promoter and lacIq. The resulting plasmid was designated pCHC109. To mutagenize DhlA, plasmid pCHC109 containing the wild type DhlA was introduced into Epicurian coli XL1Red mutator strain (Stratagene, La Jolla, CA),23 and the resulting strain was cultured for approximately 40 generations in LB broth as described previously.28 The mutated pCHC109 DNA was then isolated and electroporated into E. coli competent strain DH10B (Life Technologies, Gaithersburg, MD) for the screening of variants with mutant DhlAs. The resulting DH10B cells were grown on LB agar plates with ampicillin (100 mg/ mL) at 37 C. After overnight growth, the transformed cells were replicated using nitrocellulose transfer membranes (MSI, Westboro, MA) onto pH indicator plates (LB plates with 50 mmg/mL bromothymol blue, 1 mM IPTG and 100 mg/mL ampicillin) for another 3±5 h at 37 C. To increase the sensitivity of this screen, the membranes were transferred onto weakly buered 1.5% agar plates (0.1 mM Tris±HCl, pH 7.4) after the colonies turned blue on the pH indicator plates. Five microliters of 1,2-dichloroethane (J. T. Baker, Phillipsburg, NJ) were then added onto the covers of the Petri
+
+
+
+
+
+2180
+
+
+
+
+
+
+
+
+
+
+
+dishes and the plates were incubated at room temperature in a desiccator for 1±5 min until the colonies turned yellow as a result of DhlA activity. Colonies showing elevated DhlA activity at this stage were streaked for isolation and subjected to an additional screening round to con®rm the mutant phenotypes. Whole cell DhlA assay Overnight cultures of DH10B cells containing DhlA variants were inoculated into fresh LB broth and incubated at 37 C. IPTG (1 mM) was added during log phase growth followed by an additional 3 h incubation. The induced cells were then washed once in a weakly buered solution (0.1 mM Tris±HCl, pH 7.4) and resuspended in 3 mL of the same buer. One milliliter of the suspension was used to measure the cell density at 600 nm, the remainder was added to 50 mg/mL of bromothymol blue and separated into two parts. To detect proton release from the bacterial cells, one fraction was added to 20 mM 1,2-dichloroethane (®nal concentration). The negative control was suspension added to buer without 1,2-dichloroethane. Once the color of the experimental tube changed from blue to yellow, both the experimental and control tubes were centrifuged at 16,000Âg for 1 min using a microcentrifuge (Eppendorf, model 5415C). The time from inoculation into 1,2dichloroethane through centrifugation was recorded. The supernatants were then collected for the measurement of absorbance at 615 nm. The following formula was used to calculate DhlA activity where: one unit of DhlA activity= 1000Â(OD615(À)ÀOD615(+))/(TÂVÂOD600) OD615(À)=OD615 of the negative control OD615(+)=OD615 of the sample containing 1,2-dichloroethane T=elapsed reaction time (min) after adding 1,2-dichloroethane V=volume of the suspended culture in mL SDS-PAGE and Western immunoblotting E. coli strains containing wild type and mutant DhlA were grown to mid-log phase and induced with IPTG (1 mM) for 3±5 h at indicated temperatures (37 or 27 C). About 1.6 mL of the grown cultures were pelleted and washed once in a suspension buer (50 mM Tris±HCl, pH 7.4, 150 mM NaCl). The pellets were then resuspended in 150 mL of the same buer and were sonicated twice. The broken cells were immediately centrifuged at 16,000Âg for 20 min. The supernatants were saved and the pellets were washed once with 1 mL of the same suspension buer and ®nally resuspended in 150 mL of that buer. The protein contents of both the supernatant and pellet fractions were analyzed using the PhastSystem (Pharmacia, Uppsala, Sweden) according to the manufacturer's instructions. To visualize DhlA expression under a Ptac promoter, E. coli strains were induced as described above. Two hundred microliters of the uninduced and induced cells were
+
+
+
+
+
+then centrifuged and the supernatant were discarded. The pellets were resuspended, and boiled for 5 min in 400 mL of 1X SDS sample buer. Half a microliter of the boiled lysates was loaded onto a 12% precast SDSPAGE gel (Bio-Rad laboratories, Hercules, CA). Puri®ed DhlA protein (3.2 ng and 0.8 ng) from GJ10 was used as standards. Immunological staining of size-fractioned proteins was carried out by the ECL chemiluminescent Western blotting system (Amersham Life Science). The rabbit antiserum against the DhlA protein used in the Western immunoblotting was prepared by Zymed Laboratories, Inc. (South San Francisco, CA). The quanti®cation of the expressed amount of wild type and mutant DhlAs was analyzed on a Macintosh computer using the public domain NIH Image program (developed at the U.S. National Institutes of Health and available on the Internet at http://rsb.info.nih.gov/nihimage/). Puri®cation of dehalogenase. Ten milliliters of culture of the E. coli BL21(DE3) containing PT7-expressed DhlA was used to inoculate each of six 1-L LB solutions with ampicillin. When the A600 of the cultures reached 0.6± 0.7, IPTG was added to a ®nal concentration of 0.5 mM, and the cultures were maintained for an additional 4 h at 30 C and 220 rpm. The cells were then harvested by centrifugation and washed with 10 mM Tris±SO4, 1 mM EDTA, pH 7.5. The cell pellets were stored at À70 C prior to cell lysis. For the puri®cation of dehalogenase, induced cells were thawed and suspended in 40 ml of 10 mM Tris±SO4, 1 mM EDTA, pH 7.5 and the cell suspension was sonicated on ice by using a microtip connected to a Soni®er Cell Disrupter CP50 (Ultrasonics Homogenizer) at a setting of 6 for 30 s on/ 60 s o, for a total time of 20 min. The suspension was centrifuged at 10,000Âg for 20 min. The cell free extract was passed through a column (2.2 cm diameterÂ31 cm) of DE-52 DEAE-cellulose (Whatman) and protein was eluted from the column using a 250 ml gradient, 0± 300 mM (NH4)2SO4 in 10 mM Tris±SO4, 1 mM EDTA, pH 7.5. Active fractions were pooled, dialyzed against 10 mM Tris±SO4, 1 mM EDTA, pH 7.5, and concentrated by ultra®ltration. The concentrated protein was applied to a Bio-gel P60 (Bio-Rad) column and eluted with 10 mM Tris±SO4, 1 mM EDTA, and 50 mM Na2SO4. Protein homogeneity was established by SDS-PAGE. Protein concentrations were determined by measuring the absorbance at 280 nm (A280=4.87Â104 MÀ1 cmÀ1).18 Steady-state kinetics Enzyme activity was assayed using a pH-indicator dye system similar to that used for carbonic anhydrase.29 For steady-state kinetic analysis, buers were removed by dialyzing the enzyme against 50 mM Na2SO4 with 1 mM EDTA, pH 8.2. The pH indicators and buers used are as follows: MES (pKa 6.1) with chlorophenol red, (pKa 6.3, 574 nm); MOPS (pKa 7.2) with p-nitrophenol (pKa 7.1, 400 nm); HEPES (pKa 7.5) with phenol red (pKa 7.5, 557 nm); TAPS (pKa 8.4) with m-cresol purple (pKa 8.3, 578 nm); and CHES (pKa 9.3) with thymol blue (pKa 8.9, 590 nm). Prior to each kinetic determination the pH-indicator dye was titrated with a
+
+
+
+
+
+
+
+
+
+
+
+2181
+
+
+
+
+
+standardized solution of HCl to provide an apparent extinction coecient. The steady-state kinetic constants for wild type and A149T enzymes were determined at 25 C. Because the product of dehalogenase is a strong acid (H+ClÀ), the production of hydrogen ions could be monitored directly by following the decrease in absorbance spectrophotometrically. Kinetic constants were calculated from initial rates using the computer program HYPER.30 Site-directed mutagenesis Plasmid pCHC130 is a derivative of pPR1068 and was used as a cloning vector for random mutagenesis and site-directed mutagenesis of DhlA. It was constructed by creating a stuer fragment from two primers: 5H TATGACTAGTCCCGGG -3H (No. 145, upper) and 5H - AATTCCCGGGACTAGTCA-3H (No. 146, lower), and subcloning the stuer into NdeI/EcoRI-digested pPR1068. A PCR-based protocol of site-directed mutagenesis was used to change the Ala149 of DhlA to any amino acid. First, two pairs of PCR primers (No. 109 5H -GGCGCACTCCCGTTCTGGAT-3H and No. 142 5H -TCGGTCATCAAGCANNNGTTCATGATGATC -3H ; NO. 129 5H - GGTTCAGAATTCTCATCGCTC -3H and No. 141 5H '- GATCATCATGAACNNNTGCTTGATGACCGA -3H ; N=any nucleotide) were designed to make two partial, overlapping DhlA fragments, using pCHC109 as a template. These two DNA fragments were then used as both primers and templates for another 10 cycles of PCR. Finally, the newly synthesized PCR product was used as a template for PCR with primers No. 129 and 128 (5H -CAAGGACCATAGCATATGATA -3H ). This ®nal PCR product was puri®ed (PCR puri®cation kit, Qiagen) and digested with NdeI and EcoRI, and then subcloned into NdeI/EcoRI-digested pCHC130. The ligated products were then electroporated into E. coli DH10B and classi®ed according to their phenotypes on the pH indicator plates. Plasmid DNAs were then isolated from representative colonies from each phenotypic group and analyzed via automatic DNA sequencing. Acknowledgements We thank Drs. Angel Garcia and Geo Waldo for helpful discussions and Dr. Raymond Nanni for critical reading of the manuscript. This work is supported by the Laboratory Directed Research and Development program of Los Alamos National Laboratory. References
+
+
+
+
+
+
+
+
+3. Janssen, D. B.; Pries, F.; van der Ploeg, J.; Kazemier, B.; Terpstra, P.; Witholt, B. J. Bacteriol. 1989, 171, 6791±6799. 4. Keuning, S.; Janssen, D. B.; Witholt, B. J. Bacteriol. 1985, 153, 635±639. 5. Schanstra, J. P.; Rink, R.; Pries, F.; Janssen, D. B. Protein Expr. Purif. 1993, 4, 479±489. 6. Curragh, H.; Flynn, O.; Larkin, M. J.; Staord, T. M.; Hamilton, J. T. G.; Harper, D. B. Microbiol. 1994, 140, 1433± 1442. 7. Nagata, Y.; Nariya, T.; Ohtomo, R.; Fukuda, M.; Yano, K.; Takagi, M. J. Bacteriol. 1993, 175, 6403±6410. 8. Rink, R.; Fennema, M.; Smids, M.; Dehmel, U.; Janssen, D. B. J. Biol. Chem. 1997, 272, 14570±14650. 9. Franken, S. M.; Rozeboom, H. J.; Kalk, K. H.; Dijkstra, B. W. EMBO J. 1991, 10, 1297±1302. 10. Verschueren, K. H.; Franken, S. M.; Rozeboom, H. J.; Kalk, K. H.; Dijkstra, B. W. J. Mol. Biol. 1993, 232, 856±872. 11. Verschueren, K. H.; Kingma, J.; Rozeboom, H. J.; Kalk, K. H.; Janssen, D. B.; Dijkstra, B. W. Biochemistry 1993, 32, 9031±9037. 12. Ollis, D. L.; Cheah, E.; Cygler, M.; Dijkstra, B.; Frolow, F.; Franken, S. M.; Harel, M.; Remington, S. J.; Silman, I.; Schrag, J.; Sussman, J. L.; Verschueren, K. H. G.; Goldman, A. Protein Eng. 1992, 5, 197±211. 13. Bernstein, F. C.; Koetzle, T. F.; Williams, G. J. B.; Meyer, E. F.; Brice, M. D.; Rodgers, J. R.; Kennard, O.; Shimanouchi, T.; Tasumi, M. J. Mol. Biol. 1977, 112, 535±542. 14. Pries, F.; van den Wijngaard, A. J.; Bos, R.; Pentenga, M.; Janssen, D. B. J. Biol. Chem. 1994, 269, 17490±17494. 15. Pries, F.; Kingma, J.; Pentenga, M.; van Pouderoyen, G.; Jeronimus-Stratingh, C. M.; Bruins, A. P.; Janssen, D. B. Biochemistry 1994, 33, 1242±1247. 16. Verschueren, K. H. G.; Seljee, F.; Rozeboom, H. J.; Kalk, K. H.; Dijkstra, B. W. Nature 1993, 363, 693±698. 17. Krooshof, G. H.; Kwant, E. M.; Damborsky, J.; Koca, J.; Janssen, D. B. Biochemistry 1997, 36, 9571±9580. 18. Schanstra, J. P.; Kingma, J.; Janssen, D. B. J. Biol. Chem. 1996, 271, 14747±14753. 19. McCarty, P. L.; Semprini, L. Ground-water treatment for chlorinated solvents. In Handbook of Bioremediation; Matthews, J., Ed.; Lewis Publishers: London, 1994; pp 87±108. 20. Holloway, P.; Knoke, K. L.; Trevors, J. T.; Lee, H. Biotech. Bioeng. 1998, 59, 520±523. 21. Schanstra, J. P.; Ridder, I. S.; Heimeriks, G. J.; Rink, R.; Poelarends, G. J.; Kalk, K. H.; Dikstra, B. W.; Janssen, D. B. Biochemistry 1996, 35, 13186±13195. 22. Schanstra, J. P.; Ridder, A.; Kingma, J.; Janssen, D. B. Protein Eng. 1997, 10, 53±61. 23. Greener, A.; Callahan, M.; Jerpseth, B. Mol. Biotechnol. 1997, 7, 189±195. 24. Miller, J. H. Experiments in Molecular Genetics; Cold Spring Harbor Laboratory: Cold Spring Harbor: NY, 1972. 25. Schanstra, J. P.; Janssen, D. B. Biochemistry 1996, 35, 5624±5632. 26. Holloway, P.; Trevors, J. T.; Lee, H. J. Microbiol. Methods 1998, 32, 31±36. 27. Slonczewski, J. L.; Foster, J. W. pH-regulated genes and survival at extreme In Escherichia coli and Salmonella: Cellular and Molecular Biology; Neidhardt, F. C. Ed.; ASM Press: Washington, DC, 1996; Vol. 1; pp. 1539±1549. 28. Chang, C.-H.; Zhu, J.; Winans, S. C. J. Bacteriol. 1996, 178, 4710±4716. 29. Khalifah, R. G. J. Biol. Chem. 1971, 246, 2561±2573. 30. Cleland, W. W. Methods Enz. 1979, 103±138
+
+
+
+
+

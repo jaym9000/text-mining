@@ -1,0 +1,123 @@
+Phase: MutationImpactRelationExtraction
+Input: Impact
+
+Options: control = all
+
+Rule:MutationImpactRelationRule1
+(
+	{Impact}
+):impact
+-->
+{
+	try {
+		/**Weights
+		*
+		*/
+		double alfa = 1.0;
+		double beta = 1.0;
+		double gamma = 1.0;
+		double delta = 1.0;
+		
+		//retrieve impact
+		Annotation impactA = (Annotation)((AnnotationSet)bindings.get("impact")).iterator().next();
+
+		//retrieve impact sentence
+		Annotation sentence = (Annotation)inputAS.get("Impact",impactA.getStartNode().getOffset(),impactA.getEndNode().getOffset()).iterator().next();
+		
+		//retrieve related mutations
+		boolean mutationsFound = false;
+		int sentenceDistance = 0;
+		Long[] mutantSentence = new Long[2];
+		
+		List<Long[]> mutants = new ArrayList<Long[]>();
+		
+		while(!mutationsFound && sentenceDistance < 4) {
+			//check current sentence
+			AnnotationSet mutationAS = inputAS.get("GroundedPointMutation",sentence.getStartNode().getOffset(),sentence.getEndNode().getOffset());
+			
+			//if mutations exist
+			if(mutationAS.size() > 0) {
+				System.out.println("Flopp");
+				//annotate each of them as a ProteinMutant.
+				for(Annotation mutationA : mutationAS) {
+					String wildtypeSequence = new String((String)doc.getFeatures().get((String)doc.getFeatures().get("pacs")));
+					String sequence = new String(wildtypeSequence);
+					
+					int mutationPos = (Integer)mutationA.getFeatures().get("hasCorrectPosition")-1;
+					String mutantResidue = (String)mutationA.getFeatures().get("hasMutantResidue");
+					sequence = new String(sequence.substring(0,mutationPos)+mutantResidue+sequence.substring(mutationPos+1));
+					
+					FeatureMap features = Factory.newFeatureMap();
+					features.put("hasSequence",sequence);
+					features.put("mutatesSequence",wildtypeSequence);
+					features.put("mutatesProteinWithSwissProtId",(String)doc.getFeatures().get("pacs"));
+					
+					AnnotationSet previousMutants = outputAS.get("ProteinMutant",mutationA.getStartNode().getOffset(),mutationA.getEndNode().getOffset());
+					boolean mutantAlreadyExists = false;
+					for(Annotation previousMutant : previousMutants) {
+						if(previousMutant.getEndNode().getOffset() == mutationA.getEndNode().getOffset() && 
+							previousMutant.getStartNode().getOffset() == mutationA.getStartNode().getOffset()) {
+							mutantAlreadyExists = true;
+						}
+					}
+					if(!mutantAlreadyExists) {
+						outputAS.add(mutationA.getStartNode().getOffset(),mutationA.getEndNode().getOffset(),"ProteinMutant",features);	
+					}
+					mutants.add(new Long[] {mutationA.getStartNode().getOffset(),mutationA.getEndNode().getOffset()});
+				}
+				
+				Object tempNum = doc.getFeatures().get("numberOfImpactMutationRelations");
+				if(tempNum == null) {
+					doc.getFeatures().put("numberOfImpactMutationRelations",mutationAS.size());
+				}
+				else {
+					doc.getFeatures().put("numberOfImpactMutationRelations",((Integer)tempNum)+mutationAS.size());
+				}
+				
+				mutantSentence[0] = sentence.getStartNode().getOffset();
+				mutantSentence[1] = sentence.getEndNode().getOffset();
+				mutationsFound = true;
+			}
+			//if mutations doesnt exist
+			else {
+				//move to a more previous sentence
+				Annotation tempSentence = sentence;
+				try {
+					sentence = (Annotation)inputAS.get("Sentence",sentence.getStartNode().getOffset()-10,sentence.getStartNode().getOffset()-5).iterator().next();
+				} catch(Exception e) {
+					sentence = tempSentence;
+					sentenceDistance = 4;
+				}
+				sentenceDistance++;
+			}
+		}
+
+		//if mutationsFound
+		if(mutationsFound) {
+			for(Long[] mutant : mutants) {
+				//calculate overall score
+				FeatureMap features = impactA.getFeatures();
+				
+				double aScore = (Double)features.get("score");
+				Annotation mfA = (Annotation)inputAS.get("MolecularFunctionMention",impactA.getStartNode().getOffset(),impactA.getEndNode().getOffset()).iterator().next();
+				double mfgScore = (Double)mfA.getFeatures().get("groundingScore");
+				double mutantDistanceScore = 1.0/((double)sentenceDistance+1);
+				
+				//add score as feature.
+				double score = (alfa*aScore+beta*mutantDistanceScore/*gamma*inDocumentPositionScore*/+delta*mfgScore)/(alfa+beta/*gamma*/+delta);
+				
+				features.put("hasRelevanceScore",Double.toString(score));
+				features.put("mutant",mutant);
+				features.put("affectProperty",((String)mfA.getFeatures().get("isGroundedTo")).replace(":","_"));
+				if(mutant[0]<impactA.getStartNode().getOffset()) {
+					outputAS.add(mutant[0],impactA.getEndNode().getOffset(),"MutationImpact",features);
+				}
+				else {
+					outputAS.add(impactA.getStartNode().getOffset(),impactA.getEndNode().getOffset(),"MutationImpact",features);
+				}
+			}
+		}
+	} catch(Exception e) {
+		e.printStackTrace();
+	}
+}

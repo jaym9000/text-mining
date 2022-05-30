@@ -1,0 +1,140 @@
+Phase: ImpactOnKineticVariables
+Input: KVSentence KineticVariableMention Positive Negative Neutral NonNeutral Negation
+
+Options: control = all
+
+Rule:ImpactOKV1
+(
+	{KVSentence contains KineticVariableMention, 
+	KVSentence contains Positive, 
+	!KVSentence contains Negative}
+):impact
+-->
+{
+  gate.AnnotationSet impactSet = (gate.AnnotationSet)bindings.get("impact");
+  gate.Annotation impactAnn = (gate.Annotation)impactSet.iterator().next();
+  gate.FeatureMap features = Factory.newFeatureMap();
+
+  gate.AnnotationSet propertySet  = inputAS.get("KineticVariableMention",impactSet.firstNode().getOffset(), impactSet.lastNode().getOffset());
+  gate.Annotation propertyAnn = (gate.Annotation)propertySet.iterator().next();
+  features.put("propertyMentionId",propertyAnn.getId());
+  
+  gate.AnnotationSet positiveSet  = inputAS.get("Positive",impactSet.firstNode().getOffset(), impactSet.lastNode().getOffset());
+  // OR THIS: gate.AnnotationSet positiveSet  = inputAS.get("Positive",impactAnn.getStartNode().getOffset(), impactAnn.getEndNode().getOffset());
+  gate.Annotation positiveAnn = (gate.Annotation)positiveSet.iterator().next();
+  features.put("directionMentionId",positiveAnn.getId());
+
+  features.put("direction","Positive");
+  features.put("rule","ImpactOKV1");
+
+  outputAS.add(impactSet.firstNode(),impactSet.lastNode(),"ImpactOKV",features);
+} 
+//:impact.ImpactOKV = {direction = "Positive" rule = ImpactOKV1}
+
+Rule:ImpactOKV2
+(
+	{KVSentence contains KineticVariableMention, 
+	KVSentence contains Negative, 
+	!KVSentence contains Positive}
+):impact
+-->
+{
+  gate.AnnotationSet impactSet = (gate.AnnotationSet)bindings.get("impact");
+  gate.Annotation impactAnn = (gate.Annotation)impactSet.iterator().next();
+  gate.FeatureMap features = Factory.newFeatureMap();
+
+  gate.AnnotationSet propertySet  = inputAS.get("KineticVariableMention",impactSet.firstNode().getOffset(), impactSet.lastNode().getOffset());
+  gate.Annotation propertyAnn = (gate.Annotation)propertySet.iterator().next();
+  features.put("propertyMentionId",propertyAnn.getId());
+  
+  gate.AnnotationSet positiveSet  = inputAS.get("Negative",impactSet.firstNode().getOffset(), impactSet.lastNode().getOffset());
+  // OR THIS: gate.AnnotationSet positiveSet  = inputAS.get("Positive",impactAnn.getStartNode().getOffset(), impactAnn.getEndNode().getOffset());
+  gate.Annotation positiveAnn = (gate.Annotation)positiveSet.iterator().next();
+  features.put("directionMentionId",positiveAnn.getId());
+
+  features.put("direction","Negative");
+  features.put("rule","ImpactOKV2");
+
+  outputAS.add(impactSet.firstNode(),impactSet.lastNode(),"ImpactOKV",features);
+} 
+// :impact.ImpactOKV = {direction = "Negative" rule = ImpactOKV2}
+
+Rule:ImpactOKV3
+(
+	{KVSentence contains KineticVariableMention, 
+	KVSentence contains Neutral, 
+	!KVSentence contains Positive,
+	!KVSentence contains Negative}
+):impact
+-->
+{
+  gate.AnnotationSet impactSet = (gate.AnnotationSet)bindings.get("impact");
+  gate.Annotation impactAnn = (gate.Annotation)impactSet.iterator().next();
+  gate.FeatureMap features = Factory.newFeatureMap();
+
+  gate.AnnotationSet propertySet  = inputAS.get("KineticVariableMention",impactSet.firstNode().getOffset(), impactSet.lastNode().getOffset());
+  gate.Annotation propertyAnn = (gate.Annotation)propertySet.iterator().next();
+  features.put("propertyMentionId",propertyAnn.getId());
+  
+  gate.AnnotationSet positiveSet  = inputAS.get("Neutral",impactSet.firstNode().getOffset(), impactSet.lastNode().getOffset());
+  // OR THIS: gate.AnnotationSet positiveSet  = inputAS.get("Positive",impactAnn.getStartNode().getOffset(), impactAnn.getEndNode().getOffset());
+  gate.Annotation positiveAnn = (gate.Annotation)positiveSet.iterator().next();
+  features.put("directionMentionId",positiveAnn.getId());
+
+  features.put("direction","Neutral");
+  features.put("rule","ImpactOKV3");
+
+  outputAS.add(impactSet.firstNode(),impactSet.lastNode(),"ImpactOKV",features);
+}
+// :impact.ImpactOKV = {direction = "Neutral" rule = ImpactOKV3}
+
+Rule:ImpactOKV4
+(
+	{KVSentence contains KineticVariableMention, 
+	KVSentence contains NonNeutral,
+	KVSentence contains Negation,
+	!KVSentence contains Positive,
+	!KVSentence contains Negative}
+):impact
+--> 
+{
+  gate.AnnotationSet impactSet = (gate.AnnotationSet)bindings.get("impact");
+  gate.Annotation impactAnn = (gate.Annotation)impactSet.iterator().next();
+  gate.FeatureMap features = Factory.newFeatureMap();
+
+  gate.AnnotationSet propertySet  = inputAS.get("KineticVariableMention",impactSet.firstNode().getOffset(), impactSet.lastNode().getOffset());
+  gate.Annotation propertyAnn = (gate.Annotation)propertySet.iterator().next();
+  features.put("propertyMentionId",propertyAnn.getId());
+ /*
+  * direct mention missing (TODO)
+  */ 
+  features.put("direction","PossibleNeutral");
+  features.put("rule","ImpactOKV4");
+
+  outputAS.add(impactSet.firstNode(),impactSet.lastNode(),"ImpactOKV",features);
+}
+//:impact.ImpactOKV = {direction = "PossibleNeutral" rule = ImpactOKV4}
+
+Rule:ImpactOKV5
+(
+	{KVSentence contains KineticVariableMention, 
+	KVSentence contains Positive, 
+	KVSentence contains Negative}
+):impact --> 
+{
+  gate.AnnotationSet impactSet = (gate.AnnotationSet)bindings.get("impact");
+  gate.Annotation impactAnn = (gate.Annotation)impactSet.iterator().next();
+  gate.FeatureMap features = Factory.newFeatureMap();
+
+  gate.AnnotationSet propertySet  = inputAS.get("KineticVariableMention",impactSet.firstNode().getOffset(), impactSet.lastNode().getOffset());
+  gate.Annotation propertyAnn = (gate.Annotation)propertySet.iterator().next();
+  features.put("propertyMentionId",propertyAnn.getId());
+ /*
+  * direct mention missing (TODO)
+  */ 
+  features.put("direction","Uncertain");
+  features.put("rule","ImpactOKV5");
+
+  outputAS.add(impactSet.firstNode(),impactSet.lastNode(),"ImpactOKV",features);
+}
+//:impact.ImpactOKV = {direction = "Uncertain" rule = ImpactOKV5}

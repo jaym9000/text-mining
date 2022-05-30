@@ -1,0 +1,120 @@
+Phase: KVSubSentenceSplitter
+Input: Sentence KineticVariable
+
+Rule:ImpactSplitter
+(
+	{Sentence contains KineticVariable}
+):kvsentence
+-->
+{
+	try {
+		Annotation kvSentenceA = (gate.Annotation)((gate.AnnotationSet)bindings.get("kvsentence")).iterator().next();
+		AnnotationSet kvAS = inputAS.get("KineticVariable", kvSentenceA.getStartNode().getOffset(),kvSentenceA.getEndNode().getOffset());
+			
+		//if the sentence contain more than one kinetic variable
+		if(kvAS.size() > 1) {
+			//split
+			Map<Long,Long> kvMap = new HashMap<Long,Long>();
+			for(Annotation kvA : kvAS) {
+				kvMap.put(kvA.getStartNode().getOffset(),kvA.getEndNode().getOffset());
+			}
+			//split according to position
+			Long[] keys = (Long[]) kvMap.keySet().toArray(new Long[0]);
+			Arrays.sort(keys);
+			
+			int numberOfMfs = keys.length;
+			//leftmost
+			Long start = kvSentenceA.getStartNode().getOffset();
+			AnnotationSet tokens = inputAS.get("Token",kvMap.get(keys[0]),keys[1]);
+			Map<Long,Annotation> tokenMap = new HashMap<Long,Annotation>();
+			for(Annotation token : tokens) {
+				tokenMap.put(token.getStartNode().getOffset(),token);
+			}
+			Long[] tokenKeys = (Long[]) tokenMap.keySet().toArray(new Long[0]);
+			Arrays.sort(tokenKeys);
+			long subSentenceEnd = keys[1];
+			for(long tokenStart : tokenKeys) {
+				Annotation token = tokenMap.get(tokenStart);
+				long tokenEnd = token.getEndNode().getOffset();
+				FeatureMap features = token.getFeatures();
+				
+				if((features.get("kind").equals("punctuation") && doc.getContent().getContent(tokenEnd,tokenEnd+1).toString().matches("[\\s]"))|| doc.getContent().getContent(tokenStart,tokenEnd).toString().equals("and")) {
+					subSentenceEnd = tokenStart;
+					break;
+				}
+			}
+			//export
+			outputAS.add(start,subSentenceEnd,"KVSentence",Factory.newFeatureMap());
+			
+			//middle
+			for(int i = 1; i < numberOfMfs-1; i++) {
+				//from left..
+				tokens = inputAS.get("Token",kvMap.get(keys[i-1]),keys[i]);
+				tokenMap.clear();
+				for(Annotation token : tokens) {
+					tokenMap.put(token.getStartNode().getOffset(),token);
+				}
+				tokenKeys = (Long[])tokenMap.keySet().toArray(new Long[0]);
+				Arrays.sort(tokenKeys);
+				long subSentenceStart = kvMap.get(keys[i-1]);
+				for(Long tokenStart : tokenKeys) {
+					Annotation token = tokenMap.get(tokenStart);
+					Long tokenEnd = token.getEndNode().getOffset();
+					FeatureMap features = token.getFeatures();
+					if((features.get("kind").equals("punctuation") && doc.getContent().getContent(tokenEnd,tokenEnd+1).toString().matches("[\\s]"))|| doc.getContent().getContent(tokenStart,tokenEnd).toString().equals("and")) {
+						subSentenceStart = tokenEnd;
+					}
+				}
+				
+				//..to right
+				tokens = inputAS.get("Token",kvMap.get(keys[i]),keys[i+1]);
+				tokenMap.clear();
+				for(Annotation token : tokens) {
+					tokenMap.put(token.getStartNode().getOffset(),token);
+				}
+				tokenKeys = (Long[])tokenMap.keySet().toArray(new Long[0]);
+				Arrays.sort(tokenKeys);
+				subSentenceEnd = keys[i+1];
+				for(long tokenStart : tokenKeys) {
+					Annotation token = tokenMap.get(tokenStart);
+					long tokenEnd = token.getEndNode().getOffset();
+					FeatureMap features = token.getFeatures();
+					if((features.get("kind").equals("punctuation") && doc.getContent().getContent(tokenEnd,tokenEnd+1).toString().matches("[\\s]"))|| doc.getContent().getContent(tokenStart,tokenEnd).toString().equals("and")) {
+						subSentenceEnd = tokenStart;
+						break;
+					}
+				}
+				
+				//export
+				outputAS.add(subSentenceStart+1,subSentenceEnd,"KVSentence",Factory.newFeatureMap());
+			}
+
+			//rightmost
+			tokens = inputAS.get("Token",kvMap.get(keys[numberOfMfs-2]),keys[numberOfMfs-1]);
+			tokenMap.clear();
+			for(Annotation token : tokens) {
+				tokenMap.put(token.getStartNode().getOffset(),token);
+			}
+			tokenKeys = (Long[])tokenMap.keySet().toArray(new Long[0]);
+			Arrays.sort(tokenKeys);
+			long subSentenceStart = kvMap.get(keys[numberOfMfs-2]);
+			for(long tokenStart : tokenKeys) {
+				Annotation token = tokenMap.get(tokenStart);
+				long tokenEnd = token.getEndNode().getOffset();
+				FeatureMap features = token.getFeatures();
+				if((features.get("kind").equals("punctuation") && doc.getContent().getContent(tokenEnd,tokenEnd+1).toString().matches("[\\s]"))|| doc.getContent().getContent(tokenStart,tokenEnd).toString().equals("and")) {
+					subSentenceStart = tokenEnd;
+				}
+			}
+			//export
+			outputAS.add(subSentenceStart+1,kvSentenceA.getEndNode().getOffset(),"KVSentence",Factory.newFeatureMap());
+		}
+		//else annotate as KVSentence
+		else {
+			outputAS.add(kvSentenceA.getStartNode().getOffset(),kvSentenceA.getEndNode().getOffset(),"KVSentence",Factory.newFeatureMap());
+		}
+		
+	} catch(Exception e) {
+		e.printStackTrace();
+	}
+}

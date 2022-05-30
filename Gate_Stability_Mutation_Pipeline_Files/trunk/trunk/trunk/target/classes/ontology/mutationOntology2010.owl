@@ -1,0 +1,705 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:sqwrl="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#"
+    xmlns="http://www.unbsj.ca/sase/csas/mutationOntology.owl#"
+  xml:base="http://www.unbsj.ca/sase/csas/mutationOntology.owl">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl"/>
+    <owl:imports rdf:resource="http://swrl.stanford.edu/ontologies/3.3/swrla.owl"/>
+  </owl:Ontology>
+  <owl:Class rdf:ID="Deletion">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Deletion</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ElementaryMutation"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Insertion">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Insertion</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ElementaryMutation"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Protein">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Protein</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Proteins, also known as polypeptides, are organic compounds made of amino acids arranged in a linear chain and folded into a globular form.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Binding">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Binding</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ProteinFunction"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0005488">
+        <owl:equivalentClass rdf:resource="#Binding"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >GO:Binding</rdfs:label>
+      </rdf:Description>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="UnitOfMeasurement">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A unit of measurement is a definite magnitude of a physical quantity. For example, length is a physical quantity and the metre is a unit of length that represents a definite predetermined length.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Unit of measurement</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="EnzymeEfficiencyConstant">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Enzyme efficiency constant</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >kcat/KM - A ratio that is often thought of as a measure of enzyme efficiency</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="KineticProperty"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="MichaelisConstant">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The Michaelis constant (KM) is a measure of the substrate concentration required for effective catalysis to occur. That is, an enzyme with a high KM requires a higher substrate concentration to achieve a given reaction velocity than an enzyme with a low KM.</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#KineticProperty"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Michaelis constant</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="EnzymeActivity">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Enzyme activity</rdfs:label>
+    <owl:equivalentClass>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0003824">
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >GO:Catalytic Activity</rdfs:label>
+        <owl:equivalentClass rdf:resource="#EnzymeActivity"/>
+      </rdf:Description>
+    </owl:equivalentClass>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ProteinFunction"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="NegativeImpact">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <ImpactDirection rdf:ID="Negative">
+            <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Negative</rdfs:label>
+          </ImpactDirection>
+        </owl:hasValue>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="hasDirection"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="MutationImpact"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Negative impact</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="PositiveImpact">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Positive impact</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <ImpactDirection rdf:ID="Positive">
+            <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Positive</rdfs:label>
+          </ImpactDirection>
+        </owl:hasValue>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#hasDirection"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#MutationImpact"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#MutationImpact">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Mutation impact</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A mutant impact describes a directional alteration of a protein</rdfs:comment>
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#hasDirection"/>
+        </owl:onProperty>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:cardinality>
+      </owl:Restriction>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="CompoundMutation">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:minCardinality>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="containsElementaryMutation"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Compound mutation</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="PhysiqalQuantity">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A physical quantity describes a physical system's state at a moment in time. Examples of physical quantities are temperature, volume, pressure and molecular mass.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Physical quantity</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="NeutralImpact">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#hasDirection"/>
+        </owl:onProperty>
+        <owl:hasValue>
+          <ImpactDirection rdf:ID="Neutral">
+            <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Neutral</rdfs:label>
+          </ImpactDirection>
+        </owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#MutationImpact"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Neutral impact</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#ProteinFunction">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The function of a protein, could be anything of e.g.  transportation, binding to other biomoleculs or enzymatic activity.</rdfs:comment>
+    <owl:equivalentClass>
+      <rdf:Description rdf:about="http://purl.org/obo/owl/GO#GO_0003674">
+        <owl:equivalentClass rdf:resource="#ProteinFunction"/>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >GO:Molecular Function</rdfs:label>
+      </rdf:Description>
+    </owl:equivalentClass>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Protein function</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="ProteinProperty"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="PointMutation">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A point mutation is a replacement of one amino acid to another in the primary structure of a protein.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Point mutation</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ElementaryMutation"/>
+    </rdfs:subClassOf>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >1</owl:cardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="hasPosition"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="hasWildtypeResidue"/>
+            </owl:onProperty>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >1</owl:cardinality>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >1</owl:cardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="hasMutantResidue"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >1</owl:cardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="hasNormalizedForm"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="hasThreeLetterForm"/>
+            </owl:onProperty>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >1</owl:cardinality>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >1</owl:cardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="hasThreeLetterMutantResidue"/>
+            </owl:onProperty>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >1</owl:cardinality>
+            <owl:onProperty>
+              <owl:DatatypeProperty rdf:ID="hasThreeLetterWildtypeResidue"/>
+            </owl:onProperty>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="GroundedMutation">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Grounded mutation</rdfs:label>
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:ID="appliesTo"/>
+            </owl:onProperty>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >1</owl:cardinality>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:ID="resultsIn"/>
+            </owl:onProperty>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >1</owl:cardinality>
+          </owl:Restriction>
+          <owl:Restriction>
+            <owl:onProperty>
+              <owl:ObjectProperty rdf:ID="hasMutation"/>
+            </owl:onProperty>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+            >1</owl:cardinality>
+          </owl:Restriction>
+        </owl:intersectionOf>
+      </owl:Class>
+    </owl:equivalentClass>
+  </owl:Class>
+  <owl:Class rdf:ID="ProteinMutant">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Protein mutant</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A protein mutant is a protein where the amino acid sequence is altered compared to the wildtype protein. These alterations are called mutations.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Protein"/>
+  </owl:Class>
+  <owl:Class rdf:about="#KineticProperty">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ProteinProperty"/>
+    </rdfs:subClassOf>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Kinetic property</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="ProteinStability">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The stability of a protein, i.e. it's ability to withstand external forces that can disrupt the tertiary, secondary or primary structure. These forces can for example be unprefered tempereture, level of acidity or concentration of a detergent.</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Protein stability</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#ProteinProperty"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="ImpactDirection">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Impact direction</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:about="#ProteinProperty">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Protein property</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="CatalyticRateConstant">
+    <rdfs:subClassOf rdf:resource="#KineticProperty"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Catalytic rate constant</rdfs:label>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The catalytic rate constant (kcat) gives a direct measure of the catalytic production of product under optimum conditions (saturated enzyme).
+
+A key for understanding kcat is by looking at the Michaelis-Menten equation:
+V = Vmax[S]/(KM + [S])
+which can be rewritten as:
+V = kcat[E]t[S] / ( KM + [S])
+where Vmax = kcat[E]t</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#ElementaryMutation">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A change in the amino acid sequence of a protein</rdfs:comment>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Elementary mutation</rdfs:label>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="concludedByMeasuring">
+    <rdfs:range rdf:resource="#PhysiqalQuantity"/>
+    <rdfs:domain rdf:resource="#MutationImpact"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Concluded by measuring</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasImpact">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Has impact</rdfs:label>
+    <rdfs:range rdf:resource="#MutationImpact"/>
+    <rdfs:domain rdf:resource="#GroundedMutation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#resultsIn">
+    <rdfs:domain rdf:resource="#GroundedMutation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="#ProteinMutant"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Results in</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasMutation">
+    <rdfs:domain rdf:resource="#GroundedMutation"/>
+    <rdfs:range rdf:resource="#CompoundMutation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="impactsNeutralyOn">
+    <rdfs:domain rdf:resource="#ProteinMutant"/>
+    <rdfs:range rdf:resource="#ProteinProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#containsElementaryMutation">
+    <rdfs:range rdf:resource="#ElementaryMutation"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Contains elementary mutation</rdfs:label>
+    <rdfs:domain rdf:resource="#CompoundMutation"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasDirection">
+    <rdfs:range rdf:resource="#ImpactDirection"/>
+    <rdfs:domain rdf:resource="#MutationImpact"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Has direction</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasProperty">
+    <rdfs:range rdf:resource="#ProteinProperty"/>
+    <rdfs:domain rdf:resource="#Protein"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Has property</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="impactsPositivelyOn">
+    <rdfs:domain rdf:resource="#ProteinMutant"/>
+    <rdfs:range rdf:resource="#ProteinProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#appliesTo">
+    <rdfs:range rdf:resource="#Protein"/>
+    <rdfs:domain rdf:resource="#GroundedMutation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="impactsNegativelyOn">
+    <rdfs:domain rdf:resource="#ProteinMutant"/>
+    <rdfs:range rdf:resource="#ProteinProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="affectProperty">
+    <rdfs:range rdf:resource="#ProteinProperty"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Affect property</rdfs:label>
+    <rdfs:domain rdf:resource="#MutationImpact"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="measuredWith">
+    <rdfs:range rdf:resource="#UnitOfMeasurement"/>
+    <rdfs:domain rdf:resource="#PhysiqalQuantity"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Measured with</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="IsAlterationOf">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Is alteration of</rdfs:label>
+    <rdfs:domain rdf:resource="#ProteinMutant"/>
+    <rdfs:range rdf:resource="#Protein"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="#hasNormalizedForm">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >has normalized form</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#PointMutation"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A normalized textual description of a point mutation, written as e.g. F124L.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasThreeLetterMutantResidue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The mutant amino acid name written in Xyz format e.g. Phe or Lys.</rdfs:comment>
+    <rdfs:domain rdf:resource="#PointMutation"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >has three letter mutant residue</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasSwissProtId">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Protein"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Has swiss-prot id</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasGroundedPosition">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Has grounded position</rdfs:label>
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="#hasPosition"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A position that is verified by a sequence check (mutation grounding)</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasWildtypeResidue">
+    <rdfs:domain rdf:resource="#PointMutation"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Has wildtype residue</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasThreeLetterForm">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A textual description of a point mutation written on a form as e.g. Phe124Lys.</rdfs:comment>
+    <rdfs:domain rdf:resource="#PointMutation"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >has three letter form</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasPosition">
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Has position</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#PointMutation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The position on the amino acid sequence where one amino acid is changed by another.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasMutantResidue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Has mutant residue</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#PointMutation"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="hasGOId">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Has gene ontology id</rdfs:label>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#hasThreeLetterWildtypeResidue">
+    <rdfs:domain rdf:resource="#PointMutation"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >has three letter widltype residue</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The wildtype amino acid name written in Xyz format e.g. Phe or Lys.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:FunctionalProperty rdf:ID="hasGroundedNormalizedForm">
+    <rdfs:domain rdf:resource="#PointMutation"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Has grounded normalized form</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="hasGroundedThreeLetterForm">
+    <rdfs:domain rdf:resource="#PointMutation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Has grounded three letter form</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:AllDifferent/>
+  <swrl:Imp rdf:ID="Def-impactsNegativelyOn">
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:argument1>
+              <swrl:Variable rdf:ID="M"/>
+            </swrl:argument1>
+            <swrl:propertyPredicate rdf:resource="#impactsNegativelyOn"/>
+            <swrl:argument2>
+              <swrl:Variable rdf:ID="P"/>
+            </swrl:argument2>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:head>
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:argument1>
+                  <swrl:Variable rdf:ID="G"/>
+                </swrl:argument1>
+                <swrl:propertyPredicate rdf:resource="#resultsIn"/>
+                <swrl:argument2 rdf:resource="#M"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:IndividualPropertyAtom>
+                    <swrl:propertyPredicate rdf:resource="#affectProperty"/>
+                    <swrl:argument1>
+                      <swrl:Variable rdf:ID="I"/>
+                    </swrl:argument1>
+                    <swrl:argument2 rdf:resource="#P"/>
+                  </swrl:IndividualPropertyAtom>
+                </rdf:first>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    <rdf:first>
+                      <swrl:ClassAtom>
+                        <swrl:argument1 rdf:resource="#I"/>
+                        <swrl:classPredicate rdf:resource="#NegativeImpact"/>
+                      </swrl:ClassAtom>
+                    </rdf:first>
+                  </swrl:AtomList>
+                </rdf:rest>
+              </swrl:AtomList>
+            </rdf:rest>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:argument2 rdf:resource="#I"/>
+            <swrl:argument1 rdf:resource="#G"/>
+            <swrl:propertyPredicate rdf:resource="#hasImpact"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:body>
+  </swrl:Imp>
+  <swrl:Imp rdf:ID="Def-impactsNeutralyOn">
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:argument1 rdf:resource="#M"/>
+            <swrl:argument2 rdf:resource="#P"/>
+            <swrl:propertyPredicate rdf:resource="#impactsNeutralyOn"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:head>
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:propertyPredicate rdf:resource="#resultsIn"/>
+                <swrl:argument2 rdf:resource="#M"/>
+                <swrl:argument1 rdf:resource="#G"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    <rdf:first>
+                      <swrl:ClassAtom>
+                        <swrl:argument1 rdf:resource="#I"/>
+                        <swrl:classPredicate rdf:resource="#NeutralImpact"/>
+                      </swrl:ClassAtom>
+                    </rdf:first>
+                  </swrl:AtomList>
+                </rdf:rest>
+                <rdf:first>
+                  <swrl:IndividualPropertyAtom>
+                    <swrl:propertyPredicate rdf:resource="#affectProperty"/>
+                    <swrl:argument1 rdf:resource="#I"/>
+                    <swrl:argument2 rdf:resource="#P"/>
+                  </swrl:IndividualPropertyAtom>
+                </rdf:first>
+              </swrl:AtomList>
+            </rdf:rest>
+          </swrl:AtomList>
+        </rdf:rest>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:argument2 rdf:resource="#I"/>
+            <swrl:propertyPredicate rdf:resource="#hasImpact"/>
+            <swrl:argument1 rdf:resource="#G"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+      </swrl:AtomList>
+    </swrl:body>
+  </swrl:Imp>
+  <swrl:Imp rdf:ID="Def-impactsPositivelyOn">
+    <swrl:body>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:argument2 rdf:resource="#I"/>
+            <swrl:argument1 rdf:resource="#G"/>
+            <swrl:propertyPredicate rdf:resource="#hasImpact"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+        <rdf:rest>
+          <swrl:AtomList>
+            <rdf:rest>
+              <swrl:AtomList>
+                <rdf:first>
+                  <swrl:IndividualPropertyAtom>
+                    <swrl:propertyPredicate rdf:resource="#affectProperty"/>
+                    <swrl:argument1 rdf:resource="#I"/>
+                    <swrl:argument2 rdf:resource="#P"/>
+                  </swrl:IndividualPropertyAtom>
+                </rdf:first>
+                <rdf:rest>
+                  <swrl:AtomList>
+                    <rdf:first>
+                      <swrl:ClassAtom>
+                        <swrl:argument1 rdf:resource="#I"/>
+                        <swrl:classPredicate rdf:resource="#PositiveImpact"/>
+                      </swrl:ClassAtom>
+                    </rdf:first>
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                  </swrl:AtomList>
+                </rdf:rest>
+              </swrl:AtomList>
+            </rdf:rest>
+            <rdf:first>
+              <swrl:IndividualPropertyAtom>
+                <swrl:argument2 rdf:resource="#M"/>
+                <swrl:propertyPredicate rdf:resource="#resultsIn"/>
+                <swrl:argument1 rdf:resource="#G"/>
+              </swrl:IndividualPropertyAtom>
+            </rdf:first>
+          </swrl:AtomList>
+        </rdf:rest>
+      </swrl:AtomList>
+    </swrl:body>
+    <swrl:head>
+      <swrl:AtomList>
+        <rdf:first>
+          <swrl:IndividualPropertyAtom>
+            <swrl:argument2 rdf:resource="#P"/>
+            <swrl:argument1 rdf:resource="#M"/>
+            <swrl:propertyPredicate rdf:resource="#impactsPositivelyOn"/>
+          </swrl:IndividualPropertyAtom>
+        </rdf:first>
+        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+      </swrl:AtomList>
+    </swrl:head>
+  </swrl:Imp>
+  <owl:AllDifferent>
+    <owl:distinctMembers rdf:parseType="Collection">
+      <ImpactDirection rdf:about="#Positive"/>
+      <ImpactDirection rdf:about="#Negative"/>
+      <ImpactDirection rdf:about="#Neutral"/>
+    </owl:distinctMembers>
+  </owl:AllDifferent>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.4, Build 533)  http://protege.stanford.edu -->

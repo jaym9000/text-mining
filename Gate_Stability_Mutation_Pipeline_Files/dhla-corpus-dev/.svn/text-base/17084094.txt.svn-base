@@ -1,0 +1,270 @@
+Journal of Structural Biology 157 (2007) 384392 www.elsevier.com/locate/yjsbi
+
+
+
+
+
+The identiWcation of catalytic pentad in the haloalkane dehalogenase DhmA from Mycobacterium avium N85: Reaction mechanism and molecular evolution ଝ
+
+
+
+
+
+a Loschmidt Laboratories, Masaryk University, Brno, Czech Republic Laboratory of Functional Genomics and Proteomics, Masaryk University, Brno, Czech Republic c Department of Environmental Life Sciences, Graduate School of Life Sciences, Tohoku University, Sendai, Japan b
+
+
+
+
+
+
+
+
+
+
+
+Abstract Haloalkane dehalogenase DhmA from Mycobacterium avium N85 showed poor expression and low stability when produced in Escherichia coli. Here, we present expression DhmA in newly constructed pK4RP rhodococcal expression system in a soluble and stable form. Site-directed mutagenesis was used for the identiWcation of a catalytic pentad, which makes up the reaction machinery of all currently known haloalkane dehalogenases. The putative catalytic triad Asp123, His279, Asp250 and the Wrst halide-stabilizing residue Trp124 were deduced from sequence comparisons. The second stabilizing residue Trp164 was predicted from a homology model. Five point mutants in the catalytic pentad were constructed, tested for activity and were found inactive. A two-step reaction mechanism was proposed for DhmA. Evolution of diVerent types of catalytic pentads and molecular adaptation towards the synthetic substrate 1,2-dichloroethane within the protein family is discussed. © 2006 Elsevier Inc. All rights reserved.
+
+
+Keywords: Adaptation; Mycobacterial haloalkane dehalogenase; Homology modeling; Molecular evolution; Reaction mechanism; rrn promoter; 1,2Dichloroethane
+
+
+
+
+
+1. Introduction Haloalkane dehalogenases are bacterial enzymes that catalyze hydrolytic conversion of haloorganic compounds to the corresponding alcohols and hydrogen halides. The crystal structures of three diVerent haloalkane dehalogenases, namely DhlA from Xanthobacter autotrophicus GJ10, DhaA from Rhodococcus sp., and LinB from Sphingobium japonicum UT26 (formerly Sphingomonas paucimobilis UT26 (Pal et al., 2005)) have been determined (Verschueren
+
+
+ଝ Grant sponsor: Czech Ministry of Education (MSM0021622412 and MSM0021622413). * Corresponding author. Fax: +420 549 492 556. E-mail address: jiri@chemi.muni.cz (J. Damborský).
+
+
+
+
+
+et al., 1993c; Newman et al., 1999; Marek et al., 2000). The active site of haloalkane dehalogenases is located between two domains. The main domain is made up of an eightstranded -sheet surrounded by -helices and shares structural homology with / -hydrolases, while the cap domain is composed of -helices and resembles uteroglobin fold proteins (Ollis et al., 1992; Nardini and Dijkstra, 1999). Haloalkane dehalogenases use a two-step dehalogenation mechanism for the cleavage of carbon-halogen bonds, leading to the formation of an alcohol, a halide, and a proton as the reaction products. The carbon atom attached to the leaving halogen is attacked by a nucleophile in a bimolecular nucleophilic substitution yielding an alkyl-enzyme intermediate. This intermediate is hydrolyzed by an activated water molecule in a nucleophilic addition reaction.
+
+
+
+
+
+1047-8477/$ - see front matter © 2006 Elsevier Inc. All rights reserved. doi:10.1016/j.jsb.2006.09.004
+
+
+
+
+
+M. Pavlová et al. / Journal of Structural Biology 157 (2007) 384392
+
+
+
+
+
+385
+
+
+
+
+
+Details of the reaction mechanism have been investigated by protein crystallography (Verschueren et al., 1993a; Verschueren et al., 1993b; Verschueren et al., 1993c; Newman et al., 1999; Ridder et al., 1999; Marek et al., 2000; Oakley et al., 2002; Streltsov et al., 2003; Oakley et al., 2004), sitedirected mutagenesis (Pries et al., 1995a; Pries et al., 1995b; Krooshof et al., 1997; Schanstra et al., 1997; Hynkova et al., 1999; Schindler et al., 1999; Bohac et al., 2002), transient kinetics (Schanstra and Janssen, 1996a; Schanstra et al., 1996b; Schanstra et al., 1996c; Bosma et al., 2003; Prokop et al., 2003) and molecular modeling (Damborsky et al., 1997a; Damborsky et al., 1997; Maulitz et al., 1997; Damborsky et al., 1998; Lightstone et al., 1998; Lau et al., 2000; Kmunicek et al., 2001; Bohac et al., 2002; Otyepka and Damborsky, 2002; Shurki et al., 2002; Damborsky et al., 2003; Devi-Kesavan and Gao, 2003; Hur et al., 2003; Kahn and Bruice, 2003; Kmunicek et al., 2003; Silberstein et al., 2003; Soriano et al., 2003; Nam et al., 2004; Olsson and Warshel, 2004; Kmunicek et al., 2005; Soriano et al., 2005). Two structural features of haloalkane dehalogenases are essential for their catalytic function: the catalytic pentad and the oxyanion hole. The catalytic pentad (Janssen, 2004) is composed of a catalytic triad involved in covalent bond breakage/formation and two hydrogen bond-donating residues providing stabilization to the leaving group. Two out of three residues of the catalytic triad are invariant in DhlA, DhaA and LinB. An aspartic acid localized on a very sharp turn after the Wfth -strand serves as the nucleophile and histidine localized on the loop after the eighth -strand serves as the base. An aspartic acid localized after -strand seven (in DhlA) or a glutamic acid localized after -strand six (in LinB and DhaA) serves as the catalytic acid. One out of the two residues involved in the halide binding, i.e. tryptophan localized directly next to the nucleophilic aspartate, is invariable. The second halide-stabilizing residue is represented by a tryptophan localized in -helix four of the cap domain (in DhlA) or an asparagine positioned on the loop between -strand three and the -helix one (in DhaA and LinB). Genome projects revealed that haloalkane dehalogenase genes are present not only in a bacteria colonizing environments contaminated by halogenated hydrocarbons, but also in root- or tissue-colonizing species. The Wrst haloalkane dehalogenase originating from a mycobacterial strain was cloned from the Mycobacterium sp. GP1 (Poelarends et al., 1999). Dehalogenase activity was also conWrmed for the cell suspension of Mycobacterium tuberculosis H37Rv and several saprophytic mycobacterial strains (Jesenska et al., 2000). DhmA is the haloalkane dehalogenase enzyme isolated from the bacterial strain Mycobacterium avium N85 from swine mesenteric lymph nodes (Jesenska et al., 2002). DhmA showed broad substrate speciWcity, but was signiWcantly less stable in Escherichia coli than other currently known haloalkane dehalogenases. DhmA belongs to the same protein subfamily as DhlA (Chovancova et al., 2006). DhlA shows good dehalogenating activity with the
+
+
+
+
+
+important environmental pollutant 1,2-dichloroethane (DCE), making this enzyme functionally diVerent from the other two dehalogenases with known tertiary structure. Architecture of the cap domain and location as well as composition of the catalytic pentad makes DhlA clearly distinguishable from DhaA and LinB (Damborsky and Koca, 1999). We have constructed a new rhodococcal expression system in which stable dehalogenase DhmA was expressed and puriWed to homogeneity. We have predicted a catalytic pentad of DhmA by sequence comparisons and homology modeling. Five point mutations were introduced into DhmA at positions corresponding with the predicted catalytic pentad model. A comparison of dehalogenase activity of wild type DhmA with constructed mutants enabled proposition of the two-step reaction mechanism of DhmA. Comparison of the catalytic pentad and composition of the speciWcity-determining cap domain between DhlA and DhmA provided a new validation of recent proposals of the molecular adaptation of DhlA towards dehalogenation of DCE. 2. Materials and methods 2.1. Materials The enzymes used for DNA manipulations were obtained from Takara Shuzo (Kyoto, Japan), Toyobo (Osaka, Japan) and New England Biolabs (Beverly, USA). The cloning and mutagenesis primers were obtained from Texas Genomics Japan (Tokyo, Japan). The strains used in this study were E. coli DH5 , E. coli JM110 (Maniatis et al., 1982), and Rhodococcus erythropolis IAM1399 (ATCC 15963). The latter was used as the host bacterium for protein expression. The plasmid pUC18 (Takara Shuzo Co., Kyoto, Japan) was used for basic cloning manipulations. The kanamycin-resistant Rhodococcus-E. coli shuttle vector pK4 (Seto et al., 1995) was digested with EcoRI and KpnI as was the gene coding for putative rrn promoter (Matsui et al., 2002). The resulting vector was named pK4RP. 2.2. Cloning and sequencing The dhmA coding region was ampliWed in the pAL-781dhmA vector (Jesenska et al., 2002) using the primer pair: forward 5Ј-GCC GGT ACC AAA GGA GGA ATA TCG ATG CAT GTG CTG CGA ACC CCG-3Ј and reverse 5Ј-GCC TCT AGA TCA GTG ATG GTG ATG GTG ATG GAG CAG CGC CTG CTG CC-3Ј. The forward primer contained the KpnI restriction site (underlined), the Shine-Dalgarno sequence for Rhodococcus sp. (bold) and the beginning of the gene sequence. The reverse primer was comprised of the XbaI restriction site (underlined), a stop codon, six times the codon for histidine (bold) and the end of gene sequence. The PCR was carried out according to the provided protocol for using KOD Plus polymerase (Toyobo, Japan). The PCR
+
+
+
+
+
+386
+
+
+
+
+
+M. Pavlová et al. / Journal of Structural Biology 157 (2007) 384392
+
+
+
+
+
+product was digested with KpnI and XbaI and ligated using the DNA Ligation Kit Ver.2.1. (Takara, Japan) into the vector pUC18, which was treated by the same enzymes. The generated plasmids were propagated in E. coli DH5 and after isolation were separately sequenced by the dideoxy-chain termination method with an automated DNA sequencer ABI PRISM 310 Genetic Analyzer (Applied Biosystems, USA) on both strands using primers Rv and M4 (Takara, Japan). The vector pUC18-dhmAHis (with known sequence) was propagated in E. coli JM110 so that the combination of the XbaI restriction site and the TCA stop codon corresponds to the speciWc GATC nucleotide sequence, which was methylated in E. coli DH5 cells. The dhmAHis gene was excised from the isolated vector and ligated between the KpnI and XbaI sites of the expression vector pK4RP. 2.3. Site-directed mutagenesis The mutagenesis of DhmA was performed by using the principle of inverted PCR. The plasmid pUC18-dhmAHis was used as a template and inverted PCR was accomplished according to the provided protocol for KOD Plus polymerase. All of the mutant nucleotide sequences were conWrmed by the dideoxy-chain termination method using the ABI PRISM™ DNA sequencer (mentioned above), and recloned into the expression vector pK4RP. The oligonucleotides that were used to introduce point mutations are as follow (mutated nucleotides are underlined): Asp123Ala (5Ј-TGA TCC CCA GGC CTG CAC-3Ј), Trp124Leu (5Ј-CAA TGA TCC CAA GTC CTG CAC-3Ј), Trp164Leu (5Ј-CGC GAA GGC TCG CAA CGC GTA GAA GG-3Ј), Asp250Ala (5Ј-G GAT GGG GGC GCG GGC-3Ј) and His279Ala (5Ј-CTG GAT GAA GGC ACT GGC GTT G-3Ј). 2.4. Cultivation and expression Luria Broth media containing glycine at Wnal concentrations of 1% (w/v) and 50 g/ml kanamycin were prepared and used as the basal medium. pK4RP plasmids, carrying the dhmAHis gene and mutated genes, were transformed by electroporation (1.2 kV, 800 , 25 F, 0.1 cm cuvette) to R. erythropolis IAM1399 cells. Cultivation was performed at 30 °C with shaking at 170 rpm. The DhmAHis protein and DhmAHis proteins variants were expressed constitutively. The R. erythropolis IAM1399 cells containing only pK4RP plasmid were used as a negative control. The cells were harvested after 17 h by centrifugation at 8000g for 5 min at 4 °C. The buVer used in the treatment of the cells was potassium phosphate buVer (20 mM, pH 7.5) containing 10% (w/ v) glycerol. The cells were washed two times and resuspended in buVer containing 0.5% (v/v) Tween 80 as a stabilizer. The cells were stored at ¡80 °C. 2.5. Protein puriWcation The Rhodococcus cells were disrupted by sonication using Bioruptor (CosmoBio, Japan). Intact cells and debris were
+
+
+
+
+
+removed by centrifugation at 21,000g for 40 min at 4 °C to obtain a cell free extract that was immediately puriWed at 4 °C. The cell free extract of R. erythropolis IAM1399 cells was puriWed on a BD TALON Metal AYnity Resin (BD Biosciences, Japan). The His-tagged DhmA protein and the Wve mutants were bound to the resin in the binding buVer (20 mM potassium phosphate, 10 mM imidazole, 500 mM NaCl, 10% (w/v) glycerol, 0.5% (v/v) Tween 80, pH 7.5) and eluted by the elution buVer (20 mM potassium phosphate, 500 mM imidazole, 500 mM NaCl, 10% (w/v) glycerol, 0.5% (v/v) Tween 80, pH 7.5). Elution fractions containing DhmA protein and mutants were dialyzed against a 20 mM potassium phosphate buVer, pH 7.5, containing 10% (w/v) glycerol at 4 °C overnight. The major one-protein-band for the DhmAHis wild type and the mutants, was observed on 12.5% (w/v) SDS-polyacrylamide gel electrophoresis. The amount of a protein was determined by a protein assay kit (Bio-Rad, USA) using bovine serum albumin as a standard. 2.6. Activity assay with 1-bromobutane Haloalkane dehalogenase activities were determined by spectrophotometric assay quantifying concentration of released halide by using reagents detailed by Iwasaki (Iwasaki et al., 1952). The 6 ml of glycine buVer was pipetted to Erlenmeyer Xasks. The halogenated substrate (1-bromobutane) was added to a Wnal concentration of 10 mM. The progress of the reaction was monitored after 5, 10, 20, 30 and 40 min. The enzymatic reaction was stopped using 35% (v/v) HNO3 and Iwasaki reagents were added to the samples as described previously (Marvanova et al., 2001). Development of colour was measured by a microplate reader Model 550 (Bio-Rad, USA) in eight repetitions at 460 nm. The control without enzyme was used to estimate the spontaneous hydrolysis of halogenated compound. 2.7. Activity assay with 1,2-dichloroethane Enzymatic activity of DhmA toward DCE was assessed by the determination of substrate and product concentrations using gas chromatography. The reaction was conducted in 1.5 ml vials. The reaction was initiated by adding 0.2 mg of DhmA into substrate solution (20 mM DCE in glycine buVer, pH 8.6). The mixture was incubated at 20 °C and analyzed every hour for 24 h for product formation. At each time point, 5 l of the reaction mixture was analyzed by gas chromatography, Trace GC 2000 (Finnigen, San Jose, CA). The reaction mixture without enzyme served as an abiotic control. Linear regression of the kinetic data was calculated by using STATISTICA 6.0 (StatSoft, USA). The resulting slope of the product development in time was used as a measure of reaction activities. ANOVA of the kinetic data was performed for analysis of statistical signiWcance of the activity. This was determined by the result of the F-test and the associated p-value. The 95% conWdential intervals of the resulting activities were also used as another indicator of statistical signiWcance.
+
+
+
+
+
+M. Pavlová et al. / Journal of Structural Biology 157 (2007) 384392
+
+
+
+
+
+387
+
+
+
+
+
+2.8. Homology modeling and prediction of catalytic pentad Templates for homology modeling of the DhmA target were identiWed using Fold-recognition Meta-server (Kurowski and Bujnicki, 2003) employing the BLOSUM62 substitution matrix (HenikoV and HenikoV, 1992). The target DhmA sequence was superimposed with the templates using the program SWISS-PDBVIEWER 3.7 (Guex and Peitsch, 1997). Initial models were built by MODELLER 6.0 (Sali and Blundell, 1993) and SWISSMODEL (Guex and Peitsch, 1997), and evaluated by VERIFY3D (Luthy et al., 1992). The regions with unsatisfactory VERIFY3D scores were explored by progressive shifting in the target-template alignment using the program SPDBV and iterative homology modeling using MODELLER and SWISSMODEL programs. The best-scoring fragments were merged using SPDBV to form a hybrid model. Hybrid models were energy minimized by means of SANDER module from AMBER 6.0 (Case et al., 1999) to remove steric clashes leading to Wnal homology models of DhmA. A single model was not obtained due to the ambiguous location of a deletion in the N-terminal part of the cap domain of DhmA. Two diVerent sequence alignments of DhlA and DhmA were generated for this region providing the two models assigned as DhmA I and DhmA II. 3. Results 3.1. Expression and puriWcation of DhmA Various attempts to improve protein folding and the stability of DhmA expressed in E. coli have been carried out. Neither the fusion with thioredoxin and expression of DhmA in the pET-32(a) vector, nor the combination of the pET-32(a) vector with the pG-Tf3 plasmid harboring the trigger factor and GroEL-GroES chaperones (Nishihara et al., 2000), resulted in the production of a stable protein. Haloalkane dehalogenase DhmA was highly expressed in these systems but formed inclusion bodies. The DhmA produced in E. coli BL21(DE3) as inclusion bodies was puriWed under denaturizing conditions and refolded. The DhmA refolded protein was however inactive. Finally, the dhmAHis gene was cloned downstream of the rrn promoter element in the 16SrRNA region from Rhodococcus sp. strain T09, between KpnI and XbaI restriction sites, and a rhodococcal Shine-Dalgarno sequence was added. Rhodococcus was selected as it is a phylogenetically closer relative of mycobacteria than E. coli. DhmA enzyme was constitutively expressed in R. erythropolis IAM1399 in a stable and active form (0.8 mg/L). 3.2. Homology modeling and prediction of catalytic pentad Hydrolases and oxidoreductases were identiWed as possible templates for homology modeling by fold recognition algorithms. Superimposition of the DhmA sequence and the template structures only showed general similarity in the / hydrolase fold (main) domain, while the helical excursions
+
+
+
+
+
+from this domain diVered signiWcantly among the templates. The DhlA structure (36.7% sequence identity) was Wnally identiWed as the best template and used for homology modeling of DhmA. The main domain of DhmA provides catalytic residues as well as one of the two halide-stabilizing residues. The sequence and structural alignments suggested that the catalytic triad of DhmA is composed of Asp123, His279 and Asp250, while the one of two halide-stabilizing residues is Trp124. The secondary structure of the DhmA cap domain is analogous to that of DhlA. One exception is the Wrst -helix of the DhlA cap domain, which is not present as modeled in DhmA I or is shorter and diVerently spatially placed as in DhmA II (Fig. 1). Homology modeling using an automatic method failed to identify the second halide-stabilizing residue due to the miss-alignment of the N-terminal part of the cap domain. Manual re-building of the homology model revealed the presence of Trp164 in DhmA cap domain localized in the same position as Trp175 in DhlA. Trp164 in DhmA presumably acts as the second halide-stabilizing residue (Fig. 2) and provides crucial element in the electrostatic preorganization (Olsson and Warshel, 2004). 3.3. Site-directed mutagenesis, expression and puriWcation of protein variants The catalytic pentad in DhlA consists of the catalytic triad Asp124, His279, Asp260 and two primary halide-sta
+
+
+
+
+
+
+
+
+
+
+388
+
+
+
+
+
+M. Pavlová et al. / Journal of Structural Biology 157 (2007) 384392
+
+
+
+
+
+
+
+
+
+
+
+bilizing residues Trp125 and Trp175. The corresponding residues in the homology model of DhmA are Asp123, His279, Asp250 and Trp124, Trp164, respectively. Five point mutants were prepared to verify the catalytic pentad in DhmA dehalogenase: Asp123Ala, Asp250Ala, His279Ala, Trp124Leu and Trp164Leu. Stable wild type DhmA and its Wve mutants were expressed in Rhodococcus and puriWed to homogeneity by using metal aYnity chromatography and checked by SDS-polyacrylamide gel electrophoresis. Major one-protein-bands were observed for each protein variant (Fig. 3). The yields of the DhmA wild type were 0.8 mg/L, while protein variants were produced with somewhat lower yields (0.7 mg/L). 3.4. Activity measurements The puriWed DhmA wild type and mutant enzymes were examined for dehalogenase activity. The proteins were dia
+
+
+
+
+
+
+
+
+
+
+lyzed overnight to eliminate NaCl used during puriWcation. 1-Bromobutane was selected as a substrate because it easily undertakes dehalogenation by the wild type enzyme (Jesenska et al., 2002). The results of the activity measurements are summarised in Fig. 4. A signiWcant increase of product concentration in the time conWrmed dehalogenation activity of DhmA wild type with 1-bromobutane (0.010 mol s¡1 (mg of enzyme)¡1), while no statistically signiWcant activity was detected for all mutant enzymes (pvalue > 0.1). No signiWcant increase from zero activity was observed in the DhmA mutant at a conWdence level of 95% (Fig. 4). SpeciWc dehalogenase activity of DhmA toward DCE (0.011 nmol s¡1 (mg of enzyme)¡1) was determined by measuring alcohol production using gas chromatography. The data suggest very weak activity of DhmA toward DCE (Fig. 5), which is in the same range as previously reported for LinB enzyme (Oakley et al., 2002). 4. Discussion Haloalkane dehalogenase DhmA showed poor expression and low stability when produced in E. coli expression systems. Haloalkane dehalogenase DmbB from M. bovis MU11 shares an 82% sequence identity with DhmA and displays similar diYculties during expression and puriWcation from E. coli (Jesenska et al., 2005). Other authors also
+
+
+
+
+
+
+
+
+
+
+
+M. Pavlová et al. / Journal of Structural Biology 157 (2007) 384392
+
+
+
+
+
+389
+
+
+
+
+
+reported problems with the stability of mycobacterial proteins heterologously expressed in diVerent host cells (Wang et al., 2000; Khan et al., 2001; Magalhaes et al., 2002; Bahk et al., 2004). We tried several expression systems to improve protein folding as well as puriWcation from inclusion bodies without success. The satisfactory solution was obtained using the newly constructed pK4RP rhodococcal expression system providing 0.8 mg/L of stable protein. The Rhodococcus cells were found to be more suitable for the production of stable DhmA protein than E. coli. The catalytic pentad of DhmA was predicted from the theoretical model of its 3D structure. The model was built by homology modeling using the X-ray structure of the haloalkane dehalogenase DhlA from X. autothrophicus GJ10 as the template. We propose that mycobacterial dehalogenase DhmA catalyses a hydrolytic dehalogenation via the same reaction mechanism as DhlA (Pries et al., 1994a) and LinB (Hynkova et al., 1999), based on localization and analogy of catalytic residues. The proposed reaction mechanism is schematically shown in Fig. 6. The Asp123 acts as a nucleophile which attacks the carbon atom of the substrate carrying a halogen, leading to the release of the halide ion and formation of an alkyl-enzyme intermediate. A catalytic water molecule localized between the nucleophile and catalytic histidine cleaves this ester intermediate. This water molecule is activated by the His279 prior to cleavage. Asp250 keeps the His279 in proper orientation and stabilizes a positive charge that develops on the histidine imidazole ring during the reaction. The Trp124 and Trp164 stabilize the substrate in a Michaelis-Menten complex and a halide ion released during the dehalogenation reaction by electrostatic interactions (Bohac et al., 2002; Olsson and Warshel, 2004). Further validation of the catalytic mechanism of DhmA
+
+
+
+
+
+and the role proposed for individual residues will require structural analysis followed by detailed computational study. The protein family of haloalkane dehalogenases evolved at least three types of catalytic pentads: Asp-His-Glu+AsnTrp, Asp-His-Asp+Trp-Trp and Asp-His-Asp+Asn-Trp (Chovancova et al., 2006). The diVerences are in the position and type of the catalytic acid (after -strand 6 versus -strand 7; Glu versus Asp) and in the position and type of the second halide-stabilizing residue (after -strand 3 versus in -helix 4; Asn versus Trp). Functional group migration, sometimes called ‘hopping’ of the catalytic residues can result from: (i) stabilization of protein structure, (ii) loss of an ‘old’ catalytic residue by mutation and recruitment of the new residue, or (iii) optimization of less eYcient primordial enzymes in diVerent phylogenetic lineages (Todd et al., 2002). Interestingly, some mycobacterial species contain paralogous enzymes carrying all three types of catalytic pentad (Jesenska et al., 2005). DmbA and DmbB proteins from Mycobacterium bovis show diVerent types of catalytic pentad, diVer in melting point by 10 °C and optimal pH for activity by 2.5 U, and also display signiWcantly diVerent substrate speciWcity. The third dehalogenase DmbC from the same organism is still to be characterized, yet the enzyme clearly possesses a third type of catalytic pentad and shows dehalogenating activity. We believe that evolution of these paralogs by gene duplication and diVerentiation is more likely than an acquirement of three evolved genes from diVerent sources. Such an evolutionary model does not support either hypothesis of Schrag et al. (1992) on migration of a catalytic acid (from -strand 7 to -strand 6) during the speciation, or the hypothesis of Krooshof et al. (1997) on migration of this acid from strand 6 to -strand 7 during the molecular adaptation of
+
+
+
+
+
+
+
+
+
+
+
+390
+
+
+
+
+
+M. Pavlová et al. / Journal of Structural Biology 157 (2007) 384392
+
+
+
+
+
+
+
+
+
+
+
+dehalogenases to the synthetic compound 1,2-dichloroethane. Paralogous genes occurring in various mycobacterial species must have evolved before speciation, which occurred far earlier than the release of 1,2-dichloroethane into the biosphere in 1922. The catalytic activity of DhmA with DCE contrasts with that of DhlA. While DCE is a very poor substrate for DhmA, it is one of the best known substrates for DhlA. Short duplications in the N-terminal part of the cap domain of DhlA followed by Wne tuning single-point mutations were proposed to play an important role in the evolution of dehalogenase activity towards DCE (Pries et al., 1994b; Janssen et al., 2005). DhmA lacks the analogous direct repeat in this region (Fig. 7), which is consistent with this proposal. We believe that the primary role of the direct repeat is not in repositioning of the second halide-stabilizing Trp downstream the sequence (Pikkemaat and Janssen, 2002), but in reduction of the volume of the active site (Damborsky and Koca, 1999). DhlA shows more a narrow access channel connecting the buried active site with a bulk solvent than the other two structurally characterized dehalogenases (Petrek et al., 2006). Development of new substrate speciWcities through the modiWcation of access channels (Chaloupkova et al., 2003), for example by loop grafting (TawWk, 2006), represents an important scenario for evolution of new protein species. Pikkemaat and Janssen (2002) proposed that the hypothetical ancestor lacked the capability of DCE conversion, although it could still convert various other halogenated substrates. They expected that the hypothetical predecessor, carrying only the initial repeat, only had a very low activity and attempted to construct DhlA variants with improved activity towards DCE by a retrogenetic approach. Segmental mutations introduced by a novel directed evolution approach into the sequence of reconstructed primitive haloalkane dehalogenase DhlA did not provide the variants with enhanced activity towards DCE. The authors proposed that the DhlA enzyme is trapped in the local evolutionary optimum and suggested further randomization of constructed mutants for future experiments. DhmA represents an interesting alternative for the mutagenized DhlA as a starting material for development of more eYcient catalysts for DCE conversion.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+391
+
+
+
+
+
+
+
+
+
+
+
+392
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

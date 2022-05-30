@@ -1,0 +1,351 @@
+APPLIED AND ENVIRONMENTAL MICROBIOLOGY, July 2002, p. 35823587 0099-2240/02/$04.00ϩ0 DOI: 10.1128/AEM.68.7.35823587.2002 Copyright © 2002, American Society for Microbiology. All Rights Reserved.
+
+
+
+
+
+Vol. 68, No. 7
+
+
+
+
+
+Biodegradation of 1,2,3-Trichloropropane through Directed Evolution and Heterologous Expression of a Haloalkane Dehalogenase Gene
+
+
+
+
+
+Department of Biochemistry, Groningen Biomolecular Sciences and Biotechnology Institute, University of Groningen, 9747 AG Groningen, The Netherlands1; National Centre for Biomolecular Research, Faculty of Science, Masaryk University, CZ 611 37 Brno, Czech Republic2; and BMG Engineering AG, CH-4410 Liestal, Switzerland3
+
+
+
+
+
+
+
+
+Using a combined strategy of random mutagenesis of haloalkane dehalogenase and genetic engineering of a chloropropanol-utilizing bacterium, we constructed an organism that is capable of growth on 1,2,3-trichloropropane (TCP). This highly toxic and recalcitrant compound is a waste product generated from the manufacture of the industrial chemical epichlorohydrin. Attempts to select and enrich bacterial cultures that can degrade TCP from environmental samples have repeatedly been unsuccessful, prohibiting the development of a biological process for groundwater treatment. The critical step in the aerobic degradation of TCP is the initial dehalogenation to 2,3-dichloro-1-propanol. We used random mutagenesis and screening on eosin-methylene blue agar plates to improve the activity on TCP of the haloalkane dehalogenase from Rhodococcus sp. m15-3 (DhaA). A second-generation mutant containing two amino acid substitutions, Cys176Tyr and Tyr273Phe, was nearly eight times more efﬁcient in dehalogenating TCP than wild-type dehalogenase. Molecular modeling of the mutant dehalogenase indicated that the Cys176Tyr mutation has a global effect on the active-site structure, allowing a more productive binding of TCP within the active site, which was further ﬁne tuned by Tyr273Phe. The evolved haloalkane dehalogenase was expressed under control of a constitutive promoter in the 2,3dichloro-1-propanol-utilizing bacterium Agrobacterium radiobacter AD1, and the resulting strain was able to utilize TCP as the sole carbon and energy source. These results demonstrated that directed evolution of a key catabolic enzyme and its subsequent recruitment by a suitable host organism can be used for the construction of bacteria for the degradation of a toxic and environmentally recalcitrant chemical. 1,2,3-Trichloropropane (TCP) is a toxic synthetic chlorinated hydrocarbon that is not known to occur naturally. It is used as a chemical intermediate in organic synthesis, as a solvent, and as an extractive agent. In addition to these intentional uses, TCP is produced in considerable amounts as a by-product from the manufacture of epichlorohydrin (24, 34). Because TCP is resistant to biological and chemical degradation and can permeate soils, passing into groundwater supplies, it is often found as a water pollutant. Groundwater and soils in various parts of the United States and in Europe are polluted with TCP as a result of improper disposal of TCP-contaminated efﬂuents and due to the past use of the soil fumigant D-D, a mixture of 1,3-dichloropropene and 1,2-dichloropropane that contained TCP as a contaminant (35, 36; U.S. Environmental Protection Agency, national priority site fact sheet [http://www.epa.gov/region02/superfund/npl/ciba/] and Tysons dump site [http://www.epa.gov/reg3hwmd/super/PA/tysons-dump /index.htm]). Due to its toxicity and persistence, TCP poses a serious risk to ecosystems and human health. The cleanup of TCP-polluted sites has been limited to physicochemical methods. If feasible, bioremediation would constitute an attractive alternative because it can be less expensive, may be accompanied by complete mineralization, and offers the possibility of in situ treatment. The development of biotechnological processes for TCP removal will largely be determined by our ability to isolate or engineer microorganisms catalyzing the desired catabolic conversion steps. Thus far, TCP has no known aerobic degradation pathway. Repeated attempts to enrich microbial cultures that can utilize TCP from a variety of inocula were unsuccessful. Nevertheless, under laboratory conditions TCP can be slowly degraded in a cometabolic fashion by oxidative and hydrolytic dehalogenation (2, 41). Furthermore, thermodynamic calculations show that aerobic mineralization of TCP could provide sufﬁcient energy to sustain microbial growth (9). Comparative studies on the bacterial degradation of haloalkanes and haloalcohols indicated that the critical step in TCP degradation is the initial dehalogenation of TCP to 2,3-dichloro-1-propanol, a reaction that in principle could be catalyzed by a haloalkane dehalogenase. Haloalkane dehalogenases that catalyze hydrolytic removal of chlorine from structurally similar compounds have been described (14, 22, 42). Moreover, 2,3-dichloro-1-propanol is a good growth substrate for various gram-negative bacteria (13). This suggests that biodegradation of TCP is hindered by the slow rate of evolution of key dehalogenating enzymes and catabolic pathways but also that there is no fundamental limitation to aerobic growth on TCP. To accelerate the adaptation process, it is therefore attractive to consider genetic engineering of a biodegradative pathway. The haloalkane dehalogenase (DhaA) from Rhodococcus sp. m15-3 hydrolyzes carbon-halogen bonds in a wide range of haloalkanes, including TCP, to the corresponding (halo)alco3582
+
+
+
+
+
+
+
+
+
+
+
+* Corresponding author. Mailing address: Department of Biochemistry, Groningen Biomolecular Sciences and Biotechnology Institute, University of Groningen, Nijenborgh 4, 9747 AG Groningen, The Netherlands. Phone: 31-50-3634209. Fax: 31-50-3634165. E-mail: d.b .janssen@chem.rug.nl.
+
+
+
+
+
+
+
+
+
+
+
+BIODEGRADATION OF TCP
+
+
+MATERIALS AND METHODS
+
+
+
+
+
+3583
+
+
+
+
+
+FIG. 1. Reactions and enzymes involved in the proposed degradation pathway of TCP for A. radiobacter AD1(pTB3).
+
+
+
+
+
+hol, releasing halide ions (3, 30, 42). The enzyme comprises two domains: an ␣/␤-hydrolase core domain providing the main catalytic residues and a helical cap domain that inﬂuences substrate speciﬁcity (27). The interface of the two domains deﬁnes the hydrophobic active-site cavity containing the catalytic triad residues Asp106, His272, and Glu130 (23). Heterologous expression of the dhaA gene in the 2,3-dichloro-1propanol-utilizing bacterium Agrobacterium radiobacter strain AD1 theoretically could yield a productive degradation pathway for TCP (Fig. 1). However, the activity of DhaA on TCP is apparently too low to provide sufﬁcient energy for biosynthetic processes and bacterial growth (3). In addition, due to the low conversion rate, cells are longer exposed to toxic effects of TCP, which can inhibit growth. Our goal was to obtain bacterial growth on TCP, which would be an essential step toward the development of a biological treatment process for TCP-contaminated groundwater. We therefore targeted the Rhodococcus haloalkane dehalogenase gene (dhaA) for directed evolution. The results demonstrate that evolving haloalkane dehalogenase and introducing the evolved enzyme in a suitable host organism is an efﬁcient strategy for generation of a strain that is able to grow on a recalcitrant toxic chlorinated hydrocarbon.
+
+
+
+
+
+Strains, growth conditions, and expression vectors. The haloalkane dehalogenase gene from Rhodococcus sp. M15-3 (dhaA) was expressed in Escherichia coli BL21(DE3) Gold (Stratagene) from the T7-based expression vector pGEFϩ (26). E. coli BL21(DE3) Gold strains were grown either in Luria-Bertani (LB) liquid medium or on LB agar plates at 30°C, both supplemented with ampicillin (100 ␮g mlϪ1). In A. radiobacter AD1, wild-type and evolved dehalogenase genes were expressed from plasmids pTB3, pTB3-M1, and pTB3-M2, which are derived from the broad-host-range plasmid pJRD215 (8). The dehalogenase genes were engineered under control of the strong constitutive dhlA promoter by PCR fusion and subsequently inserted into plasmid pJRD215 (3). The broad-host-range dehalogenase expression plasmids were introduced into A. radiobacter AD1 by triparental mating. The haloalkane dehalogenase was expressed to a level of almost 8% of total soluble cellular protein in the resulting derivatives of strain AD1 (3). Recombinant A. radiobacter strains were grown in a synthetic mineral medium (MMY) (12). Growth experiments were performed in 1-liter serum ﬂasks containing 200 ml of MMY medium, and approximately 1 mM TCP was added as the sole carbon and energy source. The precultures used for inoculation were grown to the stationary phase on 4 mM epichlorohydrin and kanamycin (50 ␮g mlϪ1), washed once, and diluted into MMY medium to an optical density at 450 nm (OD450) of between 0.1 and 0.15. Cells were grown aerobically at 30°C under rotary shaking (250 rpm), and growth was monitored turbidimetrically at 450 nm. Library construction. Unless otherwise speciﬁed, standard recombinant DNA techniques were performed as described by Sambrook et al. (28). Randomly mutated dhaA libraries were generated by DNA shufﬂing or error-prone PCR under conditions generating one or two amino acid substitutions per gene. For DNA shufﬂing, an approximately 1-kb DNA fragment containing the dhaA gene was initially ampliﬁed by PCR using Pfu polymerase (Stratagene). DNA shufﬂing was performed as described by Crameri et al. (6) using 70- to 250-bp DNA fragments. Error-prone PCR was performed as described by Cadwell and Joyce (4). The ﬁnal ampliﬁcation product was puriﬁed using QiaQuick (Qiagen) and digested with NcoI and BamHI. Subsequently, the digested ampliﬁcation product was ligated into pGEF previously cut with NcoI and BamHI. The following primers were used for ampliﬁcation of dhaA using pGEFdhaA as template: pGEF-fwd, 5Ј-ACTTTAAGAAGGAGATATACCATG (upstream NcoI site), and pGEF-rev, 5Ј-TTATTGCTCAGCGGTGGCAGCAGC (downstream BamHI site). PCR was carried out on a Progene Thermo cycler (Techne, Ltd., Cambridge, United Kingdom) at 1 min , 94°C; 30 cycles of 30 s at 94°C; 30 s at 50°C; 30 s at 72°C; and an ﬁnal extension of 5 min at 72°C. Library screening. Ligation mixtures were transformed into chemically competent E. coli BL21(DE3) Gold cells, following the protocol of the manufacturer, and plated onto LB agar plates containing eosin (40 mg literϪ1), methylene blue (6.5 mg literϪ1), and ampicillin (100 ␮g mlϪ1). A mixture of eosin and methylene blue was added as an indicator to detect acid production by individual bacterial colonies (19). After 24 h of growth at 30°C, plates were incubated for 2 to 16 h in TCP vapor at room temperature and visually screened for the intensity of the red color. For quantitative analysis, crude extracts of positive variants were prepared along with parental clones. Freshly transformed cells were grown in 20 ml of LB medium until an OD600 of 1.0 was reached and subsequently induced with 0.4 mM isopropyl-␤-D-thiogalactopyranoside and incubated for 16 to 20 h at 17°C. Crude extracts were prepared by sonication of cells as described previously (40). Protein puriﬁcation. The wild-type and evolved haloalkane dehalogenases were puriﬁed to homogeneity by DEAE-cellulose and hydroxylapatite chromatography according to published protocols (29). Concentrations of puriﬁed enzyme were estimated by its absorbance at 280 nm using an absorbance coefﬁcient (⑀280) of 6.1 ⅐ 104 MϪ1cmϪ1 for DhaA (wild type) and M2 DhaA or 6.3 ⅐ 104 MϪ1cmϪ1 for M1 DhaA, as was calculated with the DNASTAR program (DNASTAR, Inc., Madison, Wis.). Dehalogenase assays. Dehalogenase activities were determined by colorimetric detection of halide release on the substrates TCP and 1,2-dibromoethane (DBE) at 30°C in 50 mM NaHCO3-NaOH buffer, pH 9.4 (1, 14). Enzyme assays were carried out al least twice, and the difference in speciﬁc activity was less than 15%. The kinetic constants Km and kcat were calculated from halide and alcohol production rates, which were measured using a colorimetric assay and gas chromatography, as described previously (3). Modeling of the mutant proteins and calculation of the active-site volumes. Models were constructed using the experimental structure of the haloalkane dehalogenase from a Rhodococcus sp. (23) cocrystallized with NaI (Protein Data Bank accession code 1CQW). All ligands were removed, and the structure was
+
+
+
+
+
+
+
+
+
+
+
+3584
+
+
+
+
+
+BOSMA ET AL.
+
+
+
+
+
+APPL. ENVIRON. MICROBIOL. TABLE 1. Kinetic constants for the wild-type and evolved haloalkane dehalogenases in 50 mM NaHCO3-NaOH at pH 9.4 and 30°Ca
+
+
+TCP Variant kcat (sϪ1) Km (mM) kcat/Km (sϪ1 MϪ1) kcat (sϪ1) DBE Km (mM) kcat/Km (sϪ1 MϪ1)
+
+
+
+
+
+numbered according to the dhaA sequence (15). Polar hydrogens were added using the program WHATIF v99 (39). The His272 residue was modeled as singly protonated on N␦ to follow the reaction mechanism of haloalkane dehalogenase as proposed by Verschueren et al. (1993) (38). Substitutions were introduced in the structure using INSIGHTII v95 (Biosym/MSI). A single rotamer was selected for Tyr273Phe dehalogenase, while three different rotamers were used for the Cys176Tyr enzyme. The position of substituted side chains was reﬁned by energy minimization using the consistent-valence force ﬁeld and steepest descent/conjugate gradient methods of DISCOVER v2.97 (Biosym/MSI). Minimization was ˚ Ϫ1. stopped when the average derivative was smaller than 0.00001 kcal ⅐ molϪ1 ⅐ A Solvent-accessible (17) and molecular (5) volumes of the active sites were calculated for the wild-type and mutant proteins using the program CASTP v1.1 ˚ was employed in these calculations. (18). A solvent probe of 1.4 A Modeling of enzyme-substrate complexes. Molecular models of DBE and TCP were positioned in the active sites using the program AUTODOCK v3.0 (10). ˚ ) were calculated The grid maps (81 by 81 by 81 points and grid spacing of 0.25 A using AUTOGRID v3.0. The structures of the substrate molecules were built with INSIGHTII and energy minimized by the semiempirical quantum mechanics AM1 method. The keyword PRECISE was used for optimization, and ESP was used for ﬁtting of the partial charges. DBE was modeled in trans and gauche conformations. Fifty dockings were performed for every substrate and every protein variant. A Lamarckian genetic algorithm (21) was used with a population size of 50 individuals with a maximum of 1.5 ϫ 106 energy evaluations and 27,000 generations, an elitism value of 1, and mutation and crossover rates of 0.02 and 0.5, respectively. The local search was based on a pseudo-Solis and Wets algorithm (31) with a maximum of 300 iterations per local search. Final orientations from every docking were clustered with a clustering tolerance for the root-mean˚. square positional deviation of 0.5 A
+
+
+
+
+
+WTb M1 M2
+
+
+a b
+
+
+
+
+
+0.08 0.15 0.28
+
+
+
+
+
+2.2 1.5 1.0
+
+
+
+
+
+36 100 280
+
+
+
+
+
+15 22 8
+
+
+
+
+
+3.90 1.20 0.75
+
+
+
+
+
+3,846 18,000 11,000
+
+
+
+
+
+For Km values, errors were Յ25%, and for kcat values, errors were Յ15%. WT, wild type.
+
+
+
+
+
+RESULTS AND DISCUSSION Experimental strategy for directed evolution. A prerequisite for directed enzyme evolution experiments is a rapid and sensitive screen or selection method for the properties of interest. Mutant dhaA libraries expressed in E. coli were screened for improved TCP conversion using a plate-screening assay based on the indicator eosin-methylene blue (EMB plates) (19). The screening for increased activity on TCP relies on the development of a red color in colonies expressing active DhaA. The production of HCl during dehalogenation of TCP causes mobilization and subsequent movement of the indicator dyes into acid-producing colonies. The haloalkane dehalogenase was expressed in E. coli BL21Gold(DE3) using the T7-based plasmid pGEFdhaA. Due to the leakiness of the T7 promoter in pGEFϩ (29), the construct yielded a basal expression level of dhaA to about 30% of total soluble protein, which resulted in a sufﬁciently high conversion rate of TCP that can be observed on EMB-agar plates. Cells with pGEFdhaA developed red-purple colonies as a consequence of generating HCl from TCP conversion, whereas cells containing only pGEFϩ without the dhaA gene turn bluepurple. Variants could then be screened for the intensity of the red color. Random mutagenesis and screening. A random library of DhaA mutants was created using DNA shufﬂing (Ϸ0.4% mutation frequency). Approximately 10,000 clones, growing on EMB-agar plates, were visually screened for the intensity of the red color after incubation in TCP vapor. Thirty potentially positive variants were picked and veriﬁed on a fresh EMB-agar plate to be more active than DhaA. One clone, designated M1, clearly developed a more highly red-colored colony than wild type, indicating improved TCP conversion. The increased dehalogenase activity of mutant M1 was conﬁrmed in crude extracts. Speciﬁc activities of the wild type and M1 were about 70 and 140 mU/mg of protein, respectively. DNA sequencing
+
+
+
+
+
+showed that a single amino acid substitution, Cys176Tyr, was responsible for the improved activity. A second-generation library was created by mutagenic PCR on the dehalogenase gene of mutant M1 (Ϸ0.4% mutation frequency). Visual screening of approximately 10,000 clones yielded 14 potentially positive variants. Among these, one variant (M2) could be clearly distinguished from the wild type and M1 on EMB-agar plates after a 2-h incubation with TCP vapor. This variant exhibited an activity on 10 mM TCP that was about 30% improved over that of M1, as measured in crude extracts. Sequencing showed that variant M2 retained the parental Cys176Tyr mutation and had an additional amino acid substitution, Tyr273Phe. Kinetic and structural analysis of evolved dehalogenases. The evolved haloalkane dehalogenases were puriﬁed and the kinetic constants on TCP and DBE were determined (Table 1). Wild-type and evolved dehalogenases hydrolyzed TCP and DBE to the corresponding alcohols 2,3-dichloro-1-propanol and 2-bromoethanol, respectively, as determined by gas chromatography. The single mutation Cys176Tyr of variant M1 improved the kcat value on TCP almost twofold and reduced the Km value. On DBE, both the kcat and the KM values of M1 DhaA were improved over those for the wild type. The kcat/Km ratio increased approximately ﬁvefold in the evolved dehalogenase. The second-generation variant M2 (Cys176Tyr plus Tyr273Phe) was nearly eightfold more efﬁcient on TCP than wild-type DhaA and almost four times as efﬁcient as the M1 dehalogenase. The improved catalytic efﬁciency on TCP is due to an increase in the kcat value as well as a decrease in the Km value. Furthermore, the increase in activity on TCP was accompanied by a decrease in activity on DBE. However, variant M2 was still three times more efﬁcient than wild-type DhaA at dehalogenating DBE, most likely as a result of the improved afﬁnity for this compound, which is reﬂected in the reduced Km value. Strikingly, mutations on similar positions were found in a homologue of DhaA, DhaAf, isolated from the DBE-utilizing bacterium Mycobacterium sp. strain GP1. In DhaAf an identical substitution was found on position 273, whereas the cysteine residue at position 176 was replaced by a phenylalanine side chain (25). The enzyme exhibited activity on TCP similar to that of wild-type DhaA but was not able to utilize TCP as a growth substrate. Structural models of wild-type and evolved dehalogenases complexed with DBE and TCP were generated to examine the molecular basis for the improved dehalogenase activity. These structures were based on the experimental structure of haloalkane dehalogenase from Rhodococcus spp. (23). The residue
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+BIODEGRADATION OF TCP
+
+
+
+
+
+3585
+
+
+
+
+
+
+
+
+
+
+
+FIG. 2. Stereo diagrams of molecular models of DBE (A) and TCP (B) binding in the active site of DhaA and its mutants. Side chains of selected active-site residues are colored by atom and labeled by residue number. The catalytic water molecule is represented by a red ball. For clarity, only polar hydrogens are shown. The side chains of the residues Tyr176 and Phe273 are shown in pink. Substrate molecules are given in stick representation with halogen atoms as balls colored by binding mode. A single binding mode (in yellow) was observed for DBE in the wild type and both mutants. The preferred binding mode of TCP in the wild-type enzyme is indicated in red. Instead of C␣, the C␤ of TCP is closest to the nucleophilic oxygen of Asp106, which does not result in dehalogenation. This unproductive binding mode was still observed to a limited extent with the single point mutant, but not with the double mutant. The preferred binding mode of TCP for the single point mutant (Cys176Tyr) is shown in yellow, and for the double point mutant (Cys176Tyr and Tyr273Phe) it is shown in blue. In both mutants the leaving halogen on the C␣ is bound between the N␩ of Trp107 and the N␦H on Asn41, and the C␣ is positioned for nucleophilic attack by the carboxylate oxygen of Asp106.
+
+
+
+
+
+Cys176, which is modiﬁed in the evolved dehalogenases, is located in the cap domain. This domain partially deﬁnes the active-site cavity and contributes to the structural basis for differences in substrate speciﬁcity between haloalkane dehalogenases (23, 27). Tyrosine 273, the other residue altered in the double mutant, is located in the main domain adjacent to His272, the base catalyst of the catalytic triad. Replacement of Cys176 by the larger tyrosine side chain resulted in a twofold reduction of the volume of the active-site cavity, which may push small substrate molecules closer to the catalytic residues and cause a better average positioning of the C␣ of the substrate for nucleophilic attack, explaining the improved activity of M1 DhaA on both DBE and TCP. Furthermore, the activesite cavity appears to be shielded from the bulk water by the Tyr176 side chain, whereas in the wild-type structure the active site is less buried and open to the bulk water (20). This may create a more hydrophobic microenvironment, which is advantageous for the dehalogenation reaction. In this respect the haloalkane dehalogenase mutants resemble haloalkane dehalogenase from Xanthobacter autotrophicus GJ10 (DhlA), in which the cavity is also buried in the protein core (37). Compared to Cys176Tyr, the mutation Tyr273Phe causes more subtle changes, and the effects on the catalytic properties of DhaA are more difﬁcult to understand. The possible effects of the mutations on the interaction with substrates were further studied by computer docking. Docking of DBE in the active site of wild-type and evolved dehaloge
+
+
+
+
+nases resulted in a similar binding mode of the substrate molecule (Fig. 2A). The substrate binds in the gauche conformation with a distance between the nucleophilic Asp106-O␦2 and ˚ . This conformation is suitable for the C␣ atom of DBE of 3.5 A SN2 displacement of bromide by nucleophilic attack and is in good agreement with the conformation obtained from quantum mechanical calculations of the dehalogenation reaction in the active site of DhlA (7, 16). Docking calculations of the dehalogenases with TCP showed three signiﬁcantly different binding modes (Fig. 2B). The wildtype and mutant proteins have different preferences for these binding modes, and the observed improvements in 1,2,3-TCP dehalogenase activity are largely due to a shift of this preference. Wild-type DhaA binds TCP mainly in a position that is unfavorable for nucleophilic attack of Asp106 on the C␣ atom of the substrate (Fig. 2B, red). To a lesser extent, this nonreactive binding mode was also found for the single mutant M1, but not with the double mutant M2. In contrast, for both mutant dehalogenases the preferred binding mode for TCP was with the C␣ atom of TCP shifted to a position that resembles that of the C␣ atom of DBE in wild-type DhaA, i.e., with a shorter distance between the C␣ atom of TCP and the nucleophilic aspartate, which makes it more susceptible to a reaction (Fig. 2B, yellow and blue). The preference for this more reactive binding mode is mainly caused by a direct interaction of the aromatic ring of Tyr176 and the chlorine atom on C␥ of TCP (Fig. 2B). Thus, the Cys176Tyr mutation appears to re
+
+
+
+
+3586
+
+
+
+
+
+BOSMA ET AL.
+
+
+
+
+
+APPL. ENVIRON. MICROBIOL.
+
+
+
+
+
+
+
+
+
+
+
+FIG. 3. Bacterial growth on TCP as the single carbon and energy source. (A) A. radiobacter AD1(pTB3) producing wild-type dehalogenase. (B) A. radiobacter AD1(pM2) expressing the evolved dehalogenase. Symbols: F, TCP concentration; ᮀ, growth (OD450); Œ, pH.
+
+
+
+
+
+duce the size of the active site, which causes small molecules to bind in a more reactive manner. This productive binding mode was further optimized due to the Tyr273Phe mutation. Utilization of TCP. In order to test how the improved dehalogenase contributes to improving the utilization of TCP by an engineered bacterium, we introduced the evolved dehalogenase gene of variant M2 into the 2,3-dichloro-1-propanolutilizing bacterium A. radiobacter AD1 using the RSF1010derived broad-host-range plasmid pJRD215. The wild-type and mutant dhaA genes were cloned behind a strong constitutive promoter which was obtained from the haloalkane dehalogenase gene (dhlA) of X. autotrophicus GJ10. Previous studies have shown that the dhlA promoter is active in various gram-negative bacteria (11). The ability of the engineered strains to metabolize TCP was evaluated in batch culture. As shown in Fig. 3, degradation of TCP is considerably more efﬁcient for strain AD1(pTB3-M2) with the evolved dehalogenase. After 10 days, strain AD1(pTB3-M2) converted 3.6 mM TCP, whereas strain AD1 with the wild-type dehalogenase converted only 1.5 mM. After a lag of 3 days, active growth of strain AD1(pTB3-M2) ensued, as indicated by an increase in the OD450. Moreover, growth continued after subsequent additions of about 0.9 mM TCP. During the degradation of TCP by strain AD1(pTB3-M2), the pH of the culture decreased to 6.0 due to hydrochloric acid production. Complete conversion into biomass of the total amount of TCP added to the culture would result in a protein yield of about 50 to 60 mg of protein ⅐ literϪ1, assuming a growth yield of 5 g of protein per mol of C (32). This would yield an increase in optical density of about 0.4, which closely resembles the observed increase in optical density obtained during degradation of TCP by strain AD1(pTB3-M2). This indicated that TCP was mineralized and used as a carbon source by the recombinant strain containing the evolved dehalogenase. In agreement with previous results no growth was obtained with strain
+
+
+
+
+
+AD1(pTB3) expressing the wild-type dehalogenase (3) (Fig. 3A). The behavior of this strain resembles a resting cell process, since TCP was very slowly converted and yielded almost no increase in biomass. Furthermore, a second addition of about 1 mM TCP was completely degraded by strain AD1(pTB3) at a slightly higher rate, but this degradation rate was also not sufﬁcient to sustain bacterial growth. In contrast to the case for strain AD1(pTB3-M2), a temporary decrease in optical density occurred with strain AD1(pTB3) at the beginning of each TCP addition, which was most likely due to toxic effects of TCP on the cells. Moreover, toxic effects of an initially high TCP concentration are most manifest at low cell densities. The pH of the culture decreased to 6.5 during degradation of TCP by strain AD1(pTB3). As described previously, due to the enantioselectivity of the haloalcohol dehalogenase HheC, strain AD1 was not able to use (S)-2,3-dichloro-1-propanol as a carbon source (3). Because wild-type DhaA produced both enantiomers during conversion of TCP, (S)-2,3-dichloro-1-propanol accumulated in the cultures with the recombinant strains. Approximately 0.7 mM (S)-2,3-dichloro-1-propanol accumulated during conversion of 3.6 mM TCP by strain AD1(pTB3-M2) with the evolved dehalogenase. Strain AD1(pTB3) converted 1.65 mM TCP, which resulted in the accumulation of about 0.28 mM (S)-2,3dichloro-1-propanol. These results indicate that the evolved dehalogenase predominantly produces the (R)-enantiomer of 2,3-dichloro-1-propanol, which is in agreement with the preferred binding mode for TCP shown in Fig. 2. Conclusions. Microorganisms have a remarkable ability to adapt to xenobiotic compounds, but some important industrial pollutants, such as TCP, are still very refractory to biodegradation. Using plasmid-encoded catabolic genes, expression with a strong constitutive promoter, and directed evolution of the key catabolic enzyme, adaptation to TCP was accelerated, which is apparently a slow process under natural conditions.
+
+
+
+
+
+
+
+
+
+
+
+BIODEGRADATION OF TCP
+
+
+
+
+
+3587
+
+
+
+
+
+The resulting recombinant strain AD1(pTB3-M2) was able to utilize TCP for growth, which to our knowledge has never been described before. Numerous attempts undertaken by us to enrich TCP-degrading organisms from environmental samples or to obtain degradation in continuous-ﬂow columns inoculated with samples from contaminated sites have been unsuccessful. Even though utilization of TCP by the recombinant strains may need further optimization to allow industrial application, the possibility of obtaining a recombinant bacterial strain that can utilize TCP, which is a toxic and persistent environmental pollutant, is clearly demonstrated. This offers new possibilities for the development of bioremediation techniques to treat this important groundwater contaminant. Successful application of 1,2-dichloroethane-degrading bacteria in a full-scale process to remove 1,2-dichloroethane from groundwater has been described (33). Since the physicochemical properties of TCP and 1,2-dichloroethane are quite similar, we are convinced that the development of a biological process for the removal of TCP from groundwater using engineered strains is feasible.
+
+
+ACKNOWLEDGMENT This work was supported by a grant from Ciba Specialty Chemicals Inc., Basel, Switzerland.
+
+
+
+
+
+
+
+17. 18. 19. 20.
+
+
+
+
+
+21. 22.
+
+
+
+
+
+23.
+
+
+
+
+
+24. 25. 26.
+
+
+
+
+
+27. 28. 29. 30.
+
+
+
+
+
+31. 32. 33. 34. 35. 36. 37.
+
+
+
+
+
+38. 39. 40. 41. 42.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,409 @@
+Phase: Debug
+Input: MutationTemp
+
+Options: control = all
+
+Rule:ExtractTextualEntities
+(
+	{MutationTemp}
+):mutTemp
+-->
+{
+	try {
+
+		//retrieve mutationTemp
+		Annotation mutationTemp = (Annotation)((AnnotationSet)bindings.get("mutTemp")).iterator().next();
+		System.out.println("mutationTemp: "+doc.getContent().getContent(mutationTemp.getStartNode().getOffset(), mutationTemp.getEndNode().getOffset()).toString());
+
+		//Annotation mutationTemp = (Annotation)((AnnotationSet)bindings.get("parag")).iterator().next();
+
+		//Iterator<Annotation> sentenceIter = (Annotation)inputAS.getCovering("Sentence",mutationTemp.getStartNode().getOffset(),mutationTemp.getEndNode().getOffset()).iterator();
+
+		//retrieve impact sentence
+		Annotation sentence = (Annotation)inputAS.get("Sentence",mutationTemp.getStartNode().getOffset(),mutationTemp.getEndNode().getOffset()).iterator().next();
+		System.out.println("sentence: "+doc.getContent().getContent(sentence.getStartNode().getOffset(), sentence.getEndNode().getOffset()).toString());
+
+
+
+
+
+
+
+/*
+
+		Iterator<Annotation> sentenceIt = inputAS.get(mutationTemp.getStartNode().getOffset()).get("Sentence").iterator();//,mutationTemp.getEndNode().getOffset()).iterator();
+		Annotation sentenceU1 = (Annotation)sentenceIt.next();
+		System.out.println("sentenceU1: "+doc.getContent().getContent(sentenceU1.getStartNode().getOffset(), sentenceU1.getEndNode().getOffset()).toString());
+		//Annotation sentenceU2 = (Annotation)sentenceIt.next();
+		//System.out.println("sentenceU2: "+doc.getContent().getContent(sentenceU2.getStartNode().getOffset(), sentenceU2.getEndNode().getOffset()).toString());
+
+
+		//Iterator<Annotation> sentenceIter = inputAS.get("Sentence").getContained(sentence.getStartNode().getOffset(),inputAS.lastNode().getOffset()).iterator();
+		Iterator<Annotation> sentenceIter = inputAS.get("Sentence",sentence.getStartNode().getOffset(),inputAS.lastNode().getOffset()).iterator();
+
+		Annotation sentenceT1 = (Annotation)sentenceIter.next();
+		Annotation sentenceT2 = (Annotation)sentenceIter.next();
+		Annotation sentenceT3 = (Annotation)sentenceIter.next();
+		System.out.println("sentenceN1: "+doc.getContent().getContent(sentenceT1.getStartNode().getOffset(), sentenceT1.getEndNode().getOffset()).toString());
+		System.out.println("sentenceN2: "+doc.getContent().getContent(sentenceT2.getStartNode().getOffset(), sentenceT2.getEndNode().getOffset()).toString());
+//(Annotation)inputAS.lastNode().getOffset();//.get("Sentence",mutationTemp.getStartNode().getOffset(),mutationTemp.getEndNode().getOffset()).iterator();
+		System.out.println("sentenceN3: "+doc.getContent().getContent(sentenceT3.getStartNode().getOffset(), sentenceT3.getEndNode().getOffset()).toString());
+*/
+
+
+
+
+
+
+		List<Annotation> contextList = new ArrayList<Annotation>();
+		Long[] context = new Long[2];
+
+		// mark the end of the context
+		context[0] = sentence.getStartNode().getOffset();
+
+		// add current sentence to the list
+		contextList.add(sentence);
+
+
+		// aqcuire sentence 1 =========================================
+		AnnotationSet sentence1Set = inputAS.get("Sentence",sentence.getEndNode().getOffset()+5,sentence.getEndNode().getOffset()+6);
+		//System.out.println("sentence2Set.size(): "+sentence2Set.size());
+		if(sentence1Set.size()==0){
+		  sentence1Set = inputAS.get("Sentence",sentence.getEndNode().getOffset()+15,sentence.getEndNode().getOffset()+16);
+		}
+		if(sentence1Set.size()==0){
+		  sentence1Set = inputAS.get("Sentence",sentence.getEndNode().getOffset()+25,sentence.getEndNode().getOffset()+26);
+		}
+		if(sentence1Set.size()==0){
+		  sentence1Set = inputAS.get("Sentence",sentence.getEndNode().getOffset()+35,sentence.getEndNode().getOffset()+36);
+		}
+		if(sentence1Set.size()==0){
+		  sentence1Set = inputAS.get("Sentence",sentence.getEndNode().getOffset()+45,sentence.getEndNode().getOffset()+46);
+		}
+		if(sentence1Set.size()==0){
+		  sentence1Set = inputAS.get("Sentence",sentence.getEndNode().getOffset()+55,sentence.getEndNode().getOffset()+56);
+		}
+		if(sentence1Set.size()==0){
+		  sentence1Set = inputAS.get("Sentence",sentence.getEndNode().getOffset()+85,sentence.getEndNode().getOffset()+86);
+		}
+		Annotation sentence1 = sentence1Set.iterator().next();
+		// old: Annotation sentence1 = (Annotation)inputAS.get("Sentence",sentence.getEndNode().getOffset()+5,sentence.getEndNode().getOffset()+6).iterator().next();
+		contextList.add(sentence1);System.out.println("@b");
+
+
+		// aqcuire sentence 2 =========================================
+		AnnotationSet sentence2Set = inputAS.get("Sentence",sentence1.getEndNode().getOffset()+5,sentence1.getEndNode().getOffset()+6);
+		//System.out.println("sentence2Set.size(): "+sentence2Set.size());
+		if(sentence2Set.size()==0){
+		  sentence2Set = inputAS.get("Sentence",sentence1.getEndNode().getOffset()+15,sentence1.getEndNode().getOffset()+16);
+		}
+		if(sentence2Set.size()==0){
+		  sentence2Set = inputAS.get("Sentence",sentence1.getEndNode().getOffset()+25,sentence1.getEndNode().getOffset()+26);
+		}
+		if(sentence2Set.size()==0){
+		  sentence2Set = inputAS.get("Sentence",sentence1.getEndNode().getOffset()+35,sentence1.getEndNode().getOffset()+36);
+		}
+		if(sentence2Set.size()==0){
+		  sentence2Set = inputAS.get("Sentence",sentence1.getEndNode().getOffset()+45,sentence1.getEndNode().getOffset()+46);
+		}
+		if(sentence2Set.size()==0){
+		  sentence2Set = inputAS.get("Sentence",sentence1.getEndNode().getOffset()+55,sentence1.getEndNode().getOffset()+56);
+		}
+		if(sentence2Set.size()==0){
+		  sentence2Set = inputAS.get("Sentence",sentence1.getEndNode().getOffset()+85,sentence1.getEndNode().getOffset()+86);
+		}
+		Annotation sentence2 = sentence2Set.iterator().next();
+		// old: Annotation sentence2 = (Annotation)inputAS.get("Sentence",sentence1.getEndNode().getOffset()+5,sentence1.getEndNode().getOffset()+10).iterator().next();
+		contextList.add(sentence2);System.out.println("@c");
+
+
+
+
+		// aqcuire sentence 3 =============================
+		AnnotationSet sentence3Set = inputAS.get("Sentence",sentence2.getEndNode().getOffset()+5,sentence2.getEndNode().getOffset()+6);
+		//System.out.println("sentence2Set.size(): "+sentence2Set.size());
+		if(sentence3Set.size()==0){
+		  sentence3Set = inputAS.get("Sentence",sentence2.getEndNode().getOffset()+15,sentence2.getEndNode().getOffset()+16);
+		}
+		if(sentence3Set.size()==0){
+		  sentence3Set = inputAS.get("Sentence",sentence2.getEndNode().getOffset()+25,sentence2.getEndNode().getOffset()+26);
+		}
+		if(sentence3Set.size()==0){
+		  sentence3Set = inputAS.get("Sentence",sentence2.getEndNode().getOffset()+35,sentence2.getEndNode().getOffset()+36);
+		}
+		if(sentence3Set.size()==0){
+		  sentence3Set = inputAS.get("Sentence",sentence2.getEndNode().getOffset()+45,sentence2.getEndNode().getOffset()+46);
+		}
+		if(sentence3Set.size()==0){
+		  sentence3Set = inputAS.get("Sentence",sentence2.getEndNode().getOffset()+55,sentence2.getEndNode().getOffset()+56);
+		}
+		if(sentence3Set.size()==0){
+		  sentence3Set = inputAS.get("Sentence",sentence2.getEndNode().getOffset()+85,sentence2.getEndNode().getOffset()+86);
+		}
+		Annotation sentence3 = sentence3Set.iterator().next();
+		// old: Annotation sentence3 = (Annotation)inputAS.get("Sentence",sentence2.getEndNode().getOffset()+5,sentence2.getEndNode().getOffset()+10).iterator().next();
+		contextList.add(sentence3);System.out.println("@d");
+
+
+
+
+		// mark the end of the context
+		context[1] = sentence3.getStartNode().getOffset();
+
+		// collect sentences of the context as list
+		List<String> contextSentences = new ArrayList<String>();
+		contextSentences.add(doc.getContent().getContent(sentence.getStartNode().getOffset(), sentence.getEndNode().getOffset()).toString());
+		contextSentences.add(doc.getContent().getContent(sentence1.getStartNode().getOffset(), sentence1.getEndNode().getOffset()).toString());
+		contextSentences.add(doc.getContent().getContent(sentence2.getStartNode().getOffset(), sentence2.getEndNode().getOffset()).toString());
+		contextSentences.add(doc.getContent().getContent(sentence3.getStartNode().getOffset(), sentence3.getEndNode().getOffset()).toString());
+
+
+		for(Annotation sent : contextList){
+		  AnnotationSet mfAS = inputAS.get("MolecularFunction",sent.getStartNode().getOffset(),sent.getEndNode().getOffset());
+		  AnnotationSet posAS = inputAS.get("Positive",sent.getStartNode().getOffset(),sent.getEndNode().getOffset());
+		  AnnotationSet negAS = inputAS.get("Negative",sent.getStartNode().getOffset(),sent.getEndNode().getOffset());
+		  AnnotationSet neuAS = inputAS.get("Neutral",sent.getStartNode().getOffset(),sent.getEndNode().getOffset());
+		  AnnotationSet nonneuAS = inputAS.get("NonNeutral",sent.getStartNode().getOffset(),sent.getEndNode().getOffset());
+
+
+		  if(mfAS.size() > 0 && (posAS.size()>0 || negAS.size()>0 || neuAS.size()>0 || nonneuAS.size()>0)) {
+		    FeatureMap features = Factory.newFeatureMap();
+		    features.put("mString",doc.getContent().getContent(mutationTemp.getStartNode().getOffset(), mutationTemp.getEndNode().getOffset()).toString());
+		    //Iterator<Annotation>  mfIter = mentions.iterator();
+
+		    // add strings of found textual entities (molecular functions and directionality words) as feature
+		    List<String> tempList;
+		    tempList =  new ArrayList<String>();
+		    for(Annotation mfAnn : mfAS){
+		      tempList.add(doc.getContent().getContent(mfAnn.getStartNode().getOffset(), mfAnn.getEndNode().getOffset()).toString());
+		    }
+		    if(!tempList.isEmpty()) features.put("mfString",tempList);
+
+		    tempList =  new ArrayList();
+		    for(Annotation posAnn : posAS){
+		      tempList.add(doc.getContent().getContent(posAnn.getStartNode().getOffset(), posAnn.getEndNode().getOffset()).toString());
+		    }
+		    if(!tempList.isEmpty()) features.put("posString",tempList);
+
+		    tempList =  new ArrayList();
+		    for(Annotation negAnn : negAS){
+		      tempList.add(doc.getContent().getContent(negAnn.getStartNode().getOffset(), negAnn.getEndNode().getOffset()).toString());
+		    }
+		    if(!tempList.isEmpty()) features.put("negString",tempList);
+
+		    tempList =  new ArrayList();
+		    for(Annotation neuAnn : neuAS){
+		      tempList.add(doc.getContent().getContent(neuAnn.getStartNode().getOffset(), neuAnn.getEndNode().getOffset()).toString());
+		    }
+		    if(!tempList.isEmpty()) features.put("neuString",tempList);
+
+		    tempList =  new ArrayList();
+		    for(Annotation nonneuAnn : nonneuAS){
+		      tempList.add(doc.getContent().getContent(nonneuAnn.getStartNode().getOffset(), nonneuAnn.getEndNode().getOffset()).toString());
+		    }
+		    if(!tempList.isEmpty()) features.put("nonneuString",tempList);
+
+
+		    // add sentence number where impact was found as feature
+		    if(sent.getStartNode().getOffset()==sentence.getStartNode().getOffset()){
+		     	features.put("sentenceNumber", 0);
+		    }else if(sent.getStartNode().getOffset()==sentence1.getStartNode().getOffset()){
+		     	features.put("sentenceNumber", 1);
+		    }else if(sent.getStartNode().getOffset()==sentence2.getStartNode().getOffset()){
+		     	features.put("sentenceNumber", 2);
+		    }else if(sent.getStartNode().getOffset()==sentence3.getStartNode().getOffset()){
+		     	features.put("sentenceNumber", 3);
+   		    }
+
+		    // add sentences as context
+		    features.put("sentences", contextSentences);
+
+		    outputAS.add(context[0],context[1],"M-MF-D-Occurance",features);
+
+		  }else if(mfAS.size() > 0 && (posAS.size()==0 && negAS.size()==0 && neuAS.size()==0 && nonneuAS.size()==0)){;
+		    FeatureMap features = Factory.newFeatureMap();
+		    features.put("mString",doc.getContent().getContent(mutationTemp.getStartNode().getOffset(), mutationTemp.getEndNode().getOffset()).toString());
+
+		    // add strings of found textual entities (molecular functions) as feature
+		    List<String> tempList;
+		    tempList =  new ArrayList<String>();
+		    for(Annotation mfAnn : mfAS){
+		      tempList.add(doc.getContent().getContent(mfAnn.getStartNode().getOffset(), mfAnn.getEndNode().getOffset()).toString());
+		    }
+		    if(!tempList.isEmpty()) features.put("mfString",tempList);
+
+		    // add sentence number where molecular function was found as feature
+		    if(sent.getStartNode().getOffset()==sentence.getStartNode().getOffset()){
+		     	features.put("sentenceNumber", 0);
+		    }else if(sent.getStartNode().getOffset()==sentence1.getStartNode().getOffset()){
+		     	features.put("sentenceNumber", 1);
+		    }else if(sent.getStartNode().getOffset()==sentence2.getStartNode().getOffset()){
+		     	features.put("sentenceNumber", 2);
+		    }else if(sent.getStartNode().getOffset()==sentence3.getStartNode().getOffset()){
+		     	features.put("sentenceNumber", 3);
+   		    }
+
+		    // add sentences as context
+		    features.put("sentences", contextSentences);
+
+		    outputAS.add(context[0],context[1],"M-MF-Occurance",features);
+
+		  }else if(mfAS.size() == 0 && (posAS.size()>0 || negAS.size()>0 || neuAS.size()>0 || nonneuAS.size()>0)){
+		    FeatureMap features = Factory.newFeatureMap();
+		    features.put("mString",doc.getContent().getContent(mutationTemp.getStartNode().getOffset(), mutationTemp.getEndNode().getOffset()).toString());
+
+		    // add strings of found textual entities (molecular functions and directionality words) as feature
+		    List<String> tempList;
+
+		    tempList =  new ArrayList();
+		    for(Annotation posAnn : posAS){
+		      tempList.add(doc.getContent().getContent(posAnn.getStartNode().getOffset(), posAnn.getEndNode().getOffset()).toString());
+		    }
+		    if(!tempList.isEmpty()) features.put("posString",tempList);
+
+		    tempList =  new ArrayList();
+		    for(Annotation negAnn : negAS){
+		      tempList.add(doc.getContent().getContent(negAnn.getStartNode().getOffset(), negAnn.getEndNode().getOffset()).toString());
+		    }
+		    if(!tempList.isEmpty()) features.put("negString",tempList);
+
+		    tempList =  new ArrayList();
+		    for(Annotation neuAnn : neuAS){
+		      tempList.add(doc.getContent().getContent(neuAnn.getStartNode().getOffset(), neuAnn.getEndNode().getOffset()).toString());
+		    }
+		    if(!tempList.isEmpty()) features.put("neuString",tempList);
+
+		    tempList =  new ArrayList();
+		    for(Annotation nonneuAnn : nonneuAS){
+		      tempList.add(doc.getContent().getContent(nonneuAnn.getStartNode().getOffset(), nonneuAnn.getEndNode().getOffset()).toString());
+		    }
+		    if(!tempList.isEmpty()) features.put("nonneuString",tempList);
+
+		    // add sentence number where directionality word was found as feature
+		    if(sent.getStartNode().getOffset()==sentence.getStartNode().getOffset()){
+		     	features.put("sentenceNumber", 0);
+		    }else if(sent.getStartNode().getOffset()==sentence1.getStartNode().getOffset()){
+		     	features.put("sentenceNumber", 1);
+		    }else if(sent.getStartNode().getOffset()==sentence2.getStartNode().getOffset()){
+		     	features.put("sentenceNumber", 2);
+		    }else if(sent.getStartNode().getOffset()==sentence3.getStartNode().getOffset()){
+		     	features.put("sentenceNumber", 3);
+   		    }
+
+		    // add sentences as context
+		    features.put("sentences", contextSentences);
+
+		    outputAS.add(context[0],context[1],"M-D-Occurance",features);
+		  }
+		}
+		
+
+
+
+		/**
+		  Separate annotation of sentence and next context.
+		  
+		Long[] mutSnetence = new Long[2];
+		mutSnetence[0] = sentence.getStartNode().getOffset();
+		mutSnetence[1] = sentence.getEndNode().getOffset();
+		FeatureMap features = Factory.newFeatureMap();
+		outputAS.add(mutSnetence[0],mutSnetence[1],"M-MF-Occurance",features);
+
+		Long[] contextNext = new Long[2];
+		Annotation nextSentence = (Annotation)inputAS.get("Sentence",sentence.getEndNode().getOffset()+5,sentence.getEndNode().getOffset()+10).iterator().next();
+		contextNext[0] = nextSentence.getStartNode().getOffset();
+		//context[1] = nextSentence.getEndNode().getOffset();
+		//outputAS.add(context[0],context[1],"M-MF-Occurance-Next",features);
+
+		Annotation nextSentence2 = (Annotation)inputAS.get("Sentence",nextSentence.getEndNode().getOffset()+5,nextSentence.getEndNode().getOffset()+10).iterator().next();
+		//context[0] = nextSentence2.getStartNode().getOffset();
+		//context[1] = nextSentence2.getEndNode().getOffset();
+		//outputAS.add(context[0],context[1],"M-MF-Occurance-Next_2",features);
+
+
+		Annotation nextSentence3 = (Annotation)inputAS.get("Sentence",nextSentence2.getEndNode().getOffset()+5,nextSentence2.getEndNode().getOffset()+10).iterator().next();
+		//context[0] = nextSentence3.getStartNode().getOffset();
+		contextNext[1] = nextSentence3.getEndNode().getOffset();
+		//outputAS.add(context[0],context[1],"M-MF-Occurance-Next_3",features);
+*/
+
+
+		//Annotation prevSentence = (Annotation)inputAS.get("Sentence",sentence.getStartNode().getOffset()-10,sentence.getStartNode().getOffset()-5).iterator().next();
+		//context[0] = prevSentence.getStartNode().getOffset();
+		//context[1] = prevSentence.getEndNode().getOffset();
+		//outputAS.add(context[0],context[1],"M-MF-Occurance-Prev",features);
+
+		/*
+		//retrieve related mutations
+		boolean mutationsFound = false;
+		int sentenceDistance = 0;
+		Long[] mutantSentence = new Long[2];
+		
+		List<Long[]> mutants = new ArrayList<Long[]>();
+		
+		while(!mutationsFound && sentenceDistance < 4) {
+			//check current sentence
+			AnnotationSet mutationAS = inputAS.get("GroundedPointMutation",sentence.getStartNode().getOffset(),sentence.getEndNode().getOffset());
+			
+			//if mutations exist
+			if(mutationAS.size() > 0) {
+				System.out.println("Flopp");
+				//annotate each of them as a ProteinMutant.
+				for(Annotation mutationA : mutationAS) {
+					String wildtypeSequence = new String((String)doc.getFeatures().get((String)doc.getFeatures().get("pacs")));
+					String sequence = new String(wildtypeSequence);
+					
+					int mutationPos = (Integer)mutationA.getFeatures().get("hasCorrectPosition")-1;
+					String mutantResidue = (String)mutationA.getFeatures().get("hasMutantResidue");
+					sequence = new String(sequence.substring(0,mutationPos)+mutantResidue+sequence.substring(mutationPos+1));
+					
+					FeatureMap features = Factory.newFeatureMap();
+					features.put("hasSequence",sequence);
+					features.put("mutatesSequence",wildtypeSequence);
+					features.put("mutatesProteinWithSwissProtId",(String)doc.getFeatures().get("pacs"));
+					
+					AnnotationSet previousMutants = outputAS.get("ProteinMutant",mutationA.getStartNode().getOffset(),mutationA.getEndNode().getOffset());
+					boolean mutantAlreadyExists = false;
+					for(Annotation previousMutant : previousMutants) {
+						if(previousMutant.getEndNode().getOffset() == mutationA.getEndNode().getOffset() && 
+							previousMutant.getStartNode().getOffset() == mutationA.getStartNode().getOffset()) {
+							mutantAlreadyExists = true;
+						}
+					}
+					if(!mutantAlreadyExists) {
+						outputAS.add(mutationA.getStartNode().getOffset(),mutationA.getEndNode().getOffset(),"ProteinMutant",features);	
+					}
+					mutants.add(new Long[] {mutationA.getStartNode().getOffset(),mutationA.getEndNode().getOffset()});
+				}
+				
+				Object tempNum = doc.getFeatures().get("numberOfImpactMutationRelations");
+				if(tempNum == null) {
+					doc.getFeatures().put("numberOfImpactMutationRelations",mutationAS.size());
+				}
+				else {
+					doc.getFeatures().put("numberOfImpactMutationRelations",((Integer)tempNum)+mutationAS.size());
+				}
+				
+				mutantSentence[0] = sentence.getStartNode().getOffset();
+				mutantSentence[1] = sentence.getEndNode().getOffset();
+				mutationsFound = true;
+			}
+			//if mutations doesnt exist
+			else {
+				//move to a more previous sentence
+				Annotation tempSentence = sentence;
+				try {
+					sentence = (Annotation)inputAS.get("Sentence",sentence.getStartNode().getOffset()-10,sentence.getStartNode().getOffset()-5).iterator().next();
+				} catch(Exception e) {
+					sentence = tempSentence;
+					sentenceDistance = 4;
+				}
+				sentenceDistance++;
+			}
+		}
+		*/
+
+	} catch(Exception e) {
+		e.printStackTrace();
+	}
+}

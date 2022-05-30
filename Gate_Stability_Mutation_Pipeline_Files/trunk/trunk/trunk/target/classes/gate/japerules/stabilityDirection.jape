@@ -1,0 +1,69 @@
+Phase:firstpass
+Input: Lookup SpaceToken Token
+Options: control = appelt
+
+Rule: StabilityDirectionRule1
+(
+{Lookup.majorType == StabilityDir}
+{SpaceToken}
+({Lookup.majorType == StabilityVals}|
+{Lookup.majorType == StabilityDir})
+): label
+-->
+:label.StabilityDirection = {rule= "StabilityDirectionRule1" }
+
+Rule: StabilityDirectionRule2
+(
+{Lookup.majorType == StabilityDir}
+{SpaceToken}
+({Token})[1]
+{SpaceToken}
+({Lookup.majorType == StabilityVals}|
+{Lookup.majorType == StabilityDir})
+): label
+-->
+:label.StabilityDirection = {rule= "StabilityDirectionRule2" }
+
+Rule: StabilityDirectionRule3
+(
+{Lookup.majorType == StabilityDir}
+({Token})[1]
+{Lookup.majorType == StabilityDir}
+): label
+-->
+:label.StabilityDirection = {rule= "StabilityDirectionRule3" }
+
+Rule: StabilityDirectionRule4
+(
+{Lookup.majorType == StabilityDir}
+{SpaceToken}
+{Lookup.majorType == StabilityDir}
+{SpaceToken}
+{Lookup.majorType == StabilityDir}
+): label
+-->
+:label.StabilityDirection = {rule= "StabilityDirectionRule4" }
+
+Rule: StabilityDirectionRule5
+(
+{Lookup.majorType == StabilityDir}
+{SpaceToken}
+({Token})[1]
+{SpaceToken}
+({Lookup.majorType == StabilityVals}|
+{Lookup.majorType == StabilityDir})
+{SpaceToken}
+({Token})[1]
+{SpaceToken}
+({Lookup.majorType == StabilityVals}|
+{Lookup.majorType == StabilityDir})
+): label
+-->
+:label.StabilityDirection = {rule= "StabilityDirectionRule5" }
+
+Rule: StabilityDirectionRule6
+(
+{Token.string == "fold-destabilizing"}
+): label
+-->
+:label.StabilityDirection = {rule= "StabilityDirectionRule6" }

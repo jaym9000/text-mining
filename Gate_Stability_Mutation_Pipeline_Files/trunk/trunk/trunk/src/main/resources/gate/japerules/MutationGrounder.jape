@@ -1,0 +1,682 @@
+Imports: {
+	import java.sql.*; 
+	import com.mysql.jdbc.exceptions.*;
+	import java.lang.*;
+	import java.util.regex.*;
+	import edu.uchsc.ccp.nlp.ei.mutation.*;
+} 
+
+Phase:MutationGrounding
+Input: Lookup
+
+Options: control = once
+
+Rule:ground1
+(
+	{Lookup.majorType == "mutation"}
+	
+):ground
+
+-->
+{
+		java.util.logging.Logger log=null;
+		if(log==null){
+		    log =  java.util.logging.Logger.getLogger("JAPELogger");
+		    log.setLevel(java.util.logging.Level.OFF);
+		}
+
+	Map<String,String> PASequenceMapping = new HashMap<String, String>();
+	
+	class Mutation implements Comparable {
+		public Mutation(String wt, int pos, String mut) {
+			wildtype = wt;
+			position = pos;
+			mutation = mut;
+		}
+		
+		public int compareTo(Object anotherMutation) throws ClassCastException {
+		    if (!(anotherMutation instanceof Mutation))
+		      throw new ClassCastException("A Mutation object expected.");
+		    int anotherMutationPosition = ((Mutation) anotherMutation).position;  
+		    return this.position - anotherMutationPosition;    
+		}
+		
+		public boolean equals(Object anotherMutation) throws ClassCastException {
+			if (!(anotherMutation instanceof Mutation))
+				throw new ClassCastException("A Mutation object expected.");
+			return ((Mutation)anotherMutation).wildtype.equals(this.wildtype) && ((Mutation)anotherMutation).position == this.position;
+			
+		}
+
+		public String wildtype;
+		public int position;
+		public String mutation;
+	}
+
+	/*
+	*
+	*	
+	class MutationNormalizer {
+	
+		public MutationNormalizer(String regexDir) {
+			mf = new MutationFinder(regexDir + "regex.txt");
+		}
+
+		
+		public Mutation normalize(String unnormalizedMutation) throws MutationException {
+			//remove crap
+			unnormalizedMutation = unnormalizedMutation.replaceAll("\\s", " ");
+			unnormalizedMutation = unnormalizedMutation.replaceAll("[ ][ ]", " ");
+			
+			Map<edu.uchsc.ccp.nlp.ei.mutation.Mutation, java.util.Set<int[]>> mutations = mf.extractMutations(unnormalizedMutation);
+			String normalizedMutationString = "";
+			for (edu.uchsc.ccp.nlp.ei.mutation.Mutation mutation : mutations.keySet()) {
+				for (int i = 0; i < mutations.get(mutation).size(); i++) {
+					normalizedMutationString = ((GroundedPointMutation) mutation).toString();
+				}
+			}
+			String wildtype = normalizedMutationString.substring(0,1);
+			String mutant = normalizedMutationString.substring(normalizedMutationString.length()-1);
+			int position = Integer.parseInt(normalizedMutationString.substring(1,normalizedMutationString.length()-1));
+			
+			return new Mutation(wildtype, position, mutant);
+		}
+		
+		private MutationFinder mf;
+	}
+	/*
+	*/
+	
+	class MutationInfo implements Comparable {
+		public MutationInfo(String pa, List<Mutation> mutations, int offset) {
+			PA = pa;
+			Mutations = mutations;
+			Offset = offset;
+		}
+		
+		public int compareTo(Object anotherMutationInfo) throws ClassCastException {
+		    if (!(anotherMutationInfo instanceof MutationInfo))
+		      throw new ClassCastException("A Mutation object expected.");  
+		    return ((MutationInfo) anotherMutationInfo).Mutations.size() - this.Mutations.size();    
+		}
+		
+		public String PA;
+		public List<Mutation> Mutations;
+		public int Offset;
+	}
+	
+	try {	
+		//System.out.print("Ground mutation mentions...");
+		String DATABASE_URL = "jdbc:mysql://sadi3:3306/uniprot";
+		String USERNAME = "swissprot";
+		String PASSWORD = "password";
+
+		Class.forName("com.mysql.jdbc.Driver");		
+		Connection con = DriverManager.getConnection(DATABASE_URL, USERNAME, PASSWORD);
+
+		//MutationNormalizer mutationNormalizer = new MutationNormalizer("C:\\JARS\\MutationFinder\\");
+		
+		//Initialize a table for protein mentions.
+		Map<int[],List<String>> mentionTable = new HashMap<int[],List<String>>();
+		Set<String> mentionSet = new HashSet<String>();
+		
+		List<gate.Annotation> proteinMentions = new ArrayList<gate.Annotation>((gate.AnnotationSet)inputAS.get("ProperProteinName"));
+		for(gate.Annotation proteinMention : proteinMentions) {
+			Long s = proteinMention.getStartNode().getOffset();
+			Long e = proteinMention.getEndNode().getOffset();
+			String value = doc.getContent().getContent(s, e).toString();
+			String start = Long.toString(s);
+			String end = Long.toString(e);
+			
+			//only consider mentions with length > 3
+			if (value.length() > 3) {
+				mentionTable.put(new int[] {Integer.parseInt(start),Integer.parseInt(end)}, (new ArrayList<String>(Arrays.asList((new String[]{value.toLowerCase()})))));
+				mentionSet.add(value.toLowerCase());
+			}
+		}
+
+		// debug.
+		for(int[] positions : mentionTable.keySet()) {
+			log.info(positions[0]+":"+positions[1]+":"+mentionTable.get(positions));
+		}
+
+
+		for(String m : mentionSet) {
+			Set<String> queryResult = new HashSet<String>();
+			String primaryAccQuery = "SELECT DISTINCT pac FROM fullname WHERE name LIKE '"+m+"%'";
+			Statement primaryAccSt = con.createStatement();
+			ResultSet primaryAccRs = primaryAccSt.executeQuery(primaryAccQuery);
+			while(primaryAccRs.next()) {
+				queryResult.add(primaryAccRs.getString("pac"));
+			}
+			String primaryAccQuery2 = "SELECT DISTINCT pac FROM genename WHERE name LIKE '"+m+"%'";
+			Statement primaryAccSt2 = con.createStatement();
+			ResultSet primaryAccRs2 = primaryAccSt2.executeQuery(primaryAccQuery2);
+			while(primaryAccRs2.next()) {
+				queryResult.add(primaryAccRs2.getString("pac"));
+			}
+			String primaryAccQuery3 = "SELECT DISTINCT pac FROM shortname WHERE name LIKE '"+m+"%'";
+			Statement primaryAccSt3 = con.createStatement();
+			ResultSet primaryAccRs3 = primaryAccSt3.executeQuery(primaryAccQuery3);
+			while(primaryAccRs3.next()) {
+				queryResult.add(primaryAccRs3.getString("pac"));
+			}
+			//add them all to the proteinMentionTable
+			List<String> queryResultAsList = new ArrayList<String>(queryResult);
+			queryResultAsList.add(0, m);
+			log.info("query result: "+queryResultAsList);
+			for(int[] ia : mentionTable.keySet()) {
+				if (mentionTable.get(ia).get(0).equals(m)) {
+					mentionTable.put(ia, queryResultAsList);
+				}
+			}
+		}
+		
+		//score the accession numbers depending on occurrance.
+		Map<String,Integer> scoreboard = new HashMap<String, Integer>();
+		for(int[] ia : mentionTable.keySet()) {
+			boolean m = true;
+			for(String pac : mentionTable.get(ia)) {
+				if(!m) {
+					if(scoreboard.get(pac) == null) {
+						scoreboard.put(pac, 1);
+					}
+					else {
+						scoreboard.put(pac, scoreboard.get(pac)+1);
+					}
+				}
+				else {
+					m = false;
+				}
+			}
+		}
+		
+		Set<String> topPACs = new HashSet<String>();
+		int numberOfMentionings = 0;
+		for(String pac : scoreboard.keySet()) {
+			if(scoreboard.get(pac)>numberOfMentionings) {
+				topPACs.clear();
+				topPACs.add(pac);
+				numberOfMentionings = scoreboard.get(pac);
+			}
+			else if(scoreboard.get(pac)==numberOfMentionings) {
+				topPACs.add(pac);
+			}
+		}
+		Set<String> allPAs = topPACs;
+		// @AK for test (remove after real fix!!!!!!!!!!!!!!!!!!!)
+		if(allPAs.contains("Q9GLJ8")){log.info("remove Q9GLJ8");
+		    allPAs.remove("Q9GLJ8");
+		}else log.info("no Q9GLJ8");
+
+		//Set<String> allPAs = new HashSet<String>();allPAs.add("P32245");
+		log.info("allPAs: "+allPAs);
+		
+		/* Filter with use of organism mentions
+		*
+		*/
+		//retrieve all organism mentions
+		Set<String> organisms = new HashSet<String>();
+		
+		List<gate.Annotation> organismMentions = new ArrayList<gate.Annotation>((gate.AnnotationSet)inputAS.get("OrganismName"));
+		for(gate.Annotation organismMention : organismMentions) {
+			Long s = organismMention.getStartNode().getOffset();
+			Long e = organismMention.getEndNode().getOffset();
+			organisms.add(doc.getContent().getContent(s, e).toString());
+		}
+		
+		//transform all mentions into scientific names.
+		Set<String> organismsSci = new HashSet<String>();
+		for(String organism : organisms) {
+			String organismSciQuery = "SELECT sciname FROM organismscieng WHERE engname = '"+organism+"'";
+			Statement organismSciSt = con.createStatement();
+			ResultSet organismSciRs = organismSciSt.executeQuery(organismSciQuery);
+			if(organismSciRs.next()) {
+				organismsSci.add(organismSciRs.getString(1));
+			}
+			else {
+				organismsSci.add(organism);
+			}
+		}
+		
+		//create organism sub query
+		String organismSubQuery = "(";
+		for(String organismsci : organismsSci) {
+			organismSubQuery += "name ='"+organismsci+"' OR ";
+		}
+		if(organismSubQuery.length() > 1) {
+			organismSubQuery = organismSubQuery.substring(0, organismSubQuery.length()-4) + ")";
+		}
+		
+		Set<String> tempAllPAs = new HashSet<String>();
+		if (organismsSci.size() > 0) {
+			for(String pac : allPAs) {
+				String checkOrganismPACQuery = "SELECT * FROM organismname WHERE pac = '"+pac+"' AND "+organismSubQuery;
+				Statement checkOrganismPACSt = con.createStatement();
+				ResultSet checkOrganismPACRs = checkOrganismPACSt.executeQuery(checkOrganismPACQuery);
+				if(checkOrganismPACRs.next()) {
+					tempAllPAs.add(pac);
+				}
+			}
+		}
+		//if the filtering ended up with accession numbers left, accept the changes.
+		if(tempAllPAs.size() != 0) {
+			allPAs = tempAllPAs;
+		}
+		log.info("allPAs after organism filter: "+allPAs);
+				
+		/* End of organism filter.
+		*/
+		
+		//retrieve all mutation mentions
+		List<gate.Annotation> mutationAnnotations = new ArrayList<gate.Annotation>((gate.AnnotationSet)inputAS.get("MutationTemp"));
+		int numberOfMutationMentions = mutationAnnotations.size();
+		//log.info("number of mutation mentions: "+numberOfMutationMentions);
+		String[][] mutationTable = new String[numberOfMutationMentions][6];
+		Set<String> mutationMentions = new HashSet<String>();
+		int mutationIndex = 0;
+		
+		Set<Mutation> normalizedMutationSet = new HashSet<Mutation>();
+		
+		for(gate.Annotation mutationAnnotation : mutationAnnotations) {
+			Long s = mutationAnnotation.getStartNode().getOffset();
+			Long e = mutationAnnotation.getEndNode().getOffset();
+			
+			mutationTable[mutationIndex][0] = Long.toString(s);
+			mutationTable[mutationIndex][1] = Long.toString(e);
+			mutationTable[mutationIndex][2] = doc.getContent().getContent(s, e).toString();
+
+			String normalizedMutationString = (String)mutationAnnotation.getFeatures().get("WNMFormat");			
+			mutationTable[mutationIndex][3] = normalizedMutationString;
+			
+			//extract the different parts and add to a set of normalized mutations.
+			String wildtype = normalizedMutationString.substring(0,1);
+			String mutant = normalizedMutationString.substring(normalizedMutationString.length()-1);
+			int position = Integer.parseInt(normalizedMutationString.substring(1,normalizedMutationString.length()-1));
+			normalizedMutationSet.add(new Mutation(wildtype, position, mutant));
+			
+			mutationMentions.add(doc.getContent().getContent(s, e).toString());
+			mutationIndex++;
+		}
+		
+		//normalize the mutations.
+		/* OLD!
+		*
+		Set<Mutation> normalizedMutationSet = new HashSet<Mutation>();
+		for(String mutationMention : mutationMentions) {
+			Mutation nm = mutationNormalizer.normalize(mutationMention);
+			normalizedMutationSet.add(nm);
+			//and also, put it in the mutationTable;
+			for(int i = 0; i < numberOfMutationMentions ; i++) {
+				if(mutationMention.equals(mutationTable[i][2])) {
+					mutationTable[i][3] = nm.wildtype+Integer.toString(nm.position)+nm.mutation;
+				}
+			}
+		}
+		/*
+		*/
+		
+		//make a list of the set
+		List<Mutation> normalizedMutations = new ArrayList<Mutation>(normalizedMutationSet);
+		
+		//sort the mutations, can't really remember why anymore.
+		Collections.sort(normalizedMutations);
+		
+		//Make sure mutations with the same WT residue and the same position are treated as one single mutation.
+		//When the grounding and the filtering is done, they are again treated as different mutations
+		Map<Mutation,List<Mutation>> sameWTMap = new HashMap<Mutation, List<Mutation>>();
+		List<Integer> listedPositions = new ArrayList<Integer>();
+		for(int i = 0; i < normalizedMutations.size(); i++) {
+			if(!listedPositions.contains(i)) {
+				List<Mutation> mList = new ArrayList<Mutation>();
+				for(int j = i+1; j < normalizedMutations.size(); j++) {
+					//two mutations are considered equal if they have the same WT residue and the same position
+					if(normalizedMutations.get(i).equals(normalizedMutations.get(j))) {
+						mList.add(new Mutation(normalizedMutations.get(j).wildtype, normalizedMutations.get(j).position, normalizedMutations.get(j).mutation));
+						listedPositions.add(j);
+					}
+				}
+				if (mList.size() > 0) {
+					sameWTMap.put(normalizedMutations.get(i), mList);
+				}
+			}
+		}
+
+		// @AK.Debug
+		for(Mutation mutation : normalizedMutations){
+		    ///log.info("normalizedMutations.mutation: "+mutation.wildtype+mutation.position+mutation.mutation);
+		 }
+
+		//remove "dublicates"
+		for(int i = normalizedMutations.size()-1; i > -1; i--) {
+			if(listedPositions.contains(i)) {
+				normalizedMutations.remove(i);
+			}
+		}
+
+		// @AK.Debug
+		for(Mutation mutation : normalizedMutations){
+		    ///log.info("normalizedMutations2.mutation: "+mutation.wildtype+mutation.position+mutation.mutation);
+		 }
+
+		//Initialize a List<PAMOMap> 
+		List<MutationInfo> mutationInfoList = new ArrayList<MutationInfo>();
+			//for each PA in allPAs
+		for(String PA : allPAs) {
+			log.info("GROUNDING ALGORITHM for : "+ PA);
+			MutationInfo mi;
+			
+			/* GROUNDING ALGORITHM START
+			*/
+			//private MutationInfo ground(List<Mutation> normalizedMutations, String PA,Connection con) throws IOException, SQLException {
+			try {
+				//retrieve the amino acid sequence
+				String sequence = PASequenceMapping.get(PA);
+				if(sequence == null) {
+					String sequenceQuery = "SELECT sequence FROM sequence WHERE pac='"+PA+"'";
+					Statement sequenceSt = con.createStatement();
+					ResultSet sequenceRs = sequenceSt.executeQuery(sequenceQuery);
+					if(sequenceRs.next()) {
+						sequence = sequenceRs.getString("sequence");
+					}
+					else {
+						mi = null;
+					}
+					PASequenceMapping.put(PA, sequence);
+					log.info("PA: "+PA + " sequence: "+sequence);
+				}
+				
+				//discard mutations that can never fit the sequence (position>sequence length +50)
+				for(int i = normalizedMutations.size()-1; i > -1 ; i--) {
+					if(normalizedMutations.get(i).position > sequence.length() + 50) {
+						normalizedMutations.remove(i);
+					}
+				}
+
+				// @AK.Debug
+				for(Mutation mutation : normalizedMutations){
+				    ///log.info("normalizedMutations3.mutation: "+mutation.wildtype+mutation.position+mutation.mutation);
+				}
+
+				List<Mutation> G = new ArrayList<Mutation>();
+				boolean groundingFound = false;
+				String regex = "";
+				Pattern pattern;
+				Matcher matcher;
+				
+				List<MutationInfo> GList = new ArrayList<MutationInfo>();
+				//first, look for smallest possible groundings (2 point mutations)
+				for(int i = 0; i < normalizedMutations.size(); i++) {
+					for(int j = i+1; j < normalizedMutations.size(); j++) {
+						regex = normalizedMutations.get(i).wildtype;
+						for(int k = 0; k < (normalizedMutations.get(j).position - normalizedMutations.get(i).position -1); k++) {
+							regex += ".";
+						}
+						regex += normalizedMutations.get(j).wildtype;
+						
+						pattern = null;
+						pattern = Pattern.compile(regex);
+						matcher = pattern.matcher(sequence);
+						
+						//if the smallest possible is found, see if it can be made larger
+						while(matcher.find()) {
+							groundingFound = true;
+							G.add(normalizedMutations.get(i));
+							G.add(normalizedMutations.get(j));
+							
+							int firstMutationsPosition = G.get(0).position;
+							int offset = firstMutationsPosition - (matcher.start()+1);
+							
+							//add all other mutations that fit.
+							for(int k = j + 1; k < normalizedMutations.size(); k++) {
+								int positionToLookAt = normalizedMutations.get(k).position-(offset+1);
+								if(sequence.length() > positionToLookAt) {
+									if (normalizedMutations.get(k).wildtype.equals(Character.toString(sequence.charAt(positionToLookAt)))) {
+										G.add(normalizedMutations.get(k));
+									}	
+								}
+							}
+							GList.add(new MutationInfo(PA,new ArrayList<Mutation>(G),offset));
+							G.clear();
+						}
+					}
+				}
+				
+				Collections.sort(GList);
+				int listSize = GList.size();
+
+				 // @AK debug
+				log.info("GList.size(): "+GList.size());
+
+				for(MutationInfo mi2 : GList){
+				  ///log.info("GList.mi.PA: "+mi2.PA);
+				  ///log.info("GList.mi.Offset: "+mi2.Offset);
+				  for(Mutation mutation2 : mi2.Mutations){
+				    ///log.info("GList.mi.mutation: "+mutation2.wildtype+mutation2.position+mutation2.mutation);
+				  }
+				}
+
+				for(int i = listSize - 1 ; i > -1 ; i--) {
+					boolean remove = false;
+					boolean removej = false;
+					int j2 = listSize;
+					for(int j = i - 1 ; j > -1 ; j-- ) {
+						//get the intersection of the two mutation lists
+						Set<Mutation> intersection = new HashSet<Mutation>(GList.get(i).Mutations);
+						intersection.retainAll(GList.get(j).Mutations);
+						if(intersection.size() > 0) {
+							if(GList.get(j).Mutations.size() > GList.get(i).Mutations.size()) {
+								remove = true;
+								break;
+							}
+							else {
+								if(Math.abs(GList.get(j).Offset) < Math.abs(GList.get(i).Offset)) {
+									remove = true;
+									break;
+								}
+								else {
+									remove = true;
+									removej = true;
+									j2 = j;
+									break;
+								}
+							}
+						}
+					}
+					if(remove) {
+						if(removej) {
+							GList.remove(j2);
+						}
+						else {
+							GList.remove(i);
+						}
+					}
+				}
+
+				 /*// @AK debug
+				log.info("GList2.size(): "+GList.size());
+				for(MutationInfo mi : GList){
+				  log.info("GList2.mi.PA: "+mi.PA);
+				  log.info("GList2.mi.Offset: "+mi.Offset);
+				  for(Mutation mutation : mi.Mutations){
+				    log.info("GList2.mi.mutation: "+mutation.wildtype+mutation.position+mutation.mutation);
+				  }
+				}*/
+
+				//if there still are more than one remaining, just choose the top one for crying out loud..
+				if (GList.size()>0) {
+					mi = GList.get(0);
+				}
+				//if there are no matches, create an empty list with mutations (inside a mutationInfo object)
+				else {
+					mi = new MutationInfo(PA,new ArrayList<Mutation>(),189819);
+				}
+			}	catch(StackOverflowError e) {
+					log.info("KLEPPP!");
+					log.info("PA:"+PA);
+					for(Mutation m : normalizedMutations) {
+						log.info(m.wildtype+m.position+m.mutation);
+					}
+					try {
+						Thread.sleep(60000);
+					} catch (InterruptedException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+					mi = null;
+			}
+
+			/* GROUNDING ALGORITHM END
+			*/
+			
+
+			if(mi!=null) {
+				mutationInfoList.add(mi);
+				//log.info("grounding against "+PA+" is done.");
+			}
+			else {
+				log.info("grounding against "+PA+" failed due to missing sequence (or perhaps something else, who knows?)");
+			}
+		}
+		Collections.sort(mutationInfoList);
+
+		log.info("mutationInfoList.size(): "+mutationInfoList.size());
+		for(MutationInfo mi : mutationInfoList){
+		  ///log.info("mi.PA: "+mi.PA);
+		  ///log.info("mi.Offset: "+mi.Offset);
+		  for(Mutation mutation : mi.Mutations){
+		    ///log.info("mi.mutation: "+mutation.wildtype+mutation.position+mutation.mutation);
+		  }
+		}
+
+		//filter
+		for(int i = mutationInfoList.size()-1; i > -1; i--) {
+			if(mutationInfoList.get(i).Mutations.size() == 0) {
+				mutationInfoList.remove(i);
+			}
+			else {
+				boolean remove = false;
+				boolean removej = false;
+				int outerJ = 0;
+				for (int j = i-1; j > -1; j--) {
+					List<Mutation> intersect = new ArrayList<Mutation>(mutationInfoList.get(j).Mutations);
+					intersect.retainAll(mutationInfoList.get(i).Mutations);
+					if(intersect.size() > 0) {
+						if (mutationInfoList.get(j).Mutations.size() == mutationInfoList.get(i).Mutations.size()) {
+							if(Math.abs(mutationInfoList.get(j).Offset) <= Math.abs(mutationInfoList.get(i).Offset)) {
+								remove = true;
+							}
+							else {
+								remove = true;
+								removej = true;
+								outerJ = j;
+							}
+						}
+						else {
+							remove = true;
+						}
+					}
+				}
+				if(remove) {
+					if(removej) {
+						mutationInfoList.remove(outerJ);
+					}
+					else {
+						mutationInfoList.remove(i);
+					}
+				}
+			}
+		}
+		//when filtering and extension is done, add the mutations previously removed, if their
+		//wildtype residue and position is equal to any of the remaining mutations.
+		for(MutationInfo mi : mutationInfoList) {
+			for(Mutation m : mi.Mutations) {
+				List<String> nm = new ArrayList<String>();
+				nm.add(m.wildtype+Integer.toString(m.position)+m.mutation);
+				try { 
+					for(Mutation sameWT : sameWTMap.get(m)) {
+						nm.add(sameWT.wildtype+Integer.toString(sameWT.position)+sameWT.mutation);
+					}
+				} catch(NullPointerException e) {
+					
+				}
+				for(int i = 0; i < numberOfMutationMentions; i++) {
+					if(nm.contains(mutationTable[i][3])) {
+						mutationTable[i][4] = mi.PA;
+						mutationTable[i][5] = Integer.toString(mi.Offset);
+					}
+				}
+			}
+		}
+		
+		
+		Set<String> chosenPacs = new HashSet<String>();
+
+		
+		/* Add PAC:s as features to protein and mutation mentions
+		 */
+		//log.info("Pmid\tStart\tEnd\tValue\t\t\tNormal\tGround\tOffset");
+		for(int i = 0; i < numberOfMutationMentions; i++) {
+			//log.info(doc.getName()+"\t"+mutationTable[i][0]+"\t"+mutationTable[i][1]+"\t"+mutationTable[i][2]+"\t"+mutationTable[i][3]+"\t\t\t"+mutationTable[i][4]+"\t"+mutationTable[i][5]);
+			
+			if(mutationTable[i][4] != null) {
+				AnnotationSet as = inputAS.get(Long.parseLong(mutationTable[i][0]),Long.parseLong(mutationTable[i][1]));
+				Annotation a = (gate.Annotation)as.get("MutationTemp").iterator().next();
+				FeatureMap features = Factory.newFeatureMap();  
+				 
+				features.put("hasMentionedPosition",Integer.parseInt(mutationTable[i][3].substring(1,mutationTable[i][3].length()-1)));
+				features.put("hasCorrectPosition", Integer.parseInt(mutationTable[i][3].substring(1,mutationTable[i][3].length()-1))-Integer.parseInt(mutationTable[i][5]));
+				features.put("isGroundedTo", mutationTable[i][4]);
+				features.put("hasWildtypeResidue", mutationTable[i][3].substring(0,1));
+				features.put("hasMutantResidue", Character.toString(mutationTable[i][3].charAt(mutationTable[i][3].length()-1)));
+				outputAS.add(Long.parseLong(mutationTable[i][0]), Long.parseLong(mutationTable[i][1]), "GroundedPointMutation",features);
+		
+				//export result to db for future evaluation
+				/**
+				Statement insertSt = con.createStatement();
+					try {
+						insertSt.executeUpdate("INSERT INTO groundedmutations (pmid,start,end,normal,pa,offset) VALUES('"+doc.getName()+"',"+mutationTable[i][0]+","+mutationTable[i][1]+",'"+mutationTable[i][3]+"','"+mutationTable[i][4]+"',"+mutationTable[i][5]+")");
+					} catch(MySQLIntegrityConstraintViolationException err) {
+						
+					}
+				/**/
+				//remember the accession numbers for later use (the protein annotation step).
+				chosenPacs.add(mutationTable[i][4]);
+			}
+		}
+		
+		for(int[] ia : mentionTable.keySet()) {
+			for(String ac : chosenPacs) {
+				if (mentionTable.get(ia).contains(ac)) {
+					AnnotationSet as = inputAS.get(Long.parseLong(Integer.toString(ia[0])),Long.parseLong(Integer.toString(ia[1])));
+					Annotation a = (gate.Annotation)as.get("ProteinName").iterator().next();
+					FeatureMap features = Factory.newFeatureMap();
+					features.put("mentionsProtein",ac);
+					outputAS.add(Long.parseLong(Integer.toString(ia[0])),Long.parseLong(Integer.toString(ia[1])), "ProteinMention", features);
+				}
+			}
+		}
+		
+		//add chosenPacs as a feature to the document
+		String pacFeature = new String();
+		int nop = 0;
+		for(String ac : chosenPacs) {
+			if(nop == 0) {
+				pacFeature=ac;
+			} else {
+				pacFeature+=","+ac;
+			}
+			nop++;
+		}
+		doc.getFeatures().put("pacs",pacFeature);
+		doc.getFeatures().put(pacFeature,PASequenceMapping.get(pacFeature));
+
+		//inputAS.removeAll(inputAS.get("MutationTemp"));
+		//inputAS.removeAll(inputAS.get("ProteinName"));
+		//inputAS.removeAll(inputAS.get("ProperProteinName"));
+		//inputAS.removeAll(inputAS.get("Lookup"));
+	}
+	catch(Exception e) {
+		e.printStackTrace();
+	}
+}

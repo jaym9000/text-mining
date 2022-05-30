@@ -1,0 +1,120 @@
+Phase: ImpacOKVRefinementStep2
+Input: ImpactOKV Negation
+
+Rule:ImpactOKVRefinementStep2Rule1
+(
+	{ImpactOKV.direction == "Positive",
+	ImpactOKV contains Negation}
+):refinedImpactOKV
+-->
+{
+	Annotation tempA = (gate.Annotation)((gate.AnnotationSet)bindings.get("refinedImpactOKV")).iterator().next();  
+	Annotation impactA = (gate.Annotation)inputAS.get("ImpactOKV",tempA.getStartNode().getOffset(),tempA.getEndNode().getOffset()).iterator().next();
+	
+	
+	AnnotationSet positiveAS = inputAS.get("Positive",tempA.getStartNode().getOffset(),tempA.getEndNode().getOffset());
+	AnnotationSet negationAS = inputAS.get("Negation",tempA.getStartNode().getOffset(),tempA.getEndNode().getOffset());
+	
+	boolean neutral = false;
+	for(Annotation positiveA : positiveAS) {
+		for(Annotation negationA : negationAS) {
+			//Negation have to come before directionality word
+			if(negationA.getEndNode().getOffset() < positiveA.getStartNode().getOffset()) {
+				//There can be no punctuation between the two words.
+				AnnotationSet tokenAS = inputAS.get("Token", negationA.getEndNode().getOffset(), positiveA.getStartNode().getOffset());
+				boolean noPunctuations = true;
+				for(Annotation tokenA : tokenAS) {
+					if(tokenA.getFeatures().get("kind").equals("punctuation")) {
+						noPunctuations = false;
+					}
+				}
+				if(noPunctuations) {
+					neutral = true;
+				}
+			}
+		}
+	}
+	
+	//update directionality
+	if(neutral) {	
+		impactA.getFeatures().put("direction","Neutral");
+	}
+}
+
+Rule:ImpactOKVRefinementStep2Rule2
+(
+	{ImpactOKV.direction == "Negative",
+	ImpactOKV contains Negation}
+):refinedImpactOKV
+-->
+{
+	Annotation tempA = (gate.Annotation)((gate.AnnotationSet)bindings.get("refinedImpactOKV")).iterator().next();  
+	Annotation impactA = (gate.Annotation)inputAS.get("ImpactOKV",tempA.getStartNode().getOffset(),tempA.getEndNode().getOffset()).iterator().next();
+	
+	
+	AnnotationSet negativeAS = inputAS.get("Negative",tempA.getStartNode().getOffset(),tempA.getEndNode().getOffset());
+	AnnotationSet negationAS = inputAS.get("Negation",tempA.getStartNode().getOffset(),tempA.getEndNode().getOffset());
+	
+	boolean neutral = false;
+	for(Annotation negativeA : negativeAS) {
+		for(Annotation negationA : negationAS) {
+			//Negation have to come before directionality word
+			if(negationA.getEndNode().getOffset() < negativeA.getStartNode().getOffset()) {
+				//There can be no punctuation between the two words.
+				AnnotationSet tokenAS = inputAS.get("Token", negationA.getEndNode().getOffset(), negativeA.getStartNode().getOffset());
+				boolean noPunctuations = true;
+				for(Annotation tokenA : tokenAS) {
+					if(tokenA.getFeatures().get("kind").equals("punctuation")) {
+						noPunctuations = false;
+					}
+				}
+				if(noPunctuations) {
+					neutral = true;
+				}
+			}
+		}
+	}
+	
+	//update directionality
+	if(neutral) {	
+		impactA.getFeatures().put("direction","Neutral");
+	}
+}
+
+Rule:ImpactOKVRefinementStep2Rule3
+(
+	{ImpactOKV.direction == "PossibleNeutral"}
+):refinedImpactOKV
+-->
+{
+	Annotation tempA = (gate.Annotation)((gate.AnnotationSet)bindings.get("refinedImpactOKV")).iterator().next();  
+	Annotation impactA = (gate.Annotation)inputAS.get("ImpactOKV",tempA.getStartNode().getOffset(),tempA.getEndNode().getOffset()).iterator().next();
+
+	AnnotationSet nonNeutralAS = inputAS.get("Negative",tempA.getStartNode().getOffset(),tempA.getEndNode().getOffset());
+	AnnotationSet negationAS = inputAS.get("Negation",tempA.getStartNode().getOffset(),tempA.getEndNode().getOffset());
+	
+	boolean neutral = false;
+	for(Annotation nonNeutralA : nonNeutralAS) {
+		for(Annotation negationA : negationAS) {
+			//Negation have to come before directionality word
+			if(negationA.getEndNode().getOffset() < nonNeutralA.getStartNode().getOffset()) {
+				//There can be no punctuation between the two words.
+				AnnotationSet tokenAS = inputAS.get("Token", negationA.getEndNode().getOffset(), nonNeutralA.getStartNode().getOffset());
+				boolean noPunctuations = true;
+				for(Annotation tokenA : tokenAS) {
+					if(tokenA.getFeatures().get("kind").equals("punctuation")) {
+						noPunctuations = false;
+					}
+				}
+				if(noPunctuations) {
+					neutral = true;
+				}
+			}
+		}
+	}
+	//update directionality
+	if(neutral) {	
+		impactA.getFeatures().put("direction","Neutral");
+	}
+}
+

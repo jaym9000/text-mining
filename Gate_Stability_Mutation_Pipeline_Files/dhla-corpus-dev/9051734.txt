@@ -1,0 +1,335 @@
+peng$$0105
+
+
+
+
+
+
+
+
+
+
+
+Inﬂuence of mutations of Val226 on the catalytic rate of haloalkane dehalogenase
+
+
+
+
+
+
+
+
+Department of Biochemistry, Groningen Biomolecular Sciences and Biotechnology Institute, University of Groningen, Nijenborgh 4, 9747 AG Groningen, The Netherlands
+
+
+1To
+
+
+
+
+
+whom correspondence should be addressed
+
+
+
+
+
+Haloalkane dehalogenase converts haloalkanes to their corresponding alcohols. The 3D structure, reaction mechanism and kinetic mechanism have been studied. The steady state kcat with 1,2-dichloroethane and 1,2-dibromoethane is limited mainly by the rate of release of the halide ion from the buried active-site cavity. During catalysis, the halogen that is cleaved off (Clα) from 1,2-dichloroethane interacts with Trp125 and the Clβ interacts with Phe172. Both these residues have van der Waals contacts with Val226. To establish the effect of these interactions on catalysis, and in an attempt to change enzyme activity without directly mutating residues involved in catalysis, we mutated Val226 to Gly, Ala and Leu. The Val226Ala and Val226Leu mutants had a 2.5-fold higher catalytic rate for 1,2-dibromoethane than the wild-type enzyme. A pre-steady state kinetic analysis of the Val226Ala mutant enzyme showed that the increase in kcat could be attributed to an increase in the rate of a conformational change that precedes halide release, causing a faster overall rate of halide dissociation. The kcat for 1,2-dichloroethane conversion was not elevated, although the rate of chloride release was also faster than in the wild-type enzyme. This was caused by a 3-fold decrease in the rate of formation of the alkyl-enzyme intermediate for 1,2-dichloroethane. Val226 seems to contribute to leaving group (Clα or Brα) stabilization via Trp125, and can inﬂuence halide release and substrate binding via an interaction with Phe172. These studies indicate that wild-type haloalkane dehalogenase is optimized for 1,2-dichloroethane, although 1,2-dibromoethane is a better substrate. Keywords: conformational change/haloalkane dehalogenase/ pre-steady state kinetics/product export/protein engineering Introduction Haloalkane dehalogenase is one of the few enzymes with a known 3D structure involved in the biodegradation of xenobiotic compounds (Verschueren et al., 1993a). Furthermore, the reaction and kinetic mechanism of the enzyme have been studied in detail (Verschueren et al., 1993b; Pries et al., 1994a, 1995; Schanstra et al., 1996a). The Xanthobacter autotrophicus strain expressing haloalkane dehalogenase is used for bioremediation of groundwater polluted with the ‘natural’ sub¨ er, 1995). Although strate 1,2-dichloroethane (Stucki and Thu applicable in these systems, improvement of the catalytic performance and expanding the substrate range of the organism would increase the feasibility of such techniques for bioremediation purposes.
+
+
+© Oxford University Press
+
+
+
+
+
+The dehalogenase reaction is initiated by binding of the substrate in the Michaelis complex, followed by nucleophilic attack of Asp124 on the carbon atom to which the halogen is bound, which leads to the formation of an alkyl-enzyme intermediate (Verschueren et al., 1993b; Pries et al., 1994a). This covalent intermediate is subsequently hydrolyzed by an activated water molecule, with His289 acting as a general base catalyst, leading to enzyme and products (Verschueren et al., 1993b; Pries et al., 1995). Recent studies have shown that halide release occurs after cleavage of the covalent intermediate and alcohol release, and that it is the slowest step in the reaction sequence during the conversion of 1,2-dichloroethane and 1,2-dibromoethane (Schanstra et al., 1996a). The active-site cavity is buried inside the protein. It is lined with the catalytic triad residues Asp124, His289 and Asp260, as well as four phenylalanines, two tryptophans, two leucines, a valine and a proline (Figure 1; Verschueren et al., 1993a). In the course of the reaction, the substrate also interacts with several of the noncatalytic triad active-site residues. In the Michaelis complex, the chlorine atom (Clα), which is cleaved off from 1,2dichloroethane, is located between the hydrogens bound to the indole nitrogens of Trp125 and Trp175 (Verschueren et al., 1993b). Replacing these two tryptophan residues with Gln reduces both the apparent afﬁnity of the enzyme for substrate and the afﬁnity for halides (Kennes et al., 1995). In the X-ray structure of the wild-type alkyl-enzyme, the halide ion that is cleaved off from the substrate was still found between the two Trp residues, whereas the Clβ lies in the plane of the Phe172 side chain and may be stabilized by interactions with the hydrogen atoms at the Cδ1 and Cε1 of this residue (Verschueren et al., 1993b). Replacing phenylalanine 172 by a tryptophan resulted in a dehalogenase mutant with a lower substrate binding and alkylation rate, indicating possible involvement of this residue in substrate binding and/or transition state stabilization during C-X cleavage (Schanstra et al., 1996b). After hydrolysis of the alkyl-enzyme, the halide ion remains bound between the two active-site Trp residues and no density for the product 2-chloroethanol was observed, indicating that it immediately leaves the active site (Figure 1). As we have found for the mutation of Trp125 and Phe172 in haloalkane dehalogenase (Kennes et al., 1995; Schanstra et al., 1996b), the mutation of residues involved directly in an enzymatic reaction will, in general, drastically change the speciﬁcity and reaction rate (Gerlt, 1994), whereas the mutation of amino acids interacting with these residues can have more subtle effects on the speciﬁcity and reactivity. In haloalkane dehalogenase, Val226 is not involved directly in the dehalogenase reaction but has van der Waals contacts with Phe172 and Trp125 (Cγ2 Val226- Nε1 Trp125 3.2 Å; Cγ1 Val226-Cζ Phe172 3.8 Å; Figure 1). Valine 226 itself is located in the wall of the active-site cavity but does not seem to interact directly with 1,2-dichloroethane during the reaction, except that the Cγ2 may interact with the Cβ of the substrate in the Michaelis complex (Verschueren et al., 1993b). Phe172 and Trp125 are both located very close to the 53
+
+
+
+
+
+J.P.Schanstra et al.
+
+
+
+
+
+
+
+
+
+
+
+halogen that is cleaved off, and slight changes in their position might thus inﬂuence the halide binding site. To establish the importance of the interactions of Val226 with Trp125 and Phe172, and in an attempt to change the activity of the enzyme without directly mutating catalytic residues, Val226 was mutated to glycine, alanine and leucine. The results show that the addition or removal of one methyl group at the side chain of residue 226 is allowed without extreme changes in the enzyme activity for the natural substrate 1,2-dichloroethane. For 1,2-dibromoethane, however, the Val226Ala and Val226Leu mutants had a 2.5-fold higher catalytic rate than the wild-type enzyme, and a pre-steady state kinetic analysis of the Val226Ala enzyme showed that this could be attributed to more rapid halide release, which was caused by an increased rate of enzyme isomerization that precedes halide dissociation. Materials and methods Materials Halogenated compounds were obtained from Janssen Chimica (Beerse, Belgium) or Merck (Darmstadt, Germany). 2H2O (99.8% v/v) was purchased from Merck or Isotec Inc. (Miamisburg, Ohio). The synthetic oligonucleotides were (from 5Ј to 3Ј): pVal226Ala, GTACGTAAGTTTCCCAAGATGGCCGCGCAACGC, with the SnaBI restriction site in bold italic and the mutated codon in bold; pVal226Gly, GTACyGCAAGyTTTCCCAAGATGGGCGCGCAACGC, with the mutated codon in bold; and pVal226Leu, GTACGCAAGTTTCCCAAGATGCTGGCGCAACGC, with the mutated codon in bold; they were obtained from Eurosequence BV (Groningen, The Netherlands). Bacterial strains and plasmids Plasmid pGELAFϩ, an expression vector based on pET-3d (Studier et al., 1990) with the dehalogenase gene (dhlA) under the control of the T7 promoter and an additional f(1)ϩ origin for the production of single-stranded DNA (Schanstra et al., 1993), was used to overexpress the dehalogenase in Escherichia coli strain BL21(DE3) (Studier et al., 1990). E.coli strains JM101 (Promega) and BW313 (Kunkel, 1985) were used for the production of single-stranded DNA for sequencing and site-directed mutagenesis, respectively. DNA manipulations Standard DNA manipulations were performed as described by Sambrook et al. (1989). Mutants were constructed using the method developed by Kunkel (1985). Sequences were conﬁrmed by dideoxy chain termination sequencing (Sanger et al., 1979). 54
+
+
+
+
+
+Protein expression and puriﬁcation The enzymes were expressed and puriﬁed as described previously (Schanstra et al., 1993). For DEAE cellulose chromatography, TEMAG buffer [10 mM Tris sulfate pH 7.5, 1 mM EDTA, 1 mM 2-mercaptoethanol, 3 mM sodium azide and 10% (v/v) glycerol] was used, while PEMAG buffer [10 mM sodium phosphate, pH 6.0, 1 mM EDTA, 1 mM 2-mercaptoethanol, 3 mM sodium azide and 10% (v/v) glycerol] was used for hydroxylapatite chromatography. The enzyme was concentrated with an Amicon ultraﬁltration cell using a PM10 ﬁlter and stored in TEMAG at 4°C. Dehalogenase assays and protein analysis Dehalogenase assays were performed using the colorimetric detection of halide release as described by Keuning et al. (1985). The experimental error of the kcat values was Ͻ15%. Protein concentrations were determined with Coomassie brilliant blue using bovine serum albumin as a standard. The concentration of puriﬁed enzyme was determined spectrophotometrically using ε280 ϭ 4.87ϫ104 M-1 cm-1 (Schanstra and Janssen, 1996). Solvent kinetic isotope effects were determined with substrate dissolved in 2H2O. Assays were performed as described above using increasing concentrations of 2H2O. The Km value was determined by measuring alcohol or halide production in 4.5 ml incubations containing various concentrations of the substrate dissolved in 50 mM Tris sulfate buffer, pH 8.2, and a suitable amount of enzyme. Samples were incubated for 15 min at 30°C. The amount of substrate converted in the incubation period did not exceed 10% of the amount present at the beginning of the experiment. The amount of alcohol produced was determined by gas chromatography. Halide production was determined colorimetrically as described previously (Keuning et al., 1985). Km values were calculated from the rates of alcohol and halide production by a nonlinear regression analysis using the Michaelis-Menten equation and the program Enzﬁtter (Leatherbarrow, 1987). The experimental error of the Km values was Ͻ25%. Pre-steady state kinetic experiments Stopped-ﬂow ﬂuorescence was used to study the kinetics of halide binding and substrate conversion. The experiments were performed on an Applied Photophysics model SX17MV instrument ﬁtted with a Xe arc lamp with excitation at 290 nm. Fluorescence emission from Trp residues was followed through a 320 nm cut-off ﬁlter supplied with the instrument. All reactions were performed at 30°C, and the reported concentrations are those in
+
+
+
+
+
+Mutational analysis of Val226 in haloalkane dehalogenase
+
+
+
+
+
+the reaction chamber. Each trace shown is the average of three or four individual experiments. Rapid-quench-ﬂow experiments were performed at 30°C on a rapid-quench-ﬂow instrument (RQF-63) from KinTek Instruments (Johnson, 1992). The experiments were carried out by loading the enzyme in one sample loop (50 µl) and substrate in the second sample loop (50 µl). The reaction was started by rapidly mixing the two reactants and then quenching with 120 µl 0.4 M H2SO4 (ﬁnal concentration) after time intervals ranging from 2 ms to 4 s. The quenched mixture was ejected directly into 1.5 ml ice-cold diethylether containing 0.05 mM 1-bromohexane as the internal standard. After thorough extraction, the diethylether layer was separated from the water layer and neutralized by adding H2CO3. The extract was transferred to a 2 ml autosampler vial for automated gas chromatographic analysis. All reported concentrations were in the reaction line of the rapid-quench-ﬂow instrument. Before stopped-ﬂow ﬂuorescence and rapid-quench experiments, the enzyme was dialyzed for at least 3 h against T50EMA (50 mM Tris sulfate, pH 8.2, 1 mM EDTA, 1 mM 2-mercaptoethanol and 3 mM sodium azide) or against T50EDA (50 mM Tris sulfate, pH 8.2, 1 mM EDTA, 1 mM dithiothreitol and 3 mM sodium azide). T50EDA was used for rapid-quench experiments with 1,2-dibromoethane because 2-mercaptoethanol interfered with 2-bromoethanol during gas chromatographic analysis. All halide and substrate solutions were prepared in T50EMA or T50EDA. Halide binding was measured with enzyme dissolved in T50EMAG buffer [T50EMA buffer supplemented with 10% (v/v) glycerol]. Glycerol was added because it improved the reproducibility of the stopped-ﬂow ﬂuorescence transients but did not affect the kinetics of binding. Glycerol (6%) did not affect the binding kinetics of the wild-type enzyme (Schanstra and Janssen, 1996). Gas chromatography All samples were analyzed on a Chrompack 438S gas chromatograph equipped with a model 911 autosampler and a CPWax 52 CB column (length, 25 m; diameter, 0.25 mm; Chrompack, Middelburg, The Netherlands), using an ECD detector for the detection of brominated compounds and an FID detector for the detection of chlorinated compounds. The carrier gas was N2 at 70 kPa. The temperature program was 3 min isothermal at 45°C, followed by an increase to 250°C at a rate of 10°C/min. Kinetic data analysis Rapid-quench and stopped-ﬂow ﬂuorescence data were simulated by numerical integration using the computer program Gepasi, designed by P.Mendes (Mendes, 1993; Gepasi for MSWindows, version 2.0, release 2.08). The Gepasi output was imported into the spreadsheet program Quattro-Pro 5.0 for MSWindows (Borland international Inc.). Both programs were run simultaneously under MS-Windows on a 486 personal computer.
+
+
+
+
+
+The complete dehalogenase reaction can be described by Scheme I (IA, bromide; IB, chloride). This is the combined scheme for substrate conversion (Schanstra et al., 1996a) and halide release identiﬁed by kinetic studies (Schanstra and Janssen, 1996). For both chloride and bromide, the upper route, starting with k4, is the most important route for halide release. Its most essential feature is that actual halide release is a rapid equilibrium step (K5), which is preceded by a slow isomerization step (k4, or in the case of halide binding k-6), and is followed by a rapid isomerization (k6, k-4 for binding). In scheme I, both formation (k2) and hydrolysis (k3) of the alkyl-enzyme intermediate (EI-R·X) are considered to be irreversible because no product of the reverse reaction and no inhibition of enzyme activity by alcohol was found (Schanstra et al., 1996a). EI is the normal native enzyme, whereas EII is the kinetically observed conformational isomer to which halide ions can rapidly bind. EI·X’ is the kinetically observed collision complex in which halide is weakly bound to the native enzyme (Schanstra and Janssen, 1996). Rate and equilibrium constants for halide binding under pseudo ﬁrst-order conditions were obtained by numerical simulation of Scheme IA and B. Under these pseudo ﬁrstorder conditions, the overall rate of halide release (koff), i.e. the rate of conversion of EI·X to EI, was extracted from these rate constants by simulation with Gepasi. Experimental apparent steady state dissociation constants (Kd) for halide binding were determined from the steady state ﬂuorescence levels reached at the end of the stoppedﬂuorescence transients. Calculation was performed by nonlinear regression ﬁtting in Sigmaplot (version 2.0; Jandel Scientiﬁc) of the equation (F0   F)/F0 ϭ faϫ[X]/([X] ϩ Kd), where F is the observed ﬂuorescence at halide concentration [X], Kd is the apparent dissociation constant and fa is the fraction of the total ﬂuorescence that is quenched at [X] ϾϾ Kd. Apparent dissociation constants were also calculated from the kinetic and equilibrium constants given in Scheme IA and B. Using the simplifying assumptions that k-4 ϾϾ k4 and k6 ϾϾ k-6, the apparent dissociation constant determined by ﬂuorescence quenching is given by Kd ϭ K8 [k7/(k7 ϩ k-7)] for Scheme IA and by Kd ϭ (k9/k-9) for Scheme IB. Rates and equilibrium constants for substrate conversion were derived by numerical simulation of Scheme II (Schanstra et al., 1996a), which is a simpliﬁed version of Scheme I.
+
+
+
+
+
+Scheme II.
+
+
+
+
+
+Under initial velocity steady state conditions, kcat ϭ k2k3kx/(k2k3 ϩ k2kx ϩ k3kx), Km ϭ k3kx(k-1 ϩ k2)/(k1(k2k3 ϩ k2kx ϩ k3kx)) and kcat/Km ϭ k1k2/(k-1 ϩ k2). These equations were derived using the determinant method (Huang, 1979). The rate of halide release as determined by a pre-steady state analysis of substrate conversion is depicted by kx, whereas the rate of halide release as determined from halide binding under pseudo ﬁrst-order conditions is depicted by koff. 55
+
+
+
+
+
+Scheme I.
+
+
+
+
+
+J.P.Schanstra et al.
+
+
+
+
+
+Results Construction and characterization of the mutant enzymes The Val226Ala mutant was constructed by Kunkel mutagenesis using wild-type single-stranded DNA as the template. Screening for a Val226Ala mutant was performed by testing for an additional SnaBI restriction site which was introduced because it was present in the mutagenic oligonucleotide. The Val226Gly and Val226Leu mutants were obtained by Kunkel mutagenesis using as the template the dehalogenase gene of an inactive deletion mutant (one nucleotide deleted in the codon for Val226) which also carried an additional SnaBI restriction site. This mutant was obtained accidentally in the previous mutagenesis round. After mutagenesis, screening for E.coli BL21(DE3) transformants producing active dehalogenase was carried out with a pH indicator plate assay and 1,2-dibromoethane as the substrate (Schanstra et al., 1993). Colonies producing active dehalogenase were checked for loss of the SnaBI restriction site which was not present in the oligonucleotides used to construct the Val226Gly and Val226Leu mutants. To examine the effect of the mutation of valine 226 to glycine, alanine and leucine, the activities and Michaelis constants were determined. The mutant and wild-type enzymes were expressed in E.coli BL21(DE3) at a temperature of 17°C to avoid expression of the mutant proteins in inclusion bodies. An analysis of the cell-free extracts with SDS-PAGE showed that the expression levels of wild-type and all mutant proteins were similar (Figure 2). The dehalogenase mutant with the highest catalytic activity was Val226Ala (Table I). The speciﬁc activity for 1,2-dibromoethane was ~2.5-fold higher in this mutant than in the wild-type enzyme. The Val226Leu mutant had a similar elevated speciﬁc activity with 1,2-dibromoethane but a signiﬁcantly lower activity for 1,2-dichloroethane than the Val226Ala mutant and the wild-type enzyme. The speciﬁc activity of the Val226Ala mutant for 1,2-dichloroethane was similar to that of the wild-type enzyme. In all mutants the Michaelis half-saturation constants for both substrates increased. Thus, the addition or removal of one methyl group at the side chain of residue 226 is allowed without extreme changes in enzyme activity. The mutant with the highest activities, Val226Ala, was subjected to a more thorough kinetic analysis. Steady state kinetic analysis of Val226Ala dehalogenase Puriﬁed enzyme (4 g) was isolated from a 10 l culture of E.coli BL21(DE3) expressing the mutant protein. The kcat of the puriﬁed Val226Ala enzyme with 1,2-dibromoethane was 2.5-fold higher than that of the wild-type enzyme (Table II), conﬁrming the activity found in cell-free extracts. The kcat of the mutant with 1,2-dichloroethane also seemed to be slightly higher. In addition, the mutant enzyme converted 1-bromo-2chloroethane 2-fold faster than the wild-type enzyme. This substrate was converted exclusively to 2-chloroethanol, with no indication for the formation of 2-bromoethanol (below the detection limit of the gas chromatograph). However, the Michaelis constants of all three substrates were 1.5- to 3-fold higher than with the wild-type enzyme (Table II). A clear solvent 2H2O kinetic isotope effect on the catalytic rates of both 1,2-dichloroethane and 1,2-dibromoethane conversion was found with the mutant enzyme (Figure 3). This indicates that for both substrates at high substrate concentration the rate-determining step is still at the end of the reaction sequence, as found before with the wild-type enzyme 56
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(Schanstra and Janssen, 1996). The conversion of 1-bromo-2chloroethane also displayed a solvent kinetic isotope effect, in both mutant and wild-type enzyme. To determine why the mutant enzyme had a higher catalytic rate than the wild type with 1,2-dibromoethane but not with 1,2-dichloroethane, the kinetics of substrate conversion in the Val226Ala enzyme were studied using pre-steady state kinetic techniques. Pre-steady state kinetic analysis of 1,2-dibromoethane conversion To identify the rate-determining step(s) in 1,2-dibromoethane conversion by mutant enzyme, a rapid-quench-ﬂow experiment with substrate in excess over enzyme was carried out (Figure 4A). A nearly linear production of 2-bromoethanol in time was observed, indicating that the rate constant of a step preceding hydrolysis of the alkyl-enzyme intermediate or the rate of the hydrolysis step itself was very close to the steady state kcat. The steady state production rate of 2-bromoethanol was 8.3 Ϯ 0.5 s-1, which was identical to the steady state kcat of the mutant enzyme for 1,2-dibromoethane derived from measurements of halide production rates (8.2 s-1; Table II). The slow step was not cleavage of the C-Br bond because, in a single turnover experiment with enzyme in excess (460 µM) over substrate (250 µM), the substrate decrease and product increase curves crossed at 50 µM. This indicated that alkyl
+
+
+
+
+Mutational analysis of Val226 in haloalkane dehalogenase
+
+
+
+
+
+
+
+
+aLower
+
+
+
+
+
+1,2-Dibromoethane kcat/Km (M-1 s-1) 6.2ϫ103 2.5ϫ103 Km (mM) 0.010 0.033 kcat (s-1) 3.0 8.2 kcat/Km (M-1 s-1) 3.0ϫ105 2.5ϫ105
+
+
+
+
+
+1-Bromo-2-chloroethane Km (mM) Ͻ0.07a 0.097 kcat (s-1) 3.2 6.9 kcat/Km (M-1 s-1)   7.1ϫ104
+
+
+
+
+
+kcat (s-1) 3.3 3.8
+
+
+
+
+
+0.53 1.5
+
+
+
+
+
+value could not be measured because of the detection limit of 2-chloroethanol by gas chromatography.
+
+
+
+
+
+
+
+
+
+
+
+enzyme accumulated and the rate of its formation was faster than the rate of hydrolysis (Figure 4B). The slow step must thus be hydrolysis of the alkyl-enzyme intermediate. The higher kcat of the Val226Ala mutant compared with wild-type enzyme was then most probably caused by an increased rate of halide release, which is the main rate-limiting step in the wild-type enzyme. This was studied separately. The kinetics of bromide binding and release were measured by stopped-ﬂow ﬂuorescence quenching experiments under pseudo ﬁrst-order conditions. All ﬂuorescence transients obtained in the concentration range 2800 mM could be ﬁtted by single exponentials (data not shown). To calculate the rate and equilibrium constants for halide binding, the observed binding rate constants (kobs) obtained from the single exponentials were plotted against the bromide concentrations used (Figure 5A). The kobs decreased from 56 s-1 at 2 mM KBr to 30 s-1 between 25 and 40 mM KBr, followed by an increase in the kobs with an increasing bromide concentration above 40 mM KBr. At bromide concentrations Ͼ600 mM, the kobs started to level off somewhat. As with the wild-type enzyme, this complex dependence of kobs on bromide concentration can be explained by the presence of two parallel routes for bromide binding and release (Scheme IA). The rate and equilibrium constants of this scheme for the Val226Ala enzyme were derived in a similar way to the wildtype enzyme using numerical simulation (Table III). The data indicated that bromide release will mainly follow the upper
+
+
+
+
+
+route of Scheme IA, in which the rate is limited mainly by the unimolecular enzyme isomerization preceding actual release. This step (k4 in Scheme IA) had a rate of 58 Ϯ 6 s-1. The actual release of the bromide ion is a rapid equilibrium step (K5, Scheme IA). Compared with the wildtype enzyme, there is a 7-fold faster overall release rate of bromide (koff, Table III), mainly caused by faster enzyme isomerization. Stopped-ﬂow ﬂuorescence experiments of substrate conversion can provide important information about the rate of substrate entrance because the intrinsic protein ﬂuorescence of the dehalogenase is also partially quenched on binding of the substrate. When excess enzyme was rapidly mixed with 1,2dibromoethane, a ﬂuorescence progress curve, corresponding to a single enzyme turnover, was obtained (Figure 4C). Doubling the substrate concentration mainly increased the amplitude and rate of the ﬁrst part of the ﬂuorescence transient, which is related to substrate import and accumulation of the Michaelis complex. Combination of the steady state and pre-steady state data allowed the extraction of rate constants for the conversion of 1,2-dibromoethane by the Val226Ala mutant (Table IV) using numerical simulation of Scheme II. The steady state kcat and Km calculated from these rates are close to the values determined experimentally. The slowest step in the conversion of 1,2dibromoethane was hydrolysis of the alkyl-enzyme, but the rate of this step was similar to that found with wild-type enzyme. The increase in kcat was caused mainly by the increase in the rate of bromide release (kx), from 4 to 43 s-1. This rate was close to the overall rate of bromide release (koff) found by a stopped-ﬂow analysis of bromide binding under pseudo ﬁrst-order conditions (Table III). Pre-steady state analysis of 1,2-dichloroethane conversion The solvent kinetic isotope effect found on the steady state rate of 1,2-dichloroethane conversion in the Val226Ala mutant (Figure 3) suggested that either hydrolysis of the alkyl-enzyme intermediate or release of the halide ion out of the active-site cavity was rate limiting for this substrate. A stopped-ﬂow ﬂuorescence analysis of chloride binding under pseudo ﬁrstorder conditions showed that the overall rate of chloride release (koff) in the Val226Ala mutant had increased to 70 s-1 (Figure 5B and Table III), which is 5-fold faster than in the wild-type enzyme. The kobs values used to calculate this rate were obtained by ﬁtting ﬂuorescence transients with single exponentials over the complete concentration range (20800 mM NaCl). The dependence of the kobs on the chloride concentration was similar to that found with the wild-type enzyme (Scheme IB). From this high rate of chloride release and the solvent kinetic isotope effect on kcat, it was concluded that the slow step in 1,2-dichloroethane conversion is most probably also hydrolysis of the alkyl-enzyme intermediate. If this is true, 57
+
+
+
+
+
+J.P.Schanstra et al.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+one would expect a lag in alcohol (2-chloroethanol) formation in an experiment with substrate in excess over enzyme. This lag was indeed observed (Figure 6A), but a slow rate of formation of the alkyl-enzyme intermediate and a slow rate of alkyl-enzyme hydrolysis are indistinguishable in such an experiment. A single turnover experiment with enzyme in excess over substrate also provided no discrimination between the two rates in 1,2-dichloroethane conversion in this mutant (Figure 6B) because it is not clear if the slow rate of substrate 58
+
+
+
+
+
+depletion was caused by a slow association rate of substrate and enzyme or by a slow rate of formation of the alkyl-enzyme intermediate. The lower limit of the rate of association of substrate and enzyme, as set by kcat/Km (2.5 mM-1 s-1 for the Val226Ala mutant; Table II; Fersht, 1985; Johnson, 1986), suggested that under single turnover conditions (0.5 mM 1,2dichloroethane) the rate of substrate binding into the Michaelis complex could be rate limiting. Therefore extra input was necessary from a stopped-ﬂow ﬂuorescence analysis of 1,2dichloroethane conversion (data not shown). The high Km for 1,2-dichloroethane allowed only multiple turnover experiments performed at high substrate concentrations (Ͼ1.5 mM substrate and 6 µM enzyme). The stopped-ﬂow traces only gave information about the rate of substrate binding (k1) because no amplitude corresponding to forms of the enzyme occurring after substrate binding was obtained. Based on these stoppedﬂow experiments, it was concluded that the rate of k1 was (4.5 Ϯ 1.0) ϫ103 µM-1 s-1.
+
+
+
+
+
+Mutational analysis of Val226 in haloalkane dehalogenase
+
+
+
+
+
+
+
+
+
+
+
+14.5 Ϯ 0.5 Ͼ1450 65 Ϯ 5 Ͼ6500
+
+
+
+
+
+Bromide binding data were obtained by numerical simulation of Scheme IA and chloride binding data by numerical simulation of Scheme IB (see ﬁts in Figure 5)a. aWild-type values taken from Schanstra and Janssen (1996). bExperimentally obtained apparent dissociation constant. cApparent K calculated from the obtained rate and equilibrium constants when assuming that the equilibria between E [↔] E and E ·X [↔] E ·X in d I II I II Scheme IA and B are strongly to the left. dOverall halide release rates at [X] ϭ 0 mM (see Materials and methods). e(-) Not applicable for scheme used in ﬁt.
+
+
+
+
+
+
+
+
+
+
+
+The data given represent the best ﬁt for all of the kinetic and equilibrium data given in this papera (ﬁts in Figures 4 and 6). aWild-type data are from Schanstra et al. (1996a). bThe steady state k cat and Km values calculated from the derived rate constants for a four-step mechanism (Scheme II) (see Materials and methods).
+
+
+
+
+
+Combination of the steady state and pre-steady state data and numerical simulation of Scheme II yielded a set of rate constants for 1,2-dichloroethane conversion by the Val226Ala mutant (Table IV). The steady state kcat and Km values calculated from the rates were in agreement with experimentally determined values. As with 1,2-dibromoethane conversion, hydrolysis of the alkyl-enzyme intermediate is the main ratelimiting step during 1,2-dichloroethane conversion by Val226Ala enzyme (9 s-1). The rates of halide release, as determined by the analysis of substrate conversion (kx) and by measuring chloride binding under pseudo ﬁrst-order conditions (koff), were in good agreement. Whereas chloride export had become much faster in the mutant, the rate of C-Cl bond cleavage was reduced from 50 s-1 in the wild-type enzyme to 14 s-1 in the Val226Ala mutant, resulting in only a small increase in steady state kcat. Discussion The mutation of residues involved directly in enzyme catalysis often results in catalytically inactive mutants. This paper describes an analysis of the effect of the mutation of Val226 in haloalkane dehalogenase, the side chain of which interacts with the aromatic ring of the supposed catalytically important residues Trp125 and Phe172.
+
+
+
+
+
+The properties of the Val226Ala mutant conﬁrmed the observation that halide release is the main rate limiting step in the wild-type enzyme (Schanstra and Janssen, 1996; Schanstra et al., 1996a). Release of the charged halide ion out of the buried active-site cavity occurs via two parallel routes (Scheme IA and B) in both wild-type and mutant enzyme. In the most important route, the actual release is preceded by a slow unimolecular isomerization step (k4, upper route in Scheme IA and B). An increase in the rate of this isomerization step is the main cause for the faster rate of overall halide release in the Val226Ala mutant compared with the wild-type enzyme. We have hypothesized for the wild-type enzyme that this isomerization is a conformational change of a part of the cap domain of the dehalogenase that is needed to allow water to enter the buried active-site cavity and solvate the halide ion (Schanstra and Janssen, 1996). In the Val226Ala mutant, this proposed conformational change is faster, and therefore Val226 itself, or Trp125 and Phe172, which have van der Waals contacts with Val226 (Figure 1), might have interactions that are lost during this proposed conformational change. Valine itself seems to interact marginally with substrate and products during 1,2-dichloroethane conversion (Verschueren et al., 1993b). This can contribute to the increase in Km in the Val226Ala mutant (see below), but cannot explain the increase 59
+
+
+
+
+
+J.P.Schanstra et al.
+
+
+
+
+
+
+
+
+
+
+
+in the rate of halide release. Trp125 is involved directly in halide binding, in the binding of the halogen moiety of the substrate, and in stabilization of the leaving group during nucleophilic substitution by Asp124 (Verschueren et al., 1993b,c; Kennes et al., 1995). It is, however, not likely that a repositioning of Trp125 caused by the Val226Ala mutation inﬂuences the rate of the proposed conformational change because the replacement of Trp125 by phenylalanine resulted in a mutant with a similar kcat for 1,2-dibromoethane to the wild-type enzyme (Kennes et al., 1995). The presence of a solvent kinetic isotope effect showed that the rate-limiting step in this mutant was still at the end of the reaction (Kennes et al., 1995), and stopped-ﬂow ﬂuorescence halide binding studies on this Trp125Phe mutant showed that there was no signiﬁcant increase in the rate of halide release (G.H.Krooshof, J.J.Schuringa and D.B.Janssen, unpublished data). Thus, it is unlikely that the faster rate of the conformational change in the Val226Ala enzyme is caused by an altered position of Trp125. Phe172 interacts with the Cα and Clβ of the substrate during conversion (Verschueren et al., 1993b) and is a member of a helix (H4, 159166)-loop helix (H5, 171181) structure that covers the active site of the dehalogenase and shields it from the solvent (Figure 1). This helix loop helix structure is 60
+
+
+
+
+
+stabilized mainly by a salt bridge (Lys261-Asp170) between the main domain and cap domain of the enzyme, by a hydrogen bond between helices 4 and 5 (Thr173-Val165) and by the hydrophobic interactions of the buried residues Phe161, Phe164 and Phe172 (Pries et al., 1994b). Such buried residues serve as structural anchors and resist translocation (Heinz et al., 1993; Matthews, 1995). Furthermore, Phe172 (H5) and Phe164 (H4) are situated in a tilted-T orientation, where the positive edge of Phe164 can interact with the negative face of Phe172 (Figure 1). Especially in the hydrophobic inside of proteins, such an interaction can contribute to protein stability (Singh and Thornton, 1985; Serrano et al., 1991; Anderson et al., 1993). Furthermore, helices 4 and 5 were found to be ‘hot spots’ for mutations during the selection of spontaneous haloalkane dehalogenase variants with elevated activity towards longer halogenated alkanes. The elevated activity was attributed to an increased ﬂexibility in this part of the cap domain or an increased size of the active-site cavity (Pries et al., 1994b). Therefore, we propose that the repositioning of Phe172 in the Val226Ala mutant has led to an increase in the ﬂexibility of this part of the cap domain and a faster rate of conformational change that is required for halide release. Although the most important effect of mutating Val226 was the increased rate of halide release, leading to a higher kcat for 1,2-dibromoethane, other effects were observed. The bimolecular rate constant for the association of substrate and enzyme and the rate of formation of the alkyl-enzyme intermediate decreased in the Val226Ala mutant with both 1,2-dichloroethane and 1,2-dibromoethane. This may be because of an altered interaction of the halogen with Trp125 as this residue directly binds the leaving group (Verschueren et al., 1993b,c; Kennes et al., 1995). Val226 and Phe172 may also be involved in substrate binding by providing a tight hydrophobic cavity, and in transition state stabilization by proper orientation of the R group of the substrate via an interaction with the Cβ and Clβ of the substrate before and during alkylation. This seems to be more important for substrates with a Clβ than for substrates with a Brβ, as indicated by the intermediate Km for the substrate 1-bromo-2-chloroethane in both wild-type and mutant dehalogenase. 1-Bromo-2-chloroethane is exclusively converted to 2-chloroethanol. The Val226Ala mutation did not signiﬁcantly alter the rate of dealkylation for both 1,2-dichloroethane and 1,2dibromoethane, indicating that other regions (i.e. His289 activating the nucleophilic water molecule, oxyanion hole) are not signiﬁcantly altered in the mutant. This ‘uncoupling’ between the rates of alkylation and dealkylation in haloalkane dehalogenase is allowed because these two processes are not mirror images of each other, unlike acylation and deacylation in the serine proteases. For both 1,2-dibromoethane and 1,2-dichloroethane, the increase in rate of halide release was accompanied by a reduction in the rate of carbon halogen bond cleavage, resulting in lower speciﬁcity constants. Thus, interactions in the active site of the dehalogenase link an increase in the rate of halide release to a decrease in the rate of substrate binding and carbon halogen bond cleavage. The kinetic mechanism of the wild-type enzyme appears to be optimized for 1,2-dichloroethane conversion in the sense that there is an optimal balance between the rates of steps that cannot be changed independently (Benner, 1989). 1,2-Dichloroethane is the growth substrate on which the X.autotrophicus strain that produces the enzyme was isolated (Janssen et al., 1985). For a substrate such as
+
+
+
+
+
+Mutational analysis of Val226 in haloalkane dehalogenase
+
+
+
+
+
+1,2-dibromoethane, improvement can obtained by increasing the rate of bromide release, whereas improvement of the kinetic constants for substrates where the rate-limiting step is carbon halogen bond cleavage (i.e. 1,2-dichloropropane, dichloromethane; Schanstra and Janssen, 1996) can possibly be obtained by decreasing the ﬂexibility of the active-site cavity. Acknowledgements
+
+
+We thank Ivo Ridder for providing Figure 1 and Ard Wieringa for experimental assistance. This work was supported by a grant from the Biotechnology Programme of the Dutch Ministry of Economic Affairs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+61
+
+
+
+
+
